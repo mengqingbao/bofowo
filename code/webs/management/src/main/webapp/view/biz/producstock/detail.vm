@@ -1,0 +1,107 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Producstock Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<table class="table table-striped table-bordered responsive">
+	<tr>
+		<td><label for="status">#springMessage("id")</label></td>
+		<td>
+			$!{producstock.id}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("shopId")</label></td>
+		<td>
+			$!{producstock.shopId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("sellerId")</label></td>
+		<td>
+			$!{producstock.sellerId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("itemId")</label></td>
+		<td>
+			$!{producstock.itemId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("propId")</label></td>
+		<td>
+			$!{producstock.propId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("propName")</label></td>
+		<td>
+			$!{producstock.propName}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("propValue")</label></td>
+		<td>
+			$!{producstock.propValue}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("stockNum")</label></td>
+		<td>
+			$!{producstock.stockNum}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("leftNum")</label></td>
+		<td>
+			$!{producstock.leftNum}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("image")</label></td>
+		<td>
+			$!{producstock.image}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("price")</label></td>
+		<td>
+			$!{producstock.price}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("specId")</label></td>
+		<td>
+			$!{producstock.specId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("specName")</label></td>
+		<td>
+			$!{producstock.specName}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("specValue")</label></td>
+		<td>
+			$!{producstock.specValue}
+		</td>
+	</tr>
+</table>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

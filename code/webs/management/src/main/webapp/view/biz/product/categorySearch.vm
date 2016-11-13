@@ -1,0 +1,53 @@
+
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>分类管理</small></div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-6">
+        <div class="am-btn-toolbar">
+          <div class="am-btn-group am-btn-group-xs">
+            <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12">
+        <form class="am-form">
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+               <th>类型编码</th><th class="table-title">类型名称</th><th>状态</th><th class="table-date am-hide-sm-only">修改日期</th><th class="table-set">操作</th>
+              </tr>
+          </thead>
+          <tbody>
+          #foreach($foo in [10000..10005])
+            <tr>
+             
+              <td>$foo</td>
+              <td> <a class="am-cf am-collapsed" data-am-collapse="{target: '#category-1'}">交易管理 </td>
+              <td>正常</td>
+              <td class="am-hide-sm-only">2014-9-4 7:28:47</td>
+              <td>
+                <div class="am-btn-toolbar">
+                  <div class="am-btn-group am-btn-group-xs">
+                    <a class="am-btn am-btn-default am-btn-xs am-text-secondary" title="查看子类"><span class="am-icon-th"></span></a>
+                    <a class="am-btn am-btn-default am-btn-xs am-text-secondary" title="编辑"><span class="am-icon-pencil-square-o"></span></a>
+                    <a class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" title="删除"><span class="am-icon-trash-o"></span></a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            #end
+          </tbody>
+        </table>
+    
+          <hr />
+          <p>注：删除父类前请先删除子类</p>
+        </form>
+      </div>
+
+    </div>

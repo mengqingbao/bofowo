@@ -1,0 +1,72 @@
+<style>
+.table-main {
+	  border: 1px solid #dddddd;
+}
+</style>
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>交易管理</small></div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-8">
+        <div class="am-form-group am-input-group-sm">
+         
+        </div>
+      </div>
+      <div class="am-u-sm-12 am-u-md-3">
+        <div class="am-input-group am-input-group-sm">
+          <input type="text" class="am-form-field">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button">搜索</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12">
+      <ul class="am-tabs-nav am-nav am-nav-tabs">
+      	<li class="am-active"><a href="javascript:void(0)">地址库</a></li>
+      	<li><a href="javascript:void(0)">默认物流公司</a></li>
+      </ul>
+        <form class="am-form">
+       <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                <th>发货地址</th><th class="table-title">发货人</th><th class="table-type">所在地区</th><th class="table-author am-hide-sm-only">街道地址</th><th class="table-date am-hide-sm-only">邮编</th><th class="table-date am-hide-sm-only">电话/手机</th><th class="table-set">操作</th>
+              </tr>
+          </thead>
+          <tbody>
+          #foreach($foo in [10000..10005])
+            <tr>
+              <td>上海</td>
+              <td><a href="#">丁月华</a></td>
+              <td class="am-hide-sm-only">上海 闸北 大厂</td>
+              <td class="am-hide-sm-only">疆场三路191</td>
+              <td>000000</td>
+              <td>15397083718</td>
+              <td>修改|删除</td>
+            </tr>
+         #end
+         </tbody>
+        </table>
+          <div class="am-cf">
+  共 15 条记录
+  <div class="am-fr">
+    <ul class="am-pagination">
+      <li class="am-disabled"><a href="#">«</a></li>
+      <li class="am-active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">»</a></li>
+    </ul>
+  </div>
+</div>
+          <hr />
+          <p>注：.....</p>
+        </form>
+      </div>
+
+    </div>

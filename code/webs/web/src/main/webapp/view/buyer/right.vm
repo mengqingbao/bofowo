@@ -1,0 +1,52 @@
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>交易管理</small></div>
+    </div>
+	
+    <div class="am-g">
+      <div class="am-u-sm-12">
+      <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li><a href="consumer-my-rate.htm">我收到的退款</a></li>
+      <li class="am-active"><a href="javascript:void(0)">我申请的退款</a></li>
+     </ul>
+        <form class="am-form">
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                <th class="table-title">退款编号</th><th class="table-type">订单编号/宝贝信息</th><th class="table-date am-hide-sm-only">卖家</th><th class="table-date am-hide-sm-only">交易金额</th><th class="table-date am-hide-sm-only">退款金额</th><th class="table-date am-hide-sm-only">申请时间</th><th class="table-date am-hide-sm-only">超时时间</th><th class="table-date am-hide-sm-only">退款给状态</th><th class="table-date am-hide-sm-only">操作</th>
+              </tr>
+          
+          #foreach($foo in [10000..10005])
+            <tr>
+              <td>65623553016902</td>
+              <td><a href="#">1388229428790269<br/> 【双11全球狂欢节】Apple/苹果 iPhone 6s Plus 移动联通电信4G </a></td>
+              <td>rock旗舰店<br/>深圳市洛克拉瓦智能科技有限公司</td>
+              <td>350</td>
+              <td>350</td>
+              <td>2016-04-20</td>
+              <td>2016-09-09</td>
+              <td>退款成功</td>
+              <td>查看</td>
+            </tr>
+
+         #end
+           </table>
+          <div class="am-cf">
+  共 15 条记录
+  <div class="am-fr">
+    <ul class="am-pagination">
+      <li class="am-disabled"><a href="#">«</a></li>
+      <li class="am-active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">»</a></li>
+    </ul>
+  </div>
+</div>
+          <hr />
+          <p>注：.....</p>
+        </form>
+      </div>
+
+    </div>

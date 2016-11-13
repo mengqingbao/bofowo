@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.MyCouponMapper">
+	<resultMap type="MyCouponModel" id="MyCouponModelMap">
+
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="couponId" column="COUPON_ID" />
+		<result property="content" column="CONTENT" />
+		<result property="buyerId" column="BUYER_ID" />
+		<result property="sellerId" column="SELLER_ID" />
+		<result property="createdTime" column="CREATED_TIME" />
+		<result property="type" column="TYPE" />
+		<result property="startDate" column="START_DATE" />
+		<result property="endDate" column="END_DATE" />
+		
+	</resultMap>
+</mapper> 

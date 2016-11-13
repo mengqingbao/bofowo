@@ -1,0 +1,11184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+	<title>京东网上商城</title>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+
+	<script type="text/javascript" src="js/jsstyle.js"></script>
+
+</head>
+
+<body>
+
+#parse("common/top_search.vm")
+#parse("common/nav.vm")
+<!-- 轮播区及浏览区开始 -->
+
+<div id="main">
+
+	<div class="mainleft">
+
+		<div class="lunbo">
+
+		   <ul class="pic">
+
+			   	<li style="display:block"><img src="images/jdtheme/z1.jpg" alt="" /></li>
+
+			   	<li><img src="images/jdtheme/z2.jpg" alt="" /></li>
+
+			   	<li><img src="images/jdtheme/z3.jpg" alt="" /></li>
+
+			   	<li><img src="images/jdtheme/z4.jpg" alt="" /></li>
+
+			   	<li><img src="images/jdtheme/z5.jpg" alt="" /></li>
+
+			   	<li><img src="images/jdtheme/z6.jpg" alt="" /></li>
+
+		   </ul> 
+
+		   <ul class="nav">
+
+		        <li class="on">1</li>
+
+		        <li>2</li>
+
+		        <li>3</li>
+
+		        <li>4</li>
+
+		        <li>5</li>
+
+		        <li>6</li>
+
+		    </ul>
+
+		</div>
+
+		<div class="liulan">
+
+			<div class="liuleft">
+
+				<div class="lefttu"></div>
+
+			</div>
+
+			<div class="liucenter">
+
+				<ul>
+
+					<li><a href=""><img src="images/jdtheme/c1.jpg" alt="" /></a></li>
+
+					<li><a href=""><img src="images/jdtheme/c2.jpg" alt="" /></a></li>
+
+					<li style="border-right:none"><a href=""><img src="images/jdtheme/c3.jpg" alt="" /></a></li>
+
+					<li><a href=""><img src="images/jdtheme/c4.jpg" alt="" /></a></li>
+
+					<li><a href=""><img src="images/jdtheme/c5.jpg" alt="" /></a></li>
+
+					<li style="border-right:none"><a href=""><img src="images/jdtheme/c6.jpg" alt="" /></a></li>
+
+					<li><a href=""><img src="images/jdtheme/c7.jpg" alt="" /></a></li>
+
+					<li><a href=""><img src="images/jdtheme/c8.jpg" alt="" /></a></li>
+
+					<li style="border-right:none"><a href=""><img src="images/jdtheme/c9.jpg" alt="" /></a></li>
+
+					<li><a href=""><img src="images/jdtheme/c10.jpg" alt="" /></a></li>
+
+					<li><a href=""><img src="images/jdtheme/c11.jpg" alt="" /></a></li>
+
+					<li style="border-right:none"><a href=""><img src="images/jdtheme/c12.jpg" alt="" /></a></li>
+
+				</ul>
+
+			</div>
+
+			<div class="liuright">
+
+				<div class="righttu"></div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="mainright">
+
+		<div class="baotu">
+
+			<a href=""><img src="images/jdtheme/b30.jpg" alt="" /></a>
+
+		</div>
+
+		<div class="kuaibao">
+
+			<span>京东快报</span>
+
+			<a href="">更多快报></a>
+
+		</div>
+
+		<div class="baomain">
+
+			<ul>
+
+				<li><a href="">美妆年度盛典 要你好看！</a></li>
+
+				<li><a href="">关于假冒客服诈骗的声明</a></li>
+
+				<li><a href="">京东值得买 9.9元购了</a></li>
+
+				<li><a href="">阿根廷野生红虾4斤178元</a></li>
+
+				<li><a href="">自营家居低至9.9元</a></li>
+
+				<li><a href="">大家电配送范围扩大公告</a></li>
+
+				<li><a href="">狂欢不落幕，好奇一整年</a></li>
+
+				<li><a href="">童书全品优惠券限时抢</a></li>
+
+			</ul>
+
+		</div>
+
+		<div class="tubiao">
+
+			<ul>
+
+				<li class="xiala">
+
+					<div class="tubiao_1"></div>
+
+					<a href="">话费</a>
+
+					<div class="tubiao_9"></div>
+
+				</li>
+
+				<li  class="xiala">
+
+					<div class="tubiao_2"></div>
+
+					<a href="">机票</a>
+
+					<div class="tubiao_9"></div>
+
+				</li>
+
+				<li  class="xiala">
+
+					<div class="tubiao_3"></div>
+
+					<a href="">彩票</a>
+
+					<div class="tubiao_9"></div>
+
+				</li>
+
+				<li  class="xiala" style="border-right:none">
+
+					<div class="tubiao_4"></div>
+
+					<a href="">游戏</a>
+
+					<div class="tubiao_9"></div>
+
+				</li>
+
+				<li style="border-bottom:none">
+
+					<div class="tubiao_5"></div>
+
+					<a href="">旅行</a>
+
+				</li>
+
+				<li style="border-bottom:none">
+
+					<div class="tubiao_6"></div>
+
+					<a href="">电影票</a>
+
+				</li>
+
+				<li style="border-bottom:none">
+
+					<div class="tubiao_7"></div>
+
+					<a href="">理财</a>
+
+				</li>
+
+				<li style="border-bottom:none;border-right:none;">
+
+					<div class="tubiao_8"></div>
+
+					<a href="">水电煤</a>
+
+				</li>
+
+				<div class="tubiaola">
+
+					<div class="close_menu">
+
+						<ul>
+
+							<li><a href="">话费</a></li>
+
+							<li><a href="">机票</a></li>
+
+							<li><a href="">彩票</a></li>
+
+							<li style="border-right:none"><a href="">游戏</a></li>
+
+						</ul>
+
+					</div>
+
+					<div class="c_main">
+
+						<div class="box" style="display:block">
+
+							<div class="phonechong">
+
+								<span class="span1">手机号:</span>
+
+								<input type="text" value="请输入手机号" class="shuru1" style="color:#ccc" />
+
+								<span class="span2">支持移动、联通、电信京东、通信</span>
+
+								<span class="close">X</span>
+
+							</div>
+
+							<div class="mianzhi">
+
+								<span class="span1">　面值:</span>
+
+								<select name="" id="jine">
+
+									<option value="">10元</option>
+
+									<option value="">20元</option>
+
+									<option value="">30元</option>
+
+									<option value="">50元</option>
+
+									<option value="">100元</option>
+
+									<option value="">200元</option>
+
+									<option value="">300元</option>
+
+									<option value="">500元</option>
+
+								</select>
+
+								<span class="span3">9.80-11.00</span>
+
+							</div>
+
+							<div class="chong">
+
+								<input type="button" value="立即充值" class="cb"/>
+
+							</div>
+
+							<div class="close">X</div>
+
+						</div>
+
+						<div class="box">
+
+							<ul class="jipiao_top">
+
+								<li class="tehui"><a href="">特惠国际机票</a></li>
+
+								<li class="guonei"><a href="">国内机票</a></li>
+
+							</ul>
+
+							<div class="jpbox" style="display:block">
+
+								<div class="tu">
+
+									<img src="images/jdtheme/d1.jpg" alt="" />
+
+									<span>国际机票430元起</span>
+
+								</div>
+
+								<div class="tu">
+
+									<img src="images/jdtheme/d2.jpg" alt="" />
+
+									<span>免签线路说走就走</span>
+
+								</div>
+
+							</div>
+
+							<div class="jpbox">
+
+								<div class="go">
+
+									<span>出发城市:</span>
+
+									<select name="" id="chufa">
+
+										<option value="">K-昆明</option>
+
+										<option value="">B-北京</option>
+
+										<option value="">S-上海</option>
+
+									</select>
+
+									<span>到达城市:</span>
+
+									<select name="" id="chufa">
+
+										<option value="">A-阿克苏</option>
+
+										<option value="">B-北京</option>
+
+										<option value="">S-上海</option>
+
+									</select>
+
+								</div>
+
+								<div class="gotime">
+
+									<span>出发日期:</span>
+
+									<select name="" id="chufatime">
+
+										<option value="">2014</option>
+
+										<option value="">2015</option>
+
+									</select>
+
+									<span>年</span>
+
+									<select name="" id="chufatime">
+
+										<option value="">12</option>
+
+										<option value="">11</option>
+
+									</select>
+
+									<span>月</span>
+
+									<select name="" id="chufatime">
+
+										<option value="">11</option>
+
+										<option value="">12</option>
+
+									</select>
+
+									<span>日</span>
+
+								</div>
+
+								<div class="goserach">
+
+									<input type="button" value="机票查询" class="cha" />
+
+									<a href="">白条购机票更方便！</a>
+
+								</div>
+
+							</div>	
+
+								
+
+							<div class="close">X</div>
+
+						</div>
+
+						<div class="box">
+
+							<div class="doubleqiu">
+
+								<div class="qiutu"></div>
+
+							</div>
+
+							<div class="qiumain">
+
+								<div class="mai">
+
+									<span>买注</span>
+
+									<select name="" id="shuangseqiu">
+
+										<option value="">双色球</option>
+
+										<option value="">大乐透</option>
+
+										<option value="">3D</option>
+
+										<option value="">竞足</option>
+
+									</select>
+
+									<span><b>试试手气吧！</b></span>
+
+								</div>
+
+								<div class="number">
+
+									<span>04</span>
+
+									<span>11</span>
+
+									<span>19</span>
+
+									<span>25</span>
+
+									<span>27</span>
+
+									<span>28</span>
+
+									<span style="color:blue">03</span>
+
+								</div>
+
+								<div class="xiazhu">
+
+									<a href="">[机选一注]</a>
+
+									<a href="">[自助选号]</a>
+
+								</div>
+
+								<input type="button" value="提交数据" class="sub" />
+
+							</div>
+
+							<div class="close">X</div>
+
+						</div>
+
+						<div class="box">
+
+							<div class="gamechose">
+
+								<ul>
+
+									<li><a href="">点卡</a></li>
+
+									<li><a href="">QQ</a></li>
+
+									<li><a href="">页游</a></li>
+
+								</ul>
+
+								<div class="yeyoutu">
+
+									<img src="images/jdtheme/d4.jpg" alt="" />
+
+									<img src="images/jdtheme/d5.jpg" alt="" />
+
+									<img src="images/jdtheme/d6.jpg" alt="" />
+
+								</div>
+
+							</div>
+
+							<div class="close">X</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</ul>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- 轮播区及浏览区结束 -->
+
+
+
+<!-- 商品展示区开始 -->
+
+<div id="lifewindow">
+
+	<div class="lifetu"></div>
+
+	<div class="lifemain">
+
+		<div class="tuarea1">
+
+			<img src="images/jdtheme/e2.jpg" alt="" />
+
+			<div class="zhe">
+
+				<h3>品牌街</h3>
+
+				<div class="life1"><a href="">卡西欧腕表</a></div>
+
+				<div class="life1"><a href="" style="color:#E4393C">全场低至4折</a></div>
+
+				<ul>
+
+					<li><a href="">更多品牌</a></li>
+
+					<li><a href="">进入品牌街</a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="tuarea2">
+
+			<img src="images/jdtheme/e3.jpg" alt="" />
+
+			<div class="zhe1">
+
+				<h3>天天低价</h3>
+
+				<div class="life1"><a href="">康佳42英寸电</a></div>
+
+				<div class="life1"><a href="" style="background:red;color:white;padding:2px 2px">直降100元</a></div>
+
+			</div>
+
+		</div>
+
+		<div class="tuarea3">
+
+			<img src="images/jdtheme/e4.jpg" alt="" />
+
+			<div class="zhe">
+
+				<h3>好东西</h3>
+
+				<div class="life1"><a href="">OPPO N3</a></div>
+
+				<div class="life1"><a href="" style="color:#E4393C;font-size:12px">白条免息送京豆</a></div>
+
+				<ul>
+
+					<li><a href="">宅在家里玩手机</a></li>
+
+					<li><a href="">逛更多></a></li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+		<div class="tuarea4">
+
+			<img src="images/jdtheme/e5.png" alt="" />
+
+			<div class="zhe1">
+
+				<h3>今日团购</h3>
+
+				<div class="life1"><a href="">56元自助餐</a></div>
+
+				<div class="life1" style="margin-top:20px">团购价<span style="font-size:25px;color:red;font-weight:700">￥45</span></div>
+
+
+
+				<div class="cantuan"></div>
+
+			</div>
+
+		</div>
+
+		<div class="tuarea5">
+
+			<img src="images/jdtheme/e6.jpg" alt="" />
+
+			<div class="zhe1">
+
+				<h3>京东首发</h3>
+
+				<div class="life1"><a href="">MR X8游戏本</a></div>
+
+				<div class="life1"><a href="" style="background:red;color:white;padding:2px 2px">8G超级显卡</a></div>
+
+			</div>
+
+		</div>
+
+		<div class="tuarea6">
+
+			<img src="images/jdtheme/e7.jpg" alt="" />
+
+			<div class="zhe1">
+
+				<h3>优惠券</h3>
+
+				<div class="life1"><a href="">NB大牌神券</a></div>
+
+				<div class="life1"><a href="" style="color:#E4393C">免费疯抢ing</a></div>
+
+			</div>
+
+		</div>
+
+		<div class="tuarea7">
+
+			<img src="images/jdtheme/e8.jpg" alt="" />
+
+			<div class="zhe1">
+
+				<h3>京东预售</h3>
+
+				<div class="life1"><a href="">魔力按摩贴</a></div>
+
+				<div class="life1"><a href="" style="background:red;color:white;padding:2px 2px">你背后的女人</a></div>
+
+			</div>
+
+		</div>
+
+		<div class="tuarea8">
+
+			<img src="images/jdtheme/e9.jpg" alt="" />
+
+			<div class="zhe1">
+
+				<div class="zhe1">
+
+				<h3>金融精选</h3>
+
+				<div class="life1"><a href="">天天免息</a></div>
+
+				<div class="life1"><a href="" style="color:red">iPad轻松购</a></div>
+
+			</div>
+
+			</div>
+
+		</div>
+
+		<div class="tuarea9"><img src="images/jdtheme/e10.jpg" alt="" /></div>
+
+		<div class="tuarea9"><img src="images/jdtheme/e11.jpg" alt="" /></div>
+
+		<div class="tuarea9"><img src="images/jdtheme/e12.jpg" alt="" /></div>
+
+	</div>
+
+</div>
+
+<!-- 商品展示区结束 -->
+
+<!-- 1楼开始 -->
+
+<div id="onefloor">
+
+<!-- 1楼顶部开始 -->
+
+	<div class="one_top">
+
+		<div class="louceng">
+
+			<h2>家电通讯</h2>
+
+			<div class="lou"><span>1F</span></div>
+
+		</div>
+
+		<ul>
+
+			<li><h3 style="color:#E4393C">特价商品</h3></li>
+
+			<li><h3>大家电</h3></li>
+
+			<li><h3>小家电</h3></li>
+
+			<li><h3>手机通讯</h3></li>
+
+			<li><h3>汽车五金</h3></li>
+
+			<div class="huakuai"></div>
+
+		</ul>
+
+		<div class="peisong">
+
+			<a href="">大家电配送<b></b></a>
+
+			<a href="">合约计划说明<b></b></a>
+
+		</div>
+
+	</div>
+
+<!-- 1楼顶部结束 -->
+
+	<div class="onemain">
+
+	<!-- 1楼左边开始 -->
+
+		<div class="mainleft">
+
+			<ul>
+
+				<li><a href="">手机</a></li>
+
+				<li><a href="">空调</a></li>
+
+				<li><a href="">手机配件</a></li>
+
+				<li><a href="">平板电视</a></li>
+
+				<li><a href="">话费补贴</a></li>
+
+				<li><a href="">冰箱</a></li>
+
+				<li><a href="">生活电器</a></li>
+
+				<li><a href="">洗衣机</a></li>
+
+				<li><a href="">厨房电器</a></li>
+
+				<li><a href="">热水器</a></li>
+
+				<li><a href="">个护健康</a></li>
+
+				<li><a href="">烟机/灶具</a></li>
+
+				<li><a href="">五金家装</a></li>
+
+				<li><a href="">家庭影院</a></li>
+
+				<li><a href="">酒柜冷柜</a></li>
+
+				<li><a href="">汽车用品</a></li>
+
+			</ul>
+
+			<div class="lefttu">
+
+				<img src="images/jdtheme/e13.jpg" alt="" />
+
+			</div>
+
+		</div>
+
+		<!-- 1楼左边结束 -->
+
+
+
+		<!-- 1楼中间开始 -->
+
+		<div class="maincenter">
+
+		<!-- 1楼特价商品开始 -->
+
+			<div class="cent1" style="display:block">
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n1.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">32“智能电视限量预约121 2, 48“智能电视预约2499</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">提前预约就是任性</span>
+
+					</div>
+
+				</div>
+
+				<div class="cenlunbo">
+
+					<div class="luntu">
+
+						<img src="images/jdtheme/nn1.jpg" alt="" />
+
+						<img src="images/jdtheme/nn2.jpg" alt="" />
+
+						<img src="images/jdtheme/nn3.jpg" alt="" />
+
+						<img src="images/jdtheme/nn4.jpg" alt="" />
+
+					</div>
+
+					<ul>
+
+						<li style="background:#7ABD54"></li>
+
+						<li></li>
+
+						<li></li>
+
+						<li></li>
+
+					</ul>
+
+				</div>
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n2.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">广东电信QQ特权卡，免流量再送QQ会员！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">100</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n3.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">小家电·Double12裸价备战！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">爆款低价抢先看！</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n4.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">诺基亚 Lumia 930 提前放价！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">2799</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n5.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">严寒冬日，奥克斯温暖多一度!</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">1699</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n6.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12爆款热卖电视提前抢</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">42英寸4K电视2499元</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n7.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">1212抢钱啦</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">低至4折</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 1楼特价商品结束 -->
+
+
+
+			<!-- 1楼大家电开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n8.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【索尼品牌日】索尼（SONY） KDL-42W700B</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">3599</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n9.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【索尼品牌日】索尼（SONY）KDL-50W700B</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">5099</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n10.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【索尼品牌日】索尼（SONY） KDL-60WM15B</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">6999</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n11.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【有钱！任性！0元购！】荣事达 8公斤 滚筒 洗衣机</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">2098</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n12.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【畅销型号，不买不爽快】格兰仕6公斤云系列节</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1212</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n13.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">索尼（Sony）KDL-50W800B 50英寸 液晶 电视</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">6169</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n14.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">飞利浦（PHILIPS）AJ7260D/93 迷你音响 iphone</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">799</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n15.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">三菱电机 MFZ-XEJ60VA 2.5匹 立柜式冷暖变频空调</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">11800</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n16.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">TCL6公斤 1200转惊艳超薄滚筒洗衣机（芭蕾白）</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1499</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n17.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">海尔80升双管遥控电热水器！特价仅此一天！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1398</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 1楼大家电结束 -->
+
+
+
+			<!-- 1楼小家电开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n18.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">疯抢开始，大金经典爆款，给你清新空气！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1999</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n19.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【限时抢，1:1废水，UV抑菌】A.O.史密斯（A.O.Smith）SR50-H3 家用反渗透净水器 厨下式净水机
+
+						【限时抢，1:1废水，UV抑菌】A.O.史密斯（A.O.S</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">4688</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n20.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">极致爆款！志高 13片劲暖电热油汀13I</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">279</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n21.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【1212爆款免单促销中】贝尔斯顿 三档转速电控原</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">698</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n22.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【惊爆价！】科沃斯魔镜S扫地机器人</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">999</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n23.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">爆款提前抢！九阳倍浓植物奶牛豆浆机 给你浓浓的</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">399</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n24.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【12.12惊喜狂欢大趴】买就赠49元足浴药包 加1</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">279</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n25.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">澳柯玛（AUCMA）AMB-201 家用全自动馒头面包一</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n26.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">亚都（YADU）YZ-DS252C 双水箱净化型加湿器</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n27.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">净美仕(Mfresh)YL-7099H 空气净化器 除甲醛 雾霾 </a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">2780</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 1楼小家电结束 -->
+
+
+
+			<!-- 1楼手机通讯开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n28.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">酷派 大神F2 移动版 4G手机 双卡双待</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">899</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n29.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">iPhone 6 Plus 16G版 移动版（深空灰）</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">6088</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n30.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">魅族 MX3 32G仅需1499！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1499</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n31.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">酷派大神F1 电信4G 手机（智尚白）FDD-LTE/CD</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">888</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n32.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">中兴V5 Max 现货疯抢！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">999</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n33.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">华为 Ascend P7 移动4G手机（白色）TD-LTE/TD-</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">2388</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n34.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">三星 Galaxy S4 I9508V 4G手机（玫瑰金） TD-LTE</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">2588</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n35.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">联想 笋尖S90u 联通4G手机（宝石银）TD–LTE/W</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1999</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n36.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">vivo Xplay3S移动联通双4G手机，影音旗舰！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">2998</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n37.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">飞毛腿 双USB 移动电源 20000毫安 金色</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">118</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 1楼手机通讯结束 -->
+
+			<!-- 1楼汽车五金开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n38.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【299疯抢】嘉实多(CASTROL) 动力版极护(EDGE </a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n39.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">夏普车载净化器！洁净空气！净化体验！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">799</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n40.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【赠滤网一个】3M菲尔萃车载净化器KJEC05</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1580</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n41.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">华丰巨箭 46件精品套筒组套 6.3MM铬钒钢套筒S2批</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">129</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n42.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【京东自营】丰田（TOYOTA）原厂全合成机油 0</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">95</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n43.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【12.12疯抢价赠打蛋器】博世TSR 10.8v充电式</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">325</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n44.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【京东自营】亿力 YILI YLQ5660G-140B亿力高压</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">899</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n45.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 京东自营 蓝贝尔 应急启动电源</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">368</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n46.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 奔跑吧GiGi 裸奔的价格 至尊的品质</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/n47.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【12.12提前开抢！】裕津韩国原装进口 HP-2500</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1799</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 1楼汽车五金结束 -->
+
+		</div>
+
+		<!-- 1楼中间结束 -->
+
+
+
+		<!-- 1楼右侧开始 -->
+
+		<div class="mainright">
+
+			<ul>
+
+				<li><img src="images/jdtheme/n48.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/n49.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/n50.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/n51.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/n52.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/n53.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/n54.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/n55.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/n56.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/n57.jpg" alt="" /></li>
+
+			</ul>
+
+			<div class="righttu">
+
+				<div class="rightlun">
+
+					<img src="images/jdtheme/n58.jpg" alt="" />
+
+					<img src="images/jdtheme/n59.jpg" alt="" />
+
+				</div>
+
+				<ul>
+
+					<li style="background:#7ABD54"></li>
+
+					<li></li>
+
+				</ul>			
+
+			</div>
+
+		</div>
+
+		<!-- 1楼右侧结束 -->
+
+	</div>
+
+</div>
+
+<!-- 1楼结束 -->
+
+
+
+<!-- 2楼开始 -->
+
+<div id="twofloor">
+
+<!-- 2楼顶部开始 -->
+
+	<div class="one_top">
+
+		<div class="louceng">
+
+			<h2>电脑数码</h2>
+
+			<div class="lou"><span>2F</span></div>
+
+		</div>
+
+		<ul>
+
+			<li><h3 style="color:#E4393C">特价商品</h3></li>
+
+			<li><h3>笔记本</h3></li>
+
+			<li><h3>数码影音</h3></li>
+
+			<li><h3>DIY攒机</h3></li>
+
+			<li><h3>外设办公</h3></li>
+
+			<div class="huakuai"></div>
+
+		</ul>
+
+		<div class="peisong">
+
+			<a href="">DIY装机大师<b></b></a>
+
+			<a href="">游戏社区<b></b></a>
+
+		</div>
+
+	</div>
+
+<!-- 2楼顶部结束 -->
+
+	<div class="onemain">
+
+	<!-- 2楼左边开始 -->
+
+		<div class="mainleft">
+
+			<ul>
+
+				<li><a href="">游戏本</a></li>
+
+				<li><a href="">数码相机</a></li>
+
+				<li><a href="">笔记本</a></li>
+
+				<li><a href="">单反相机</a></li>
+
+				<li><a href="">平板电脑</a></li>
+
+				<li><a href="">台式电脑</a></li>
+
+				<li><a href="">打印机</a></li>
+
+				<li><a href="">移动硬盘</a></li>
+
+				<li><a href="">移动电源</a></li>
+
+				<li><a href="">耳机/耳麦</a></li>
+
+				<li><a href="">路由器</a></li>
+
+				<li><a href="">办公文仪</a></li>
+
+				<li><a href="">显示器</a></li>
+
+				<li><a href="">鼠标</a></li>
+
+				<li><a href="">CPU</a></li>
+
+				<li><a href="">显卡</a></li>
+
+			</ul>
+
+			<div class="lefttu">
+
+				<img src="images/jdtheme/e14.jpg" alt="" />
+
+			</div>
+
+		</div>
+
+		<!-- 2楼左边结束 -->
+
+
+
+		<!-- 2楼中间开始 -->
+
+		<div class="maincenter">
+
+		<!-- 2楼特价商品开始 -->
+
+			<div class="cent1" style="display:block">
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f1.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12预热先来一把</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">Y神聚会</span>
+
+					</div>
+
+				</div>
+
+				<div class="cenlunbo">
+
+					<div class="luntu">
+
+						<img src="images/jdtheme/2l1.jpg" alt="" />
+
+						<img src="images/jdtheme/2l2.jpg" alt="" />
+
+						<img src="images/jdtheme/2l3.jpg" alt="" />
+
+						<img src="images/jdtheme/2l4.jpg" alt="" />
+
+					</div>
+
+					<ul>
+
+						<li style="background:#7ABD54"></li>
+
+						<li></li>
+
+						<li></li>
+
+						<li></li>
+
+					</ul>
+
+				</div>
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f2.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">360儿童卫士智能手表，新年好礼好给力！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">买即送188-100学生文具</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f3.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">拍立得专场，助力12.12</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">“惊喜不断”</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f4.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">投影机该换啦！师傅上门安装 一步到位</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">免费安装 旧机器抵200！</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f5.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">键鼠买1送1， 高品质移动电源 12.12元起</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">U盘1.2元秒杀</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f6.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">显示器高大上来袭！打爆12.12！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">每满1212立减111！</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f7.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">说好的幸福,说好的Helix.</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">Helix强势出击,全力预</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 2楼特价商品结束 -->
+
+
+
+			<!-- 2楼笔记本开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f8.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">ThinkPad I5超强配置,精英之选棒棒哒！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">3849</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f9.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">惠普（HP） HP 14-d004AX 14英寸笔记本电脑 （A</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">2299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f10.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【限时购！】超能游戏本配置！全能冠军！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">5999</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f11.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">华硕FX飞行堡垒，浴血出征！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">6499</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f12.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">支持通话功能！戴尔全高清屏幕特价抢！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1399</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f13.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">惠普i5良心产品！750G的硬盘白菜价！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">3199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f14.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">860跑车本历史低价震撼促！雷神周年庆主推</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">6499</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f15.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">华为10.1寸超爽大屏娱乐，不容错过</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1499</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f16.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">联想每满1000减100元，震撼来袭！！！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">2699</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f17.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">赛扬办公神器，有底线无低价！火热促销中</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">2299</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 2楼笔记本结束 -->
+
+
+
+			<!-- 2楼数码影音开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f18.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【性价比双头套！助力12.12】佳能 700D单反双头</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">5799</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f19.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">五重好礼，换券立减-索尼α7K（28-70mm）全画幅</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">9199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f20.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【又是自拍，也是卡片】卡西欧（CASIO） ZR150</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1999</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f21.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【京东专属助力12.12】富士 X-A1 微型单电套机 </a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">2699</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f22.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">记录是为了被打破而存在 Beats PB2 蓝牙无线带麦</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1598</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f23.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">惠威 经典MKII！每满199减30！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">888</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f24.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">送礼佳品 Misfit shine智能手环</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">698</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f25.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">闪迪（SanDisk） CF卡 至尊高速存储卡 8G-50M</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">169</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f26.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">送精美耳机！索尼（SONY） ICD-PX240 数码录音</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">399</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f27.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">读书郎G11，支持WIFI上网的智能学生平板电脑</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1298</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 2楼数码影音结束 -->
+
+
+
+			<!-- 2楼DIY攒机开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f28.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">托兔I5 4590/B85/GTX660 3G/DIY组装机</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">3299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f29.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">武极 i3 4150/GTX750Ti2G/DIY组装机</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">2599</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f30.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【每满1212立减111】LG 27英寸LED背光IPS显示</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1409</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f31.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【无影驰，不游戏】影驰 战将M 128GB mSATA SS</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">419</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f32.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">超高素质GTX970！技嘉G1 970！绝赞！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">2899</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f33.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">下单立减100！如此窄边戴尔超大屏你见过吗！！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1599</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f34.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【12.12】爱国者（aigo）黑暗骑士G4黄金版电源</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f35.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【返现100，截止12.12】微星B85M Night Elf</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f36.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">威刚(ADATA) 红色威龙 DDR3 2133 CL10 8G 台式</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">499</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f37.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【每满120-12】振华战蝶450电源</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 2楼DIY攒机结束 -->
+
+			<!-- 2楼外设办公开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f38.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">极路由（HiWiFi）超强信号套装（极路由1S+极卫</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">178</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f39.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">彩色喷墨无线一体机，2年超长保修</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f40.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">跪求使用比价软件比价！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">699</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f41.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">映美（Jolimark） FP-530KIII 针式打印机 白色（8</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f42.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">惠朗全自动装订机 好评返100礼品卡 年底福利到！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">2150</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f43.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">金士顿Hello Kitty超萌16G可变装U盘！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f44.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">超值套装！罗技MK365 无线键鼠套装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">229</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f45.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">下单返现100元！安普 原装超五类网线 白箱 305米</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f46.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">东芝新小黑2TB，超值限量抢购中，先到先得</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">699</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/2f47.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【时尚之选】亿觅10000mAh聚合物充电宝</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">118</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 2楼外设办公结束 -->
+
+		</div>
+
+		<!-- 2楼中间结束 -->
+
+
+
+		<!-- 2楼右侧开始 -->
+
+		<div class="mainright">
+
+			<ul>
+
+				<li><img src="images/jdtheme/2f48.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/2f49.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/2f50.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/2f51.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/2f52.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/2f53.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/2f54.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/2f55.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/2f56.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/2f57.gif" alt="" /></li>
+
+			</ul>
+
+			<div class="righttu">
+
+				<div class="rightlun">
+
+					<img src="images/jdtheme/2f58.jpg" alt="" />
+
+					<img src="images/jdtheme/2f59.jpg" alt="" />
+
+				</div>
+
+				<ul>
+
+					<li style="background:#7ABD54"></li>
+
+					<li></li>
+
+				</ul>			
+
+			</div>
+
+		</div>
+
+		<!-- 2楼右侧结束 -->
+
+	</div>
+
+</div>
+
+<!-- 2楼结束 -->
+
+
+
+<!-- 3楼开始 -->
+
+<div id="threefloor">
+
+<!-- 1楼顶部开始 -->
+
+	<div class="one_top">
+
+		<div class="louceng">
+
+			<h2>服饰鞋包</h2>
+
+			<div class="lou"><span>3F</span></div>
+
+		</div>
+
+		<ul>
+
+			<li><h3 style="color:#E4393C">特价商品</h3></li>
+
+			<li><h3>品牌男装</h3></li>
+
+			<li><h3>品牌女装</h3></li>
+
+			<li><h3>鞋靴箱包</h3></li>
+
+			<li><h3>运动户外</h3></li>
+
+			<div class="huakuai"></div>
+
+		</ul>
+
+		<div class="haiwaigou"></div>
+
+	</div>
+
+<!-- 1楼顶部结束 -->
+
+	<div class="onemain">
+
+	<!-- 1楼左边开始 -->
+
+		<div class="mainleft">
+
+			<ul class="xiebao">
+
+				<li><a href="">男装</a></li>
+
+				<li><a href="">女装</a></li>
+
+				<li><a href="">服装配饰</a></li>
+
+				<li><a href="">内衣</a></li>
+
+				<li><a href="">女鞋</a></li>
+
+				<li><a href="">男鞋</a></li>
+
+				<li><a href="">设计师</a></li>
+
+				<li><a href="">功能箱包</a></li>
+
+				<li><a href="">潮流女包</a></li>
+
+				<li><a href="">时尚男包</a></li>
+
+				<li><a href="">户外鞋服</a></li>
+
+				<li><a href="">户外装备</a></li>
+
+				<li><a href="">运动器械</a></li>
+
+				<li><a href="">新版运动馆</a></li>
+
+			</ul>
+
+			<div class="f_left">
+
+				<img src="images/jdtheme/3fleft.jpg" alt="" />
+
+			</div>
+
+		</div>
+
+		<!-- 1楼左边结束 -->
+
+
+
+		<!-- 1楼中间开始 -->
+
+		<div class="maincenter">
+
+		<!-- 3楼特价商品开始 -->
+
+			<div class="cent1" style="display:block">
+
+				<div class="f3tu1">
+
+					<div class="f3tu1_1">
+
+						<strong>1212羽绒季</strong>
+
+						<span class="huazi">厚且瘦身</span>
+
+						<img src="images/jdtheme/3f1.jpg" alt="" />
+
+					</div>
+
+					<div class="f3tu1_2">
+
+						<strong>1212羽绒节</strong>
+
+						<span class="huazi">寒战来袭</span>
+
+						<img src="images/jdtheme/3f2.jpg" alt="" />
+
+					</div>
+
+				</div>
+
+				<div class="f3tu2">
+
+					<strong>贝爷代言</strong>
+
+					<span class="huazi">高端户外品牌</span>
+
+					<img src="images/jdtheme/3f3.jpg" alt="" />
+
+				</div>
+
+				<div class="f3tu3">
+
+					<div class="f3tu1_3">
+
+						<strong>1212羽毛球</strong>
+
+						<span class="huazi">爆品直降</span>
+
+						<img src="images/jdtheme/3f4.jpg" alt="" />
+
+					</div>
+
+					<div class="f3tu1_4">
+
+						<strong>1212大放送</strong>
+
+						<span class="huazi">男包买赠</span>
+
+						<img src="images/jdtheme/3f5.jpg" alt="" />
+
+					</div>
+
+				</div>
+
+				<div class="f3tu4">
+
+					<strong>1212跑步机</strong>
+
+					<span class="huazi">每满千减百</span>
+
+					<img src="images/jdtheme/3f6.jpg" alt="" />
+
+				</div>
+
+				<div class="f3tu5">
+
+					<div class="f3tu1_5">
+
+						<strong>1212奢侈品</strong>
+
+						<span class="huazi">缤纷满减</span>
+
+						<img src="images/jdtheme/3f7.jpg" alt="" />
+
+					</div>
+
+					<div class="f3tu1_6">
+
+						<strong>1212自营箱</strong>
+
+						<span class="huazi">2件低至5折</span>
+
+						<img src="images/jdtheme/3f88.jpg" alt="" />
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 3楼特价商品结束 -->
+
+
+
+			<!-- 3楼品牌男装开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f8.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 Dickies 男式修身工装长裤</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">269</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f9.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 战地吉普 男装外套 连帽棉衣</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">288</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f10.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 北极绒 男士绒羽绒服</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">498</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f11.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 劲霸男装 白鸭绒羽绒服外套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f12.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 海澜之家男装 羊毛呢大衣外套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">428</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f13.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 千纸鹤男装 水晶绒休闲裤长裤子</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">138</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f14.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 秋鹿男女睡衣 家居服睡衣两件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">129</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f15.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 花笙记男汉服式针织开衫交领</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f16.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 波司登 男款大众气质毛领款</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">519</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f17.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 七匹狼男装 男士商务直筒长裤</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">279</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 3楼品牌男装结束 -->
+
+
+
+			<!-- 3楼品牌女装开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f18.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 三枪女士秋冬保暖内衣套装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">125</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f19.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 波司登保暖内衣 护肩护膝</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f20.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 哥弟女装 圆领蓝绿拼色毛衣针织衫</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">520</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f21.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 咔琦娜 女装超大貉子毛领</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">799</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f22.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 tune tune 七分袖毛呢外套大衣</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">419</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f23.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 雪莲羊绒 樽高领女款</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">389</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f24.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 名人瑞裳 女装立领奢华毛呢大衣</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">208</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f25.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 华歌尔 包容大胸 蕾丝全罩杯文胸</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">360</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f26.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 Ochirly欧时力高腰半身短裙伞裙</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">285</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f27.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 思诺芙德毛衣 雪莲时尚纯山羊绒衫</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 3楼品牌女装结束 -->
+
+
+
+			<!-- 3楼鞋靴箱包开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f28.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 法国大使 红色 商务拉杆箱</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">749</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f29.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 奥康 高邦保暖商务棉鞋 男</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">239</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f30.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 红蜻蜓 头层牛皮休闲 男棉鞋</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">189</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f31.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 KISSCAT接吻猫舒适短靴</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">529</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f32.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 上海故事真丝丝巾女士高档礼品披肩</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">268</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f33.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 美国森泰斯 防雨套双肩电脑男背包</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">198</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f34.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 BUYBARLY 男士真皮 针扣裤腰带</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f35.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">BURBERRY 巴宝莉 中性款HERITAGE系列驼色格</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">3380</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f36.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12货到付款 七公主女包单肩斜挎包</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">158</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f37.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 花花公子 拉杆箱万向轮旅行箱</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">229</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 3楼鞋靴箱包结束 -->
+
+			<!-- 3楼运动户外开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f38.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 红双喜直拍双面反胶乒乓球拍</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f39.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 诚悦运动器材可拆装组合电镀哑铃</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">198</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f40.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 金史密斯 静音可折叠电动跑步机</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">3980</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f41.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 川崎 全碳素突击型超速羽毛球拍</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">178</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f42.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 乔丹男鞋 缓冲运动鞋男士新款</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">139</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f43.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 PUMA 彪马 经典生活系列 休闲鞋</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">489</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f44.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 康尔 折叠床 午休床 折叠椅</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">319</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f45.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 探路者 情侣户外套绒冲锋衣</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f46.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 鸿星尔克女鞋 运动鞋女跑步鞋</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/3f47.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 阿迪达斯男子团队基础系列篮球鞋</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">328</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 3楼运动户外结束 -->
+
+		</div>
+
+		<!-- 3楼中间结束 -->
+
+
+
+		<!-- 3楼右侧开始 -->
+
+		<div class="mainright">
+
+			<ul>
+
+				<li><img src="images/jdtheme/3f48.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/3f49.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/3f50.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/3f51.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/3f52.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/3f53.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/3f54.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/3f55.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/3f56.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/3f57.jpg" alt="" /></li>
+
+			</ul>
+
+			<div class="righttu">
+
+				<div class="rightlun">
+
+					<img src="images/jdtheme/3f58.jpg" alt="" />
+
+					<img src="images/jdtheme/3f59.png" alt="" />
+
+				</div>
+
+				<ul>
+
+					<li style="background:#7ABD54"></li>
+
+					<li></li>
+
+				</ul>			
+
+			</div>
+
+		</div>
+
+		<!-- 1楼右侧结束 -->
+
+	</div>
+
+</div>
+
+<!-- 3楼结束 -->
+
+
+
+<!-- 4楼开始 -->
+
+<div id="fourfloor">
+
+<!-- 4楼顶部开始 -->
+
+	<div class="one_top">
+
+		<div class="louceng">
+
+			<h2>美容珠宝</h2>
+
+			<div class="lou"><span>4F</span></div>
+
+		</div>
+
+		<ul>
+
+			<li><h3 style="color:#E4393C">特价商品</h3></li>
+
+			<li><h3>美容化妆</h3></li>
+
+			<li><h3>个人护理</h3></li>
+
+			<li><h3>黄金珠宝</h3></li>
+
+			<li><h3>钟表首饰</h3></li>
+
+			<div class="huakuai"></div>
+
+		</ul>
+
+		<div class="lifeguan"></div>
+
+	</div>
+
+<!-- 4楼顶部结束 -->
+
+	<div class="onemain">
+
+	<!-- 4楼左边开始 -->
+
+		<div class="mainleft">
+
+			<ul>
+
+				<li><a href="">面部护肤</a></li>
+
+				<li><a href="">瑞士名表</a></li>
+
+				<li><a href="">彩妆香水</a></li>
+
+				<li><a href="">国产名表</a></li>
+
+				<li><a href="">洗发护发</a></li>
+
+				<li><a href="">时尚腕表</a></li>
+
+				<li><a href="">身体护肤</a></li>
+
+				<li><a href="">钻石</a></li>
+
+				<li><a href="">口腔护理</a></li>
+
+				<li><a href="">翡翠珍珠</a></li>
+
+				<li><a href="">女性护理</a></li>
+
+				<li><a href="">时尚饰品</a></li>
+
+				<li><a href="">美容养颜</a></li>
+
+				<li><a href="">火机烟具</a></li>
+
+				<li><a href="">礼品</a></li>
+
+				<li><a href="">奢侈品</a></li>
+
+			</ul>
+
+			<div class="lefttu">
+
+				<img src="images/jdtheme/e15.jpg" alt="" />
+
+			</div>
+
+		</div>
+
+		<!-- 4楼左边结束 -->
+
+
+
+		<!-- 4楼中间开始 -->
+
+		<div class="maincenter">
+
+		<!-- 4楼特价商品开始 -->
+
+			<div class="cent1" style="display:block">
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f1.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【有钱！任性！】就是要你好看！美妆满199减80</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">满299减120</span>
+
+					</div>
+
+				</div>
+
+				<div class="cenlunbo">
+
+					<div class="luntu">
+
+						<img src="images/jdtheme/4l1.jpg" alt="" />
+
+						<img src="images/jdtheme/4l2.jpg" alt="" />
+
+						<img src="images/jdtheme/4l3.jpg" alt="" />
+
+						<img src="images/jdtheme/4l4.jpg" alt="" />
+
+					</div>
+
+					<ul>
+
+						<li style="background:#7ABD54"></li>
+
+						<li></li>
+
+						<li></li>
+
+						<li></li>
+
+					</ul>
+
+				</div>
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f2.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 明觉 印度小叶紫檀佛珠手串</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f3.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【1212进口美妆年终盛典】部分大牌满399赠399</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">美妆大牌满499减100</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f4.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">万表钜惠，双12提前“开战”</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">爆款钜惠，大牌火拼</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f5.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">腕表12.12，秒杀快抢！</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">打白条，享免息！</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f6.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 源生珠宝 日本海水珍珠项链</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">698</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f7.png" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 菜百首饰黄金项链儿童长命锁平安锁</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">990</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 4楼特价商品结束 -->
+
+
+
+			<!-- 4楼美容化妆开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f8.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">贝德玛卸妆水舒妍洁肤液 500ml蓝水-混合型油性肤</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">123</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f9.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">KOSE高丝药用雪肌精水乳套装（化妆水200ml+</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">399</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f10.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">Dior/迪奥 唇膏 口红/唇彩/变色润唇膏 粉漾诱瘾润唇</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">179</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f11.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">花印官方旗舰店 花印滋养美白大面膜套装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f12.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">无添加 FANCL 柔滑保湿洁面粉50g -滋润型 2013</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">145</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f13.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">手机下单179，优惠中！！！韩后（Hanhoo） 雪</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">296</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f14.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">养生堂 朵而(duoer) 天然VC美白补水洁面爽肤护肤</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">119</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f15.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【历史新低】Olay玉兰油 新生塑颜金大红瓶双生装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f16.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">2014新品希芸鲨烷精纯美容油 面部修护精华油保湿</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f17.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">爽健Dr.Scholl 爽健丝柔电动修足机 电动修脚器 修</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">349</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 4楼美容化妆结束 -->
+
+
+
+			<!-- 4楼个人护理开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f18.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">潘婷 pantene 丝质顺滑洗护促销装（洗发水750ml+</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">113</b>.80</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f19.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">吉列剃须刀锋速3一年装（1刀架+8刀头）</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">102</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f20.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【特价】水之密语 凝润水护 洗发 护发 2件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">98</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f21.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">金稻KD-2331纳米离子蒸脸器美容仪蒸脸机家用美</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">269</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f22.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">欧莱雅透明质酸水润3件套（发根控油 发丝水润）</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">92</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f23.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">施华蔻多效修护19套装（洗+护+精华）经典套装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">128</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f24.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">佳洁士闪耀炫白牙贴7件装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">139</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f25.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">EiSANSUN COCO洗发水水润蛋白滋养双效香芬洗</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">96</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f26.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">欧舒丹（L'OCCITANE）甜蜜樱花味系列 身体补水</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">189</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f27.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">薇薇秘密 生姜泡脚药足部按摩精油14件套 驱寒去湿 </a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">139</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 4楼个人护理结束 -->
+
+
+
+			<!-- 4楼黄金珠宝开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f28.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 绳奇 999千足黄金貔貅黑玛瑙手链</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">536</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f29.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 孙小圣智能定时提醒喝水创意水杯子</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">168</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f30.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 上海集藏 2015年羊年生肖彩色银条</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">129</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f31.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 Mbox耳钉 施华洛世奇锆石耳钉</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">139</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f32.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 MAOMAO 莲花镯 纯银饰品手镯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">278</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f33.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 黛米 特价超大珍珠项链 浓情</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">178</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f34.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 双儿珠宝 天然和田玉招财蟾蜍手玩把件</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">799</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f35.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 晴爱 黄金项链 女 黄金吊坠</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">439</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f36.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 塔斯马尼亚薰衣草小熊</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f37.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 老福记 双面弥勒佛黄金吊坠</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1669</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 4楼黄金珠宝结束 -->
+
+
+
+			<!-- 4楼钟表首饰开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f38.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【京东自营】天梭(TISSOT)手表 力洛克系列机械情</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">3205</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f39.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">卡西欧(CASIO)黑白配 情侣手表 EF-544钢带对表</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1258</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f40.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 美立方时尚饰品 开运水晶项链</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">138</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f41.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 唯一S999纯银手镯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">229</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f42.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 COISE 龙凤福银手镯女款</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">178</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f43.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">【京东自营】真力时（ZENITH） 传承系列机械男</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">31999</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f44.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">汉密尔顿(Hamilton)手表卡其系列海军先锋自动机</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">5699</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f45.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">Swarovski 施华洛世奇 2014年新款金色天鹅水晶项</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">559</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f46.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 盘道 星月菩提子手串 佛珠手链</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">198</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/4f47.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 澜润珍珠 淡水珍珠手链双排多层</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">218</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 4楼钟表首饰结束 -->
+
+		</div>
+
+		<!-- 4楼中间结束 -->
+
+
+
+		<!-- 4楼右侧开始 -->
+
+		<div class="mainright">
+
+			<ul>
+
+				<li><img src="images/jdtheme/4f48.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/4f49.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/4f50.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/4f51.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/4f52.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/4f53.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/4f54.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/4f55.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/4f56.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/4f57.jpg" alt="" /></li>
+
+			</ul>
+
+			<div class="righttu">
+
+				<div class="rightlun">
+
+					<img src="images/jdtheme/4f58.jpg" alt="" />
+
+					<img src="images/jdtheme/4f59.jpg" alt="" />
+
+				</div>
+
+				<ul>
+
+					<li style="background:#7ABD54"></li>
+
+					<li></li>
+
+				</ul>			
+
+			</div>
+
+		</div>
+
+		<!-- 4楼右侧结束 -->
+
+	</div>
+
+</div>
+
+<!-- 4楼结束 -->
+
+
+
+<!-- 5楼开始 -->
+
+<div id="fivefloor">
+
+<!-- 5楼顶部开始 -->
+
+	<div class="one_top">
+
+		<div class="louceng">
+
+			<h2>居家生活</h2>
+
+			<div class="lou"><span>5F</span></div>
+
+		</div>
+
+		<ul>
+
+			<li><h3 style="color:#E4393C">特价商品</h3></li>
+
+			<li><h3>家居家纺</h3></li>
+
+			<li><h3>厨具餐具</h3></li>
+
+			<li><h3>家具家装</h3></li>
+
+			<li><h3>自营家具</h3></li>
+
+			<div class="huakuai"></div>
+
+		</ul>
+
+		<div class="jiacity"></div>
+
+	</div>
+
+<!-- 5楼顶部结束 -->
+
+	<div class="onemain">
+
+	<!-- 5楼左边开始 -->
+
+		<div class="mainleft">
+
+			<ul>
+
+				<li><a href="">家具</a></li>
+
+				<li><a href="">灯具照明</a></li>
+
+				<li><a href="">家用清洁</a></li>
+
+				<li><a href="">宠物生活</a></li>
+
+				<li><a href="">水具/酒具</a></li>
+
+				<li><a href="">烹饪锅具</a></li>
+
+				<li><a href="">厨房配件</a></li>
+
+				<li><a href="">餐具</a></li>
+
+				<li><a href="">床品套件</a></li>
+
+				<li><a href="">枕芯</a></li>
+
+				<li><a href="">被子</a></li>
+
+				<li><a href="">电热毯</a></li>
+
+				<li><a href="">家装建材</a></li>
+
+				<li><a href="">家装软饰</a></li>
+
+				<li><a href="">洗衣液</a></li>
+
+				<li><a href="">生活用纸</a></li>
+
+			</ul>
+
+			<div class="lefttu">
+
+				<img src="images/jdtheme/e16.jpg" alt="" />
+
+			</div>
+
+		</div>
+
+		<!-- 5楼左边结束 -->
+
+
+
+		<!-- 5楼中间开始 -->
+
+		<div class="maincenter">
+
+		<!-- 5楼特价商品开始 -->
+
+			<div class="cent1" style="display:block">
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f1.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 年终大抢购</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">满200减40 满400减</span>
+
+					</div>
+
+				</div>
+
+				<div class="cenlunbo">
+
+					<div class="luntu">
+
+						<img src="images/jdtheme/5l1.jpg" alt="" />
+
+						<img src="images/jdtheme/5l2.jpg" alt="" />
+
+						<img src="images/jdtheme/5l3.jpg" alt="" />
+
+						<img src="images/jdtheme/5l4.jpg" alt="" />
+
+					</div>
+
+					<ul>
+
+						<li style="background:#7ABD54"></li>
+
+						<li></li>
+
+						<li></li>
+
+						<li></li>
+
+					</ul>
+
+				</div>
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f2.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 预热 家居家纺</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">满400减150</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f3.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 狂欢不止 再来1次</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">爆款低至6元</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f4.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 购家具</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">超值精品超低价</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f5.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 西昊M37家用电脑椅 独创2D舒适坐垫</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">398</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f6.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 慢回弹记忆枕第2件半价送枕套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f7.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 热卖领先 半青皮沙发 上楼安装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">5399</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼特价商品结束 -->
+
+
+
+			<!-- 5楼家居专访开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f8.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 merrylife 法兰绒四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">228</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f9.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 钱皇纯桑蚕丝被性比高长丝比宫茧</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">810</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f10.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 品诚家纺全棉斜纹四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f11.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 熙洛 全棉斜纹印花四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">109</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f12.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 买赠 可水洗超大地毯 可货到付款</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">248</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f13.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 3M思高T1手压式自动旋转甩干拖把</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">189</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f14.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 奥朵台灯 现代简约水晶床头灯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">148</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f15.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 洁云 柔韧270节卷筒卫生纸</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f16.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 滴露消毒液1.2L超值特惠两瓶装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">129</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f17.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 清风（APP）擦手纸 单层两折16包</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">192</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼家居家纺结束 -->
+
+
+
+			<!-- 5楼厨具餐具开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f18.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 膳魔师不锈钢真空保温杯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">197</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f19.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 双立人Chef系列厨房刀具10件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1888</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f20.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 大双龙平杯套组带茶盘</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">328</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f21.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 乾合祥 紫泥西施瓢 满就减</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">259</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f22.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 钻技炒锅韩国进口 无油烟无涂层</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f23.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 樱之歌52头 紫玉情缘餐具套装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f24.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 美亚炒锅睿智不粘4.3L玻璃盖单柄</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f25.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 言艺 宜兴紫砂功夫茶具套装配茶盘</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">158</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f26.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 ZingAnything 柠檬活力榨汁杯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">149</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f27.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 尚帝 39件套宜兴乌紫砂柏木茶盘整套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">449</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼厨具餐具结束 -->
+
+
+
+			<!-- 5楼家具家装开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f28.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 刀奴 换鞋凳 楠竹换鞋凳宜家新品</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f29.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 好事达台式电脑桌9330黑胡桃</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">139</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f30.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 乐佳康 简易衣柜 储物柜子</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f31.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 禾辰 伸缩旋转电视柜 厂家直销</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">749</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f32.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 西耶 烤漆钢化玻璃伸缩电视机柜组合</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">779</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f33.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 史丹利 LT-801-23 25件套多用工具套装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f34.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 航标 厨房水槽双槽套餐双槽</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f35.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 飞雕FDHS01D全铜淋浴花洒套装二出水</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f36.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 可洛 欧式简约客厅卧室吊灯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">668</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f37.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 西昊 人体工学电脑椅 赠防爆板</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">239</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼家具家装结束 -->
+
+
+
+			<!-- 5楼自营家居开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f38.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 至优 智能马桶坐便盖洁身器</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1212</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f39.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 双箭 雅思四层带门收纳柜木纹色</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f40.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 麦富迪宠物狗粮 藻趣儿幼犬粮牛肉味</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f41.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 SIMELO印象京都迎宾保温壶</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">169</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f42.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 爱仕达 电磁炉通用不粘四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f43.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 苏泊尔火红点系列可立盖无烟炒锅</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">459</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f44.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 维达擦手纸 商用三折20包整箱</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">250</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f45.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 睡眠博士蝶形慢回弹人体工学记忆枕</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">129</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f46.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 博洋家纺 高支全棉印花床单四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">269</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f47.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 蔻姿家纺 高支高密全棉磨毛四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼自营家居结束 -->
+
+		</div>
+
+		<!-- 5楼中间结束 -->
+
+
+
+		<!-- 5楼右侧开始 -->
+
+		<div class="mainright">
+
+			<ul>
+
+				<li><img src="images/jdtheme/5f48.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f49.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f50.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f51.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f52.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f53.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f54.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f55.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f56.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f57.gif" alt="" /></li>
+
+			</ul>
+
+			<div class="righttu">
+
+				<div class="rightlun">
+
+					<img src="images/jdtheme/5f58.jpg" alt="" />
+
+					<img src="images/jdtheme/5f59.jpg" alt="" />
+
+				</div>
+
+				<ul>
+
+					<li style="background:#7ABD54"></li>
+
+					<li></li>
+
+				</ul>			
+
+			</div>
+
+		</div>
+
+		<!-- 5楼右侧结束 -->
+
+	</div>
+
+</div>
+
+<!-- 5楼结束 -->
+
+
+
+<!-- 6楼开始 -->
+
+<div id="sixfloor">
+
+<!-- 6楼顶部开始 -->
+
+	<div class="one_top">
+
+		<div class="louceng">
+
+			<h2>母婴玩具</h2>
+
+			<div class="lou"><span>6F</span></div>
+
+		</div>
+
+		<ul>
+
+			<li><h3 style="color:#E4393C">特价商品</h3></li>
+
+			<li><h3>家居家纺</h3></li>
+
+			<li><h3>厨具餐具</h3></li>
+
+			<li><h3>家具家装</h3></li>
+
+			<li><h3>自营家具</h3></li>
+
+			<div class="huakuai"></div>
+
+		</ul>
+
+		<div class="jiacity"></div>
+
+	</div>
+
+<!-- 6楼顶部结束 -->
+
+	<div class="onemain">
+
+	<!-- 6楼左边开始 -->
+
+		<div class="mainleft">
+
+			<ul>
+
+				<li><a href="">家具</a></li>
+
+				<li><a href="">灯具照明</a></li>
+
+				<li><a href="">家用清洁</a></li>
+
+				<li><a href="">宠物生活</a></li>
+
+				<li><a href="">水具/酒具</a></li>
+
+				<li><a href="">烹饪锅具</a></li>
+
+				<li><a href="">厨房配件</a></li>
+
+				<li><a href="">餐具</a></li>
+
+				<li><a href="">床品套件</a></li>
+
+				<li><a href="">枕芯</a></li>
+
+				<li><a href="">被子</a></li>
+
+				<li><a href="">电热毯</a></li>
+
+				<li><a href="">家装建材</a></li>
+
+				<li><a href="">家装软饰</a></li>
+
+				<li><a href="">洗衣液</a></li>
+
+				<li><a href="">生活用纸</a></li>
+
+			</ul>
+
+			<div class="lefttu">
+
+				<img src="images/jdtheme/e16.jpg" alt="" />
+
+			</div>
+
+		</div>
+
+		<!-- 5楼左边结束 -->
+
+
+
+		<!-- 5楼中间开始 -->
+
+		<div class="maincenter">
+
+		<!-- 5楼特价商品开始 -->
+
+			<div class="cent1" style="display:block">
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f1.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 年终大抢购</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">满200减40 满400减</span>
+
+					</div>
+
+				</div>
+
+				<div class="cenlunbo">
+
+					<div class="luntu">
+
+						<img src="images/jdtheme/5l1.jpg" alt="" />
+
+						<img src="images/jdtheme/5l2.jpg" alt="" />
+
+						<img src="images/jdtheme/5l3.jpg" alt="" />
+
+						<img src="images/jdtheme/5l4.jpg" alt="" />
+
+					</div>
+
+					<ul>
+
+						<li style="background:#7ABD54"></li>
+
+						<li></li>
+
+						<li></li>
+
+						<li></li>
+
+					</ul>
+
+				</div>
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f2.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 预热 家居家纺</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">满400减150</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f3.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 狂欢不止 再来1次</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">爆款低至6元</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f4.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 购家具</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">超值精品超低价</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f5.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 西昊M37家用电脑椅 独创2D舒适坐垫</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">398</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f6.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 慢回弹记忆枕第2件半价送枕套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f7.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 热卖领先 半青皮沙发 上楼安装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">5399</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼特价商品结束 -->
+
+
+
+			<!-- 5楼家居专访开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f8.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 merrylife 法兰绒四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">228</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f9.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 钱皇纯桑蚕丝被性比高长丝比宫茧</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">810</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f10.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 品诚家纺全棉斜纹四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f11.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 熙洛 全棉斜纹印花四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">109</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f12.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 买赠 可水洗超大地毯 可货到付款</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">248</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f13.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 3M思高T1手压式自动旋转甩干拖把</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">189</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f14.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 奥朵台灯 现代简约水晶床头灯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">148</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f15.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 洁云 柔韧270节卷筒卫生纸</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f16.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 滴露消毒液1.2L超值特惠两瓶装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">129</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f17.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 清风（APP）擦手纸 单层两折16包</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">192</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼家居家纺结束 -->
+
+
+
+			<!-- 5楼厨具餐具开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f18.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 膳魔师不锈钢真空保温杯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">197</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f19.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 双立人Chef系列厨房刀具10件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1888</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f20.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 大双龙平杯套组带茶盘</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">328</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f21.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 乾合祥 紫泥西施瓢 满就减</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">259</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f22.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 钻技炒锅韩国进口 无油烟无涂层</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f23.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 樱之歌52头 紫玉情缘餐具套装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f24.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 美亚炒锅睿智不粘4.3L玻璃盖单柄</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f25.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 言艺 宜兴紫砂功夫茶具套装配茶盘</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">158</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f26.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 ZingAnything 柠檬活力榨汁杯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">149</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f27.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 尚帝 39件套宜兴乌紫砂柏木茶盘整套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">449</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼厨具餐具结束 -->
+
+
+
+			<!-- 5楼家具家装开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f28.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 刀奴 换鞋凳 楠竹换鞋凳宜家新品</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f29.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 好事达台式电脑桌9330黑胡桃</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">139</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f30.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 乐佳康 简易衣柜 储物柜子</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f31.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 禾辰 伸缩旋转电视柜 厂家直销</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">749</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f32.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 西耶 烤漆钢化玻璃伸缩电视机柜组合</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">779</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f33.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 史丹利 LT-801-23 25件套多用工具套装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f34.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 航标 厨房水槽双槽套餐双槽</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f35.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 飞雕FDHS01D全铜淋浴花洒套装二出水</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f36.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 可洛 欧式简约客厅卧室吊灯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">668</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f37.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 西昊 人体工学电脑椅 赠防爆板</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">239</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼家具家装结束 -->
+
+
+
+			<!-- 5楼自营家居开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f38.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 至优 智能马桶坐便盖洁身器</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1212</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f39.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 双箭 雅思四层带门收纳柜木纹色</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f40.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 麦富迪宠物狗粮 藻趣儿幼犬粮牛肉味</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f41.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 SIMELO印象京都迎宾保温壶</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">169</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f42.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 爱仕达 电磁炉通用不粘四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f43.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 苏泊尔火红点系列可立盖无烟炒锅</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">459</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f44.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 维达擦手纸 商用三折20包整箱</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">250</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f45.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 睡眠博士蝶形慢回弹人体工学记忆枕</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">129</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f46.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 博洋家纺 高支全棉印花床单四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">269</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f47.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 蔻姿家纺 高支高密全棉磨毛四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼自营家居结束 -->
+
+		</div>
+
+		<!-- 5楼中间结束 -->
+
+
+
+		<!-- 5楼右侧开始 -->
+
+		<div class="mainright">
+
+			<ul>
+
+				<li><img src="images/jdtheme/5f48.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f49.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f50.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f51.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f52.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f53.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f54.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f55.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f56.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f57.gif" alt="" /></li>
+
+			</ul>
+
+			<div class="righttu">
+
+				<div class="rightlun">
+
+					<img src="images/jdtheme/5f58.jpg" alt="" />
+
+					<img src="images/jdtheme/5f59.jpg" alt="" />
+
+				</div>
+
+				<ul>
+
+					<li style="background:#7ABD54"></li>
+
+					<li></li>
+
+				</ul>			
+
+			</div>
+
+		</div>
+
+		<!-- 5楼右侧结束 -->
+
+	</div>
+
+</div>
+
+<!-- 6楼结束 -->
+
+
+
+<!-- 7楼开始 -->
+
+<div id="sevenfloor">
+
+<!-- 7楼顶部开始 -->
+
+	<div class="one_top">
+
+		<div class="louceng">
+
+			<h2>食品保健</h2>
+
+			<div class="lou"><span>7F</span></div>
+
+		</div>
+
+		<ul>
+
+			<li><h3 style="color:#E4393C">特价商品</h3></li>
+
+			<li><h3>家居家纺</h3></li>
+
+			<li><h3>厨具餐具</h3></li>
+
+			<li><h3>家具家装</h3></li>
+
+			<li><h3>自营家具</h3></li>
+
+			<div class="huakuai"></div>
+
+		</ul>
+
+		<div class="jiacity"></div>
+
+	</div>
+
+<!-- 7楼顶部结束 -->
+
+	<div class="onemain">
+
+	<!-- 6楼左边开始 -->
+
+		<div class="mainleft">
+
+			<ul>
+
+				<li><a href="">家具</a></li>
+
+				<li><a href="">灯具照明</a></li>
+
+				<li><a href="">家用清洁</a></li>
+
+				<li><a href="">宠物生活</a></li>
+
+				<li><a href="">水具/酒具</a></li>
+
+				<li><a href="">烹饪锅具</a></li>
+
+				<li><a href="">厨房配件</a></li>
+
+				<li><a href="">餐具</a></li>
+
+				<li><a href="">床品套件</a></li>
+
+				<li><a href="">枕芯</a></li>
+
+				<li><a href="">被子</a></li>
+
+				<li><a href="">电热毯</a></li>
+
+				<li><a href="">家装建材</a></li>
+
+				<li><a href="">家装软饰</a></li>
+
+				<li><a href="">洗衣液</a></li>
+
+				<li><a href="">生活用纸</a></li>
+
+			</ul>
+
+			<div class="lefttu">
+
+				<img src="images/jdtheme/e16.jpg" alt="" />
+
+			</div>
+
+		</div>
+
+		<!-- 5楼左边结束 -->
+
+
+
+		<!-- 5楼中间开始 -->
+
+		<div class="maincenter">
+
+		<!-- 5楼特价商品开始 -->
+
+			<div class="cent1" style="display:block">
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f1.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 年终大抢购</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">满200减40 满400减</span>
+
+					</div>
+
+				</div>
+
+				<div class="cenlunbo">
+
+					<div class="luntu">
+
+						<img src="images/jdtheme/5l1.jpg" alt="" />
+
+						<img src="images/jdtheme/5l2.jpg" alt="" />
+
+						<img src="images/jdtheme/5l3.jpg" alt="" />
+
+						<img src="images/jdtheme/5l4.jpg" alt="" />
+
+					</div>
+
+					<ul>
+
+						<li style="background:#7ABD54"></li>
+
+						<li></li>
+
+						<li></li>
+
+						<li></li>
+
+					</ul>
+
+				</div>
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f2.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 预热 家居家纺</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">满400减150</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f3.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 狂欢不止 再来1次</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">爆款低至6元</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f4.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 购家具</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">超值精品超低价</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f5.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 西昊M37家用电脑椅 独创2D舒适坐垫</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">398</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f6.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 慢回弹记忆枕第2件半价送枕套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f7.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 热卖领先 半青皮沙发 上楼安装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">5399</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼特价商品结束 -->
+
+
+
+			<!-- 5楼家居专访开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f8.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 merrylife 法兰绒四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">228</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f9.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 钱皇纯桑蚕丝被性比高长丝比宫茧</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">810</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f10.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 品诚家纺全棉斜纹四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f11.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 熙洛 全棉斜纹印花四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">109</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f12.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 买赠 可水洗超大地毯 可货到付款</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">248</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f13.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 3M思高T1手压式自动旋转甩干拖把</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">189</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f14.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 奥朵台灯 现代简约水晶床头灯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">148</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f15.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 洁云 柔韧270节卷筒卫生纸</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f16.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 滴露消毒液1.2L超值特惠两瓶装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">129</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f17.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 清风（APP）擦手纸 单层两折16包</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">192</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼家居家纺结束 -->
+
+
+
+			<!-- 5楼厨具餐具开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f18.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 膳魔师不锈钢真空保温杯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">197</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f19.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 双立人Chef系列厨房刀具10件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1888</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f20.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 大双龙平杯套组带茶盘</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">328</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f21.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 乾合祥 紫泥西施瓢 满就减</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">259</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f22.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 钻技炒锅韩国进口 无油烟无涂层</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f23.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 樱之歌52头 紫玉情缘餐具套装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f24.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 美亚炒锅睿智不粘4.3L玻璃盖单柄</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f25.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 言艺 宜兴紫砂功夫茶具套装配茶盘</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">158</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f26.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 ZingAnything 柠檬活力榨汁杯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">149</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f27.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 尚帝 39件套宜兴乌紫砂柏木茶盘整套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">449</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼厨具餐具结束 -->
+
+
+
+			<!-- 5楼家具家装开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f28.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 刀奴 换鞋凳 楠竹换鞋凳宜家新品</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f29.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 好事达台式电脑桌9330黑胡桃</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">139</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f30.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 乐佳康 简易衣柜 储物柜子</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f31.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 禾辰 伸缩旋转电视柜 厂家直销</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">749</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f32.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 西耶 烤漆钢化玻璃伸缩电视机柜组合</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">779</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f33.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 史丹利 LT-801-23 25件套多用工具套装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f34.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 航标 厨房水槽双槽套餐双槽</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f35.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 飞雕FDHS01D全铜淋浴花洒套装二出水</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f36.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 可洛 欧式简约客厅卧室吊灯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">668</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f37.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 西昊 人体工学电脑椅 赠防爆板</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">239</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼家具家装结束 -->
+
+
+
+			<!-- 5楼自营家居开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f38.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 至优 智能马桶坐便盖洁身器</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1212</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f39.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 双箭 雅思四层带门收纳柜木纹色</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f40.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 麦富迪宠物狗粮 藻趣儿幼犬粮牛肉味</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f41.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 SIMELO印象京都迎宾保温壶</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">169</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f42.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 爱仕达 电磁炉通用不粘四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f43.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 苏泊尔火红点系列可立盖无烟炒锅</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">459</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f44.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 维达擦手纸 商用三折20包整箱</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">250</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f45.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 睡眠博士蝶形慢回弹人体工学记忆枕</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">129</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f46.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 博洋家纺 高支全棉印花床单四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">269</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f47.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 蔻姿家纺 高支高密全棉磨毛四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼自营家居结束 -->
+
+		</div>
+
+		<!-- 5楼中间结束 -->
+
+
+
+		<!-- 5楼右侧开始 -->
+
+		<div class="mainright">
+
+			<ul>
+
+				<li><img src="images/jdtheme/5f48.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f49.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f50.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f51.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f52.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f53.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f54.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f55.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f56.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f57.gif" alt="" /></li>
+
+			</ul>
+
+			<div class="righttu">
+
+				<div class="rightlun">
+
+					<img src="images/jdtheme/5f58.jpg" alt="" />
+
+					<img src="images/jdtheme/5f59.jpg" alt="" />
+
+				</div>
+
+				<ul>
+
+					<li style="background:#7ABD54"></li>
+
+					<li></li>
+
+				</ul>			
+
+			</div>
+
+		</div>
+
+		<!-- 5楼右侧结束 -->
+
+	</div>
+
+</div>
+
+<!-- 7楼结束 -->
+
+
+
+<!-- 8楼开始 -->
+
+<div id="eightfloor">
+
+<!-- 8楼顶部开始 -->
+
+	<div class="one_top">
+
+		<div class="louceng">
+
+			<h2>图书音像</h2>
+
+			<div class="lou"><span>8F</span></div>
+
+		</div>
+
+		<ul>
+
+			<li><h3 style="color:#E4393C">特价商品</h3></li>
+
+			<li><h3>家居家纺</h3></li>
+
+			<li><h3>厨具餐具</h3></li>
+
+			<li><h3>家具家装</h3></li>
+
+			<li><h3>自营家具</h3></li>
+
+			<div class="huakuai"></div>
+
+		</ul>
+
+		<div class="jiacity"></div>
+
+	</div>
+
+<!-- 8楼顶部结束 -->
+
+	<div class="onemain">
+
+	<!-- 8楼左边开始 -->
+
+		<div class="mainleft">
+
+			<ul>
+
+				<li><a href="">家具</a></li>
+
+				<li><a href="">灯具照明</a></li>
+
+				<li><a href="">家用清洁</a></li>
+
+				<li><a href="">宠物生活</a></li>
+
+				<li><a href="">水具/酒具</a></li>
+
+				<li><a href="">烹饪锅具</a></li>
+
+				<li><a href="">厨房配件</a></li>
+
+				<li><a href="">餐具</a></li>
+
+				<li><a href="">床品套件</a></li>
+
+				<li><a href="">枕芯</a></li>
+
+				<li><a href="">被子</a></li>
+
+				<li><a href="">电热毯</a></li>
+
+				<li><a href="">家装建材</a></li>
+
+				<li><a href="">家装软饰</a></li>
+
+				<li><a href="">洗衣液</a></li>
+
+				<li><a href="">生活用纸</a></li>
+
+			</ul>
+
+			<div class="lefttu">
+
+				<img src="images/jdtheme/e16.jpg" alt="" />
+
+			</div>
+
+		</div>
+
+		<!-- 5楼左边结束 -->
+
+
+
+		<!-- 5楼中间开始 -->
+
+		<div class="maincenter">
+
+		<!-- 5楼特价商品开始 -->
+
+			<div class="cent1" style="display:block">
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f1.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 年终大抢购</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">满200减40 满400减</span>
+
+					</div>
+
+				</div>
+
+				<div class="cenlunbo">
+
+					<div class="luntu">
+
+						<img src="images/jdtheme/5l1.jpg" alt="" />
+
+						<img src="images/jdtheme/5l2.jpg" alt="" />
+
+						<img src="images/jdtheme/5l3.jpg" alt="" />
+
+						<img src="images/jdtheme/5l4.jpg" alt="" />
+
+					</div>
+
+					<ul>
+
+						<li style="background:#7ABD54"></li>
+
+						<li></li>
+
+						<li></li>
+
+						<li></li>
+
+					</ul>
+
+				</div>
+
+				<div class="centu" style="border-bottom:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f2.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 预热 家居家纺</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">满400减150</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f3.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 狂欢不止 再来1次</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">爆款低至6元</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f4.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 购家具</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">超值精品超低价</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f5.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 西昊M37家用电脑椅 独创2D舒适坐垫</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">398</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu" style="border-right:1px solid #eee">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f6.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 慢回弹记忆枕第2件半价送枕套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f7.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 热卖领先 半青皮沙发 上楼安装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">5399</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼特价商品结束 -->
+
+
+
+			<!-- 5楼家居专访开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f8.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 merrylife 法兰绒四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">228</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f9.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 钱皇纯桑蚕丝被性比高长丝比宫茧</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">810</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f10.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 品诚家纺全棉斜纹四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f11.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 熙洛 全棉斜纹印花四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">109</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f12.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 买赠 可水洗超大地毯 可货到付款</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">248</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f13.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 3M思高T1手压式自动旋转甩干拖把</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">189</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f14.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 奥朵台灯 现代简约水晶床头灯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">148</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f15.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 洁云 柔韧270节卷筒卫生纸</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f16.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 滴露消毒液1.2L超值特惠两瓶装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">129</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f17.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 清风（APP）擦手纸 单层两折16包</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">192</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼家居家纺结束 -->
+
+
+
+			<!-- 5楼厨具餐具开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f18.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 膳魔师不锈钢真空保温杯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">197</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f19.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 双立人Chef系列厨房刀具10件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1888</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f20.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 大双龙平杯套组带茶盘</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">328</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f21.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 乾合祥 紫泥西施瓢 满就减</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">259</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f22.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 钻技炒锅韩国进口 无油烟无涂层</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f23.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 樱之歌52头 紫玉情缘餐具套装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f24.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 美亚炒锅睿智不粘4.3L玻璃盖单柄</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f25.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 言艺 宜兴紫砂功夫茶具套装配茶盘</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">158</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f26.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 ZingAnything 柠檬活力榨汁杯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">149</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f27.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 尚帝 39件套宜兴乌紫砂柏木茶盘整套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">449</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼厨具餐具结束 -->
+
+
+
+			<!-- 5楼家具家装开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f28.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 刀奴 换鞋凳 楠竹换鞋凳宜家新品</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f29.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 好事达台式电脑桌9330黑胡桃</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">139</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f30.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 乐佳康 简易衣柜 储物柜子</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">99</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f31.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 禾辰 伸缩旋转电视柜 厂家直销</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">749</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f32.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 西耶 烤漆钢化玻璃伸缩电视机柜组合</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">779</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f33.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 史丹利 LT-801-23 25件套多用工具套装</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">199</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f34.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 航标 厨房水槽双槽套餐双槽</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f35.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 飞雕FDHS01D全铜淋浴花洒套装二出水</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f36.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 可洛 欧式简约客厅卧室吊灯</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">668</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f37.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 西昊 人体工学电脑椅 赠防爆板</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">239</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼家具家装结束 -->
+
+
+
+			<!-- 5楼自营家居开始 -->
+
+			<div class="cent1">
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f38.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 至优 智能马桶坐便盖洁身器</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">1212</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f39.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 双箭 雅思四层带门收纳柜木纹色</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f40.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 麦富迪宠物狗粮 藻趣儿幼犬粮牛肉味</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">89</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f41.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 SIMELO印象京都迎宾保温壶</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">169</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f42.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 爱仕达 电磁炉通用不粘四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">299</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f43.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 苏泊尔火红点系列可立盖无烟炒锅</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">459</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f44.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 维达擦手纸 商用三折20包整箱</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">250</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f45.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 睡眠博士蝶形慢回弹人体工学记忆枕</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">129</b>.90</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f46.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 博洋家纺 高支全棉印花床单四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">269</b>.00</span>
+
+					</div>
+
+				</div>
+
+				<div class="centu">
+
+					<div class="tu">
+
+						<img src="images/jdtheme/5f47.jpg" alt="" />
+
+					</div>
+
+					<div class="p_name">
+
+						<a href="">12.12 蔻姿家纺 高支高密全棉磨毛四件套</a>
+
+					</div>
+
+					<div class="price">
+
+						<span style="color:#E4393C">￥<b style="font-size:16px">599</b>.00</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<!-- 5楼自营家居结束 -->
+
+		</div>
+
+		<!-- 5楼中间结束 -->
+
+
+
+		<!-- 5楼右侧开始 -->
+
+		<div class="mainright">
+
+			<ul>
+
+				<li><img src="images/jdtheme/5f48.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f49.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f50.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f51.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f52.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f53.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f54.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f55.jpg" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f56.gif" alt="" /></li>
+
+				<li><img src="images/jdtheme/5f57.gif" alt="" /></li>
+
+			</ul>
+
+			<div class="righttu">
+
+				<div class="rightlun">
+
+					<img src="images/jdtheme/5f58.jpg" alt="" />
+
+					<img src="images/jdtheme/5f59.jpg" alt="" />
+
+				</div>
+
+				<ul>
+
+					<li style="background:#7ABD54"></li>
+
+					<li></li>
+
+				</ul>			
+
+			</div>
+
+		</div>
+
+		<!-- 5楼右侧结束 -->
+
+	</div>
+
+</div>
+
+<!-- 8楼结束 -->
+
+
+
+<!-- hot热门区开始 -->
+
+<div id="hot">
+
+ <!-- 左边开始 -->
+
+	<div class="hotleft">
+
+	<!-- 热门晒单区域开始 -->
+
+		<div class="shaidan">
+
+			<div class="dan_top">
+
+				<h2>热门晒单</h2>
+
+			</div>
+
+			<div class="shaimain">
+
+				<ul>
+
+					<li>
+
+						<div class="dantu">
+
+							<img width="50px" height="50px" src="images/jdtheme/s1.jpg" alt="" />
+
+							<div class="shai"></div>
+
+						</div>
+
+						<div class="hotname"><a href="">[晒单帖]服务态度好</a></div>
+
+						<div class="hotlun">
+
+							<a href="">客服很好，买东西服务很重要，产品不错，服务满意</a>
+
+							<div class="dou"></div>
+
+						</div>
+
+					</li>
+
+					<li>
+
+					
+
+
+
+						<div class="dantu">
+
+							<img width="50px" height="50px" src="images/jdtheme/s2.jpg" alt="" />
+
+							<div class="shai"></div>
+
+						</div>
+
+						<div class="hotname"><a href="">[晒单帖]各种条码都能识别，速度超级快</a></div>
+
+						<div class="hotlun">
+
+							<a href="">看评价说扫描枪有问题，但是客服很好很耐心的介绍了功能、设置啊，感觉功能相当完备。拿到手里各种</a>
+
+							<div class="dou"></div>
+
+						</div>
+
+					</li>
+
+					<li>
+
+						<div class="dantu">
+
+							<img width="50px" height="50px" src="images/jdtheme/s3.jpg" alt="" />
+
+							<div class="shai"></div>
+
+						</div>
+
+						<div class="hotname"><a href="">[晒单帖]很棒的东西</a></div>
+
+						<div class="hotlun">
+
+							<a href="">给公司买的。感觉很不错。拆包以后就试了下。效果很清晰。</a>
+
+							<div class="dou"></div>
+
+						</div>
+
+					</li>
+
+					<li>
+
+						<div class="dantu">
+
+							<img width="50px" height="50px" src="images/jdtheme/s4.jpg" alt="" />
+
+							<div class="shai"></div>
+
+						</div>
+
+						<div class="hotname"><a href="">[晒单帖]女儿喜欢的漂亮书包！</a></div>
+
+						<div class="hotlun">
+
+							<a href="">质量很好，外观漂亮，女儿喜欢！</a>
+
+							<div class="dou"></div>
+
+						</div>
+
+					</li>
+
+					<li>
+
+						<div class="dantu">
+
+							<img width="50px" height="50px" src="images/jdtheme/s5.jpg" alt="" />
+
+							<div class="shai"></div>
+
+						</div>
+
+						<div class="hotname"><a href="">[晒单帖]容量大、做工好</a></div>
+
+						<div class="hotlun">
+
+							<a href="">京东配送还是很给力的，下单两天就收到货了 我买的艾迪宝6支装的羽毛球包，看外观没有色差，跟描述内</a>
+
+							<div class="dou"></div>
+
+						</div>
+
+					</li>
+
+					<li>
+
+						<div class="dantu">
+
+							<img width="50px" height="50px" src="images/jdtheme/s6.jpg" alt="" />
+
+							<div class="shai"></div>
+
+						</div>
+
+						
+
+
+
+						<div class="hotname"><a href="">[晒单帖]舒肤佳专效护理系列沐浴露</a></div>
+
+						<div class="hotlun">
+
+							<a href="">舒肤佳专效护理系列沐浴露敏感型，专为娇嫩、敏感、特异型肌肤设计，100%天然温和0刺激成分，不含</a>
+
+							<div class="dou"></div>
+
+						</div>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	<!-- 热门晒单区域结束 -->
+
+
+
+	<!-- 热门活动区域开始 -->
+
+		<div class="shaidan1">
+
+			<div class="dan_top">
+
+				<h2>热门活动</h2>
+
+			</div>
+
+			<div class="shaimain">
+
+				<ul>
+
+					<li>
+
+						<div class="dantu">
+
+							<img width="50px" height="50px" src="images/jdtheme/s7.jpg" alt="" />
+
+							<div class="re"></div>
+
+						</div>
+
+						<div class="hotname"><a href="">佳贝艾特金装150克2、3段0元试用！</a></div>
+
+						<div class="hotlun">
+
+							<a href="">全球同步销售：佳贝艾特金装150克2、3段0元试用，零风险！快来报名！</a>
+
+							<div class="dou"></div>
+
+						</div>
+
+					</li>
+
+					<li>
+
+						<div class="dantu">
+
+							<img width="50px" height="50px" src="images/jdtheme/s8.jpg" alt="" />
+
+							<div class="re"></div>
+
+						</div>
+
+						<div class="hotname"><a href="">一枪在手生活无琐事-惠泽热熔胶枪</a></div>
+
+						<div class="hotlun">
+
+							<a href="">惠泽热熔胶枪京东首发，邀您0元试用啦~~</a>
+
+							<div class="dou"></div>
+
+						</div>
+
+					</li>
+
+					<li>
+
+						<div class="dantu">
+
+							<img width="50px" height="50px" src="images/jdtheme/s9.jpg" alt="" />
+
+							<div class="re"></div>
+
+						</div>
+
+						<div class="hotname"><a href="">I’m cool系列彩色冰箱0元试用</a></div>
+
+						<div class="hotlun">
+
+							<a href="">奥马I’m cool系列彩色冰箱0元试用啦！冷藏/冷冻双温区，欧盟质控标准，太空舱检漏技术，年轻人的冰箱</a>
+
+							<div class="dou"></div>
+
+						</div>
+
+					</li>
+
+					<li>
+
+						<div class="dantu">
+
+							<img width="50px" height="50px" src="images/jdtheme/s10.jpg" alt="" />
+
+							<div class="re"></div>
+
+						</div>
+
+						<div class="hotname"><a href="">华为荣耀6plus0元试用</a></div>
+
+						<div class="hotlun">
+
+							<a href="">为了庆祝华为荣耀新品横空出世，也为了答谢各位花粉的支持与厚爱，我们从研发童鞋那里抢到了50台崭</a>
+
+							<div class="dou"></div>
+
+						</div>
+
+					</li>
+
+					<li>
+
+						<div class="dantu">
+
+							<img width="50px" height="50px" src="images/jdtheme/s11.jpg" alt="" />
+
+							<div class="re"></div>
+
+						</div>
+
+						<div class="hotname"><a href="">《Win8平板最佳伴侣》有奖问答活动</a></div>
+
+						<div class="hotlun">
+
+							<a href="">今年双12来京东，参加《Win8平板最佳伴侣》有奖问答活动，就有机会把Win8平板“伴侣”带回家！</a>
+
+							<div class="dou"></div>
+
+						</div>
+
+					</li>
+
+					<li>
+
+						<div class="dantu">
+
+							<img width="50px" height="50px" src="images/jdtheme/s12.jpg" alt="" />
+
+							<div class="re"></div>
+
+						</div>
+
+						<div class="hotname"><a href="">许愿望，赢周生生Charme苹果串珠免单</a></div>
+
+						<div class="hotlun">
+
+							<a href="">2015年即将到来，你有什么愿望？留下你的愿望，有机会赢取周生生Charme苹果串珠免单权，祈愿明年平</a>
+
+							<div class="dou"></div>
+
+						</div>
+
+					</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	<!-- 热门活动区域结束 -->
+
+	</div>
+
+ <!-- 左边结束 -->
+
+
+
+ <!-- 右边开始 -->
+
+	<div class="hotright">
+
+		<div class="readtop">
+
+			<div class="read">
+
+				<h2>在线读书</h2>
+
+				<a href="">更多在线读书></a>
+
+			</div>
+
+			<div class="readmain">
+
+				<div class="readleft">
+
+					<img src="images/jdtheme/s13.jpg" alt="" />
+
+				</div>
+
+				<div class="readright">
+
+					<a href="">[电子书]1元特价，好书周周有</a>
+
+					<a href="">《默克尔传》极具影响力的女性</a>
+
+					<a href="">《旅行者阅读行为分析报告》</a>
+
+					<a href="">京东大数据——洞悉未来</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<h3>订阅促销信息</h3>
+
+		<div class="readbottom">
+
+			<div class="youjian"></div>
+
+			<input class="shuru" type="text" name="" id="" value="请输入您的Email地址" />
+
+			<input  class="ding"  type="button" value="订阅"/>
+
+		</div>
+
+	</div>
+
+
+
+ <!-- 右边结束 -->
+
+</div>
+
+<!-- hot热门区结束 -->
+
+#parse("common/footer.vm")
+</body>
+
+</html>

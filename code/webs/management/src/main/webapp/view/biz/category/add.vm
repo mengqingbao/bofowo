@@ -1,0 +1,109 @@
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>分类管理</small></div>
+    </div> 
+ 
+ <div class="am-g" style="height:400px">
+      <div class="am-u-sm-12">
+
+<form action="category-insert.htm" method="post"> 
+	<input type="hidden" name="type" value="$!{type}"/>
+	<input type="hidden" name="pid" id="pid" #if($!{type}==3) value="0" #else value="100" #end/>
+	<table class="am-table am-table-striped am-table-hover table-main" style="width:600px">
+			<tr>
+				<td>父类：</td>
+				<td>
+					<select name="pid1" id="pid1">
+					 #if($!{type}==3)
+					  <option value="0">一级</option>
+					  #foreach($item in $list)
+						<option value="$item.id">$item.name</option>
+						#end
+					 #else
+					  <option value="100">一级</option>
+						#foreach($item in $list)
+						<option value="$item.id">$item.name</option>
+						#end
+					#end
+					</select>
+					#if($!{type}==2)
+					<select name="pid2" id="pid2">
+					
+					</select>
+					#end
+				</td>
+			</tr>	
+			<tr>
+				<td>编码：</td>
+				<td>
+					<input type="text" name="id" id="codeId"/>
+				</td>
+			</tr>	
+			<tr>
+				<td>分类名称：</td>
+				<td>
+					<input type="text" name="name" id="name"/>
+				</td>
+			</tr>
+			<tr>
+				<td>内容描述：</td>
+				<td>
+					<textarea rows="5" name="desc" id="desc"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>状态：</td>
+				<td>
+					<input type="radio" name="status" value="1" checked/>:启用 <input type="radio" name="status" value="0"/>:停用
+				</td>
+			</tr>
+	</table>
+	<input type="submit" value="提交" class="am-btn am-btn-default am-btn-xs am-text-secondary"/>
+</form>
+
+
+</div>
+</div>
+<script>
+
+jQuery("#pid1").change(function(){
+jQuery("#pid").val($(this).val());
+var largestId=Number($(this).val());
+
+	jQuery.ajax({
+     type: 'get',
+     url: 'get-sub-category.htm?pid='+$(this).val()+'&type=$!{type}',
+     dataType:'json',
+     success:function(data){
+     	$("#pid2").empty();
+     	jQuery.each(data, function(index,item){ 
+     	#if($!{type}==2)
+        	$("#pid2").prepend("<option value='"+item.id+"'>"+item.name+"</option>");
+        #end
+        if(largestId<item.id) largestId=item.id;
+         }); 
+         largestId+=100000;
+         jQuery("#codeId").val(largestId);
+    $("#pid2").prepend("<option value='0'>请选择</option>");
+     }
+});
+})
+#if($!{type}==2)
+jQuery("#pid2").change(function(){
+	jQuery("#pid").val($(this).val());
+	var largestId=Number($(this).val());
+	jQuery.ajax({
+     type: 'get',
+     url: 'get-sub-category.htm?pid='+$(this).val()+'&type=$!{type}',
+     dataType:'json',
+     success:function(data){
+     	
+     	jQuery.each(data, function(index,item){ 
+        if(largestId<item.id) largestId=item.id;
+         }); 
+         largestId+=100;
+         jQuery("#codeId").val(largestId);
+     }
+   });
+});
+#end
+</script>

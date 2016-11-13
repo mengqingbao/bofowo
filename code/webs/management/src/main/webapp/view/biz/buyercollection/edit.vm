@@ -1,0 +1,92 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>BuyerCollection Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<form action="buyercollection-update.htm" method="post"> 
+	<table class="table table-striped table-bordered responsive">
+															<tr>
+				<td><label for="status">#springMessage("itemId")</label></td>
+				<td>
+					<input type="text" name="itemId" id="itemId" value="$!{buyercollection.itemId}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("title")</label></td>
+				<td>
+					<input type="text" name="title" id="title" value="$!{buyercollection.title}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("image")</label></td>
+				<td>
+					<input type="text" name="image" id="image" value="$!{buyercollection.image}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("buyerId")</label></td>
+				<td>
+					<input type="text" name="buyerId" id="buyerId" value="$!{buyercollection.buyerId}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("sellerId")</label></td>
+				<td>
+					<input type="text" name="sellerId" id="sellerId" value="$!{buyercollection.sellerId}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("shopId")</label></td>
+				<td>
+					<input type="text" name="shopId" id="shopId" value="$!{buyercollection.shopId}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("shopName")</label></td>
+				<td>
+					<input type="text" name="shopName" id="shopName" value="$!{buyercollection.shopName}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("type")</label></td>
+				<td>
+					<input type="text" name="type" id="type" value="$!{buyercollection.type}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("createdTime")</label></td>
+				<td>
+					<input type="text" name="createdTime" id="createdTime" value="$!{buyercollection.createdTime}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("tBuyerCollectioncol")</label></td>
+				<td>
+					<input type="text" name="tBuyerCollectioncol" id="tBuyerCollectioncol" value="$!{buyercollection.tBuyerCollectioncol}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("isDelete")</label></td>
+				<td>
+					<input type="text" name="isDelete" id="isDelete" value="$!{buyercollection.isDelete}"/>
+				</td>
+			</tr>
+						</table>
+	<input type="submit" value="#springMessage("save")"/>
+</form>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

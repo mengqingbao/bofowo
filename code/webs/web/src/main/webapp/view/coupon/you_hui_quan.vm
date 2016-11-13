@@ -1,0 +1,67 @@
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>优惠券</small></div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-8">
+      </div>
+      <div class="am-u-sm-12 am-u-md-3">
+        <div class="am-input-group am-input-group-sm">
+          <input type="text" class="am-form-field">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button">搜索</button>
+          </span>
+        </div>
+      </div>
+    </div>
+   <div class="am-g">
+      <div class="am-u-sm-12">
+      <ul class="am-tabs-nav am-nav am-nav-tabs">
+      	<li class="am-active"><a href="javascript:void(0)">活动列表</a></li>
+      </ul>
+      
+      <div class="am-cf">
+      <br/>
+      	<p>1.满免邮活动包括店铺所有商品，活动时间不能和已有活动重叠。</p>
+		<p>2.满免邮活动时间不能和满就减活动时间重叠。</p>
+		</p><span style="color:red">3.该活动提交后需管理员审核通过才正式使用。</span></p>
+	  </div>
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                 <th>活动名称</th><th>开始时间</th><th class="table-title">结束时间</th><th class="table-type">状态</th><th>操作</th>
+              </tr>
+          
+          #foreach($foo in [10000..10005])
+            <tr>
+              <td><a href="#">满100面邮费</a></td>
+              <td>2016-09-08 00：00：00</td>
+              <td>2016-09-08 00：00：00</td>
+                <td>待审核</td>
+                <td><a href="">查看</a>|<a href="">编辑</a>|<a href="">删除</a></td>
+            </tr>
+
+         #end
+           </table>        
+
+
+<div class="am-cf">
+  共 15 条记录
+  <div class="am-fr">
+    <ul class="am-pagination">
+      <li class="am-disabled"><a href="#">«</a></li>
+      <li class="am-active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">»</a></li>
+    </ul>
+  </div>
+</div>
+          <hr />
+          <p>注：.....</p>
+
+      </div>
+
+    </div>

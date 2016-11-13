@@ -1,0 +1,134 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>WebContent Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<form action="webcontent-insert.htm" method="post"> 
+	<table class="table table-striped table-bordered responsive">
+															<tr>
+				<td><label for="status">#springMessage("title")</label></td>
+				<td>
+					<input type="text" name="title" id="title"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("author")</label></td>
+				<td>
+					<input type="text" name="author" id="author"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("from")</label></td>
+				<td>
+					<input type="text" name="from" id="from"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("createDate")</label></td>
+				<td>
+					<input type="text" name="createDate" id="createDate"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("modifyDate")</label></td>
+				<td>
+					<input type="text" name="modifyDate" id="modifyDate"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("creator")</label></td>
+				<td>
+					<input type="text" name="creator" id="creator"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("modifier")</label></td>
+				<td>
+					<input type="text" name="modifier" id="modifier"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("contentA")</label></td>
+				<td>
+					<input type="text" name="contentA" id="contentA"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("contentB")</label></td>
+				<td>
+					<input type="text" name="contentB" id="contentB"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("contentC")</label></td>
+				<td>
+					<input type="text" name="contentC" id="contentC"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("categoryId")</label></td>
+				<td>
+					<input type="text" name="categoryId" id="categoryId"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("status")</label></td>
+				<td>
+					<input type="text" name="status" id="status"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("isDelete")</label></td>
+				<td>
+					<input type="text" name="isDelete" id="isDelete"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("desc")</label></td>
+				<td>
+					<input type="text" name="desc" id="desc"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("tagLibId")</label></td>
+				<td>
+					<input type="text" name="tagLibId" id="tagLibId"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("seoTittle")</label></td>
+				<td>
+					<input type="text" name="seoTittle" id="seoTittle"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("seoKey")</label></td>
+				<td>
+					<input type="text" name="seoKey" id="seoKey"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("seoDesc")</label></td>
+				<td>
+					<input type="text" name="seoDesc" id="seoDesc"/>
+				</td>
+			</tr>
+						</table>
+	<input type="submit" value="#springMessage("save")"/>
+</form>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

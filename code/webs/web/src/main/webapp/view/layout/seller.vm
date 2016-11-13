@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>lymall 商家中心</title>
+  <meta name="description" content="商家中心">
+  <meta name="keywords" content="index">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="assets/css/amazeui.css"/>
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <script type="text/javascript" charset="utf-8" src="js/jquery-1.8.3.min.js"></script>    
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，lymall 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+#include("common/header.vm");
+
+<div class="am-cf admin-main">
+  <!-- sidebar start -->
+  <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
+    <div class="am-offcanvas-bar admin-offcanvas-bar">
+      <ul class="am-list admin-sidebar-list">
+        <li class="admin-parent"><a class="am-cf am-collapsed" href="shop-detail.htm?id=100091"><span class="am-icon-home"></span> 进入店铺</a></li>
+        <li class="admin-parent">
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-product-nav'}"><span class="am-icon-th"></span> 商品管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub  am-in" id="collapse-product-nav">
+            <li><a href="provider-item-add.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 商品发布</a></li>
+            <li><a href="provider-item-search-1.htm"><span class="am-icon-puzzle-piece"></span> 出售中的商品</a></li>
+            <li><a href="provider-item-search-2.htm"><span class="am-icon-puzzle-piece"></span> 仓库中的商品</a></li>
+            <li><a href="provider-item-search-3.htm"><span class="am-icon-puzzle-piece"></span> 违规下架的商品</a></li>
+            <li><a href="provider-item-search-4.htm"><span class="am-icon-puzzle-piece"></span> 下架的商品</a></li>
+            <li><a href="provider-item-search-5.htm"><span class="am-icon-puzzle-piece"></span> 待审核的商品</a></li>
+            <li><a href="provider-item-search-6.htm"><span class="am-icon-puzzle-piece"></span> 已拒绝的商品</a></li>
+            <!--  <li><a href="provider-item-from-taobao.htm"><span class="am-icon-puzzle-piece"></span> 淘宝导入的商品</a></li>
+            <li><a href="provider-item-from-jd.htm"><span class="am-icon-puzzle-piece"></span> 京东导入的商品</a></li> -->
+          </ul>
+        </li>
+        <li class="admin-parent">
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-trade-nav'}"><span class="am-icon-th"></span> 交易管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-trade-nav">
+            <li><a href="my-sale-trades.htm?status=0" class="am-cf"><span class="am-icon-puzzle-piece"></span> 订单管理</a></li>
+            <!--li><a href="transport-shipments-setting.htm"><span class="am-icon-puzzle-piece"></span> 发货设置</a></li -->
+         	<li><a href="transport-tool.htm"><span class="am-icon-puzzle-piece"></span> 物流模板</a></li>
+          <li><a href="i-geted-rate.htm"><span class="am-icon-puzzle-piece"></span> 评价</a></li>
+          </ul>
+        </li>
+        <li class="admin-parent">
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-shop-nav'}"><span class="am-icon-th"></span> 店铺管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-shop-nav">
+            <!--<li><a href="shop-search.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 店铺类目管理</a></li>-->
+            <li><a href="shop-detail.htm?id=100091"><span class="am-icon-puzzle-piece"></span> 我的店铺</a></li>
+            <li><a href="shop-setting.htm"><span class="am-icon-puzzle-piece"></span> 店铺设置</a></li>
+            <li><a href="provider-store-category.htm"><span class="am-icon-puzzle-piece"></span> 自定义分类</a></li>
+            <li><a href="store-prop-spec.htm"><span class="am-icon-puzzle-piece"></span> 属性规格</a></li>
+            <li><a href="provider-store-brand.htm"><span class="am-icon-puzzle-piece"></span> 品牌列表</a></li>
+            <li><a href="shop-theme-setting.htm"><span class="am-icon-puzzle-piece"></span> 主题设置</a></li>
+            <li><a href="store-bill-setting.htm"><span class="am-icon-puzzle-piece"></span> 结算信息设置</a></li>
+          </ul>
+        </li>
+        <li class="admin-parent">
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-marketing-nav'}"><span class="am-icon-th"></span> 营销管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-marketing-nav">
+            <li><a href="store-manjian.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 满就减</a></li>
+            <li><a href="store-free-shipment.htm"><span class="am-icon-puzzle-piece"></span> 满免邮</a></li>
+            <!--<li><a href="youhuiqian.htm"><span class="am-icon-puzzle-piece"></span> 优惠券管理</a></li>-->
+            
+          </ul>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+  <!-- sidebar end -->
+
+  <!-- content start -->
+  <div class="admin-content">
+	
+     $screen_content
+  </div>
+  <!-- content end -->
+
+</div>
+
+
+
+<footer>
+  <hr>
+  <p class="am-padding-left">© 2014 404886, Inc.2016 404886公司版权所有.</p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+ <script type="text/javascript" charset="utf-8" src="plugins/ueditor/ueditor.config.js"></script>
+ <script type="text/javascript" charset="utf-8" src="plugins/ueditor/ueditor.all.min.js"> </script>
+ <script type="text/javascript" charset="utf-8" src="plugins/ueditor/lang/zh-cn/zh-cn.js"></script>    
+
+  <div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">表单</strong> / <small>添加分类</small></div>
+  </div>
+  
+  <div class="am-tabs am-margin" data-am-tabs="">
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li class="am-active"><a href="#tab1">店铺分类</a></li>
+
+    </ul>
+
+ <div class="am-tabs-bd" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      <div class="am-tab-panel am-active am-fade am-in" id="tab1">
+        <div class="am-g am-margin-top">
+        <form class="am-form" name="myForm" id="myForm" action="provider-store-category-update.htm" method="post" >
+         <input type="hidden" name="id" value="$!{item.id}">
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              分类名称:
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end">
+              <input type="text" name="name" id="name" value="$!{item.name}"class="am-input-sm">
+            </div>
+          </div>
+
+
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              分类描述
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end">
+              <textarea rows="4"  name="desc">$!{item.desc}</textarea>
+            </div>
+          </div>
+          
+         <div class="am-margin">
+   			  <a class="am-btn am-btn-primary am-btn-xs" href="javascript:void(0)" onclick="formSubmit()">提 交</a>
+  			  <a class="am-btn am-btn-primary am-btn-xs" href="store-prop-$!{type}.htm">取 消</a>
+  		 </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+function formSubmit()
+  {
+  	document.getElementById("myForm").submit()
+  }
+</script>  
+
+
+  

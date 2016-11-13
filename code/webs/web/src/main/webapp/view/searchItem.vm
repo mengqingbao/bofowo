@@ -1,0 +1,161 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>bofowo.cn</title>
+  <meta name="description" content="bofowo.cn bofowo.com">
+  <meta name="keywords" content="index">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="assets/css/amazeui.css"/>
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="stylesheet" href="css/turnpic-ie.css?12">
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，lymall 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+#include("common/header.vm");
+
+<div class="am-cf admin-main">
+ 
+ <div class="am-g">
+<div class="am-cf am-padding">
+	<div class="am-u-md-6">
+			LOGO
+
+       </div>
+   		<div class="am-u-md-6">
+      
+     <form id="form1" action="search.htm" method="get">
+      <div class="am-u-sm-2">
+        <div class="am-form-group">
+          <select name="searchType" id="searchType" style="width:60px;font-size:12px" size="1">
+            <option value="item">宝贝</option>
+            <option value="shop">店铺</option>
+          </select>
+        </div>
+      </div>
+      <div class="am-u-sm-9">
+        <div class="am-input-group am-input-group-sm">
+          <input type="text" class="am-form-field" name="keyWord" placeholder="请输入要搜索的关键词" value="$!pageInfo.keyWord">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button" onclick="search()">搜索</button>
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+  
+
+    
+    <div class="am-g">
+      <div class="am-u-md-9">
+      
+       <div class="am-panel am-panel-default">
+          <div id="collapse-panel-2" class="am-in">
+            <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-3 am-margin gallery-list">
+      			#foreach($item in $items)
+      			<li>
+       			    <a href="item-1000043-detail.htm">
+         			  <img style="width:175px;height:175px" src="item-image-${StringUtil.getImageId($item.images)}.htm" alt="">
+        			 </a>
+                </li>
+                #end
+   			 </ul>
+   			 <div class="am-margin am-cf">
+      <hr/>
+  <div class="am-pagination">
+   #pageNavigation($pageInfo,"form1")
+   </div>
+    </div>
+          </div>
+        </div>
+     </div>   
+      </div>
+
+      <div class="am-u-md-3">
+        <div class="am-panel am-panel-default">
+          <div class="am-panel-hd am-cf">热卖榜</div>
+          <div id="collapse-panel-2" class="am-in">
+            <table class="am-table am-table-bd am-table-bdrs am-table-striped am-table-hover">
+              <tbody>
+              <tr>
+                <td><img style="width:175px;height:175px" src="item-image-1000087.htm" alt=""></td>
+              </tr>
+              #foreach($foo in [0..5])
+              <tr>
+              <td><a href="#" title="迪乐龙童鞋秋冬款加绒保暖男童运动鞋棉鞋中大童恐龙闪灯跑步鞋">迪乐龙童鞋秋冬款加绒保暖男童</a></td>
+              </tr>
+              #end
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        
+        <div class="am-panel am-panel-default">
+          <div class="am-panel-hd am-cf">关注度</div>
+          <div id="collapse-panel-2" class="am-in">
+            <table class="am-table am-table-bd am-table-bdrs am-table-striped am-table-hover">
+              <tbody>
+              <tr>
+                <td><img style="width:175px;height:175px" src="item-image-1000087.htm" alt=""></td>
+              </tr>
+              #foreach($foo in [0..5])
+              <tr>
+              <td><a href="#" title="迪乐龙童鞋秋冬款加绒保暖男童运动鞋棉鞋中大童恐龙闪灯跑步鞋">迪乐龙童鞋秋冬款加绒保暖男童</a></td>
+              </tr>
+              #end
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+   
+  </div>
+  <!-- content end -->
+
+</div>
+
+
+
+<footer>
+  <hr>
+  <p class="am-padding-left">© 2014 404886, Inc.2016 404886公司版权所有.</p>
+</footer>
+<script>
+function search(){
+	var form=jQuery("#form1");
+	if(jQuery("#searchType").val()=="shop"){
+		form.attr("action", "searchShop.htm");
+	}else{
+		form.attr("action", "searchItem.htm");
+	}
+	form.submit();
+}
+</script>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

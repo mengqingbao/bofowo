@@ -1,0 +1,20 @@
+.type-file-text {
+    height:22px;
+    border:1px solid #cdcdcd;
+    width:180px;
+}
+.type-file-button {
+    background-color:#FFF;
+    border:1px solid #CDCDCD;
+    height:24px;
+    width:70px;
+}
+.type-file-file {
+    position:absolute;
+    top:0;
+    right:0;
+    height:24px;
+filter:alpha(opacity:0);
+    opacity: 0;
+    width:260px
+}

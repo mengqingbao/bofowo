@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	   http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	<context:component-scan base-package="com.bofowo.site.serviceimpl" />
+	<!-- 引用ehCache的配置 -->
+	<bean id="defaultCacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation">
+			<value>WEB-INF/ehcache.xml</value>
+		</property>
+	</bean>
+	<!-- 定义ehCache的工厂，并设置所使用的Cache name -->
+	<bean id="ehcache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager">
+			<ref local="defaultCacheManager" />
+		</property>
+		<property name="cacheName">
+			<value>DEFAULT_CACHE</value>
+		</property>
+	</bean>
+	<bean id="CacheProvider" class="com.bofowo.cache.CacheProvider">
+		<property name="cache">
+			<ref local="ehcache" />
+		</property>
+	</bean>
+
+	<bean name="memcachedClient" destroy-method="shutdown"
+		class="net.rubyeye.xmemcached.utils.XMemcachedClientFactoryBean">
+		<property name="servers">
+			<value>${memcache.cluster}</value>
+		</property>
+		<property name="weights">
+			<list>
+				<value>1</value>
+				<value>2</value>
+			</list>
+		</property>
+		<property name="sessionLocator">
+			<bean class="net.rubyeye.xmemcached.impl.KetamaMemcachedSessionLocator" />
+		</property>
+		<property name="transcoder">
+			<bean class="net.rubyeye.xmemcached.transcoders.SerializingTranscoder" />
+		</property>
+		<property name="bufferAllocator">
+			<bean class="net.rubyeye.xmemcached.buffer.SimpleBufferAllocator"/>
+		</property>
+	</bean>
+	<bean id="methodCacheInterceptor" class="com.bofowo.aop.interceptor.MethodCacheInterceptor">
+		<property name="cache">
+			<ref local="ehcache" />
+		</property>
+	</bean>
+	<!-- flush cache拦截器 -->
+	<bean id="methodCacheAfterAdvice" class="com.bofowo.aop.interceptor.MethodCacheAfterAdvice">
+		<property name="cache">
+			<ref local="ehcache" />
+		</property>
+	</bean>
+	<bean id="methodCachePointCut"
+		class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<property name="advice">
+			<ref local="methodCacheInterceptor" />
+		</property>
+		<property name="patterns">
+			<list>
+				<value>.*cache.*</value>
+				<value>.*Cache</value>
+				<value>.*Cache.*</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="methodCachePointCutAdvice"
+		class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+		<property name="advice">
+			<ref local="methodCacheAfterAdvice" />
+		</property>
+		<property name="patterns">
+			<list>
+				<value>.*create.*</value>
+				<value>.*update.*</value>
+				<value>.*delete.*</value>
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="transactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<!-- 配置事务属性 -->
+		<property name="transactionAttributes">
+			<props>
+				<prop key="del">PROPAGATION_REQUIRED</prop>
+				<prop key="update">PROPAGATION_REQUIRED</prop>
+				<prop key="insert">PROPAGATION_REQUIRED</prop>
+				<prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="autoproxy"
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<!-- 可以是Service或DAO层（最好是针对业务层*Service） -->
+		<property name="beanNames"> 
+			<list>
+				<value>*Service</value>
+			</list>
+		</property>
+		<property name="interceptorNames">
+			<list>
+			<value>transactionInterceptor</value> 
+			</list>
+		</property>
+	</bean>
+	 <bean id="SpringBeanUtil" class="org.springframe.core.util.SpringBeanUtil"/> 
+</beans>

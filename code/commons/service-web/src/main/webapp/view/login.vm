@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>多才多艺群策网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
+
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="bower_components/jquery/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    #parse("common/head.vm")
+<div class="ch-container">
+
+<div class="row" style="width:1000px;margin:0 auto">
+    <div class="box col-md-12">
+        <div class="box-inner">
+            <div class="box-content">
+            <ul class="breadcrumb">
+			        <h3>会员登录</h3>
+			    </ul>
+			    
+              		<form class="form-horizontal" action="j_spring_security_check" method="post">
+                <fieldset>
+               		 <div class="input-group col-md-6" style="width:400px;margin:0 auto;margin-top:60px">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
+                        <input type="text" name="j_username" class="form-control" placeholder="用户名/邮箱">
+                    </div>
+                    </div>
+                    <div class="clearfix"></div><br>
+					<div class="input-group col-md-6" style="width:400px;margin:0 auto;margin-top:30px;">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock red"></i></span>
+                        <input type="password" name="j_password" class="form-control" placeholder="登录密码">
+                    </div>
+                    </div>
+                    <div class="clearfix"></div>
+					<div class="input-group col-md-6" style="width:300px;margin:0 auto;margin-top:10px;">
+                    <div class="input-prepend">
+                        <label class="remember" for="remember"><input type="checkbox" id="remember"> 下次自动登录</label>
+                        <label class="remember" for="remember" style="margin-left:100px;"><a> 忘记密码?</a></label>
+                    </div>
+                    </a>
+                    <div class="clearfix"></div>
+					<div class="input-group col-md-6" style="width:400px;margin:0 auto;margin-top:30px;margin-bottom:100px;">
+                    <p class="center col-md-5">
+                        <button type="submit" class="btn btn-primary" style="width:100px">登录</button>
+                    </p>
+                    </div>
+                </fieldset>
+            </form>
+            </div>
+        </div>
+    </div>
+    <!--/span-->
+
+</div><!--/row-->
+		 				
+    <hr>
+</div>
+   #include("common/footer.vm")
+</body>
+</html>

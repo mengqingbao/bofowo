@@ -1,0 +1,90 @@
+  <script src="/js/jquery-ui.js"></script>
+  <div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">表单</strong> / <small>满减活动</small></div>
+  </div>
+  
+  <div class="am-tabs am-margin" data-am-tabs="">
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li class="am-active"><a href="#tab1">活动添加</a></li>
+
+    </ul>
+
+ <div class="am-tabs-bd" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      <div class="am-tab-panel am-active am-fade am-in" id="tab1">
+        <div class="am-g am-margin-top">
+        <form class="am-form" action="store-coupon-update.htm" method="post" name="myForm" id="myForm">
+          <input type="hidden" name="type" value="1"/>
+          <input type="hidden" name="id" value="$!{item.id}"/>
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              活动名称:
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end">
+              <input type="text" id="name" name="name" value="$!item.name" class="am-input-sm">
+            </div>
+          </div>
+
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-2 am-u-md-2 am-text-right">
+              开始时间
+            </div>
+            <div class="am-u-sm-2 am-u-md-4 am-u-end">
+			          <input type='text' name="beginTime" id="beginTime" value="$dateFormat.toSimpleDateString($!item.beginTime)"/>
+            </div>
+            <div class="am-u-sm-2 am-u-md-2 am-text-right">
+              结束时间
+            </div>
+            <div class="am-u-sm-2 am-u-md-4 am-u-end">
+			    <input type='text' name="endTime"  id="endTime" value="$dateFormat.toSimpleDateString($!item.endTime)"/>
+			 </div>
+            </div>
+          </div>
+          
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-2 am-u-md-2 am-text-right">
+              满
+            </div>
+            <div class="am-u-sm-2 am-u-md-4 am-u-end">
+              <input type="text" name class="am-input-sm">
+            </div>
+            <div class="am-u-sm-2 am-u-md-2 am-text-right">
+             元，减
+            </div>
+            <div class="am-u-sm-2 am-u-md-4 am-u-end">
+              <input type="text" class="am-input-sm">
+            </div>
+			<input type="hidden" name="content" id="content" value="$!item.content"/>
+          </div>
+
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              备注
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end">
+              <textarea rows="4" name="desc">$!item.desc</textarea>
+            </div>
+          </div>
+          
+            <div class="am-margin">
+  			  <a class="am-btn am-btn-primary am-btn-xs" href="javascript:void(0)" onclick="formSubmit()">提 交</a>
+  			  <a class="am-btn am-btn-primary am-btn-xs" href="store-manjian.htm">取 消</a>
+  			</div>
+  
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  $( function() {
+    $("#beginTime").datepicker();
+    $("#endTime").datepicker();
+  } );
+  function formSubmit()
+  {
+  document.getElementById("myForm").submit();
+  }
+  </script>
+  

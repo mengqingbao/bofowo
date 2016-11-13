@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.ProducpropertiesMapper">
+	<resultMap type="ProducpropertiesModel" id="ProducpropertiesModelMap">
+
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="inputType" column="INPUT_TYPE" />
+		<result property="categoryId" column="CATEGORY_ID" />
+		<result property="propertiesType" column="PROPERTIES_TYPE" />
+		<result property="type" column="TYPE" />
+		<result property="desc" column="DESC_" />
+		<result property="val" column="VAL_" />
+		<result property="creator" column="CREATOR" />
+		<result property="createdDate" column="CREATED_DATE" />
+		
+	</resultMap>
+</mapper> 

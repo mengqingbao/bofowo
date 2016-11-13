@@ -1,0 +1,207 @@
+ <script type="text/javascript" charset="utf-8" src="plugins/ueditor/ueditor.config.js"></script>
+ <script type="text/javascript" charset="utf-8" src="plugins/ueditor/ueditor.all.min.js"> </script>
+ <script type="text/javascript" charset="utf-8" src="plugins/ueditor/lang/zh-cn/zh-cn.js"></script>    
+ <script type="text/javascript" charset-"utf-8" src="js/jsAddress.js"></script>
+  <div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">表单</strong> / <small>邮件模板</small></div>
+  </div>
+  
+  <div class="am-tabs am-margin" data-am-tabs="">
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li class="am-active"><a href="#tab1">添加模板</a></li>
+
+    </ul>
+
+ <div class="am-tabs-bd" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      <div class="am-tab-panel am-active am-fade am-in" id="tab1">
+        <div class="am-g am-margin-top">
+        <form class="am-form" name="myForm" id="myForm" method="post" action="transport-tool-insert.htm">
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              模板名称:
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end">
+              <input type="text" name="tittle" class="am-input-sm">
+            </div>
+          </div>
+
+
+			<div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              包邮地区：
+            </div>
+            <div class="am-u-sm-2 am-u-md-3 am-u-end">
+              <select id="freePostProvince" name="freePostProvince" multiple="multiple" size="12"></select>
+
+            </div>
+            <div class="am-u-sm-2 am-u-md-2 am-u-end">
+            	<br/><br/><br/><br/><br/>
+            	<input type="button" value="  添加->  " onclick="moveRight()"/><br /> 
+                <br/>
+                <input type="button" value="  <-删除  "  onclick="moveLeft()"/><br /> 
+            </div>
+            <div class="am-u-sm-2 am-u-md-3 am-u-end">
+               <select id="targetProvince" name="freeArea" multiple="multiple" size="14"></select>
+            </div>
+          </div>
+
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-2 am-u-md-2 am-text-right">
+              首重/件
+            </div>
+            <div class="am-u-sm-2 am-u-md-2 am-u-end">
+              <input type="text" name="fee" class="am-input-sm">
+            </div>
+            <div class="am-u-sm-2 am-u-md-2 am-u-end">
+              <span>KG/件</span>
+            </div>
+            <div class="am-u-sm-2 am-u-md-2 am-text-right">
+              运费
+            </div>
+            <div class="am-u-sm-2 am-u-md-2 am-u-end">
+              <input type="text" name="firstFee" class="am-input-sm">
+            </div>
+            <div class="am-u-sm-2 am-u-md-2 am-u-end">
+              <span>元</span>
+            </div>
+          </div>
+          
+           <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-2 am-u-md-2 am-text-right">
+              续重/件
+            </div>
+            <div class="am-u-sm-2 am-u-md-2 am-u-end">
+              <input type="text" name="exWeight" class="am-input-sm">
+            </div>
+            <div class="am-u-sm-2 am-u-md-2 am-u-end">
+              <span>KG/件</span>
+            </div>
+            <div class="am-u-sm-2 am-u-md-2 am-text-right">
+              续运费
+            </div>
+            <div class="am-u-sm-2 am-u-md-2 am-u-end">
+              <input type="text" name="exWeightFee" class="am-input-sm">
+            </div>
+            <div class="am-u-sm-2 am-u-md-2 am-u-end">
+              <span>元</span>
+            </div>
+          </div>
+
+  <div class="am-margin">
+    <a class="am-btn am-btn-primary am-btn-xs" href="javascript:void(0)" onclick="formSubmit()">提 交</a>
+    <a class="am-btn am-btn-primary am-btn-xs" href="transport-tool.htm">取 消</a>
+  </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+	addressProvinceInit("freePostProvince");
+</script>
+<script type="text/javascript">  
+  
+      
+    /**选中的元素向右移动**/  
+    function moveRight()  
+    {  
+          
+            //得到第一个select对象  
+        var selectElement = document.getElementById("freePostProvince");  
+        var optionElements = selectElement.getElementsByTagName("option");  
+        var len = optionElements.length;  
+      
+  
+        if(!(selectElement.selectedIndex==-1))   //如果没有选择元素，那么selectedIndex就为-1  
+        {  
+              
+            //得到第二个select对象  
+            var selectElement2 = document.getElementById("targetProvince");  
+      
+                // 向右移动  
+                for(var i=0;i<len ;i++)  
+                {  
+                    selectElement2.appendChild(optionElements[selectElement.selectedIndex]);  
+                }  
+        } else  
+        {  
+            alert("您还没有选择需要移动的元素！");  
+        }  
+    }  
+      
+    //移动所有的到右边  
+    function moveAll()  
+    {  
+        //得到第一个select对象  
+        var selectElement = document.getElementById("freePostProvince");  
+        var optionElements = selectElement.getElementsByTagName("option");  
+        var len = optionElements.length;  
+        //alert(len);  
+      
+        //将第一个selected中的数组翻转  
+        var firstOption = new Array();  
+        for(var k=len-1;k>=0;k--)  
+        {  
+            firstOption.push(optionElements[k]);  
+      
+        }  
+        var lens = firstOption.length;  
+            //得到第二个select对象  
+        var selectElement2 = document.getElementById("targetProvince");  
+        for(var j=lens-1;j>=0;j--)  
+        {  
+            selectElement2.appendChild(firstOption[j]);  
+        }  
+    }  
+      
+    //移动选中的元素到左边  
+    function moveLeft()  
+    {  
+        //首先得到第二个select对象  
+        var selectElement = document.getElementById("targetProvince");  
+        var optionElement = selectElement.getElementsByTagName("option");  
+        var len = optionElement.length;  
+          
+        //再次得到第一个元素  
+        if(!(selectElement.selectedIndex==-1))  
+        {  
+            var firstSelectElement = document.getElementById("freePostProvince");  
+            for(i=0;i<len;i++)  
+            {  
+                firstSelectElement.appendChild(optionElement[selectElement.selectedIndex]);//被选中的那个元素的索引  
+            }  
+        }else  
+        {  
+            alert("您还没有选中要移动的项目!");  
+        }  
+    }  
+      
+    //全部向左移  
+    function moveAllLeft()  
+    {  
+        var selectElement = document.getElementById("targetProvince");  
+        var optionElements = document.getElementsByTagName("option");  
+        var len = optionElements.length;  
+        var optionEls = new Array();  
+        for(var i=len-1;i>=0;i--)  
+        {  
+            optionEls.push(optionElements[i]);  
+        }  
+        var lens = optionEls.length;  
+          
+        var firstSelectElement = document.getElementById("freePostProvince");  
+        for(var j=lens-1;j>=0;j--)  
+        {  
+            firstSelectElement.appendChild(optionEls[j]);  
+        }  
+    }  
+</script>  
+<script type="text/javascript">
+function formSubmit()
+  {
+  document.getElementById("myForm").submit();
+  }
+</script>
+  

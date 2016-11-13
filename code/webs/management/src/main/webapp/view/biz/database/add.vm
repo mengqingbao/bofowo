@@ -1,0 +1,164 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Database Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<form action="database-insert.htm" method="post"> 
+	<table class="table table-striped table-bordered responsive">
+															<tr>
+				<td><label for="status">#springMessage("databasename")</label></td>
+				<td>
+					<input type="text" name="databasename" id="databasename"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("driverclassname")</label></td>
+				<td>
+					<input type="text" name="driverclassname" id="driverclassname"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("url")</label></td>
+				<td>
+					<input type="text" name="url" id="url"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("username")</label></td>
+				<td>
+					<input type="text" name="username" id="username"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("password")</label></td>
+				<td>
+					<input type="text" name="password" id="password"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("druid.initialsize")</label></td>
+				<td>
+					<input type="text" name="druid.initialsize" id="druid.initialsize"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("initialsize")</label></td>
+				<td>
+					<input type="text" name="initialsize" id="initialsize"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("maxactive")</label></td>
+				<td>
+					<input type="text" name="maxactive" id="maxactive"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("maxidle")</label></td>
+				<td>
+					<input type="text" name="maxidle" id="maxidle"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("minidle")</label></td>
+				<td>
+					<input type="text" name="minidle" id="minidle"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("maxwait")</label></td>
+				<td>
+					<input type="text" name="maxwait" id="maxwait"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("removeabandoned")</label></td>
+				<td>
+					<input type="text" name="removeabandoned" id="removeabandoned"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("removeabandonedtimeout")</label></td>
+				<td>
+					<input type="text" name="removeabandonedtimeout" id="removeabandonedtimeout"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("timebetweenevictionrunsmillis")</label></td>
+				<td>
+					<input type="text" name="timebetweenevictionrunsmillis" id="timebetweenevictionrunsmillis"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("minevictableidletimemillis")</label></td>
+				<td>
+					<input type="text" name="minevictableidletimemillis" id="minevictableidletimemillis"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("validationquery")</label></td>
+				<td>
+					<input type="text" name="validationquery" id="validationquery"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("testwhileidle")</label></td>
+				<td>
+					<input type="text" name="testwhileidle" id="testwhileidle"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("testonborrow")</label></td>
+				<td>
+					<input type="text" name="testonborrow" id="testonborrow"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("testonreturn")</label></td>
+				<td>
+					<input type="text" name="testonreturn" id="testonreturn"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("poolpreparedstatements")</label></td>
+				<td>
+					<input type="text" name="poolpreparedstatements" id="poolpreparedstatements"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("maxpoolpreparedstatementperconnectionsize")</label></td>
+				<td>
+					<input type="text" name="maxpoolpreparedstatementperconnectionsize" id="maxpoolpreparedstatementperconnectionsize"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("filters")</label></td>
+				<td>
+					<input type="text" name="filters" id="filters"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("status")</label></td>
+				<td>
+					<input type="text" name="status" id="status"/>
+				</td>
+			</tr>
+						</table>
+	<input type="submit" value="#springMessage("save")"/>
+</form>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

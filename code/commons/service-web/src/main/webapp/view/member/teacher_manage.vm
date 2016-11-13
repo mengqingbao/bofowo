@@ -1,0 +1,155 @@
+﻿<script src="/js/jquery.tablesorter.min.js"></script>
+<link href='/css/extend.css' rel='stylesheet'>
+<div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="">
+                    <h2>Trainer Management</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                        <a href="#" class="btn btn-close btn-round btn-default"><i
+                                class="glyphicon glyphicon-remove"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+				
+	<div class="row">
+		<form action="" id="form1" name="form1">
+		<div class="col-md-12 box" style="text-align:right;">
+			<span>Full Name:<input type="text" name="keyword" class="" style="width: 120px;"> </span>
+			<span>Trainer level:
+				<select style="width:55px">
+						<option>#springMessage("all")</option>
+						<option>人事经理</option>
+						<option>人事经理/部门经理</option>
+				</select> 
+			</span>
+			<span>From:
+				<select style="width:55px">
+						<option>#springMessage("all")</option>
+						<option>全体员工</option>
+						<option>生鲜处</option>
+				</select> </span>
+			<span>#Trainer level:<select style="width:55px">
+					<option>#springMessage("all")</option>
+					<option>#springMessage("available")</option>
+					<option>#springMessage("inavild")</option>
+			</select> </span>
+			
+			 <a href="#" class="btn btn-success"><i class="glyphicon glyphicon-filter"></i> <strong>#springMessage("filter")</strong></a>
+			</div>
+		</form>
+		
+	</div>
+	
+                    <table class="table table-striped table-bordered responsive" id="coursetable">
+                        <thead>
+                        <tr>
+							<th width="120px">Employee ID</th>
+							<th>Full Name</th>
+							<th width="120px">Trainer code</th>							
+							<th width="120px">Trainer level</th>	
+							<th width="100px">From</th>	
+							<th width="100px">Status</th>	
+							<th width="150px">#springMessage("operate")</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+
+							<tr>
+								<td width="50px">113-98</td>
+								<td title="$item.target"><a href="/tfuncation-my-detail-info.htm">Yalinna 范赟</a></td>
+								<td  width="120px">LCL</td>
+								<td width="100px">Height</td>
+								<td width="60px"><span class="label-success label label-default">Internal</span></td>
+								<td><span class="label-success label label-default"><i class="glyphicon glyphicon-ok-sign"></i> normal</label></td>
+								<td width="200px">
+									<a class="btn btn-info" href="#">
+                                    <i class="glyphicon glyphicon-edit icon-white"></i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger" href="#">
+                                    <i class="glyphicon glyphicon-trash icon-white"></i>
+                                    Delete
+                                </a>
+								</td>
+							</tr>
+							<tr>
+								<td width="50px">113-98</td>
+								<td title="$item.target"><a href="/tfuncation-my-detail-info.htm">Clare 朱萍</a></td>
+								<td  width="120px">LCL</td>
+								<td width="100px">Height</td>
+								<td width="60px"><span class="label-success label label-default">Internal</span></td>
+								<td><span class="label-success label label-default"><i class="glyphicon glyphicon-ok-sign"></i> normal</label></td>
+								<td width="200px">
+									<a class="btn btn-info" href="#">
+                                    <i class="glyphicon glyphicon-edit icon-white"></i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger" href="#">
+                                    <i class="glyphicon glyphicon-trash icon-white"></i>
+                                    Delete
+                                </a>
+								</td>
+							</tr>
+							<tr>
+								<td width="50px">113-99</td>
+								<td title="$item.target"><a href="/tfuncation-my-detail-info.htm">Adile</a></td>
+								<td  width="120px">LCL</td>
+								<td width="100px">Height</td>
+								<td width="60px"><span class="label-success label label-default">Internal</span></td>
+								<td><span class="label-success label label-default"><i class="glyphicon glyphicon-ok-sign"></i> normal</label></td>
+								<td width="200px">
+									<a class="btn btn-info" href="#">
+                                    <i class="glyphicon glyphicon-edit icon-white"></i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger" href="#">
+                                    <i class="glyphicon glyphicon-trash icon-white"></i>
+                                    Delete
+                                </a>
+								</td>
+							</tr>
+							<tr>
+								<td width="50px">113-100</td>
+								<td title="$item.target"><a href="/tfuncation-my-detail-info.htm">Frank Zhang</a></td>
+								<td  width="120px">LCL</td>
+								<td width="100px">Height</td>
+								<td width="60px"><span class="label-success label label-default">Internal</span></td>
+								<td><span class="label-danger label label-default"><i class="glyphicon glyphicon-info-sign"></i> Disable</label></td>
+								<td width="200px">
+									<a class="btn btn-info" href="#">
+                                    <i class="glyphicon glyphicon-edit icon-white"></i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger" href="#">
+                                    <i class="glyphicon glyphicon-trash icon-white"></i>
+                                    Delete
+                                </a>
+								</td>
+							</tr>
+                        
+                        </tbody>
+                    </table>
+					
+					#pageNavigation($!pageInfo,'form1')
+					
+					<div class="row"><div class="col-md-12 "><a href="add_trainer.htm" class="btn btn-danger"><strong>Add Trainer</strong></a> </div></div>
+					
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+
+    </div><!--/row-->
+
+	  	  	
+   
+	
+     <script>
+	  
+	  $("#coursetable").tablesorter({headers: {5: { sorter: false}}})
+	  </script>

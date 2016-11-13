@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.ProductMapper">
+	<resultMap type="ProductModel" id="ProductModelMap">
+
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="trademarkId" column="TRADEMARK_ID" />
+		<result property="marketPrice" column="MARKET_PRICE" />
+		<result property="shopPrice" column="SHOP_PRICE" />
+		<result property="type" column="TYPE_" />
+		<result property="code" column="CODE" />
+		<result property="content" column="CONTENT" />
+		<result property="shopCategoryId" column="SHOP_CATEGORY_ID" />
+		<result property="shopStatus" column="SHOP_STATUS" />
+		<result property="status" column="STATUS" />
+		<result property="isRecommend" column="IS_RECOMMEND" />
+		<result property="seoKey" column="SEO_KEY" />
+		<result property="seoContent" column="SEO_CONTENT" />
+		<result property="seoTitle" column="SEO_TITLE" />
+		<result property="tiglib" column="TIGLIB" />
+		<result property="plBenefit" column="PL_BENEFIT" />
+		<result property="order" column="ORDER_" />
+		<result property="categoryId" column="CATEGORY_ID" />
+		<result property="shopId" column="SHOP_ID" />
+		<result property="sellerId" column="SELLER_ID" />
+		<result property="createdTime" column="CREATED_TIME" />
+		<result property="modifiedTime" column="MODIFIED_TIME" />
+		<result property="modifier" column="MODIFIER" />
+		<result property="num" column="NUM" />
+		<result property="images" column="IMAGES" />
+		
+	</resultMap>
+</mapper> 

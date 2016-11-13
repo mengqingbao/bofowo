@@ -1,0 +1,239 @@
+<div id="top_main">
+
+			<ul class="topu">
+
+				<li>
+
+					<div class="xing"></div>
+
+					<a href="">收藏京东</a>
+
+				</li>
+
+
+
+				<li class="xuan">
+
+					<div class="erwei"></div>
+
+					<a href="" class="aa">关注京东
+
+						<!-- 将二维图添加进a标签里 -->
+
+						<div class="erweitu"></div>
+
+					</a>					
+
+				</li>
+
+
+
+				<li>
+
+				<div class="didian"></div>
+
+				<strong style="padding-left: 20px">北京</strong><a href="" style="padding-left: 0px">[更换]</a>
+
+				</li>
+
+
+
+			</ul>
+
+
+
+			<div id="hello">
+
+				<span>您好，欢迎来到京东！
+
+				<a href="">[登陆]</a><a href="">[免费注册]</a>
+
+				</span>
+
+			</div>
+
+
+
+			<div class="topright">
+
+				<ul>
+
+					<li>
+
+					<div class="cun">
+
+						<a href="">我的订单</a>
+
+					</div>
+
+						</li>
+
+					<li>
+
+						<div class="cun">
+
+							<div class="vip"></div>
+
+							<a href="">会员俱乐部</a>
+
+						</div>		
+
+					</li>
+
+					<li>
+
+						<div class="cun">
+
+							<div class="bjd"></div>
+
+							<a href="">企业频道</a>
+
+						</div>
+
+					</li>
+
+					<li class="hidetu">
+
+						<div class="cun">
+
+							<a href="" class="dong">手机京东</a>
+
+							<div class="phonetu"></div>
+
+							<div class="downjian11"></div>
+
+						</div>
+
+						<div class="erwei">
+
+							<div class="shoudan"></div>
+
+							<div class="jd"></div>
+
+							<div class="span1">
+
+								<span>京东客户端</span>
+
+							</div>
+
+							<div class="apple"></div>
+
+							<div class="andr"></div>
+
+							<div class="ewtu"></div>
+
+							<div class="span1">
+
+								<span>网银钱包客户端</span>
+
+							</div>
+
+							<div class="apple"></div>
+
+							<div class="andr"></div>
+
+						</div>
+
+					</li>
+
+					<li class="kefu">
+
+						<div class="cun">
+
+							<div class="a1">
+
+								<div class="kefuhide">
+
+									<span>客户服务</span>
+
+									<div class="downjian1"></div>
+
+									<ul>
+
+										<li><a href="">帮助中心</a></li>
+
+										<li><a href="">售后服务</a></li>
+
+										<li><a href="">在线客服</a></li>
+
+										<li><a href="">投诉中心</a></li>
+
+										<li><a href="">客服邮箱</a></li>
+
+									</ul>
+
+								</div>
+
+							</div>	
+
+						</div>
+
+					</li>
+
+					<li class="wangzhan">
+
+						<div class="cun">
+
+							<span>网站导航</span>
+
+							<div class="downjian1"></div>
+
+						</div>
+
+						<div class="wangzhanhide">
+
+							<div class="tese"><span>特色栏目</span></div>
+
+							<div class="tesemain">
+
+								<a href="">京东通信</a>
+
+								<a href="">校园之星</a>
+
+								<a href="">视频购物</a>
+
+								<a href="">京东社区</a>
+
+								<a href="">在线读书</a>
+
+								<a href="">装机大师</a>
+
+								<a href="">京东E卡　</a>
+
+								<a href="">家装城</a>
+
+								<a href="">搭配购　</a>
+
+								<a href="">我喜欢　</a>
+
+								<a href="">游戏社区</a>
+
+							</div>
+
+							<div class="tese"><span>企业服务</span></div>
+
+							<div class="tesemain1">
+
+								<a href="">企业采购</a>
+
+								<a href="">办公直通车</a>
+
+							</div>
+
+							<div class="tese"><span>旗下网站</span></div>
+
+							<div class="tesemain2">
+
+								<a href="">English Site</a>
+
+							</div>
+
+							
+
+						</div>
+
+					</li>
+
+				</ul>
+
+			</div>

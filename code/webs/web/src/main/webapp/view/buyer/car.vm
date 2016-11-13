@@ -1,0 +1,60 @@
+<style>
+.table-main {
+	  border: 1px solid #dddddd;
+}
+</style>
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>购物车</small></div>
+    </div>
+
+    
+    <div class="am-g">
+      <div class="am-u-sm-12">
+        <form class="am-form">
+           <table class="am-table am-table-striped am-table-hover table-main">
+          <tbody>
+          	<tr>
+          		<td><input type="checkbox"/></td><td>图片</td><td>标题</td><td>商家</td><td>价格</td><td>数量</td><td>操作</td>
+          	</tr>
+
+            		#foreach($item in $items)
+            			<tr>
+            			  <td><input type="checkbox"/>
+            			  <td  class="table-title" width="120px"><a href="item-$!{item.itemId}-detail.htm"><image src="item-image-$!{item.pic}.htm" style="width:80px;height:80px"><a/></td>
+            			  <td  class="table-title" width="220px"><a href="item-$!{item.itemId}-detail.htm">$!item.title</a></td>
+            			  <td  class="table-title" width="220px"><a href="#">$!item.sellerId</a></td>
+            			  <td  class="table-title" width="60px">$!item.price</td>
+            			  <td class="am-hide-sm-only" width="60px">$!item.num</td>
+            			  
+             				 <td  class="table-title">
+             				 	立即支付 
+             				 	<br/>
+             				 	删除
+             				 	
+             				 
+             				 </td>
+             				 </tr>
+             		#end
+             	
+            <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>总计：$!item.total</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+          </tbody>
+        </table>
+          
+        
+        </form>
+      </div>
+
+    </div>
+    
+    <div class="am-g">
+      <div class="am-u-sm-12">
+         <input type="button" value="立即结算" class="am-btn am-btn-default"/>
+      </div>
+    </div>
+    
+    <div class="am-g">
+      <div class="am-u-sm-12">
+        <hr />
+          <p>注：.....</p>
+      </div>
+    </div>

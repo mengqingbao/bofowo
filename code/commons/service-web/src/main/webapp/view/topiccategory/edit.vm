@@ -1,0 +1,56 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>TopicCategory Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<form action="topiccategory-update.htm" method="post"> 
+	<table class="table table-striped table-bordered responsive">
+															<tr>
+				<td><label for="status">#springMessage("topicId")</label></td>
+				<td>
+					<input type="text" name="topicId" id="topicId" value="$!{topiccategory.topicId}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("categoryName")</label></td>
+				<td>
+					<input type="text" name="categoryName" id="categoryName" value="$!{topiccategory.categoryName}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("createMan")</label></td>
+				<td>
+					<input type="text" name="createMan" id="createMan" value="$!{topiccategory.createMan}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("createTime")</label></td>
+				<td>
+					<input type="text" name="createTime" id="createTime" value="$!{topiccategory.createTime}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("status")</label></td>
+				<td>
+					<input type="text" name="status" id="status" value="$!{topiccategory.status}"/>
+				</td>
+			</tr>
+						</table>
+	<input type="submit" value="#springMessage("save")"/>
+</form>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

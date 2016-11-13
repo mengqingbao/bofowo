@@ -1,0 +1,95 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>BuyerAddress Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<table class="table table-striped table-bordered responsive">
+	<tr>
+		<td><label for="status">#springMessage("id")</label></td>
+		<td>
+			$!{buyeraddress.id}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("buyerId")</label></td>
+		<td>
+			$!{buyeraddress.buyerId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("province")</label></td>
+		<td>
+			$!{buyeraddress.province}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("city")</label></td>
+		<td>
+			$!{buyeraddress.city}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("area")</label></td>
+		<td>
+			$!{buyeraddress.area}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("address")</label></td>
+		<td>
+			$!{buyeraddress.address}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("postCode")</label></td>
+		<td>
+			$!{buyeraddress.postCode}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("realName")</label></td>
+		<td>
+			$!{buyeraddress.realName}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("mobile")</label></td>
+		<td>
+			$!{buyeraddress.mobile}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("tele")</label></td>
+		<td>
+			$!{buyeraddress.tele}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("isDefault")</label></td>
+		<td>
+			$!{buyeraddress.isDefault}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("isDelete")</label></td>
+		<td>
+			$!{buyeraddress.isDelete}
+		</td>
+	</tr>
+</table>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>盈艺术</title>
+<link type="text/css" rel="stylesheet" href="/css/normalize.css" />
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+
+
+
+</head>
+
+<body>
+	#parse("/head.vm")
+	<div>
+		<ul>
+			<li>
+				<img src="img/BANNER.png" style="width: 100%; height: 471px;cursor: pointer;" id="reservation"></img>
+				</li>
+		</ul>
+	</div>
+
+
+	<div class="content">
+		<div class="content-title">
+			|油画专区&nbsp;&nbsp;<span>OIL PAINTING AREA</span>
+		</div>
+		<div class="content-div" style="height: 535px;">
+			<div class="content-img" style="width: 431px; top: 0px; left: 0px;"
+				data-pictype="canvas" data-picid="1005">
+				<img src="img/1/youhua01.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">焦灼的醇香</p>
+					<p class="content-img-r">作者：于向溟</p>
+				</div>
+			</div>
+			<div class="content-img" style="width: 431px; top: 0px; left: 446px;"
+				data-pictype="canvas" data-picid="1011">
+				<img src="img/1/youhua02.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">一个人的战争</p>
+					<p class="content-img-r">作者：于向溟</p>
+				</div>
+			</div>
+			<div class="content-img" style="width: 362px; top: 0px; left: 892px;"
+				data-pictype="canvas" data-picid="1021">
+				<img src="img/1/youhua03.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">新城校尉之二</p>
+					<p class="content-img-r">作者：于向溟</p>
+				</div>
+			</div>
+			<div class="content-img"
+				style="width: 232px; top: 0px; left: 1269px;" data-pictype="canvas"
+				data-picid="1012">
+				<img src="img/1/youhua04.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">重重艳影</p>
+					<p class="content-img-r">作者：于向溟</p>
+				</div>
+			</div>
+			<div class="content-img"
+				style="width: 719px; top: 290px; left: 446px;" data-pictype="canvas"
+				data-picid="1017">
+				<img src="img/1/youhua05.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">焚天</p>
+					<p class="content-img-r">作者：于向溟</p>
+				</div>
+			</div>
+			<div class="content-img"
+				style="width: 320px; top: 290px; left: 1180px;"
+				data-pictype="canvas" data-picid="1016">
+				<img src="img/1/youhua06.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">幻境</p>
+					<p class="content-img-r">作者：于向溟</p>
+				</div>
+			</div>
+		</div>
+		<div class="content-title">
+			|水墨画专区&nbsp;&nbsp;<span>PAINTING AREA</span>
+		</div>
+		<div class="content-div" style="height: 537px;">
+
+			<div class="content-img" style="width: 313px; top: 0px; left: 0px;"
+				data-pictype="wash" data-picid="2014">
+				<img src="img/2/shuimo02.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">隐语系列纸本墨</p>
+					<p class="content-img-r">作者：张锰</p>
+				</div>
+			</div>
+			<div class="content-img" style="width: 641px; top: 0px; left: 328px;"
+				data-pictype="wash" data-picid="2008">
+				<img src="img/2/shuimo03.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">隐于树系列纸本墨</p>
+					<p class="content-img-r">作者：张锰</p>
+				</div>
+			</div>
+			<div class="content-img" style="width: 518px; top: 0px; left: 984px;"
+				data-pictype="wash" data-picid="2002">
+				<img src="img/2/shuimo01.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">蘑菇系列纸本墨</p>
+					<p class="content-img-r">作者：张锰</p>
+				</div>
+			</div>
+			<div class="content-img" style="width: 555px; top: 264px; left: 0px;"
+				data-pictype="wash" data-picid="2003">
+				<img src="img/2/shuimo04.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">隐于树系列纸本墨</p>
+					<p class="content-img-r">作者：张锰</p>
+				</div>
+			</div>
+			<div class="content-img"
+				style="width: 399px; top: 264px; left: 570px;" data-pictype="wash"
+				data-picid="2013">
+				<img src="img/2/shuimo05.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">隐于树系列纸本墨</p>
+					<p class="content-img-r">作者：张锰</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="content-title">
+			|雕塑装置&nbsp;&nbsp;<span>SCULPTURE DEVICE</span>
+		</div>
+		<div class="content-div" style="height: 531px;">
+
+			<div class="content-img" style="width: 354px; top: 0px; left: 0px;"
+				data-pictype="device" data-picid="3003">
+				<img src="img/4/zhuangzhi01.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">救世主</p>
+					<p class="content-img-r">作者：于向溟</p>
+				</div>
+			</div>
+			<div class="content-img" style="width: 414px; top: 0px; left: 369px;"
+				data-pictype="device" data-picid="3001">
+				<img src="img/4/zhuangzhi02.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">方舟</p>
+					<p class="content-img-r">作者：于向溟</p>
+				</div>
+			</div>
+			<div class="content-img" style="width: 702px; top: 0px; left: 798px;"
+				data-pictype="device" data-picid="3005">
+				<img src="img/4/zhuangzhi03.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">舞者之一</p>
+					<p class="content-img-r">作者：于向溟</p>
+				</div>
+			</div>
+			<div class="content-img"
+				style="width: 594px; top: 285px; left: 369px;" data-pictype="device"
+				data-picid="3002">
+				<img src="img/4/zhuangzhi04.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">行者之一</p>
+					<p class="content-img-r">作者：于向溟</p>
+				</div>
+			</div>
+			<div class="content-img"
+				style="width: 521px; top: 285px; left: 978px;" data-pictype="device"
+				data-picid="3004">
+				<img src="img/4/zhuangzhi05.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">试验田－中轴线之一</p>
+					<p class="content-img-r">作者：于向溟</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="content-title">
+			|影像作品&nbsp;&nbsp;<span>IMAGE WORKS </span>
+		</div>
+		<div class="content-div" style="height: 576px;">
+
+			<div class="content-img" style="width: 482px; top: 0px; left: 0px;"
+				data-pictype="film" data-picid="4011">
+				<img src="img/3/yingxiang01.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">青豆天堂3-西瓜世界</p>
+					<p class="content-img-r">作者：张锰</p>
+				</div>
+			</div>
+			<div class="content-img" style="width: 516px; top: 0px; left: 497px;"
+				data-pictype="film" data-picid="4012">
+				<img src="img/3/yingxiang02.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">青豆天堂3-西瓜世界</p>
+					<p class="content-img-r">作者：张锰</p>
+				</div>
+			</div>
+			<div class="content-img"
+				style="width: 474px; top: 0px; left: 1028px;" data-pictype="film"
+				data-picid="4006">
+				<img src="img/3/yingxiang05.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">七里海</p>
+					<p class="content-img-r">作者：张锰</p>
+				</div>
+			</div>
+			<div class="content-img" style="width: 540px; top: 282px; left: 0px;"
+				data-pictype="film" data-picid="4008">
+				<img src="img/3/yingxiang03.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">青豆天堂</p>
+					<p class="content-img-r">作者：张锰</p>
+				</div>
+			</div>
+			<div class="content-img"
+				style="width: 457px; top: 282px; left: 555px;" data-pictype="film"
+				data-picid="4007">
+				<img src="img/3/yingxiang04.png" />
+				<div class="content-img-bottom">
+					<p class="content-img-l">青豆天堂</p>
+					<p class="content-img-r">作者：张锰</p>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+
+
+
+
+
+
+	</div>
+
+	#parse("/bottom.vm")
+
+<script type="text/javascript">
+	$(function(){
+	$("#bottom").addClass("bottom");
+	
+	
+	$("#reservation").click(function(){
+		var isLogin='$!{currentUserUtil.getCurrentUserName()}';
+		if(!$currentUserUtil.isAuthority()){
+			fullDiv();
+			$("#login").show();
+		}else{
+		window.location = "reservation-add.htm?userName="+isLogin ;
+	}
+	});
+	});
+	
+	
+	</script>
+
+
+</body>
+</html>

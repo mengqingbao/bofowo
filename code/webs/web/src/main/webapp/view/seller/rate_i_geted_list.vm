@@ -1,0 +1,67 @@
+
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>评价管理</small></div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-6">
+        <div class="am-btn-toolbar">
+
+        </div>
+      </div>
+      <div class="am-u-sm-12 am-u-md-3">
+        <div class="am-form-group">
+          
+        </div>
+      </div>
+      <div class="am-u-sm-12 am-u-md-3">
+        <div class="am-input-group am-input-group-sm">
+          <input type="text" class="am-form-field">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button">搜索</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12">
+        <form class="am-form">
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                <th class="table-id">买家</th><th class="table-title" width="320px">评价内容</th><th class="table-type">评分</th><th class="table-date am-hide-sm-only">评价日期</th><th class="table-set">操作</th>
+              </tr>
+          </thead>
+          <tbody>
+            #foreach($foo in $items)
+            <tr>
+              <td>$!foo.buyerId</td>
+              <td>$!foo.comment </td>
+              <td>
+              服务：$!foo.serviceRate <br/>
+              描述：$!foo.itemRate <br/>
+              快递：$!foo.postRate
+              </td>
+              <td class="am-hide-sm-only">$!foo.createdTime</td>
+              <td>
+                <div class="am-btn-toolbar">
+                  <div class="am-btn-group am-btn-group-xs">
+                    <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 评价</button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+           #end
+          </tbody>
+        </table>
+           <div class="am-cf">
+ 	<form id="form1" name="form1></form>
+			#pageNavigation($!pageInfo,'form1')
+			</div>
+          <hr />
+          <p>注：.....</p>
+       
+      </div>
+
+    </div>

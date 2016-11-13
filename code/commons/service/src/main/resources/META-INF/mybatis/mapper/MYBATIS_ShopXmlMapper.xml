@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.ShopMapper">
+	<resultMap type="ShopModel" id="ShopModelMap">
+
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="desc" column="DESC_" />
+		<result property="logoImg" column="LOGO_IMG" />
+		<result property="creator" column="CREATOR" />
+		<result property="url" column="URL" />
+		<result property="owner" column="OWNER" />
+		<result property="createdTime" column="CREATED_TIME" />
+		<result property="serviceScoreTotal" column="SERVICE_SCORE_TOTAL" />
+		<result property="drawScoreTotal" column="DRAW_SCORE_TOTAL" />
+		<result property="postScoreTotal" column="POST_SCORE_TOTAL" />
+		<result property="commentTimes" column="COMMENT_TIMES" />
+		<result property="level" column="LEVEL_" />
+		<result property="notice" column="NOTICE" />
+		<result property="header" column="HEADER" />
+		<result property="layout" column="LAYOUT" />
+		<result property="layoutColumnTotal" column="LAYOUT_COLUMN_TOTAL" />
+		<result property="footer" column="FOOTER" />
+		<result property="order" column="ORDER_" />
+		<result property="status" column="STATUS" />
+		<result property="body" column="BODY" />
+		<result property="shopId" column="SHOP_ID" />
+		<result property="sellerId" column="SELLER_ID" />
+		<result property="type" column="TYPE_" />
+		<result property="address" column="ADDRESS" />
+		<result property="tele" column="TELE" />
+		<result property="qq" column="QQ" />
+		<result property="wangwang" column="WANGWANG" />
+		<result property="seoKey" column="SEO_KEY" />
+		<result property="seoContent" column="SEO_CONTENT" />
+		<result property="province" column="PROVINCE" />
+		<result property="city" column="CITY" />
+		<result property="area" column="AREA" />
+		<result property="categoryId" column="CATEGORY_ID" />
+		
+	</resultMap>
+</mapper> 

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/css/user/main.css">
+<script type="text/javascript" src="js/common/jquery-1.8.2.min.js"></script>
+
+</head>
+<script type="text/javascript">
+		function onFocusFun() {
+			$(".error-content").hide();
+		}
+
+		function userName() {
+			var userNameVal = $("#j_username").val();
+			var realUserName = userNameVal.replace(/(^\s*)|(\s*$)/g, "");
+			if (userNameVal == "" || realUserName == "") {
+				return false;
+			} else {
+				return true;
+			}
+		}
+		function passwd() {
+			var pawVal = $("#j_password").val();
+			var realPawVal = pawVal.replace(/(^\s*)|(\s*$)/g, "");
+			if (pawVal == "" || realPawVal == "") {
+				return false;
+			} else {
+				return true;
+			}
+		}
+
+		function checkLogin() {
+			debugger;
+			if (!userName() || !passwd()) {
+				$(".error-content").show();
+				return false;
+			}
+		}
+	</script>
+<body class="mbody">
+	#parse("/head.vm")
+  <form  action=""  onSubmit="return checkLogin()" method="post">
+
+  <div class="minelog_bj">
+        <p class="minelog_ph1">登录</p>
+        <div class="minelog_logdiv1"><input type="text" id="j_username" onFocus="onFocusFun()" name="j_username"  class="minelog_text" placeholder="手机号"/></div>
+       <span id="nameSpan" style="color: red;"></span>
+        <div class="minelog_logdiv1"><input type="password" class="minelog_text" id="j_password"
+					onFocus="onFocusFun()"  placeholder="密码" name="j_password"/></div>
+        #if(!$error)
+			<div class="error-div" style="text-align: center;">
+				<span class="error-content" style="color: red; display: none">*用户名或密码不匹配</span>
+				
+			</div>
+			#end
+			<div class="error-div" style="text-align: center;">
+				
+				<span class="error-content" style="color: red;"> #if($error)
+					*用户名与密码不匹配 #end </span>
+			</div>
+        <div class="minelog_logdiv1"><input type="submit" name="" value="立即登录" class="minelog_button1"></div>
+        <p class="minelog_logp"><a href="findpassword.htm">忘记密码？</a><a href="user-register.htm" class="minelog_bor">立即注册</a></p>
+    </div>
+  </form>
+
+#parse("/bottom.vm")
+</body>
+</html>

@@ -1,0 +1,80 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Doc Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<form action="doc-update.htm" method="post"> 
+	<table class="table table-striped table-bordered responsive">
+															<tr>
+				<td><label for="status">#springMessage("docName")</label></td>
+				<td>
+					<input type="text" name="docName" id="docName" value="$!{doc.docName}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("path")</label></td>
+				<td>
+					<input type="text" name="path" id="path" value="$!{doc.path}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("isdelete")</label></td>
+				<td>
+					<input type="text" name="isdelete" id="isdelete" value="$!{doc.isdelete}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("status")</label></td>
+				<td>
+					<input type="text" name="status" id="status" value="$!{doc.status}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("topicId")</label></td>
+				<td>
+					<input type="text" name="topicId" id="topicId" value="$!{doc.topicId}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("createDate")</label></td>
+				<td>
+					<input type="text" name="createDate" id="createDate" value="$!{doc.createDate}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("changeDate")</label></td>
+				<td>
+					<input type="text" name="changeDate" id="changeDate" value="$!{doc.changeDate}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("creator")</label></td>
+				<td>
+					<input type="text" name="creator" id="creator" value="$!{doc.creator}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("changeMan")</label></td>
+				<td>
+					<input type="text" name="changeMan" id="changeMan" value="$!{doc.changeMan}"/>
+				</td>
+			</tr>
+						</table>
+	<input type="submit" value="#springMessage("save")"/>
+</form>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

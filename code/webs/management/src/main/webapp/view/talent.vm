@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>多才多艺群策网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
+
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="bower_components/jquery/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    #parse("common/head.vm")
+<div class="ch-container">
+
+	<div class="row" style="width:1024px;margin:0 auto">
+		<div class="box col-md-12"><!--column start-->
+			<div class="box-content">
+				<div class="page-header">
+					<h3>首页 》策划师</h3>
+				</div>
+				<table class="" style="">
+						<tbody>
+							<tr>
+								<td class="center">行业：</td>
+								<td class="center">工业</td>
+								<td class="center">农业</td>
+								<td class="center">服务业</td>
+								<td class="center">网商</td>
+								<td class="center">金融</td>
+								<td class="center">互联网</td>
+							</tr>
+							<tr>
+								<td class="center">所在地区：</td>
+								<td class="center">上海</td>
+								<td class="center">北京</td>
+								<td class="center">广州</td>
+								<td class="center">杭州</td>
+								<td class="center">武汉</td>
+								<td class="center">其他</td>
+							</tr>	
+							<tr>
+								<td class="center">当前所属行业：</td>
+								<td class="center">工业</td>
+								<td class="center">农业</td>
+								<td class="center">服务业</td>
+								<td class="center">网商</td>
+								<td class="center">金融</td>
+								<td class="center">互联网</td>
+							</tr>
+							<tr>
+								<td class="center">状态：</td>
+								<td class="center">有完成项目</td>
+								<td class="center">项目进行中</td>
+								<td class="center">全部状态</td>
+								<td class="center"></td>
+								<td class="center"></td>
+								<td class="center"></td>
+							</tr>		
+						</tbody>
+					</table>	
+			</div>
+					
+				</div><!--column end-->
+		 </div>
+    
+	<div class="row" style="width:1024px;margin:0 auto">
+				
+				<div class="box col-md-12"><!--column start-->
+						<div class="box-content">
+							<table class="table table-border" style="">
+						<tbody>
+							<tr>
+								<td class="center" width="100px" style="background-color: #F9F9F9;"><img src="/upload/avatar/huawei.jpg" style="width:100px;height:100px;" class="dashboard-avatar"></td>
+								<td class="center">
+									<a href="#"><h4>張三</h4></a>
+									<p>状态：实名认证</p>
+									<p>从事行业30年，拥有丰富的策划管理经验。</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="center" width="100px" style="background-color: #F9F9F9;"><img src="/upload/avatar/huawei.jpg" style="width:100px;height:100px;" class="dashboard-avatar"></td>
+								<td class="center">
+									<a href="#"><h4>張三</h4></a>
+									<p>状态：实名认证</p>
+									<p>从事行业30年，拥有丰富的策划管理经验。</p>
+								</td>
+							</tr>	
+							<tr>
+								<td class="center" width="100px" style="background-color: #F9F9F9;"><img src="/upload/avatar/huawei.jpg" style="width:100px;height:100px;" class="dashboard-avatar"></td>
+								<td class="center">
+									<a href="#"><h4>張三</h4></a>
+									<p>状态：实名认证</p>
+									<p>从事行业30年，拥有丰富的策划管理经验。</p>
+								</td>
+							</tr>	
+							<tr>
+								<td class="center" width="100px" style="background-color: #F9F9F9;"><img src="/upload/avatar/huawei.jpg" style="width:100px;height:100px;" class="dashboard-avatar"></td>
+								<td class="center">
+									<a href="#"><h4>張三</h4></a>
+									<p>状态：实名认证</p>
+									<p>从事行业30年，拥有丰富的策划管理经验。</p>
+								</td>
+							</tr>	
+							<tr>
+								<td class="center" width="100px" style="background-color: #F9F9F9;"><img src="/upload/avatar/huawei.jpg" style="width:100px;height:100px;" class="dashboard-avatar"></td>
+								<td class="center">
+									<a href="#"><h4>張三</h4></a>
+									<p>状态：实名认证</p>
+									<p>从事行业30年，拥有丰富的策划管理经验。</p>
+								</td>
+							</tr>	
+							<tr>
+								<td class="center" width="100px" style="background-color: #F9F9F9;"><img src="/upload/avatar/huawei.jpg" style="width:100px;height:100px;" class="dashboard-avatar"></td>
+								<td class="center">
+									<a href="#"><h4>張三</h4></a>
+									<p>状态：实名认证</p>
+									<p>从事行业30年，拥有丰富的策划管理经验。</p>
+								</td>
+							</tr>	
+							<tr>
+								<td class="center" width="100px" style="background-color: #F9F9F9;"><img src="/upload/avatar/huawei.jpg" style="width:100px;height:100px;" class="dashboard-avatar"></td>
+								<td class="center">
+									<a href="#"><h4>張三</h4></a>
+									<p>状态：实名认证</p>
+									<p>从事行业30年，拥有丰富的策划管理经验。</p>
+								</td>
+							</tr>	
+							<tr>
+								<td class="center" width="100px" style="background-color: #F9F9F9;"><img src="/upload/avatar/huawei.jpg" style="width:100px;height:100px;" class="dashboard-avatar"></td>
+								<td class="center">
+									<a href="#"><h4>張三</h4></a>
+									<p>状态：实名认证</p>
+									<p>从事行业30年，拥有丰富的策划管理经验。</p>
+								</td>
+							</tr>	
+							<tr>
+								<td class="center" width="100px" style="background-color: #F9F9F9;"><img src="/upload/avatar/huawei.jpg" style="width:100px;height:100px;" class="dashboard-avatar"></td>
+								<td class="center">
+									<a href="#"><h4>張三</h4></a>
+									<p>状态：实名认证</p>
+									<p>从事行业30年，拥有丰富的策划管理经验。</p>
+								</td>
+							</tr>	
+							<tr>
+								<td class="center" width="100px" style="background-color: #F9F9F9;"><img src="/upload/avatar/huawei.jpg" style="width:100px;height:100px;" class="dashboard-avatar"></td>
+								<td class="center">
+									<a href="#"><h4>張三</h4></a>
+									<p>状态：实名认证</p>
+									<p>从事行业30年，拥有丰富的策划管理经验。</p>
+								</td>
+							</tr>			
+						</tbody>
+					</table>	
+					
+					</div>
+				</div><!--column end-->
+	
+	</div>
+				
+		<div class="row" style="width:1024px;margin:0 auto">
+				<div class="box col-md-12"><!--column start-->
+					
+						<div class="box-content">
+							 #pageNavigation($!pageInfo,'form1')
+						 </div>
+					
+				</div><!--column end-->
+		 </div>
+    <hr>
+</div>
+   #include("common/footer.vm")
+</body>
+</html>

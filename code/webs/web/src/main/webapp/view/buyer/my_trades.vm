@@ -1,0 +1,110 @@
+<style>
+.table-main {
+	  border: 1px solid #dddddd;
+}
+</style>
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>已购买的商品</small></div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-6">
+        <div class="am-form-group am-input-group-sm">
+         <input type="text" class="am-form-field" value="买家ID">
+        </div>
+      </div>
+      <div class="am-u-sm-12 am-u-md-6">
+        <div class="am-form-group am-input-group-sm">
+         <input type="text" class="am-form-field" value="卖家ID">
+        </div>
+      </div>
+      </div>
+      <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-4">
+        <div class="am-form-group">
+          <select data-am-selected="{btnSize: 'sm'}">
+            <option value="option1">交易状态</option>
+            <option value="option2">等待付款</option>
+            <option value="option3">等待发货</option>
+            <option value="option3">买家确认收货</option>
+          </select>
+        </div>
+      </div>
+      <div class="am-u-sm-12 am-u-md-4">
+        <div class="am-form-group">
+          <select data-am-selected="{btnSize: 'sm'}">
+            <option value="option1">所有类别</option>
+            <option value="option2">IT业界</option>
+            <option value="option3">数码产品</option>
+            <option value="option3">笔记本电脑</option>
+            <option value="option3">平板电脑</option>
+            <option value="option3">只能手机</option>
+            <option value="option3">超极本</option>
+          </select>
+        </div>
+      </div>
+      <div class="am-u-sm-12 am-u-md-4">
+        <div class="am-input-group am-input-group-sm">
+          <input type="text" class="am-form-field">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button">搜索</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12">
+        <form class="am-form">
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                <th  class="table-title" width="120px;">图片</th><th class="table-title" width="220px;">标题</th><th class="table-title"  width="60px">单价</th><th  class="table-title"  width="60px">数量</th><th  class="table-title"  width="60px">实付金额</th><th  class="table-title"  width="60px">交易状态</th><th  class="table-title">售后服务</th>
+              </tr>
+          </thead>
+          </table>
+          
+          #foreach($item in $!items)
+           <table class="am-table am-table-striped am-table-hover table-main">
+          <tbody>
+          	<tr>
+          		<td>订单号： $!item.id</td><td>创建时间： $dateFormat.toDateStr($item.createdTime)</td><td>店铺：$!item.shopName</td><td>商家ID：$!item.sellerId</td>
+          	</tr>
+            <tr>
+            	<td colspan= 4>
+            		<table style="width:100%">
+            		#foreach($order in $item.orders)
+            			<tr>
+            			  <td  class="table-title" width="120px"><image src="item-image-$!{StringUtil.getImageId($!{order.pic})}.htm" style="width:100px"></td>
+            			  <td  class="table-title" width="220px"><a href="#">$order.title</a></td>
+            			  <td  class="table-title" width="60px">$order.price</td>
+            			  <td class="am-hide-sm-only" width="60px">$order.num</td>
+            			  <td  class="table-title" width="60px">$order.realPay</td>
+           				    <td  class="table-title" width="60px">$!order.status 等待签收</td>
+             				 <td  class="table-title">
+             				 	退货 
+             				 	<br/>返修<br/>
+             				 	查看物流
+             				 	
+             				 
+             				 </td>
+             				 </tr>
+             		#end
+             		
+            		</table>
+            	</td>
+            </tr>
+            <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>总计：$item.realPay</td></tr>
+          </tbody>
+        </table>
+         #end
+          <div class="am-cf">
+ <form id="form1" name="form1></form>
+			#pageNavigation($!pageInfo,'form1')
+</div>
+          <hr />
+          <p>注：.....</p>
+        </form>
+      </div>
+
+    </div>

@@ -1,0 +1,130 @@
+   <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>#if($type==8) 添加属性 #else 添加规格 #end</small></div>
+    </div> 
+ 
+ <div class="am-g" style="height:400px">
+      <div class="am-u-sm-12">
+<form action="producproperties-insert.htm" method="post"> 
+<input type="hidden" name="type" id="type" value="$!{type}"/>
+	<table class="am-table am-table-striped am-table-hover table-main">
+			<tr>
+				<td><label for="status">分类</label></td>
+				<td>
+					<select name="pid1" id="pid1">
+            		  <option value="0">选择发表分类</option>
+             			 #foreach($cat in $categories)
+             			 <option value="$cat.id">$cat.name</option>
+            			  #end
+            		</select>
+            		
+            		<select name="pid2" id="pid2">
+            		  <option value="0">选择发表分类</option>
+            		</select>
+            		
+            		<select name="categoryId" id="categoryId">
+            		  <option value="0">选择发表分类</option>
+            		</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="status">名称</label></td>
+				<td>
+					<input type="text" name="name" id="name"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">属性类型</label></td>
+				<td>
+					<select name="inputType" id="inputType">
+						<option value="input">文本域</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label for="status">属性类型</label></td>
+				<td>
+					<select name="propertiesType" id="propertiesType" onchange="setPropertiesType(this.value)">
+						<option value="multi">多选项</option>
+						<option value="single">单项</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="status">描述</label></td>
+				<td>
+					<input type="text" name="desc" id="desc"/>
+				</td>
+			</tr>
+			<tr id="multi_content">
+				<td width="80px"><label for="status">内容</label></td>
+				<td>
+					<input type="hidden" name="val" id="val"/>
+					<table class="am-table am-table-striped am-table-hover table-main">
+					<tr><th width="80px">值</th><th>操作</th></tr>
+					<tr><th><input type="text" name="val"></th><th></th></tr>
+					<tr id="lastTr"><th><input type="button" value="添加" id="addproperties"/></th><th></th></tr>
+					</table>
+				</td>
+			</tr>
+		   </table>
+	<input type="submit" class="am-btn am-btn-primary am-btn-xs" value="#springMessage("save")"/>
+</form>
+
+</div><!--box-content end-->
+	</div>
+<script>
+$("#addproperties").click(function(){
+	$("#lastTr").before("<tr class=\"lasttr\"><th><input type=\"text\" name=\"val\" ></th><th><a href=\"javascript:void(0)\" onclick=\"deltr(this)\">删除</a></th></tr>");
+});
+function deltr(obj){
+	$(obj).parent().parent().remove();
+}
+function setPropertiesType(v){
+	if(v=="single"){
+		$("#multi_content").hide();
+	}else{
+		$("#multi_content").show();
+	}
+}
+
+
+jQuery("#pid1").change(function(){
+	if($(this).val()==0){
+		return;
+	}
+	jQuery.ajax({
+     type: 'get',
+     url: 'get-sub-category.htm?pid='+$(this).val()+'&type=2',
+     dataType:'json',
+     success:function(data){
+     	$("#pid2").empty();
+     	jQuery.each(data, function(index,item){ 
+        	$("#pid2").prepend("<option value='"+item.id+"'>"+item.name+"</option>");
+         }); 
+    $("#pid2").prepend("<option value='0'>请选择</option>");
+     }
+});
+})
+
+jQuery("#pid2").change(function(){
+	if($(this).val()==0){
+		return;
+	}
+
+	jQuery.ajax({
+     type: 'get',
+     url: 'get-sub-category.htm?pid='+$(this).val()+'&type=2',
+     dataType:'json',
+     success:function(data){
+     	
+     	$("#categoryId").empty();
+     	jQuery.each(data, function(index,item){
+        	$("#categoryId").prepend("<option value='"+item.id+"'>"+item.name+"</option>");
+         }); 
+    	$("#categoryId").prepend("<option value='0'>请选择</option>");
+     }
+   });
+});
+
+</script>

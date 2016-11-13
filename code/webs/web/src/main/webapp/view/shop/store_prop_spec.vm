@@ -1,0 +1,132 @@
+<div class="admin-content">
+
+  <div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">店铺设置</strong> / <small>规格属性管理</small></div>
+  </div>
+
+  <div class="am-tabs am-margin">
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li #if($type=='spec')class="am-active"#end><a href="store-prop-spec.htm">规格</a></li>
+      <li #if($type=='prop')class="am-active"#end><a href="store-prop-prop.htm">属性</a></li>
+    </ul>
+
+    <div class="am-tabs-bd">
+      <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+        <!--规格-->
+         <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-6">
+        <div class="am-btn-toolbar">
+          <div class="am-btn-group am-btn-group-xs">
+            <a class="am-btn am-btn-default" href="store-prop-add.htm?type=$type"><span class="am-icon-plus"></span> 新增</a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="am-u-sm-12 am-u-md-3">
+        <div class="am-form-group">
+          <select data-am-selected="{btnSize: 'sm'}">
+          #foreach($scm in $scms)
+            <option value="$scm.id">$scm.name</option>
+           #end
+          </select>
+        </div>
+      </div>
+      <div class="am-u-sm-12 am-u-md-3">
+        <div class="am-input-group am-input-group-sm">
+          <input type="text" class="am-form-field">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button">搜索</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12">
+        <form class="am-form">
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+               <th class="table-title">属性</th><th class="table-type">类型</th><th class="table-author am-hide-sm-only">内容</th><th class="table-set">操作</th>
+              </tr>
+          </thead>
+          <tbody>
+          
+          #foreach($item in $items)
+            <tr>
+              <td>$item.name</td>
+              <td>$!item.inputType</td>
+              <td class="am-hide-sm-only">$!item.inputOption</td>
+              <td>
+                <div class="am-btn-toolbar">
+                  <div class="am-btn-group am-btn-group-xs">
+                    <a class="am-btn am-btn-default am-btn-xs am-text-secondary" href="store-prop-edit.htm?id=$!{item.id}&type=$item.type" title="编辑"><span class="am-icon-pencil-square-o" title="编辑"></span></a>
+                    <a class="am-btn am-btn-default am-btn-xs am-text-danger btn-del" title="删除" id="$!item.id"><span class="am-icon-trash-o"></span></a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+           #end 
+          </tbody>
+        </table>
+          <form id="form1" name="form1></form>
+  <div class="am-pagination">
+  
+   #pageNavigation($pageInfo,"form1")
+   </div>
+          <hr />
+          <p>注：.....</p>
+      </div>
+
+    </div>
+        <!--规格-->
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+    <link href='/css/jquery.qtip.min.css' rel='stylesheet'>
+<link href='/css/jquery.qtip.css' rel='stylesheet'>
+<script src="/js/jquery.qtip.min.js"></script>
+<script>
+	jQuery(".btn-del").each(function(){jQuery(this).qtip({
+		content: {
+			text: "#springMessage("confirm")<br/><br/><input type='button' value='#springMessage("delete")' onclick='del("+jQuery(this).attr('id')+")' class='btn btn-danger'>  <input type='button' value='#springMessage("cancel")' class='btn cancel'>",
+			title: "#springMessage("delete")",
+			button: "#springMessage("cancel")",
+		},
+		
+		position: {
+			my: 'bottom right',
+			at: 'top center'
+		 },
+		style: {
+			classes: 'qtip-shadow qtip-bootstrap'
+		},
+		show: {
+			event: 'click', // Show it on click...
+			solo: true, // ...and hide all other tooltips...
+			modal: true // ...and make it modal
+		  },
+		hide: true,
+		events: {
+            render: function(event, api) {
+                $('.cancel').click(function(e) {
+                    api.hide(e);
+                });
+            },
+          //  hide: function(event, api) { api.destroy(); }
+        }
+
+	});})
+	
+	function del(id){
+		window.location.href='store-prop-del.htm?id='+id;
+	}
+	
+	function filterBtn(){
+		$("#form1").submit();
+	}
+</script>

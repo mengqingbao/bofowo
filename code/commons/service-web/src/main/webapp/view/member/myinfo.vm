@@ -1,0 +1,152 @@
+ <div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="">
+                    <h2><i class="glyphicon glyphicon-user"></i> #springMessage("sub-menu-tfuncation-my-info")</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                        <a href="#" class="btn btn-close btn-round btn-default"><i
+                                class="glyphicon glyphicon-remove"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+        
+         
+        <table class="table table-striped responsive">
+		<tbody>	
+		<tr>
+			<th width="150px" >Full Name</th>
+            <td width="250px">Allen Du</td>
+		</tr>
+		<tr>
+			<th width="150px" >Last Name</th>	
+			<td>13920570702</td>	
+          </tr>
+		 <tr>
+			<th width="150px" >Employee ID</th>
+            <td width="250px">Allen Du</td>
+		</tr>
+		<tr>
+			<th width="150px" >Phone Number</th>	
+			<td>13920570702</td>	
+          </tr>
+		 <tr>
+			<th width="150px" >Email</th>
+            <td width="250px">allen@tdc-consulting.cn</td>
+		</tr>
+		<tr>
+			<th width="150px" >Address/Store</th>	
+			<td>上海市静安区镇宁路200号欣安大厦东峰22B </td>	
+          </tr>
+		  <tr>
+			<th width="150px" >trainer level</th>
+            <td width="250px">010-65180608 ext. 812</td>
+		</tr>
+		<tr>
+			<th width="150px" >trainer code</th>	
+			<td>CEGOS Management Consulting (shanghai)</td>	
+          </tr>
+		  <tr>
+			<th width="150px" >From</th>
+            <td width="250px">External</td>
+		</tr>
+		<tr>
+			<th width="150px" >Company</th>	
+			<td></td>	
+          </tr>
+		  <tr>
+			<th width="150px" >domain/theme of the trainer</th>
+            <td width="250px"></td>
+		</tr>
+		  <tr>
+			<th width="150px" >date of last performed training</th>
+            <td width="250px"></td>
+		</tr>
+		<tr>
+			<th width="150px" >total fees</th>	
+			<td></td>	
+          </tr>
+		  <tr>
+			<th width="150px" >number of people trained</th>
+            <td width="250px"></td>
+		</tr>
+		<tr>
+			<th width="150px" >number of training days</th>	
+			<td></td>	
+          </tr>
+		  <tr>
+			<th width="150px" >number of completed hours</th>
+            <td width="250px"></td>
+		</tr>
+		<tr>
+			<th width="150px" >number of scheduled sessions</th>	
+			<td></td>	
+          </tr>
+		<tr>
+			<th width="150px" >actual expenses</th>	
+			<td></td>	
+          </tr>
+		  <tr>
+			<th width="150px" >upcoming sessions</th>
+            <td width="250px"></td>
+		</tr>
+		<tr>
+			<th width="150px" >completed sessions</th>	
+			<td></td>	
+          </tr>
+		 </tbody>
+      </table>
+	  
+	<hr/>
+	<h2>History of training courses conducted by the trainer</h2>
+	    <table class="table table-striped responsive ">
+			<tbody>
+          <tr>
+			<th width="50px" >Code</th>
+            <th >Title</th>	
+			<th width="70px" >Time</th>	
+			<th width="70px" >Duration</th>
+          </tr>
+
+				<tr #if($!courseId=='99') style="background:red" #end>
+					<td width="50px">EI-006
+</td>
+					<td title="To practice the fire fighting equipment "><a href="#">Fire fighting Practise</a></td>
+					<td width="70px">&lt; 3days</td>
+					<td width="70px">1.0 h</td>
+				</tr>
+         				<tr #if($!courseId=='78') style="background:red" #end>
+					<td width="50px">CHN0001
+</td>
+					<td title="To know the Auchan history and culture"><a href="#">Welcome to Auchan</a></td>
+					<td width="70px">&lt;1个月</td>
+					<td width="70px">0.75 h</td>
+
+				</tr>
+         				<tr #if($!courseId=='5') style="background:red" #end>
+					<td width="50px">CHN0020
+</td>
+					<td title="To know the Auchan rules for staff"><a href="#">Employee handbook@</a></td>
+					<td width="90px">&lt;1个月</td>
+					<td width="90px">1.5 h</td>
+
+				</tr>
+         				<tr #if($!courseId=='4') style="background:red" #end>
+					<td width="50px">EI-014
+</td>
+					<td title="To know which kind of welfare and insurance staff will got."><a href="#">Welfare and iinsurance</a></td>
+					<td width="70px">&lt;1个月</td>
+					<td width="70px">1.0 h</td>
+				</tr>
+         		 
+		         </tbody>
+      </table>
+	<input type="button" name="Modify" id="submit" value="#springMessage("Modify")" class="btn btn-success"/>
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+
+    </div><!--/row-->

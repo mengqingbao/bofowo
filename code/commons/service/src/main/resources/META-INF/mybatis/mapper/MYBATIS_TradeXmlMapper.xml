@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.TradeMapper">
+	<resultMap type="TradeModel" id="TradeModelMap">
+
+		<id property="id" column="ID" />
+		<result property="title" column="TITLE" />
+		<result property="total" column="TOTAL" />
+		<result property="realPay" column="REAL_PAY" />
+		<result property="status" column="STATUS" />
+		<result property="pic" column="PIC" />
+		<result property="num" column="NUM" />
+		<result property="note" column="NOTE" />
+		<result property="productId" column="PRODUCT_ID" />
+		<result property="shopPrace" column="SHOP_PRACE" />
+		<result property="sellerId" column="SELLER_ID" />
+		<result property="buyerId" column="BUYER_ID" />
+		<result property="shopName" column="SHOP_NAME" />
+		<result property="payWay" column="PAY_WAY" />
+		<result property="createdTime" column="CREATED_TIME" />
+		<result property="modifyTime" column="MODIFY_TIME" />
+		
+	</resultMap>
+</mapper> 

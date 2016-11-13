@@ -1,0 +1,69 @@
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>主题设置</small></div>
+    </div>
+
+   <div class="am-g">
+      <div class="am-u-sm-12">
+      <ul class="am-tabs-nav am-nav am-nav-tabs">
+      	<li class="am-active"><a href="javascript:void(0)">店铺主题</a></li>
+      </ul>
+      <div class="am-g" style="margin-top:20px;">
+      <div class="am-u-sm-12 am-u-md-2">
+        
+      	<image src="images/theme/1.jpg" width="100px"/>
+
+      </div>
+      <div class="am-u-sm-12 am-u-md-10">
+      	<p>模版名称：style4</p>
+		<p>风格名称：木纹爱心宠物</p>
+		<p><a href="#">进入店铺</a></p>
+      </div>
+	  </div>
+	  <div class="am-u-sm-12 am-u-md-12">
+        &nbsp;
+      </div>
+         
+<ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li class="am-active"><a href="#tab2">全部主题</a></li>
+      <li><a href="#tab3">免费主题</a></li>
+    </ul>
+    <div class="am-g">
+      <div class="am-u-sm-12">
+        <form class="am-form">
+          <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-3 am-margin gallery-list">
+          #foreach($foo in [10000..10025])
+      <li>
+        <a href="#">
+          <img class="am-img-thumbnail am-img-bdrs" src="images/theme/2.jpg" alt="">
+          <div class="gallery-title">模板名称：化工样式</div>
+          <div class="gallery-title">风格名称：专业</div>
+          <div class="gallery-title am-btn-group am-btn-group-xs">
+            <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 使用</button>
+            <button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 预览</button>
+          </div>
+        </a>
+      </li>
+      #end
+    </ul>      
+
+
+<div class="am-cf">
+  共 15 条记录
+  <div class="am-fr">
+    <ul class="am-pagination">
+      <li class="am-disabled"><a href="#">«</a></li>
+      <li class="am-active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">»</a></li>
+    </ul>
+  </div>
+</div>
+          <hr />
+          <p>注：.....</p>
+
+      </div>
+
+    </div>

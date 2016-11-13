@@ -1,0 +1,80 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>MyCoupon Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<form action="mycoupon-update.htm" method="post"> 
+	<table class="table table-striped table-bordered responsive">
+															<tr>
+				<td><label for="status">#springMessage("name")</label></td>
+				<td>
+					<input type="text" name="name" id="name" value="$!{mycoupon.name}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("couponId")</label></td>
+				<td>
+					<input type="text" name="couponId" id="couponId" value="$!{mycoupon.couponId}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("content")</label></td>
+				<td>
+					<input type="text" name="content" id="content" value="$!{mycoupon.content}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("buyerId")</label></td>
+				<td>
+					<input type="text" name="buyerId" id="buyerId" value="$!{mycoupon.buyerId}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("sellerId")</label></td>
+				<td>
+					<input type="text" name="sellerId" id="sellerId" value="$!{mycoupon.sellerId}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("createdTime")</label></td>
+				<td>
+					<input type="text" name="createdTime" id="createdTime" value="$!{mycoupon.createdTime}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("type")</label></td>
+				<td>
+					<input type="text" name="type" id="type" value="$!{mycoupon.type}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("startDate")</label></td>
+				<td>
+					<input type="text" name="startDate" id="startDate" value="$!{mycoupon.startDate}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("endDate")</label></td>
+				<td>
+					<input type="text" name="endDate" id="endDate" value="$!{mycoupon.endDate}"/>
+				</td>
+			</tr>
+						</table>
+	<input type="submit" value="#springMessage("save")"/>
+</form>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

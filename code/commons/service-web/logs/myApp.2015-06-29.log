@@ -1,0 +1,1161 @@
+16:55:34.250 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+16:55:34.292 [main] INFO  org.mortbay.log - jetty-6.1.26
+16:55:34.693 [main] INFO  /app - Initializing Spring root WebApplicationContext
+16:55:34.693 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+16:55:34.800 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 16:55:34 CST 2015]; root of context hierarchy
+16:55:34.856 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+16:55:35.015 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+16:55:35.085 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+16:55:35.104 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+16:55:35.693 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+16:55:36.219 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+16:55:36.302 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+16:55:38.441 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+16:55:38.670 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+16:55:38.930 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+16:55:38.957 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+16:55:38.977 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+16:55:39.013 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+16:55:39.389 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+16:55:39.390 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+16:55:39.392 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+16:55:39.393 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+16:55:39.395 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+16:55:39.397 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+16:55:39.400 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+16:55:39.401 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+16:55:39.403 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+16:55:39.404 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+16:55:39.405 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+16:55:39.406 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+16:55:39.408 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+16:55:39.409 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+16:55:39.411 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+16:55:39.413 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+16:55:39.415 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+16:55:39.417 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+16:55:39.420 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+16:55:39.421 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+16:55:39.423 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+16:55:39.425 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+16:55:39.426 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+16:55:39.427 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+16:55:39.429 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+16:55:39.431 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+16:55:39.432 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+16:55:39.433 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+16:55:39.436 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+16:55:39.437 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+16:55:39.439 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+16:55:39.439 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+16:55:39.440 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+16:55:39.442 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+16:55:39.443 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+16:55:39.444 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+16:55:39.445 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+16:55:39.446 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+16:55:39.448 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+16:55:39.450 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+16:55:39.451 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+16:55:39.452 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+16:55:39.454 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+16:55:39.455 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+16:55:39.456 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+16:55:39.457 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+16:55:39.459 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+16:55:39.460 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+16:55:39.462 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+16:55:39.464 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+16:55:39.465 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+16:55:39.466 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+16:55:39.467 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+16:55:39.479 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4786 ms
+16:55:39.526 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+16:55:39.526 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+16:55:39.529 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 16:55:39 CST 2015]; parent: Root WebApplicationContext
+16:55:39.529 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+16:55:39.667 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+16:55:39.669 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+16:55:39.886 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+16:55:39.886 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+16:55:40.229 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 702 ms
+16:55:40.235 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+16:55:59.725 [614710631@qtp-2067015026-0] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge12o9ahckze81l6ljxq|72d924a8, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge12o9ahckze81l6ljxq|72d924a8, idleConnectionTestPeriod -> 18000, initialPoolSize -> 7, jdbcUrl -> jdbc:mysql://192.168.0.222:3306/lyun?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 13, maxStatements -> 3600, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+17:02:56.615 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+17:02:56.663 [main] INFO  org.mortbay.log - jetty-6.1.26
+17:02:57.105 [main] INFO  /app - Initializing Spring root WebApplicationContext
+17:02:57.105 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:02:57.216 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 17:02:57 CST 2015]; root of context hierarchy
+17:02:57.256 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+17:02:57.419 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+17:02:57.493 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+17:02:57.516 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+17:02:58.160 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+17:02:58.480 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+17:02:58.563 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+17:03:00.216 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+17:03:00.440 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+17:03:00.704 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+17:03:00.731 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+17:03:00.749 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+17:03:00.763 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+17:03:01.134 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+17:03:01.135 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+17:03:01.137 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+17:03:01.138 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+17:03:01.140 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+17:03:01.141 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+17:03:01.142 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+17:03:01.144 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+17:03:01.145 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+17:03:01.146 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+17:03:01.148 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+17:03:01.149 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+17:03:01.151 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+17:03:01.153 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+17:03:01.155 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+17:03:01.157 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+17:03:01.158 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+17:03:01.159 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+17:03:01.162 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+17:03:01.164 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+17:03:01.165 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+17:03:01.167 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+17:03:01.168 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+17:03:01.170 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+17:03:01.171 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+17:03:01.172 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+17:03:01.173 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+17:03:01.175 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+17:03:01.176 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+17:03:01.177 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+17:03:01.178 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+17:03:01.178 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+17:03:01.180 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+17:03:01.181 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+17:03:01.183 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+17:03:01.184 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+17:03:01.185 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+17:03:01.186 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+17:03:01.187 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+17:03:01.188 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+17:03:01.189 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+17:03:01.190 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+17:03:01.192 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+17:03:01.193 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+17:03:01.195 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+17:03:01.196 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+17:03:01.197 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+17:03:01.198 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+17:03:01.200 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+17:03:01.201 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+17:03:01.202 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+17:03:01.203 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+17:03:01.204 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+17:03:01.216 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4110 ms
+17:03:01.258 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+17:03:01.258 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+17:03:01.260 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 17:03:01 CST 2015]; parent: Root WebApplicationContext
+17:03:01.261 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+17:03:01.400 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+17:03:01.402 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+17:03:01.600 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+17:03:01.600 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+17:03:01.939 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 681 ms
+17:03:01.946 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+17:03:19.638 [614710631@qtp-2067015026-0] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge12o9ahcugn63wuxes|72d924a8, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge12o9ahcugn63wuxes|72d924a8, idleConnectionTestPeriod -> 18000, initialPoolSize -> 7, jdbcUrl -> jdbc:mysql://192.168.0.222:3306/lyun?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 13, maxStatements -> 3600, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+17:07:05.325 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+17:07:05.365 [main] INFO  org.mortbay.log - jetty-6.1.26
+17:07:05.807 [main] INFO  /app - Initializing Spring root WebApplicationContext
+17:07:05.807 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:07:05.909 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 17:07:05 CST 2015]; root of context hierarchy
+17:07:05.979 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+17:07:06.151 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+17:07:06.277 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+17:07:06.298 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+17:07:06.845 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+17:07:07.191 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+17:07:07.272 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+17:07:08.855 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+17:07:09.078 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+17:07:09.346 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+17:07:09.372 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+17:07:09.408 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+17:07:09.423 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+17:07:09.767 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+17:07:09.769 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+17:07:09.771 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+17:07:09.772 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+17:07:09.774 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+17:07:09.776 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+17:07:09.778 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+17:07:09.780 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+17:07:09.781 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+17:07:09.782 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+17:07:09.784 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+17:07:09.786 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+17:07:09.787 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+17:07:09.788 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+17:07:09.790 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+17:07:09.791 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+17:07:09.793 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+17:07:09.794 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+17:07:09.795 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+17:07:09.797 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+17:07:09.798 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+17:07:09.800 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+17:07:09.802 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+17:07:09.804 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+17:07:09.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+17:07:09.806 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+17:07:09.808 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+17:07:09.809 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+17:07:09.811 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+17:07:09.813 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+17:07:09.815 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+17:07:09.815 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+17:07:09.816 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+17:07:09.817 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+17:07:09.819 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+17:07:09.821 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+17:07:09.822 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+17:07:09.823 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+17:07:09.825 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+17:07:09.826 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+17:07:09.827 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+17:07:09.829 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+17:07:09.831 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+17:07:09.832 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+17:07:09.833 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+17:07:09.834 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+17:07:09.835 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+17:07:09.836 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+17:07:09.837 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+17:07:09.839 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+17:07:09.841 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+17:07:09.843 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+17:07:09.843 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+17:07:09.858 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4051 ms
+17:07:09.902 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+17:07:09.902 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+17:07:09.904 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 17:07:09 CST 2015]; parent: Root WebApplicationContext
+17:07:09.904 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+17:07:10.020 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+17:07:10.022 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+17:07:10.218 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+17:07:10.219 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+17:07:10.558 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 656 ms
+17:07:10.565 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+17:07:37.121 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+17:07:37.170 [main] INFO  org.mortbay.log - jetty-6.1.26
+17:07:37.603 [main] INFO  /app - Initializing Spring root WebApplicationContext
+17:07:37.603 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:07:37.721 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 17:07:37 CST 2015]; root of context hierarchy
+17:07:37.762 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+17:07:37.940 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+17:07:38.015 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+17:07:38.038 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+17:07:38.555 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+17:07:38.828 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+17:07:38.904 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+17:07:40.498 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+17:07:40.727 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+17:07:40.993 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+17:07:41.020 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+17:07:41.063 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+17:07:41.077 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+17:07:41.430 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+17:07:41.431 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+17:07:41.433 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+17:07:41.434 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+17:07:41.435 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+17:07:41.437 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+17:07:41.439 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+17:07:41.440 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+17:07:41.441 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+17:07:41.443 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+17:07:41.444 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+17:07:41.445 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+17:07:41.446 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+17:07:41.447 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+17:07:41.449 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+17:07:41.451 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+17:07:41.453 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+17:07:41.454 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+17:07:41.456 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+17:07:41.457 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+17:07:41.459 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+17:07:41.460 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+17:07:41.461 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+17:07:41.463 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+17:07:41.465 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+17:07:41.467 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+17:07:41.468 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+17:07:41.469 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+17:07:41.471 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+17:07:41.472 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+17:07:41.473 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+17:07:41.473 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+17:07:41.475 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+17:07:41.476 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+17:07:41.477 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+17:07:41.478 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+17:07:41.479 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+17:07:41.481 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+17:07:41.482 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+17:07:41.483 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+17:07:41.485 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+17:07:41.486 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+17:07:41.487 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+17:07:41.489 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+17:07:41.490 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+17:07:41.491 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+17:07:41.492 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+17:07:41.494 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+17:07:41.495 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+17:07:41.497 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+17:07:41.498 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+17:07:41.500 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+17:07:41.501 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+17:07:41.512 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3909 ms
+17:07:41.559 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+17:07:41.559 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+17:07:41.561 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 17:07:41 CST 2015]; parent: Root WebApplicationContext
+17:07:41.562 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+17:07:41.681 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+17:07:41.683 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+17:07:41.888 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+17:07:41.889 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+17:07:42.212 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 653 ms
+17:07:42.218 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+17:08:02.744 [1610247747@qtp-1878516339-1] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge12o9ahd0gyl50d475|72d924a8, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge12o9ahd0gyl50d475|72d924a8, idleConnectionTestPeriod -> 18000, initialPoolSize -> 7, jdbcUrl -> jdbc:mysql://192.168.0.222:3306/lyun?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 13, maxStatements -> 3600, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+17:09:27.419 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+17:09:27.461 [main] INFO  org.mortbay.log - jetty-6.1.26
+17:09:27.866 [main] INFO  /app - Initializing Spring root WebApplicationContext
+17:09:27.866 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:09:27.954 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 17:09:27 CST 2015]; root of context hierarchy
+17:09:28.016 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+17:09:28.177 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+17:09:28.264 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+17:09:28.284 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+17:09:28.844 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+17:09:29.175 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+17:09:29.257 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+17:09:30.909 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+17:09:31.138 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+17:09:31.428 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+17:09:31.458 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+17:09:31.494 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+17:09:31.506 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+17:09:31.871 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+17:09:31.873 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+17:09:31.874 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+17:09:31.876 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+17:09:31.877 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+17:09:31.878 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+17:09:31.880 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+17:09:31.881 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+17:09:31.883 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+17:09:31.885 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+17:09:31.886 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+17:09:31.887 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+17:09:31.889 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+17:09:31.890 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+17:09:31.893 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+17:09:31.894 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+17:09:31.896 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+17:09:31.897 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+17:09:31.901 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+17:09:31.903 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+17:09:31.904 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+17:09:31.905 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+17:09:31.907 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+17:09:31.908 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+17:09:31.910 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+17:09:31.911 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+17:09:31.913 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+17:09:31.914 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+17:09:31.915 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+17:09:31.917 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+17:09:31.918 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+17:09:31.918 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+17:09:31.919 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+17:09:31.921 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+17:09:31.922 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+17:09:31.923 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+17:09:31.924 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+17:09:31.925 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+17:09:31.926 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+17:09:31.927 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+17:09:31.929 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+17:09:31.930 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+17:09:31.932 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+17:09:31.933 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+17:09:31.935 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+17:09:31.936 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+17:09:31.937 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+17:09:31.938 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+17:09:31.939 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+17:09:31.940 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+17:09:31.941 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+17:09:31.942 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+17:09:31.943 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+17:09:31.954 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4088 ms
+17:09:31.998 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+17:09:31.998 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+17:09:32.000 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 17:09:32 CST 2015]; parent: Root WebApplicationContext
+17:09:32.000 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+17:09:32.139 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+17:09:32.141 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+17:09:32.334 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+17:09:32.334 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+17:09:32.667 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 669 ms
+17:09:32.672 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+17:09:43.277 [614710631@qtp-2067015026-0] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge12o9ahd2u3t16qjp9k|3499480a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge12o9ahd2u3t16qjp9k|3499480a, idleConnectionTestPeriod -> 18000, initialPoolSize -> 7, jdbcUrl -> jdbc:mysql://192.168.0.222:3306/lyun?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 13, maxStatements -> 3600, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+17:11:35.023 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+17:11:35.071 [main] INFO  org.mortbay.log - jetty-6.1.26
+17:11:35.525 [main] INFO  /app - Initializing Spring root WebApplicationContext
+17:11:35.526 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:11:35.618 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 17:11:35 CST 2015]; root of context hierarchy
+17:11:35.680 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+17:11:35.822 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+17:11:35.899 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+17:11:35.922 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+17:11:36.623 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+17:11:36.965 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+17:11:37.041 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+17:11:38.684 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+17:11:38.910 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+17:11:39.178 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+17:11:39.207 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+17:11:39.247 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+17:11:39.262 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+17:11:39.623 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+17:11:39.624 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+17:11:39.625 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+17:11:39.627 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+17:11:39.628 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+17:11:39.629 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+17:11:39.631 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+17:11:39.633 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+17:11:39.635 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+17:11:39.636 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+17:11:39.638 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+17:11:39.639 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+17:11:39.640 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+17:11:39.641 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+17:11:39.643 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+17:11:39.644 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+17:11:39.646 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+17:11:39.647 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+17:11:39.649 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+17:11:39.652 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+17:11:39.653 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+17:11:39.655 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+17:11:39.656 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+17:11:39.658 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+17:11:39.659 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+17:11:39.660 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+17:11:39.661 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+17:11:39.663 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+17:11:39.665 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+17:11:39.666 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+17:11:39.668 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+17:11:39.668 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+17:11:39.669 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+17:11:39.670 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+17:11:39.671 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+17:11:39.673 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+17:11:39.674 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+17:11:39.675 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+17:11:39.676 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+17:11:39.677 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+17:11:39.678 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+17:11:39.679 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+17:11:39.681 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+17:11:39.682 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+17:11:39.683 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+17:11:39.684 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+17:11:39.686 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+17:11:39.687 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+17:11:39.688 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+17:11:39.689 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+17:11:39.690 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+17:11:39.692 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+17:11:39.693 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+17:11:39.704 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4178 ms
+17:11:39.750 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+17:11:39.751 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+17:11:39.753 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 17:11:39 CST 2015]; parent: Root WebApplicationContext
+17:11:39.753 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+17:11:39.885 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+17:11:39.887 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+17:11:40.090 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+17:11:40.091 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+17:11:40.423 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 672 ms
+17:11:40.428 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+17:12:16.180 [492474367@qtp-1878516339-0] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge12o9ahd5kpi1uk0o5l|1de646e8, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge12o9ahd5kpi1uk0o5l|1de646e8, idleConnectionTestPeriod -> 18000, initialPoolSize -> 7, jdbcUrl -> jdbc:mysql://192.168.0.222:3306/lyun?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 13, maxStatements -> 3600, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+17:14:50.561 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+17:14:50.603 [main] INFO  org.mortbay.log - jetty-6.1.26
+17:14:51.043 [main] INFO  /app - Initializing Spring root WebApplicationContext
+17:14:51.044 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:14:51.144 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 17:14:51 CST 2015]; root of context hierarchy
+17:14:51.219 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+17:14:51.384 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+17:14:51.468 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+17:14:51.489 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+17:14:52.069 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+17:14:52.394 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+17:14:52.471 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+17:14:54.062 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+17:14:54.286 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+17:14:54.559 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+17:14:54.587 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+17:14:54.625 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+17:14:54.639 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+17:14:54.989 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+17:14:54.990 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+17:14:54.991 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+17:14:54.992 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+17:14:54.994 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+17:14:54.996 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+17:14:54.997 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+17:14:54.999 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+17:14:55.000 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+17:14:55.002 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+17:14:55.003 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+17:14:55.004 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+17:14:55.005 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+17:14:55.006 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+17:14:55.008 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+17:14:55.010 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+17:14:55.012 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+17:14:55.013 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+17:14:55.015 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+17:14:55.016 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+17:14:55.018 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+17:14:55.019 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+17:14:55.021 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+17:14:55.022 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+17:14:55.024 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+17:14:55.026 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+17:14:55.027 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+17:14:55.028 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+17:14:55.030 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+17:14:55.031 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+17:14:55.032 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+17:14:55.032 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+17:14:55.034 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+17:14:55.035 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+17:14:55.036 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+17:14:55.037 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+17:14:55.039 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+17:14:55.040 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+17:14:55.042 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+17:14:55.043 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+17:14:55.044 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+17:14:55.045 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+17:14:55.046 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+17:14:55.047 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+17:14:55.048 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+17:14:55.049 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+17:14:55.051 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+17:14:55.052 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+17:14:55.053 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+17:14:55.054 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+17:14:55.055 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+17:14:55.057 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+17:14:55.058 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+17:14:55.074 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4030 ms
+17:14:55.118 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+17:14:55.118 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+17:14:55.120 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 17:14:55 CST 2015]; parent: Root WebApplicationContext
+17:14:55.120 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+17:14:55.243 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+17:14:55.245 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+17:14:55.434 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+17:14:55.434 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+17:14:55.772 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 654 ms
+17:14:55.778 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+17:15:02.523 [2045233147@qtp-1878516339-0] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge12o9ahd9ri4ayipfe|3499480a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge12o9ahd9ri4ayipfe|3499480a, idleConnectionTestPeriod -> 18000, initialPoolSize -> 7, jdbcUrl -> jdbc:mysql://192.168.0.222:3306/lyun?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 13, maxStatements -> 3600, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+17:25:07.014 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+17:25:07.055 [main] INFO  org.mortbay.log - jetty-6.1.26
+17:25:07.516 [main] INFO  /app - Initializing Spring root WebApplicationContext
+17:25:07.516 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:25:07.607 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 17:25:07 CST 2015]; root of context hierarchy
+17:25:07.659 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+17:25:07.829 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+17:25:07.930 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+17:25:07.952 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+17:25:08.608 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+17:25:08.998 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+17:25:09.084 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+17:25:10.857 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+17:25:11.082 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+17:25:11.338 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+17:25:11.364 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+17:25:11.400 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+17:25:11.413 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+17:25:11.764 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+17:25:11.765 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+17:25:11.767 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+17:25:11.768 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+17:25:11.769 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+17:25:11.771 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+17:25:11.772 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+17:25:11.774 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+17:25:11.776 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+17:25:11.777 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+17:25:11.778 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+17:25:11.779 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+17:25:11.781 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+17:25:11.782 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+17:25:11.784 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+17:25:11.788 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+17:25:11.790 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+17:25:11.791 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+17:25:11.793 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+17:25:11.794 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+17:25:11.797 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+17:25:11.798 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+17:25:11.799 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+17:25:11.801 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+17:25:11.803 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+17:25:11.804 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+17:25:11.806 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+17:25:11.807 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+17:25:11.809 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+17:25:11.811 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+17:25:11.812 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+17:25:11.812 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+17:25:11.814 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+17:25:11.815 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+17:25:11.817 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+17:25:11.819 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+17:25:11.820 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+17:25:11.822 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+17:25:11.823 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+17:25:11.824 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+17:25:11.825 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+17:25:11.827 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+17:25:11.828 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+17:25:11.829 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+17:25:11.830 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+17:25:11.831 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+17:25:11.833 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+17:25:11.834 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+17:25:11.836 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+17:25:11.837 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+17:25:11.838 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+17:25:11.840 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+17:25:11.841 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+17:25:11.851 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4335 ms
+17:25:11.898 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+17:25:11.898 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+17:25:11.900 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 17:25:11 CST 2015]; parent: Root WebApplicationContext
+17:25:11.901 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+17:25:12.031 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+17:25:12.033 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+17:25:12.236 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+17:25:12.237 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+17:25:12.568 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 670 ms
+17:25:12.574 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+17:25:29.670 [492474367@qtp-1878516339-0] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge12o9ahdmza2g65frb|6eb1371c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge12o9ahdmza2g65frb|6eb1371c, idleConnectionTestPeriod -> 18000, initialPoolSize -> 7, jdbcUrl -> jdbc:mysql://192.168.0.222:3306/lyun?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 13, maxStatements -> 3600, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+17:41:27.220 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+17:41:27.259 [main] INFO  org.mortbay.log - jetty-6.1.26
+17:41:27.669 [main] INFO  /app - Initializing Spring root WebApplicationContext
+17:41:27.670 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:41:27.763 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 17:41:27 CST 2015]; root of context hierarchy
+17:41:27.813 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+17:41:27.991 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+17:41:28.067 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+17:41:28.087 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+17:41:28.639 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+17:41:28.952 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+17:41:29.039 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+17:41:30.672 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+17:41:30.895 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+17:41:31.178 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+17:41:31.205 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+17:41:31.246 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+17:41:31.260 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+17:41:31.610 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+17:41:31.612 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+17:41:31.614 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+17:41:31.615 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+17:41:31.618 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+17:41:31.620 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+17:41:31.622 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+17:41:31.623 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+17:41:31.625 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+17:41:31.626 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+17:41:31.628 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+17:41:31.629 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+17:41:31.630 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+17:41:31.632 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+17:41:31.634 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+17:41:31.635 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+17:41:31.637 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+17:41:31.638 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+17:41:31.640 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+17:41:31.641 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+17:41:31.643 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+17:41:31.644 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+17:41:31.645 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+17:41:31.648 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+17:41:31.649 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+17:41:31.651 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+17:41:31.653 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+17:41:31.654 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+17:41:31.656 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+17:41:31.658 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+17:41:31.659 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+17:41:31.659 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+17:41:31.660 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+17:41:31.662 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+17:41:31.663 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+17:41:31.664 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+17:41:31.665 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+17:41:31.666 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+17:41:31.668 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+17:41:31.669 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+17:41:31.670 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+17:41:31.671 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+17:41:31.673 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+17:41:31.674 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+17:41:31.675 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+17:41:31.676 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+17:41:31.677 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+17:41:31.679 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+17:41:31.680 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+17:41:31.682 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+17:41:31.683 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+17:41:31.684 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+17:41:31.685 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+17:41:31.695 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4025 ms
+17:41:31.738 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+17:41:31.738 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+17:41:31.740 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 17:41:31 CST 2015]; parent: Root WebApplicationContext
+17:41:31.741 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+17:41:31.863 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+17:41:31.865 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+17:41:32.054 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+17:41:32.055 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+17:41:32.384 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 646 ms
+17:41:32.390 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+17:41:47.064 [2045233147@qtp-1878516339-1] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge12o9ahe7zf51in896u|6eb1371c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge12o9ahe7zf51in896u|6eb1371c, idleConnectionTestPeriod -> 18000, initialPoolSize -> 7, jdbcUrl -> jdbc:mysql://192.168.0.222:3306/lyun?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 13, maxStatements -> 3600, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+17:44:47.938 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+17:44:47.999 [main] INFO  org.mortbay.log - jetty-6.1.26
+17:44:48.524 [main] INFO  /app - Initializing Spring root WebApplicationContext
+17:44:48.524 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:44:48.634 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 17:44:48 CST 2015]; root of context hierarchy
+17:44:48.679 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+17:44:48.873 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+17:44:48.953 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+17:44:48.978 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+17:44:49.553 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+17:44:49.856 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+17:44:49.931 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+17:44:51.609 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+17:44:51.965 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+17:44:52.230 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+17:44:52.257 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+17:44:52.292 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+17:44:52.308 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+17:44:52.746 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+17:44:52.747 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+17:44:52.749 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+17:44:52.750 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+17:44:52.752 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+17:44:52.754 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+17:44:52.755 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+17:44:52.757 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+17:44:52.759 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+17:44:52.761 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+17:44:52.762 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+17:44:52.764 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+17:44:52.765 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+17:44:52.767 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+17:44:52.769 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+17:44:52.770 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+17:44:52.772 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+17:44:52.773 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+17:44:52.775 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+17:44:52.776 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+17:44:52.778 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+17:44:52.781 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+17:44:52.783 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+17:44:52.785 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+17:44:52.786 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+17:44:52.788 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+17:44:52.790 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+17:44:52.794 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+17:44:52.797 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+17:44:52.799 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+17:44:52.800 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+17:44:52.800 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+17:44:52.801 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+17:44:52.803 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+17:44:52.804 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+17:44:52.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+17:44:52.806 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+17:44:52.808 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+17:44:52.810 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+17:44:52.812 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+17:44:52.815 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+17:44:52.816 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+17:44:52.817 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+17:44:52.818 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+17:44:52.819 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+17:44:52.820 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+17:44:52.821 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+17:44:52.822 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+17:44:52.830 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+17:44:52.833 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+17:44:52.834 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+17:44:52.836 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+17:44:52.837 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+17:44:52.851 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4327 ms
+17:44:52.901 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+17:44:52.902 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+17:44:52.904 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 17:44:52 CST 2015]; parent: Root WebApplicationContext
+17:44:52.905 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+17:44:53.067 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+17:44:53.069 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+17:44:53.264 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+17:44:53.264 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+17:44:53.623 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 721 ms
+17:44:53.629 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+17:44:53.798 [492474367@qtp-1878516339-0] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge12o9ahecafk1psjsza|6eb1371c, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge12o9ahecafk1psjsza|6eb1371c, idleConnectionTestPeriod -> 18000, initialPoolSize -> 7, jdbcUrl -> jdbc:mysql://192.168.0.222:3306/lyun?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 13, maxStatements -> 3600, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+17:48:13.201 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+17:48:13.252 [main] INFO  org.mortbay.log - jetty-6.1.26
+17:48:13.722 [main] INFO  /app - Initializing Spring root WebApplicationContext
+17:48:13.722 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:48:13.815 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 17:48:13 CST 2015]; root of context hierarchy
+17:48:13.860 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+17:48:14.038 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+17:48:14.152 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+17:48:14.174 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+17:48:14.803 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+17:48:15.160 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+17:48:15.240 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+17:48:16.894 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+17:48:17.116 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+17:48:17.383 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+17:48:17.412 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+17:48:17.449 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+17:48:17.463 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+17:48:17.829 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+17:48:17.831 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+17:48:17.832 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+17:48:17.833 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+17:48:17.835 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+17:48:17.836 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+17:48:17.838 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+17:48:17.839 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+17:48:17.840 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+17:48:17.842 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+17:48:17.843 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+17:48:17.844 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+17:48:17.846 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+17:48:17.847 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+17:48:17.849 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+17:48:17.850 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+17:48:17.852 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+17:48:17.854 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+17:48:17.855 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+17:48:17.857 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+17:48:17.858 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+17:48:17.859 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+17:48:17.862 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+17:48:17.863 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+17:48:17.865 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+17:48:17.867 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+17:48:17.869 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+17:48:17.871 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+17:48:17.872 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+17:48:17.874 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+17:48:17.876 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+17:48:17.876 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+17:48:17.878 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+17:48:17.879 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+17:48:17.880 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+17:48:17.881 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+17:48:17.882 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+17:48:17.883 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+17:48:17.885 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+17:48:17.886 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+17:48:17.887 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+17:48:17.888 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+17:48:17.890 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+17:48:17.891 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+17:48:17.893 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+17:48:17.894 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+17:48:17.895 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+17:48:17.896 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+17:48:17.897 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+17:48:17.898 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+17:48:17.899 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+17:48:17.901 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+17:48:17.902 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+17:48:17.913 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4191 ms
+17:48:17.959 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+17:48:17.960 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+17:48:17.961 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 17:48:17 CST 2015]; parent: Root WebApplicationContext
+17:48:17.962 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+17:48:18.098 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+17:48:18.100 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+17:48:18.284 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+17:48:18.285 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+17:48:18.627 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 667 ms
+17:48:18.633 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+17:48:33.033 [614710631@qtp-1878516339-0] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge12o9ahegouh9gd44z|1de646e8, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge12o9ahegouh9gd44z|1de646e8, idleConnectionTestPeriod -> 18000, initialPoolSize -> 7, jdbcUrl -> jdbc:mysql://192.168.0.222:3306/lyun?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 13, maxStatements -> 3600, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+17:56:41.837 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+17:56:41.892 [main] INFO  org.mortbay.log - jetty-6.1.26
+17:56:42.379 [main] INFO  /app - Initializing Spring root WebApplicationContext
+17:56:42.379 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+17:56:42.473 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 17:56:42 CST 2015]; root of context hierarchy
+17:56:42.534 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+17:56:42.706 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+17:56:42.805 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+17:56:42.824 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+17:56:43.829 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+17:56:44.217 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+17:56:44.303 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+17:56:45.976 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+17:56:46.197 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+17:56:46.459 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+17:56:46.485 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+17:56:46.504 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+17:56:46.517 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+17:56:46.895 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+17:56:46.897 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+17:56:46.899 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+17:56:46.900 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+17:56:46.902 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+17:56:46.903 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+17:56:46.905 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+17:56:46.906 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+17:56:46.907 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+17:56:46.909 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+17:56:46.912 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+17:56:46.913 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+17:56:46.915 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+17:56:46.916 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+17:56:46.919 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+17:56:46.921 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+17:56:46.922 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+17:56:46.925 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+17:56:46.926 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+17:56:46.928 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+17:56:46.930 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+17:56:46.931 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+17:56:46.932 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+17:56:46.934 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+17:56:46.935 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+17:56:46.937 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+17:56:46.938 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+17:56:46.939 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+17:56:46.941 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+17:56:46.943 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+17:56:46.945 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+17:56:46.945 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+17:56:46.946 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+17:56:46.947 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+17:56:46.948 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+17:56:46.950 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+17:56:46.951 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+17:56:46.952 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+17:56:46.954 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+17:56:46.955 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+17:56:46.956 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+17:56:46.958 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+17:56:46.959 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+17:56:46.961 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+17:56:46.962 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+17:56:46.963 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+17:56:46.964 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+17:56:46.965 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+17:56:46.967 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+17:56:46.968 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+17:56:46.970 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+17:56:46.971 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+17:56:46.972 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+17:56:46.984 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4605 ms
+17:56:47.031 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+17:56:47.031 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+17:56:47.033 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 17:56:47 CST 2015]; parent: Root WebApplicationContext
+17:56:47.033 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+17:56:47.200 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+17:56:47.203 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+17:56:47.418 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+17:56:47.418 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+17:56:47.775 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 744 ms
+17:56:47.783 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+17:56:53.670 [614710631@qtp-1878516339-0] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge12o9aherln11gcmcgx|3b48a380, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge12o9aherln11gcmcgx|3b48a380, idleConnectionTestPeriod -> 18000, initialPoolSize -> 7, jdbcUrl -> jdbc:mysql://192.168.0.222:3306/lyun?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 13, maxStatements -> 3600, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+18:20:14.766 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+18:20:14.816 [main] INFO  org.mortbay.log - jetty-6.1.26
+18:20:15.199 [main] INFO  /app - Initializing Spring root WebApplicationContext
+18:20:15.199 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+18:20:15.286 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 18:20:15 CST 2015]; root of context hierarchy
+18:20:15.339 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+18:20:15.525 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+18:20:15.609 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+18:20:15.631 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+18:20:16.360 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+18:20:16.695 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+18:20:16.779 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+18:20:18.456 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+18:20:18.686 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+18:20:18.954 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+18:20:18.980 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+18:20:19.018 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+18:20:19.034 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+18:20:19.387 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+18:20:19.389 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+18:20:19.390 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+18:20:19.392 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+18:20:19.394 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+18:20:19.396 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+18:20:19.397 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+18:20:19.399 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+18:20:19.401 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+18:20:19.402 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+18:20:19.404 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+18:20:19.405 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+18:20:19.406 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+18:20:19.409 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+18:20:19.411 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+18:20:19.413 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+18:20:19.414 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+18:20:19.416 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+18:20:19.418 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+18:20:19.419 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+18:20:19.422 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+18:20:19.424 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+18:20:19.426 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+18:20:19.427 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+18:20:19.428 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+18:20:19.430 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+18:20:19.431 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+18:20:19.432 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+18:20:19.435 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+18:20:19.436 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+18:20:19.438 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+18:20:19.438 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+18:20:19.439 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+18:20:19.440 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+18:20:19.441 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+18:20:19.442 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+18:20:19.443 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+18:20:19.444 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+18:20:19.446 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+18:20:19.447 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+18:20:19.449 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+18:20:19.450 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+18:20:19.452 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+18:20:19.453 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+18:20:19.454 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+18:20:19.455 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+18:20:19.456 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+18:20:19.457 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+18:20:19.459 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+18:20:19.460 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+18:20:19.461 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+18:20:19.462 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+18:20:19.463 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+18:20:19.474 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4275 ms
+18:20:19.518 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+18:20:19.518 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+18:20:19.519 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 18:20:19 CST 2015]; parent: Root WebApplicationContext
+18:20:19.520 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+18:20:19.652 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+18:20:19.653 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+18:20:19.861 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+18:20:19.862 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+18:20:20.202 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 684 ms
+18:20:20.208 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+18:20:42.816 [2045233147@qtp-1878516339-1] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge12o9ahflvifpug99d|3b48a380, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge12o9ahflvifpug99d|3b48a380, idleConnectionTestPeriod -> 18000, initialPoolSize -> 7, jdbcUrl -> jdbc:mysql://192.168.0.222:3306/lyun?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 13, maxStatements -> 3600, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]
+19:29:34.653 [main] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+19:29:34.715 [main] INFO  org.mortbay.log - jetty-6.1.26
+19:29:35.199 [main] INFO  /app - Initializing Spring root WebApplicationContext
+19:29:35.199 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization started
+19:29:35.325 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing Root WebApplicationContext: startup date [Mon Jun 29 19:29:35 CST 2015]; root of context hierarchy
+19:29:35.371 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/applicationContext.xml]
+19:29:35.591 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-service.xml]
+19:29:35.684 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/spring-mybatis.xml]
+19:29:35.700 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [META-INF/spring/services.xml]
+19:29:36.433 [main] INFO  o.s.b.f.c.ext.CspPropertyPlaceholderConfigurer - Loading properties file from class path resource [META-INF/spring/jdbc.properties]
+19:29:36.748 [main] INFO  com.mchange.v2.log.MLog - MLog clients using log4j logging.
+19:29:36.904 [main] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+19:29:38.795 [main] INFO  o.s.cache.ehcache.EhCacheManagerFactoryBean - Initializing EhCache CacheManager
+19:29:39.013 [main] INFO  o.s.b.factory.config.ext.CspPropertiesFactoryBean - Loading properties file from class path resource [application.properties]
+19:29:39.310 [main] WARN  net.rubyeye.xmemcached.XMemcachedClient - XMemcachedClient is using Text protocol
+19:29:39.356 [main] INFO  com.google.code.yanf4j.nio.impl.SelectorManager - Creating 8 reactors...
+19:29:39.372 [main] WARN  c.google.code.yanf4j.core.impl.AbstractController - The Controller started at localhost/127.0.0.1:0 ...
+19:29:39.388 [Xmemcached-Reactor-0] WARN  c.google.code.yanf4j.core.impl.AbstractController - Add a session: 192.168.0.233:11211
+19:29:39.746 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogManageService] onto handler 'blogManageServiceExporter'
+19:29:39.762 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userInfoService] onto handler 'userInfoServiceExporter'
+19:29:39.762 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexManageService] onto handler 'indexManageServiceExporter'
+19:29:39.762 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/sensitivityWordService] onto handler 'sensitivityWordServiceExporter'
+19:29:39.762 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowReplyService] onto handler 'lyunKnowReplyServiceExporter'
+19:29:39.762 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/otherLogonManageService] onto handler 'otherLogonManageServiceExporter'
+19:29:39.762 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/thirdLoginInfoService] onto handler 'thirdLoginInfoServiceExporter'
+19:29:39.762 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/solrService] onto handler 'solrServiceExporter'
+19:29:39.762 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsTypeService] onto handler 'newsTypeServiceExporter'
+19:29:39.762 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogTypeService] onto handler 'blogTypeServiceExporter'
+19:29:39.762 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/storeService] onto handler 'storeServiceExporter'
+19:29:39.778 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMoneyService] onto handler 'lyunMoneyServiceExporter'
+19:29:39.778 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserDetailsService] onto handler 'lawyerConsultByUserDetailsServiceExporter'
+19:29:39.778 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/indexTypeService] onto handler 'indexTypeServiceExporter'
+19:29:39.778 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerManageService] onto handler 'lawyerManageServiceExporter'
+19:29:39.778 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowStoreService] onto handler 'lyunKnowStoreServiceExporter'
+19:29:39.778 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowTypeService] onto handler 'lyunKnowTypeServiceExporter'
+19:29:39.778 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/userMemoService] onto handler 'userMemoServiceExporter'
+19:29:39.778 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoCommentService] onto handler 'videoCommentServiceExporter'
+19:29:39.778 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsCommentService] onto handler 'newsCommentServiceExporter'
+19:29:39.793 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerDetailsInfoService] onto handler 'lawyerDetailsInfoServiceExporter'
+19:29:39.794 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunEmailService] onto handler 'lyunEmailServiceExporter'
+19:29:39.796 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpointService] onto handler 'lyunViewpointServiceExporter'
+19:29:39.797 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioInfoService] onto handler 'audioInfoServiceExporter'
+19:29:39.799 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/rankListService] onto handler 'rankListServiceExporter'
+19:29:39.801 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/documentManageService] onto handler 'documentManageServiceExporter'
+19:29:39.802 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsManageService] onto handler 'newsManageServiceExporter'
+19:29:39.804 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoTypeService] onto handler 'videoTypeServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/consultService] onto handler 'consultServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogsService] onto handler 'blogsServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/chatMessageService] onto handler 'chatMessageServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/accountService] onto handler 'accountServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoManageService] onto handler 'videoManageServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageNetworkwillService] onto handler 'lyunMessageNetworkwillServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageOrdinaryService] onto handler 'lyunMessageOrdinaryServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageVideoService] onto handler 'lyunMessageVideoServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/eventReviewService] onto handler 'eventReviewServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioTypeService] onto handler 'audioTypeServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunViewpoinreplyService] onto handler 'lyunViewpoinreplyServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioManageService] onto handler 'audioManageServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/contactInfoService] onto handler 'contactInfoServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/videoInfoService] onto handler 'videoInfoServiceExporter'
+19:29:39.805 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunKnowService] onto handler 'lyunKnowServiceExporter'
+19:29:39.821 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouPayService] onto handler 'fyouPayServiceExporter'
+19:29:39.821 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/blogCommentService] onto handler 'blogCommentServiceExporter'
+19:29:39.821 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/smsService] onto handler 'smsServiceExporter'
+19:29:39.821 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/audioCommentService] onto handler 'audioCommentServiceExporter'
+19:29:39.821 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lyunMessageAudioService] onto handler 'lyunMessageAudioServiceExporter'
+19:29:39.821 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/newsInfoService] onto handler 'newsInfoServiceExporter'
+19:29:39.821 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/fyouLogService] onto handler 'fyouLogServiceExporter'
+19:29:39.821 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/caseManageService] onto handler 'caseManageServiceExporter'
+19:29:39.821 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/lawyerConsultByUserService] onto handler 'lawyerConsultByUserServiceExporter'
+19:29:39.821 [main] INFO  o.s.web.servlet.handler.SimpleUrlHandlerMapping - Mapped URL path [/oldProductService] onto handler 'oldProductServiceExporter'
+19:29:39.836 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4637 ms
+19:29:39.883 [main] INFO  /app - Initializing Spring FrameworkServlet 'dispatcher'
+19:29:39.883 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization started
+19:29:39.883 [main] INFO  o.s.web.context.support.XmlWebApplicationContext - Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Mon Jun 29 19:29:39 CST 2015]; parent: Root WebApplicationContext
+19:29:39.883 [main] INFO  o.s.beans.factory.xml.XmlBeanDefinitionReader - Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+19:29:40.039 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - Loading Velocity config from [class path resource [velocity.properties]]
+19:29:40.039 [main] INFO  o.s.web.servlet.view.velocity.VelocityConfigurer - ClasspathResourceLoader with name 'springMacro' added to configured VelocityEngine
+19:29:40.242 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-register],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.app_register(org.springframework.ui.ModelMap,com.lyun.site.model.AccountModel)
+19:29:40.242 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/app-login-service],methods=[],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String com.lyun.site.controller.AppService.newsimage_index(org.springframework.ui.ModelMap,java.lang.String,java.lang.String)
+19:29:40.554 [main] INFO  org.springframework.web.servlet.DispatcherServlet - FrameworkServlet 'dispatcher': initialization completed in 671 ms
+19:29:40.554 [main] INFO  org.mortbay.log - Started SelectChannelConnector@0.0.0.0:8080
+19:29:52.476 [614710631@qtp-1220089985-1] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, dataSourceName -> 1hge12o9ahi31fg7pvqf2|793938ad, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.jdbc.Driver, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, identityToken -> 1hge12o9ahi31fg7pvqf2|793938ad, idleConnectionTestPeriod -> 18000, initialPoolSize -> 7, jdbcUrl -> jdbc:mysql://192.168.0.222:3306/lyun?useUnicode=true&characterEncoding=utf-8, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 3600, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 13, maxStatements -> 3600, maxStatementsPerConnection -> 0, minPoolSize -> 5, numHelperThreads -> 3, numThreadsAwaitingCheckoutDefaultUser -> 0, preferredTestQuery -> null, properties -> {user=******, password=******}, propertyCycle -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> true, unreturnedConnectionTimeout -> 0, usesTraditionalReflectiveProxies -> false ]

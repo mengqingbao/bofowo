@@ -1,0 +1,106 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>律云后台管理</title>
+  <meta name="description" content="管理后台登陆">
+  <meta name="keywords" content="index">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="assets/css/amazeui.css"/>
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body style="background: #f8f8f8;">
+
+
+  <!-- content start -->
+<div class="admin-content" style="width: 700px;
+    margin: 100px auto;background: #f8f8f8;">
+
+<div class="am-tab-panel am-fade am-active am-in" id="tab2">
+        <form class="am-form">
+        <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-4 am-text-right">
+            &nbsp;
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
+     			<strong>管理员登陆</strong>
+            </div>
+            <div class="am-hide-sm-only am-u-md-4"></div>
+          </div>
+        
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-4 am-text-right">
+              账户
+            </div>
+            <div class="am-u-sm-8 am-u-md-4">
+              <input type="text" name="username" class="am-input-sm">
+            </div>
+            <div class="am-hide-sm-only am-u-md-4"></div>
+          </div>
+
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-4 am-text-right">
+              密码:
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
+              <input type="text" name="password" class="am-input-sm">
+            </div>
+            <div class="am-hide-sm-only am-u-md-4"></div>
+          </div>
+          
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-4 am-text-right">
+              登陆验证码:
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
+              <input type="text" name="validate" class="am-input-sm">
+            </div>
+            <div class="am-hide-sm-only am-u-md-4"></div>
+          </div>
+          
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-4 am-text-right">
+            &nbsp;
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
+     			<button type="button" class="am-btn am-btn-primary am-btn-xs">登陆</button>
+            </div>
+            <div class="am-hide-sm-only am-u-md-4"></div>
+          </div>
+
+        </form>
+      </div>
+
+</div>
+  <!-- content end -->
+
+
+<a href="#" class="am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}">
+  <span class="am-icon-btn am-icon-th-list"></span>
+</a>
+
+<footer style="position:fixed;
+bottom:0;width:100%;">
+  <hr>
+  <p class="am-padding-left">© 2014 404886, Inc.2016 404886公司版权所有.</p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

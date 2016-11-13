@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.TaglibMapper">
+	<resultMap type="TaglibModel" id="TaglibModelMap">
+
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="type" column="TYPE" />
+		<result property="status" column="STATUS" />
+		<result property="isDelete" column="IS_DELETE" />
+		<result property="createdDate" column="CREATED_DATE" />
+		<result property="modifiedDate" column="MODIFIED_DATE" />
+		<result property="desc" column="DESC_" />
+		
+	</resultMap>
+</mapper> 

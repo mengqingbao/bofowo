@@ -1,0 +1,71 @@
+<header class="am-topbar admin-header">
+
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+  <div class="am-topbar-brand">
+    <small style="font-size: 1.0rem;">您好  test，欢迎来到 &nbsp; <a href="#"><span class="am-icon-power-off"></span> 退出</a></small>
+  </div>
+
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+    <li class="am-dropdown" data-am-dropdown>
+        <a  href="index.htm">
+           <span class="am-icon-home"></span> 首页 </a> 
+        </a>
+      </li>
+     <li class="am-dropdown" data-am-dropdown>
+        <a  href="purchaser-car.htm">
+          <span class="am-icon-users"></span> 购物车  <span class="am-badge am-badge-warning">5</span>
+        </a>
+       
+      </li>
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          <span class="am-icon-users"></span> 买家中心 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="consumer-myitem.htm"><span class="am-icon-user"></span> 我的订单</a></li>
+          <li><a href="consumer-deliver-address.htm"><span class="am-icon-cog"></span> 收货地址</a></li>
+        </ul>
+      </li>
+      
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          <span class="am-icon-users"></span> 卖家中心 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="provider-item-search-1.htm"><span class="am-icon-user"></span> 出售中的商品</a></li>
+          <li><a href="shop-detail.htm?id=100091"><span class="am-icon-cog"></span> 我的店铺</a></li>
+          <li><a href="my-sale-trades.htm?status=0"><span class="am-icon-power-off"></span> 交易订单</a></li>
+        </ul>
+      </li>
+      
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          <span class="am-icon-users"></span> 我的收藏 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="consumer-shop-collect.htm"><span class="am-icon-user"></span> 我收藏的店铺</a></li>
+          <li><a href="consumer-item-collect.htm"><span class="am-icon-cog"></span> 我收藏的宝贝</a></li>
+        </ul>
+      </li>
+      
+      
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          <span class="am-icon-users"></span> 帮助中心
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?b6c50edced50f1e3a5020c75c7e3c675";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+  
+</header>

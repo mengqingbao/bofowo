@@ -1,0 +1,43 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Team Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+		<div class="row"><div class="col-md-12 box"><a href="/team-add.htm" class="btn btn-success"><strong>Add</strong></a> </div></div>
+		
+<div class="row">
+#foreach($item in $items)
+<div class="box col-md-4"><!--column start-->
+					<div class="box-inner">
+						<div class="box-content">
+							<p>
+										<a href="#">
+									   <img src="/img/slider/4.jpg"  style="width:100%;height:180px;">
+									   
+									</a>
+									<hr>
+									<a href="#"><h4>$item.teameName</h4></a>
+									<p>参与人数：<a>50</a>人  完成度:100%</p>
+									<p>管理人: <a href="#">张三</a></p>
+							   </p>
+						</div>
+					</div>
+				</div><!--column end-->
+#end
+ </tbody>
+</table>
+</div>
+		</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

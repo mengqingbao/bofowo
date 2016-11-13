@@ -1,0 +1,14 @@
+## jquery
+<script src="#getJsPath('jquery/jquery-1.6.1.min.js')" type="text/javascript"></script>
+## jquery validator
+    <script src="#getJsPath('jquery/jquery.validate.min.js')" type="text/javascript"></script>
+## jquery ui
+    <script src="#getJsPath('jquery/ui/jquery.ui.core.min.js')" type="text/javascript"></script>
+    <script src="#getJsPath('jquery/ui/jquery.ui.position.min.js')" type="text/javascript"></script>
+    <script src="#getJsPath('jquery/ui/jquery.ui.widget.min.js')" type="text/javascript"></script>
+    <script src="#getJsPath('jquery/ui/jquery.ui.autocomplete.js')" type="text/javascript"></script>
+## WdatePicker
+    <script src="#getJsPath('calendar/WdatePicker.js')" type="text/javascript"></script>
+## cmdb
+    <script src="#getJsPath('cms-common.js?2241')" type="text/javascript"></script>
+    <script src="#getJsPath('cms-init.js?2241')" type="text/javascript"></script>

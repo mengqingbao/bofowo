@@ -1,0 +1,170 @@
+#macro(getRequestBase)
+#if($request.contextPath != "")$request.contextPath#end
+#end
+
+#macro(getJsPath $jsPath)#getRequestBase()/js/$jsPath#end
+#macro(getCssPath $cssPath)#getRequestBase()/css/$cssPath#end
+#macro(getImgPath $imgPath)#getRequestBase()/img/$imgPath#end
+#macro(invoke $page)
+    #if($page.startsWith("/"))
+        #parse($page)
+    #else
+        #set($uri = $request.getAttribute("javax.servlet.include.request_uri"))
+        #if(!$uri)#set($uri = $request.getServletPath())#end
+        #set($path = $uri.substring(0, $uri.lastIndexOf("/")))
+        #parse("$path/$page")
+    #end
+#end
+#macro(message $errorMsg $returnMsg $cols)
+	#if($errorMsg)
+	<tr>
+        <td colspan="$!cols" class="messageBar"><label class="message">错误：$errorMsg</label></td>
+    </tr>
+	#end
+	#if($returnMsg)
+	<tr>
+        <td colspan="$!cols" class="messageBar"><label class="message">提示：$returnMsg</label></td>
+    </tr>
+	#end
+#end
+
+#macro(pageNavigation $pageInfo $formName )
+	#if($pageInfo)
+        <div class="row">
+			<div class="col-md-12">
+				<div class="dataTables_info" id="DataTables_Table_info">
+				#springMessage("showing") 
+				#set( $startRow=$!pageInfo.startRow+1) 
+				$startRow #springMessage("to") 
+				#if($!pageInfo.endRow>$!pageInfo.totalItem)
+					$!pageInfo.totalItem
+				#else
+					$!pageInfo.endRow 
+				#end
+				#springMessage("of") 
+				$!pageInfo.totalItem #springMessage("entries")
+			</div>
+			</div>
+			<div class="col-md-12 center-block">
+			<ul class="pagination">
+		## 设置页码宽度，一边pageWidth个
+		#set($pageWidth = 5)
+		## 判断是否有上一页，当前页数大于1才有
+    	#if($pageInfo.currentPage > 1)
+    		#set($previousPage=${pageInfo.currentPage} - 1)
+    		 <li class="prev"><a href="javascript:gotoPage('$formName', $previousPage);"> &lt #springMessage("page-pre") </a></li>
+    	#else
+    		<li class="prev disabled"><a href="javascript:void(0)">&lt #springMessage("page-pre") </a></li>
+		#end
+		##计算向左快速翻页
+    	#if($pageInfo.currentPage > $pageWidth + 1)
+			#set($quickLeftPage = $pageInfo.currentPage - $pageWidth - 1)
+        	<li><a href="javascript:gotoPage('$formName', $quickLeftPage);">...</a><li>
+        #end
+		## 计算最左边的页码
+		#if($pageInfo.currentPage > $pageWidth)
+			#set ($leftPage=$pageInfo.currentPage - $pageWidth)
+		#else
+			#set ($leftPage = 1)
+		#end
+		## 计算最右边的页码
+		#if($pageInfo.currentPage + $pageWidth > $pageInfo.totalPage)
+			#set ($rightPage=$pageInfo.totalPage)
+		#else
+			#set ($rightPage = $pageInfo.currentPage + $pageWidth)
+		#end
+		#if($rightPage < 1)
+			#set ($rightPage = 1)
+		#end
+		## 显示页码
+		#foreach( $pageIndex in [$leftPage..$rightPage] )
+        	#if($pageIndex!=$pageInfo.currentPage)
+    			<li><a href="javascript:gotoPage('$formName', $pageIndex);">$pageIndex</a><li>
+        	#else
+    			<li class="active"><a href="javascript:void(0)">$pageIndex</a></li>
+        	#end
+		#end
+		##计算向右快速翻页
+        #if($pageInfo.totalPage > $rightPage)
+        	#set ($rightNextPage=$rightPage + $pageWidth + 1)
+        	<li><a href="javascript:gotoPage('$formName', $rightNextPage);">...</a></li>
+    	#end
+		## 判断是否有下一页，当前页数小于总页数时才有
+    	#if($pageInfo.currentPage < $pageInfo.totalPage)
+    		#set($nextPage=${pageInfo.currentPage} + 1)
+        	<li class="next"><a href="javascript:gotoPage('$formName', $nextPage);"> #springMessage("page-next")</a></li>
+    	#else
+    		<li class="next disabled"><a href="javascript:void(0)">#springMessage("page-next") &gt</a> </li>
+        #end
+		</ul>			
+		</div>
+		</div>
+		<script>
+    		function inputPage(formName,obj){
+                if(obj.value != ""){
+                	gotoPage(formName,obj.value)
+                }
+            }
+    		function gotoPage(formName,pageIndex){
+				if(pageIndex == ""){
+					alert("请输入页码");
+            		return;
+				}
+    			var pageNum1 = pageIndex + "";
+				var pageNum = 1;
+            	var pattern =   /^([0-9])+$/;
+                var flag = pattern.test(pageNum1);
+            	if(flag){
+            		pageNum = pageNum1;
+            	}else{
+					alert("页码["+pageNum1+"]不正确");
+            		return;
+            	}
+            	var pageInputName = "currentPage";
+            	var pageInput = null;
+            	var form = document.getElementsByName(formName)[0];
+
+            	if(document.getElementsByName(pageInputName).length != 0){
+            		pageInput = document.getElementsByName(pageInputName)[0];
+            		pageInput.value = pageNum;
+            	}else{
+            		pageInput = document.createElement("input");
+            		pageInput.type = "hidden";
+            	    pageInput.name = "currentPage";
+            	    pageInput.value = pageNum;
+            	    form.appendChild(pageInput);
+            	}
+				form.submit();
+            }
+    	</script>
+	#else
+		<div class="pagination">没有分页对象</div>
+	#end
+#end
+
+#macro(menubar $menus $layout)
+	#foreach($menu in $menus)
+		<li class="$!StyleUtil.getMethodType($menu.code) #if($menu.code==$layout) active #end active">
+			<a href="$menu.url"><i class="glyphicon $!StyleUtil.getClass($menu.code)"></i> <span>#springMessage("manage-$!{menu.code}")</span></a>
+			<ul class="nav nav-pills nav-stacked">
+			 #foreach($m in $menu.subMenus)
+				<li><a href="$m.url">#springMessage("sub-menu-$!{m.code}")</a></li>
+			 #end
+			</ul>
+		</li>
+	#end	
+#end
+#macro(subPageMenubar $menus $layout)
+		#foreach($menu in $menus)
+			#if($menu.code==$layout)
+			    <a class="menuitem submenuheader menuitem_red" href="" >#springMessage("manage-$!{menu.code}")</a>
+                <div class="submenu">
+                    <ul>
+					 #foreach($m in $menu.subMenus)
+						<li><a href="$m.url">#springMessage("sub-menu-$!{m.code}")</a></li>
+					 #end
+                    </ul>
+                </div>
+			#end
+		#end
+#end

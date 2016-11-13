@@ -1,0 +1,59 @@
+<script src="/bower_components/flot/excanvas.min.js"></script>
+<script src="/bower_components/flot/jquery.flot.js"></script>
+<script src="/bower_components/flot/jquery.flot.pie.js"></script>
+<script src="/bower_components/flot/jquery.flot.stack.js"></script>
+<script src="/bower_components/flot/jquery.flot.resize.js"></script>
+ <div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="">
+                    <h2><i class="glyphicon glyphicon-user"></i> #springMessage("sub-menu-tfuncation-my-info")</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                        <a href="#" class="btn btn-close btn-round btn-default"><i
+                                class="glyphicon glyphicon-remove"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+        
+				<table class="table"><tr><td>
+                <table class="responsive">
+				<tbody>	
+				  <tr>
+					<td colspan="2" style="text-align:left"><a href="#" class="animated rubberBand"><img src="/img/default.jpg"></a></td>
+				  </tr>
+				  <tr>
+					<td>Full Name:</td>
+					<td>Allen Du</td>
+				  </tr>
+				  <tr>
+					<td>Phone Number:</td>
+					<td>13920570702</td>
+				  </tr>
+				  <tr>
+					<td>Email:</td>
+					<td>allen@tdc-consulting.cn</td>
+				  </tr>
+				  <tr>
+					<td>Address:</td>
+					<td>上海市静安区镇宁路200号欣安大厦东峰22B</td>
+				  </tr>
+				  <tr>
+					<td colspan="2" style="text-align:right"><a href="/tfuncation-my-detail-info.htm" class="animated rubberBand"><i class="glyphicon glyphicon-chevron-down"></i> <strong>more</strong></a></td>
+				  </tr>
+				</tbody>
+			  </table>
+			  </td>
+			  <td width="50%" style="text-align:center">
+				<h3>Statistical Graph<h3>
+				<div id="piechart" style="height:300px"></div>
+                </div>
+			  </td></tr></table>
+            </div>
+        </div>
+        <!--/span-->
+
+    </div><!--/row-->
+ <script src="/js/init-chart.js"></script>

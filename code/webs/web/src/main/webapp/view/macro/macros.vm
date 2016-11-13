@@ -1,0 +1,162 @@
+
+#macro(getRequestBase)
+#if($request.contextPath != "")$request.contextPath#end
+#end
+
+#macro(getJsPath $jsPath)#getRequestBase()/js/$jsPath#end
+#macro(getCssPath $cssPath)#getRequestBase()/css/$cssPath#end
+#macro(getImgPath $imgPath)#getRequestBase()/img/$imgPath#end
+#macro(invoke $page)
+    #if($page.startsWith("/"))
+        #parse($page)
+    #else
+        #set($uri = $request.getAttribute("javax.servlet.include.request_uri"))
+        #if(!$uri)#set($uri = $request.getServletPath())#end
+        #set($path = $uri.substring(0, $uri.lastIndexOf("/")))
+        #parse("$path/$page")
+    #end
+#end
+
+#macro(message $errorMsg $returnMsg $cols)
+	#if($errorMsg)
+	<tr>
+        <td colspan="$!cols" class="messageBar"><label class="message">错误：$errorMsg</label></td>
+    </tr>
+	#end
+	#if($returnMsg)
+	<tr>
+        <td colspan="$!cols" class="messageBar"><label class="message">提示：$returnMsg</label></td>
+    </tr>
+	#end
+#end
+
+
+#macro(pageNavigation $pageInfo $formName )
+	#if($pageInfo)
+	<div class="am-cf">
+  共 $!pageInfo.totalItem 条记录
+        <div class="am-fr">
+         <ul class="am-pagination">
+       		
+		## 设置页码宽度，一边pageWidth个
+		#set($pageWidth = 5)
+		## 判断是否有上一页，当前页数大于1才有
+    	#if($pageInfo.currentPage > 1)
+    		#set($previousPage=${pageInfo.currentPage} - 1)
+    		<li>
+    		 <a href="javascript:gotoPage('$formName', $previousPage);"> « </a>
+    		</li>
+    	#else
+    		<li class="am-disabled">
+    		 <a  class="prev_page btn_status1" href="javascript:void(0);">  « </a>
+    		</li>
+		#end
+		
+		## 计算最左边的页码
+		#if($pageInfo.currentPage > $pageWidth)
+			#set ($leftPage=$pageInfo.currentPage - $pageWidth)
+		#else
+			#set ($leftPage = 1)
+		#end
+		## 计算最右边的页码
+		#if($pageInfo.currentPage + $pageWidth > $pageInfo.totalPage)
+			#set ($rightPage=$pageInfo.totalPage)
+		#else
+			#set ($rightPage = $pageInfo.currentPage + $pageWidth)
+		#end
+		#if($rightPage < 1)
+			#set ($rightPage = 1)
+		#end
+		## 显示页码
+		 
+		#foreach( $pageIndex in [$leftPage..$rightPage] )
+        	#if($pageIndex!=$pageInfo.currentPage)
+        		<li>
+    			<a href="javascript:gotoPage('$formName', $pageIndex);" class="btn_status4">$pageIndex</a>
+    			</li>
+        	#else
+        		<li class="am-active">
+    			<a href="javascript:void(0);" class="btn_status3">$pageIndex</a>
+    			</li>
+        	#end
+		#end
+		
+		##计算向右快速翻页
+        #if($pageInfo.totalPage > $rightPage)
+        	#set ($rightNextPage=$rightPage + $pageWidth + 1)
+        	<li>
+        	<a href="javascript:gotoPage('$formName', $rightNextPage);"  class="btn_status4">...</a>
+        	</li>
+    	#end
+    	
+		## 判断是否有下一页，当前页数小于总页数时才有
+    	#if($pageInfo.currentPage < $pageInfo.totalPage)
+    		#set($nextPage=${pageInfo.currentPage} + 1)
+    		<li class="am-disabled">
+        		<a href="javascript:gotoPage('$formName', $nextPage);" class="prev_page btn_status2">»</a>
+        	</li>
+    	#else
+    		<li class="am-disabled">
+    			<a class="prev_page btn_status2" href="javascript:void(0);"> » </a>
+    		</li>
+        #end
+        </ul>
+        </div>
+    	
+   
+    	
+		<script>
+    		function inputPage(formName,obj){
+                if(obj.value != ""){
+                	gotoPage(formName,obj.value)
+                }
+            }
+    		function gotoPage(formName,pageIndex){
+				if(pageIndex == ""){
+					alert("请输入页码");
+            		return;
+				}
+    			var pageNum1 = pageIndex + "";
+				var pageNum = 1;
+            	var pattern =   /^([0-9])+$/;
+                var flag = pattern.test(pageNum1);
+            	if(flag){
+            		pageNum = pageNum1;
+            	}else{
+					alert("页码["+pageNum1+"]不正确");
+            		return;
+            	}
+            	var pageInputName = "currentPage";
+            	var pageInput = null;
+            	var form = document.getElementsByName(formName)[0];
+
+            	if(document.getElementsByName(pageInputName).length != 0){
+            		pageInput = document.getElementsByName(pageInputName)[0];
+            		pageInput.value = pageNum;
+            	}else{
+            		pageInput = document.createElement("input");
+            		pageInput.type = "hidden";
+            	    pageInput.name = "currentPage";
+            	    pageInput.value = pageNum;
+            	    form.appendChild(pageInput);
+            	}
+				form.submit();
+            }
+    	</script>
+	#else
+		<div class="pagenumber">没有分页对象</div>
+	#end
+#end
+
+#macro(menubar $menus)
+	#foreach($menu in $menus)
+		 <li>
+			<a href="#" class="nav-top-item">$menu.name</a>
+			<ul>
+			 #foreach($m in $menu.subMenus)
+				<li><a href="$m.url">$m.name</a></li>
+			 #end
+			</ul>
+		</li>
+	#end	
+#end

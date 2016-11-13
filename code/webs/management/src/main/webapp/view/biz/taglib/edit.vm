@@ -1,0 +1,36 @@
+  <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>添加标签</small></div>
+    </div> 
+ 
+ <div class="am-g" style="height:400px">
+      <div class="am-u-sm-12">
+
+<form action="taglib-update.htm" method="post"> 
+	<table class="am-table am-table-striped am-table-hover table-main" style="width:400px">
+			<tr>
+				<td><label for="status">标签名称：</label></td>
+				<td>
+					<input type="hidden" name="id" id="id" value="$!{taglib.id}"/>
+					<input type="hidden" name="id" id="type" value="$!{taglib.type}"/>
+					<input type="text" name="name" id="name" value="$!{taglib.name}"/>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="status">状态：</label></td>
+				<td>
+					<input type="radio" name="status" value="1" #if($!{taglib.status}==1) checked #end/>:启用 <input type="radio" name="status" value="0" #if($!{taglib.status}==0) checked #end/>:停用
+				</td>
+			</tr>
+			<tr>
+				<td><label for="status">描述</label></td>
+				<td>
+					<input type="text" name="desc" id="desc" value="$!{taglib.desc}"/>
+				</td>
+			</tr>
+		</table>
+	<input type="submit" value="#springMessage("save")"/>
+</form>
+
+</div>
+
+</div>

@@ -1,0 +1,126 @@
+  <script type="text/javascript" charset-"utf-8" src="js/jquery.cxcolor.min.js"></script> 
+ <link rel="stylesheet" href="css/cxcolor-base.css">
+  <link rel="stylesheet" href="css/cxcolor-layout.css">
+  <div class="am-cf am-padding">
+<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">店铺设置</strong> / <small>#if($type=='spec') 添加规格 #else 添加属性 #end</small></div>  </div>
+  
+  <div class="am-tabs am-margin" data-am-tabs="">
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li class="am-active"><a href="#tab1">添加#if($type=="spec")规格#else属性#end</a></li>
+
+    </ul>
+
+ <div class="am-tabs-bd" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      <div class="am-tab-panel am-active am-fade am-in" id="tab1">
+        <div class="am-g am-margin-top">
+        <form class="am-form" name="myForm" id="myForm" method="post" action="store-prop-update.htm">
+          <input type="hidden" name="id" id="id" value="$!{item.id}"/>    
+          <input type="hidden" id="type" name="type" value="$!type"/>
+          <input type="hidden" name="inputOption" id="inputOption">
+           <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              所属分类:
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end">
+          <select name="categoryId" id="categoryId" data-am-selected="{btnSize: 'sm'}">
+             <option value="0">--选择自定义分类--</option>
+           	 #foreach($scm in $scms)
+             <option value="$scm.id">$scm.name</option>
+            #end
+          </select>
+        </div>
+      </div>
+          
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              名称:
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end">
+              <input type="text" name="name"  class="am-input-sm" value="$!item.name">
+            </div>
+          </div>
+          
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              属性类别:
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end">
+          <select name="inputType" id="inputType" data-am-selected="{btnSize: 'sm'}"  onchange="setValue(this.value)">
+            <option value="0">--选择属性类型--</option>
+            <option value="mulit">多项</option>
+            <option value="single">单项</option>
+          </select>
+        </div>
+      </div>
+          <!--动态生成属性值-->
+            <div class="am-g am-margin-top-sm" id="optionContent">
+          </div>
+          
+  <div class="am-margin">
+    <a class="am-btn am-btn-primary am-btn-xs" href="javascript:void(0)" onclick="formSubmit()">提 交</a>
+    <a class="am-btn am-btn-primary am-btn-xs" href="store-prop-$!{type}.htm">取 消</a>
+  </div>
+   
+     
+          
+        </form>
+        
+        <br/><br/><br/><br/><br/><br/><br/><br/> <br/><br/><br/><br/><br/><br/><br/><br/>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+function formSubmit()
+  {
+  document.getElementById("myForm").submit();
+  }
+ // $('#color').cxColor();
+var mulitStr="<div class=\"am-u-sm-4 am-u-md-2 am-text-right\"> 值:</div><div class=\"am-u-sm-8 am-u-md-4 am-u-end\"><input type=\"hidden\" id=\"inputOption\" name=\"inputOption\">"+
+			"<ul id=\"targetContent\" >"+
+			#foreach($item in $inputOpetion)
+			"<li><span>$item</span>    <a href=\"javascript:void(0)\" onclick=\"delLi(this)\">删除</a></li>"+
+			#end
+			"</ul> <br/>"+
+			"<ul><input type=\"text\" name=\"option\" id=\"option\"><input type=\"button\" value=\"添加\" onclick='addOption(\"targetContent\",\"option\")'/></ul>"+
+			"</div>";
+var single="<div class=\"am-u-sm-4 am-u-md-2 am-text-right\"> 值:</div><div class=\"am-u-sm-8 am-u-md-4 am-u-end\"><input type=\"text\" id=\"color\" name=\"tittle\" value=\"$!item.tittle\" class=\"am-input-sm\"></div>";
+var radioStr="";
+function setValue(val){
+	if(val=="mulit")
+  		 jQuery("#optionContent").html(mulitStr);
+  	if(val=="single")
+  		 jQuery("#optionContent").html(single);
+ 	 if(val=="text")
+ 		 jQuery("#optionContent").html(inputStr);
+}
+function addOption(id,targetId){
+	var v="<li><span>"+jQuery('#'+targetId).val()+"</span>    <a href=\"javascript:void(0)\" onclick=\"delLi(this)\">删除</a></li>";
+	var ss=jQuery("#"+id).html()+v;
+	jQuery("#"+id).html(ss);
+	jQuery("#"+targetId).val("");
+	refreshVal();
+}
+function delLi(obj){
+	jQuery(obj).parents("li").remove();
+	refreshVal();
+}
+
+function refreshVal(){
+	var text="";
+	jQuery("#targetContent").find("li").each(function (i) {
+				if(text==""){
+					text=$(this).children("span").html();
+				}else{
+					text+=";"+$(this).children("span").html();
+				}
+                    jQuery("#inputOption").val(text);
+            });
+}
+
+ $("#categoryId").val("$!{item.categoryId}");
+  $("#inputType").val("$!{item.inputType}");
+  setValue("$!{item.inputType}");
+  refreshVal();
+</script>
+  

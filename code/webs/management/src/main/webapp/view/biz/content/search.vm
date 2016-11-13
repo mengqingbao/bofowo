@@ -1,0 +1,119 @@
+
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>内容管理</small></div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-6">
+        <div class="am-btn-toolbar">
+          <div class="am-btn-group am-btn-group-xs">
+            <a class="am-btn am-btn-default" href="add-content.htm"><span class="am-icon-plus"></span> 新增</a>
+          </div>
+        </div>
+      </div>
+      <div class="am-u-sm-12 am-u-md-3">
+        <div class="am-form-group">
+          <select data-am-selected="{btnSize: 'sm'}">
+            <option value="option1">所有类别</option>
+            #foreach($category in $categories)
+              <option value="$category.id">$category.name</option>
+            #end
+          </select>
+        </div>
+      </div>
+      <div class="am-u-sm-12 am-u-md-3">
+        <div class="am-input-group am-input-group-sm">
+          <input type="text" class="am-form-field">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button">搜索</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12">
+        <form class="am-form">
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                <th class="table-title">标题</th><th class="table-type">状态</th><th class="table-author am-hide-sm-only">作者</th><th class="table-date am-hide-sm-only">修改日期</th><th class="table-set">操作</th>
+              </tr>
+          </thead>
+          <tbody>
+          #foreach($foo in $list)
+            <tr>
+              <td><a href="#">$!foo.title</a></td>
+              <td>#if($!foo.status==1) 显示 #else 不显示 #end</td>
+              <td class="am-hide-sm-only">$!foo.author</td>
+              <td class="am-hide-sm-only">$dateFormat.toSimpleDateString($!foo.modifyDate)</td>
+              <td>
+                <div class="am-btn-toolbar">
+                  <div class="am-btn-group am-btn-group-xs">
+                    <a href="webcontent-edit.htm?id=$!{foo.id}" class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</a>
+                    <a href="#" contentId="$!{foo.id}" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+           #end
+          </tbody>
+        </table>
+          <div class="am-cf">
+
+
+  <form id="form1" name="form1></form>
+  <div class="am-pagination">
+  
+   #pageNavigation($pageInfo,"form1")
+   </div>
+</div>
+          <hr />
+          <p>注：.....</p>
+        </form>
+      </div>
+
+    </div>
+    
+       <link href='resources/css/jquery.qtip.min.css' rel='stylesheet'>
+<link href='resources/css/jquery.qtip.css' rel='stylesheet'>
+<script src="resources/js/jquery.js"></script>
+<script src="resources/js/jquery-migrate.min.js"></script>
+<script src="resources/js/jquery.qtip.min.js"></script>
+
+<script>
+	jQuery(".am-text-danger").each(function(){jQuery(this).qtip({
+		content: {
+			text: "确定删除？<br/><br/><input type='button' value='删除' onclick='del("+jQuery(this).attr('contentId')+")' class='btn btn-danger'>  <input type='button' value='取消' class='btn cancel'>",
+			title: "确认删除",
+			button: "取消",
+		},
+		
+		position: {
+			my: 'bottom right',
+			at: 'top center'
+		 },
+		style: {
+			classes: 'qtip-shadow qtip-bootstrap'
+		},
+		show: {
+			event: 'click', // Show it on click...
+			solo: true, // ...and hide all other tooltips...
+			modal: true // ...and make it modal
+		  },
+		hide: true,
+		events: {
+            render: function(event, api) {
+                $('.cancel').click(function(e) {
+                    api.hide(e);
+                });
+            },
+          //  hide: function(event, api) { api.destroy(); }
+        }
+
+	});})
+	
+	function del(id){
+		window.location.href='webcontent-del.htm?id='+id;
+	}
+</script>

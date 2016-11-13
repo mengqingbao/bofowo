@@ -1,0 +1,95 @@
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>满免邮</small></div>
+    </div>
+
+
+   <div class="am-g">
+      <div class="am-u-sm-12">
+      <div class="am-cf">
+      <br/>
+      	<p>1.满免邮活动包括店铺所有商品，活动时间不能和已有活动重叠。</p>
+		<p>2.满免邮活动时间不能和满就减活动时间重叠。</p>
+		</p><span style="color:red">3.可以设置同类目叠加免邮。</span></p>
+	  </div>
+	   <div class="am-u-sm-12 am-u-md-12">
+         <div class="am-btn-group am-btn-group-xs">
+            <a href="store-free-shipment-add.htm" class="am-btn am-btn-default"><span class="am-icon-plus"></span>添加活动</a>
+         </div>
+      </div>
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                 <th>活动名称</th><th>开始时间</th><th class="table-title">结束时间</th><th class="table-type">状态</th><th>操作</th>
+              </tr>
+          
+          #foreach($foo in $items)
+           <tr>
+              <td><a href="#">$foo.name</a></td>
+              <td>$dateFormat.toSimpleDateString($!foo.beginTime)</td>
+              <td>$dateFormat.toSimpleDateString($!foo.endTime)</td>
+                <td></td>
+                <td> <div class="am-btn-toolbar">
+                  <div class="am-btn-group am-btn-group-xs">
+                    <a class="am-btn am-btn-default am-btn-xs am-text-secondary" href="store-coupon-edit.htm?id=$!{foo.id}&type=$!{foo.type}" title="编辑"><span class="am-icon-pencil-square-o" title="编辑"></span></a>
+                    <a class="am-btn am-btn-default am-btn-xs am-text-danger btn-del" title="删除" id="$!foo.id" type="$!foo.type"><span class="am-icon-trash-o"></span></a>
+                  </div>
+                </div></td>
+            </tr>
+
+         #end
+           </table>        
+
+<div class="am-pagination">
+  
+   #pageNavigation($pageInfo,"form1")
+   </div>
+          <hr />
+          <p>注：.....</p>
+
+      </div>
+
+    </div>
+    
+    <link href='/css/jquery.qtip.min.css' rel='stylesheet'>
+<link href='/css/jquery.qtip.css' rel='stylesheet'>
+<script src="/js/jquery.qtip.min.js"></script>
+<script>
+	jQuery(".btn-del").each(function(){jQuery(this).qtip({
+		content: {
+			text: "#springMessage("confirm")<br/><br/><input type='button' value='#springMessage("delete")' onclick='del("+jQuery(this).attr('id')+","+jQuery(this).attr('type')+")' class='btn btn-danger'>  <input type='button' value='#springMessage("cancel")' class='btn cancel'>",
+			title: "#springMessage("delete")",
+			button: "#springMessage("cancel")",
+		},
+		
+		position: {
+			my: 'bottom right',
+			at: 'top center'
+		 },
+		style: {
+			classes: 'qtip-shadow qtip-bootstrap'
+		},
+		show: {
+			event: 'click', // Show it on click...
+			solo: true, // ...and hide all other tooltips...
+			modal: true // ...and make it modal
+		  },
+		hide: true,
+		events: {
+            render: function(event, api) {
+                $('.cancel').click(function(e) {
+                    api.hide(e);
+                });
+            },
+          //  hide: function(event, api) { api.destroy(); }
+        }
+
+	});})
+	
+	function del(id,type){
+		window.location.href='store-coupon-del.htm?id='+id+'&type='+type;
+	}
+	
+	function filterBtn(){
+		$("#form1").submit();
+	}
+</script>

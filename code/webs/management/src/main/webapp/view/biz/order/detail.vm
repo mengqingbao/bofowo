@@ -1,0 +1,101 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Order Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<table class="table table-striped table-bordered responsive">
+	<tr>
+		<td><label for="status">#springMessage("id")</label></td>
+		<td>
+			$!{order.id}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("itemId")</label></td>
+		<td>
+			$!{order.itemId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("title")</label></td>
+		<td>
+			$!{order.title}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("pic")</label></td>
+		<td>
+			$!{order.pic}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("num")</label></td>
+		<td>
+			$!{order.num}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("price")</label></td>
+		<td>
+			$!{order.price}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("total")</label></td>
+		<td>
+			$!{order.total}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("status")</label></td>
+		<td>
+			$!{order.status}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("realPay")</label></td>
+		<td>
+			$!{order.realPay}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("properties")</label></td>
+		<td>
+			$!{order.properties}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("spec")</label></td>
+		<td>
+			$!{order.spec}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("tid")</label></td>
+		<td>
+			$!{order.tid}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("note")</label></td>
+		<td>
+			$!{order.note}
+		</td>
+	</tr>
+</table>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

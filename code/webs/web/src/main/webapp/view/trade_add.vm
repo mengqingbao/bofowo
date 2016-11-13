@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0076)http://trade.jd.com/shopping/order/getEasyOrderInfo.action?rid=1471362847307 -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>暴风网-结算页</title>
+    <!--结算页面样式-->
+    <link rel="stylesheet" href="./assets/trade/bankList.css" charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="./assets/trade/saved_resource" source="widget">
+    <link type="text/css" rel="stylesheet" href="./assets/trade/saved_resource(1)">
+    <script type="text/javascript" async="" src="./assets/trade/wl.js"></script>
+    <script type="text/javascript" src="./assets/trade/jquery-1.6.4.js"></script>
+    <script type="text/javascript" src="./assets/trade/saved_resource(2)"></script>
+    <script type="text/javascript" src="./assets/trade/cookieTrack_v4.js"></script>
+    <script type="text/javascript" src="./assets/trade/order.common.js"></script>
+    <script type="text/javascript" src="./assets/trade/jquery.checkout.js"></script>
+    <link charset="utf-8" rel="stylesheet" href="./assets/trade/tips.css"></head>
+  
+  <body id="mainframe">
+
+    <div id="o-header-2013">
+      <div id="header-2013" style="display:none;"></div>
+    </div>
+    <!--shortcut end-->
+    <div class="w w1 header clearfix">
+      <div id="logo">
+        <a href="http://www.jd.com/" class="link1" target="_blank">
+          <img src="./assets/trade/logo.jpg" style="height:60px;width:160px;" alt="京东商城"></a>
+        <a href="http://trade.jd.com/shopping/order/getEasyOrderInfo.action?rid=1471362847307#none" class="link2">
+          <b>
+          </b>"结算页"</a>
+      </div>
+     
+    </div>
+    <!-- /header -->
+    <!--/ /widget/header/header.tpl -->
+    <div id="consignee_back" name="consignee_back" style="display:none"></div>
+    <div id="consignee_back_action" name="consignee_back_action" style="display:none"></div>
+    <div id="part-invoice_back" name="part-invoice_back" style="display:none"></div>
+    <div id="part-invoice_back_action" name="part-invoice_back_action" style="display:none"></div>
+    <div id="payment-ship_back_action" name="payment-ship_back_action" style="display:none"></div>
+    <div id="payment-ship_back" name="payment-ship_back" style="display:none"></div>
+    <input type="hidden" name="beforePickSiteId" id="beforePickSiteId">
+    <!--自提点-->
+    <input type="hidden" name="beforePickDate" id="beforePickDate">
+    <!--自提时间-->
+    <input type="hidden" name="beforePickSiteNum" id="beforePickSiteNum">
+    <!--默认5个-->
+    <input type="hidden" name="beforePickRegionId" id="beforePickRegionId" value="-1">
+    <!--搜索区域-->
+    <input type="hidden" name="beforePickSelRegionid" id="beforePickSelRegionid">
+    <!--搜索区域-->
+    <input type="hidden" id="beforePickName" name="beforePickName">
+    <input type="hidden" id="sopCartJson" value="[{&quot;id&quot;:2894348,&quot;num&quot;:1,&quot;shopId&quot;:0,&quot;cid&quot;:739,&quot;gift&quot;:false}]">
+    <input type="hidden" id="hasSopSku" value="false">
+    <input type="hidden" id="hasBigItem" value="false">
+    <input type="hidden" id="sopNotPutInvoice" value="false">
+    <input type="hidden" id="isChangeItemByArea" value="false">
+    <input type="hidden" id="hasTang9" value="false">
+    <input type="hidden" id="needPay" value="149.00">
+    <input type="hidden" id="consignee_id" name="consignee_id" value="138143493">
+    <input type="hidden" id="hideAreaIds" value="2-2820-51972-0">
+    <input type="hidden" id="isPresale" value="false">
+    <input type="hidden" id="presaleStepPay" value="">
+    <input type="hidden" id="flowType" value="">
+    <input type="hidden" id="flowId" value="">
+    <input type="hidden" id="showCheckCode" value="false">
+    <input type="hidden" id="reset_promise_311" value="0">
+    <input type="hidden" id="resetFlag" value="0000000000">
+    <input type="hidden" id="easyBuyFlag" value="2">
+    <input type="hidden" id="ui-dialog-close" value="">
+    <input type="hidden" id="overseaPurchaseCookies" value="">
+    <input type="hidden" id="isHasSimCard" value="false">
+    <input type="hidden" id="ignorePriceChange" value="0">
+    <input type="hidden" id="canBaitiaoDetail" value="true">
+    <input type="hidden" id="selfPickShutDownFlag" value="0">
+    <input type="hidden" id="TrackID" name="TrackID" value="">
+    <input type="hidden" id="invokeNewCouponInterface" name="invokeNewCouponInterface" value="true">
+    <input type="hidden" id="submitButtonABTest" value="0">
+    <input type="hidden" id="eid" value="5519A849CBE114DB884DEEAF51E0D1B14C6B57F687CE066F1DF115586894D833A27E43C629F90393D422140282D1D213">
+    <input type="hidden" id="fp" value="532fed39cc3e76036d3b89ffe7f05f32">
+    <input type="hidden" id="baitiaoPayRequest" value="plan=1">
+    <input type="hidden" id="baitiaoPayRepayDateRequest" value="repayDate=2016-09-15 23:54:07">
+    <input type="hidden" id="jdpy_cardInfo" value="nocard">
+    <form id="direct_pay" action="https://cashier.jd.com/direct/directPay.action" method="post">
+      <input type="hidden" name="orderId">
+      <input type="hidden" name="toType">
+      <input type="hidden" name="orderType">
+      <input type="hidden" name="directPayInfoJson">
+      <input type="hidden" name="payMethod">
+      <input type="hidden" name="key"></form>
+    <input type="hidden" id="lastneedPay" value="149.00">
+    <input type="hidden" id="btNeedPay" value="149.00">
+    <input type="hidden" id="isNewVertual" name="isNewVertual" value="true">
+    <input type="hidden" id="isBestCoupon" name="isBestCoupon">
+    <!-- main -->
+    <div id="container">
+      <div id="content" class="w">
+        <!-- <div class="m"> -->
+        <div class="checkout-tit">
+          <span class="tit-txt">填写并核对订单信息</span>
+          
+        </div>
+        <!--<div class="mc">-->
+        <div class="checkout-steps">
+          <!-- /widget/consignee-step/consignee-step.tpl -->
+          <div class="step-tit">
+            <h3>收货人信息</h3>
+            <div class="extra-r">
+              <a href="http://trade.jd.com/shopping/order/getEasyOrderInfo.action?rid=1471362847307#none" class="ftx-05" onclick="use_NewConsignee()" clstag="pageclick|keycount|trade_201602181|3">新增收货地址</a>
+              <input type="hidden" id="del_consignee_type" value="0"></div>
+          </div>
+          <div class="step-cont">
+            <div id="consignee-addr" class="consignee-content">
+              <div class="consignee-scrollbar">
+                <div class="ui-scrollbar-main">
+                  <div class="consignee-scroll">
+                    <div class="consignee-cont" id="consignee1" style="height: 42px;">
+                      <ul id="consignee-list">
+                        <!---->
+                        <!-- <li class="ui-switchable-panel" id="consignee_index_138143493" selected="selected" style="cursor: pointer;">
+                        <div class="consignee-item item-selected" consigneeId="138143493" id="consignee_index_div_138143493">
+                        <b></b>
+                        <div class="user-name">
+                        <div class="fl"><strong limit="4">孟庆宝</strong>&nbsp;&nbsp;收</div>
+                        <div class="fr">153****3718</div>
+                        <div class="clr"></div></div>
+                        <div class="mt10" limit="15">上海 闸北区 城区 </div>
+                        <div class="adr-m" limit="30">江场三路181号盈科律师大厦8楼</div>
+                        <div class="op-btns ar">
+                        <a href="#none" class="ftx-05 mr10 setdefault-consignee hide" fid="138143493">设为默认地址</a>
+                        <a href="#none" class="ftx-05 mr10 edit-consignee" fid="138143493">编辑</a>
+                        <a href="#none" class="ftx-05 del-consignee hide" fid="138143493">删除</a></div>
+                        </div>
+                        </li>
+                        -->
+                        <li class="ui-switchable-panel ui-switchable-panel-selected" style="display: list-item;" id="consignee_index_138143493" selected="selected">
+                          <div class="consignee-item item-selected" consigneeid="138143493" id="consignee_index_div_138143493" consigneetype="0" clstag="pageclick|keycount|trade_201602181|1">
+                            <span limit="8" title="孟庆宝">孟庆宝 上海</span>
+                            <b>
+                            </b>
+                          </div>
+                          <div class="addr-detail">
+                            <!--yanwenqi 全球购添加idcard 不是国际购的要不要显示？ -->
+                            <span class="addr-name" limit="6" title="孟庆宝">孟庆宝</span>
+                            <span class="addr-info" limit="45" title="上海 闸北区 城区 江场三路181号盈科律师大厦8楼">上海 闸北区 城区 江场三路181号盈科律师大厦8楼</span>
+                            <span class="addr-tel">153****3718</span></div>
+                          <div class="op-btns" consigneeid="138143493">
+                            <a href="http://trade.jd.com/shopping/order/getEasyOrderInfo.action?rid=1471362847307#none" class="ftx-05 setdefault-consignee hide" fid="138143493" clstag="pageclick|keycount|trade_201602181|4">设为默认地址</a>
+                            <a href="http://trade.jd.com/shopping/order/getEasyOrderInfo.action?rid=1471362847307#none" class="ftx-05 edit-consignee" fid="138143493" clstag="pageclick|keycount|trade_201602181|6">编辑</a>
+                            <a href="http://trade.jd.com/shopping/order/getEasyOrderInfo.action?rid=1471362847307#none" class="ftx-05 del-consignee hide" fid="138143493" clstag="pageclick|keycount|trade_201602181|5">删除</a></div>
+                        </li>
+                       </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+
+          <!--/ /widget/consignee-step/consignee-step.tpl -->
+          <div class="hr"></div>
+          <!--/ /widget/shopping-list/shopping-list.tpl -->
+          <div id="shipAndSkuInfo">
+            <div id="payShipAndSkuInfo">
+              <div class="step-tit">
+                <h3>付款方式</h3></div>
+              <div class="step-cont">
+                <div class="payment-list" id="">
+                  <div class="list-cont">
+                    <ul id="payment-list">
+                      <input type="hidden" id="instalmentPlan" value="false">
+                      <li style="cursor: pointer;" onclick="
+                      save_Pay(1,0,1); 				" clstag="pageclick|keycount|trade_201602181|8">
+                        <div class=" payment-item item-selected online-payment " for="pay-method-1" payname="货到付款" payid="1" onlinepaytype="0">
+                          <b>
+                          </b>支付宝支付
+                          <span class="qmark-icon qmark-tip" data-tips="送货上门后再收款，支持现金、POS机刷卡、支票支付 &lt;a href=&#39;//help.jd.com/user/issue/103-983.html&#39; target=&#39;_blank&#39; class=&#39;ftx-05&#39;&gt;查看服务及配送范围&lt;/a&gt;"></span></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="hr"></div>
+              <!--/ /widget/payment-step/payment-step.tpl -->
+              <div class="step-tit">
+                <h3>商品清单</h3>
+                <div class="extra-r">
+                  <a class="price-desc" id="price-desc" href="http://trade.jd.com/shopping/order/getEasyOrderInfo.action?rid=1471362847307#none" data-tips="因可能存在系统缓存、页面更新导致价格变动异常等不确定性情况出现，商品售价以本结算页商品价格为准；如有疑问，请您立即联系销售商咨询。">
+                    <i>
+                    </i>&nbsp;价格说明</a>
+                  <a href="http://cart.jd.com/" id="cartRetureUrl" class="return-edit ftx-05" clstag="pageclick|keycount|trade_201602181|15">返回修改购物车</a></div>
+              </div>
+              <div class="step-cont" id="skuPayAndShipment-cont">
+                <!--添加商品清单 zhuqingjie -->
+                <div class="shopping-lists" id="shopping-lists">
+                  <!--定义大商品清单LIST-->
+                  <div class="shopping-list ABTest">
+               
+                              <table style="width:100%">
+                              	<tr><td>标题</td><td>价格</td><td>活动</td><td>数量</td><td>实付金额</td></tr>
+                              	<tr><td>$!{pm.name}</td><td><p style=" text-decoration:line-through;">$!{pm.marketPrice}</p> $!{pm.shopPrice}</td><td>无</td><td>$!{num}</td><td>$!{total}</td></tr>
+                              </table>
+                 
+                </div>
+                <!--shopping-lists 结束--></div>
+            </div>
+          </div>
+
+
+
+
+        <div class="trade-foot">
+          <!-- 预售 -->
+          <div id="checkout-floatbar" class="group">
+            <div class="ui-ceilinglamp checkout-buttons">
+              <div class="sticky-wrap">
+                <div class="inner">
+                <form name-"form1" action="trade_add_pay.htm">
+                	<input type="hidden" name="goodsId" value="$!{goodsId}"/>
+                	<input type="hidden" name="quantity" value="${num}"/>
+                  <button type="submit" class="checkout-submit" id="order-submit" onclick="javascript:submit_Order();">提交订单
+                    <b></b>
+                  </button>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+    </div>
+
+  </body>
+
+</html>

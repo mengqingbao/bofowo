@@ -1,0 +1,83 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Doc Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<table class="table table-striped table-bordered responsive">
+	<tr>
+		<td><label for="status">#springMessage("id")</label></td>
+		<td>
+			$!{doc.id}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("docName")</label></td>
+		<td>
+			$!{doc.docName}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("path")</label></td>
+		<td>
+			$!{doc.path}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("isdelete")</label></td>
+		<td>
+			$!{doc.isdelete}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("status")</label></td>
+		<td>
+			$!{doc.status}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("topicId")</label></td>
+		<td>
+			$!{doc.topicId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("createDate")</label></td>
+		<td>
+			$!{doc.createDate}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("changeDate")</label></td>
+		<td>
+			$!{doc.changeDate}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("creator")</label></td>
+		<td>
+			$!{doc.creator}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("changeMan")</label></td>
+		<td>
+			$!{doc.changeMan}
+		</td>
+	</tr>
+</table>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

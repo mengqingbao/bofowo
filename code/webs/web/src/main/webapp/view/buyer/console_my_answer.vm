@@ -1,0 +1,38 @@
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>交易管理</small></div>
+    </div>
+	
+    <div class="am-g">
+      <div class="am-u-sm-12">
+      <ul class="am-tabs-nav am-nav am-nav-tabs">
+	  <li><a href="consumer-rate.htm">我的评价</a></li>
+      <li #if($type=="question") class="am-active" #end><a href="consumer-console-question.htm">收到的提问</a></li>
+      <li #if($type=="answer") class="am-active" #end><a href="consumer-console-answer.htm">我的提问</a></li>
+     </ul>
+        <form class="am-form">
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                <th>来源/用途</th><th class="table-title">剩余金额（元）</th><th class="table-type">有效期</th><th class="table-date am-hide-sm-only">使用状态</th>
+              </tr>
+          
+          #foreach($item in $items)
+            <tr>
+              <td><a href="#">华为手机旗舰店 满100减5</a></td>
+              <td><a href="#">5</a></td>
+              <td>2016-04-20 to 2016-09-09</td>
+                <td>未使用</td>
+            </tr>
+
+         #end
+           </table>
+          <div class="am-cf">
+ 			 <form id="form1" name="form1></form>
+			  #pageNavigation($!pageInfo,'form1')
+		  </div>  
+          <hr />
+          <p>注：.....</p>
+        </form>
+      </div>
+
+    </div>

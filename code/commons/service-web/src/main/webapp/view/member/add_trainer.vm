@@ -1,0 +1,257 @@
+﻿
+<div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="">
+                    <h2>Add Trainer</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-setting btn-round btn-default"><i
+                                class="glyphicon glyphicon-cog"></i></a>
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                        <a href="#" class="btn btn-close btn-round btn-default"><i
+                                class="glyphicon glyphicon-remove"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+                    <form action="teacher-manage.htm" method="post" class="niceform">
+				<h2>General</h2>
+                <table class="table table-striped table-bordered responsive">
+					<tr>
+                        <td width="300px"><label for="parentId">Code:</label></td>
+                        <td id="category_">
+                           <input type="text" name="" class="form-control col-md-8"/>
+							
+                        </td>
+					</tr>
+					<tr>
+                        <td><label for="parentcode">Full Name:</label></td>
+                        <td id="category_sub">
+                            <input type="text" name="" class="form-control"/>
+							
+                        </td>
+                    </tr>
+					<tr>
+                        <td><label for="parentcode">Employee ID:</label></td>
+                        <td id="category_sub">
+                           <input type="text" name="" class="form-control"/>
+							
+                        </td>
+					</tr>
+					<tr>	
+                        <td><label for="password">Domain Of The Trainer</label></td>
+                        <td style="line-height:34px">
+							<select class="form-control">
+								#foreach($i in [1..40])
+								<option>domain$i</option>
+								#end
+							</select>
+						</td>
+                    </tr>
+					<tr>	
+                        <td><label for="password">Theme Of The Trainer</label></td>
+                        <td style="line-height:34px">
+							<select class="form-control">
+								#foreach($i in [1..40])
+								<option>theme$i</option>
+								#end
+							</select>
+						</td>
+                    </tr>
+					<tr>
+                        <td><label for="parentcode">Domain:</label></td>
+                        <td id="category_sub">
+                           <select class="form-control">
+							<option>SMT</option>
+						  </select>
+                        </td>
+					</tr>
+					<tr>
+                        <td><label for="parentcode">Theme:</label></td>
+                        <td id="category_sub">
+                          <select class="form-control">
+							<option>Commerce</option>
+						  </select>
+							
+                        </td>
+						</tr>
+					
+					<tr>	
+                        <td><label for="password">Trainer level:</label></td>
+                        <td style="line-height:34px">
+							<select class="form-control">
+							#foreach($i in [1..40])
+								<option>T$i</option>
+							#end
+							</select>
+						</td>
+                    </tr>
+					<tr>
+                        <td><label for="password">Trainer code:</label></td>
+                        <td style="line-height:34px">
+							<input type="text" name="" class="form-control"/>
+						</td>
+					</tr>
+					<tr>	
+                        <td><label for="password">From:</label></td>
+                        <td style="line-height:34px">
+							<select class="form-control">
+								<option>internal</option>
+								<option>external trainer</option>
+								<option>other</option>
+							</select>
+						</td>
+                    </tr>
+					<tr>
+                        <td><label for="password">Expertise of trainer:</label></td>
+                        <td style="line-height:34px">
+							<input type="text" name="" class="form-control"/>
+						</td>
+					</tr>
+					<tr>	
+                        <td><label for="password">Company</label></td>
+                        <td style="line-height:34px">
+							<select class="form-control">
+								#foreach($i in [1..40])
+								<option>Company$i</option>
+								#end
+							</select>
+						</td>
+                    </tr>
+					<tr>
+                        <td><label for="email">Phone Number:</label></td>
+                        <td><input type="text" name="" class="form-control"/></td>
+                    </tr>
+					<tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="text" name="" class="form-control"/></td>
+					</tr>
+                </table>
+				
+                <input type="submit" name="submit" id="submit" value="#springMessage("save")"  class="btn btn-success" />
+         </form>
+                </div>
+            </div>
+        </div>
+    </div><!--/span-->
+
+    <!-- content ends -->
+    </div><!--/#content.col-md-0-->
+</div><!--/fluid-row-->
+
+		 
+<script>
+	function getSubCategory(code){
+
+				
+		jQuery.ajax({
+            type:'get',
+            dataType:'json',
+            url:'course-add-ajax-getSubCategory.htm',
+            data:'code=' + code,
+            success: function(msg){
+               $("#subCategory").empty();
+			   jQuery.each(msg,function(idx,item){
+					
+					$("#subCategory").append("<option value=\"1\">"+item.title+"</option>");
+					
+			   });
+             }});
+	}
+ 
+ </script>	
+
+<div id="dialog-form" title="#springMessage("calendar")">
+  
+  <form>
+    
+  </form>
+</div> 
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+         aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h3>Settings</h3>
+                </div>
+                <div class="modal-body">
+                   <table>
+						<tr><td width="50px"> 
+							<label for="name">#springMessage("calendar")</label></td><td><div id="datepicker"></div><div id="datepicker2"></div></td><tr>
+						<tr height="50px"><td> <label for="email">#springMessage("course.trainer")</label></td><td>
+							<select name="trainee" id="trainee" style="width:154px" onchange="getSubCategory(this.value)">
+												<option>django</option>
+												<option>lumi</option>
+												<option>capchin</option>
+											</select>
+						</td>
+						</tr>
+					 <tr><td>#springMessage("address")</td><td><input type="text" id="calendar_address"/></td><tr>
+					 <tr><td></td><td> <input type="submit" tabindex="-1" style="position:absolute; top:-1000px"></td><tr>
+					</table>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-default" data-dismiss="modal">Close</a>
+                    <a href="#" class="btn btn-primary" data-dismiss="modal">Save changes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+var htm1="";
+var locale=jQuery.cookie('org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE');
+jQuery.datepicker.setDefaults(jQuery.datepicker.regional[locale]);
+jQuery( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+	  dateFormat:"yy-mm-td",
+	  inline: true,
+	  onSelect:function(dateText, inst){htm1="<tr><td>"+dateText+"</td><td>";}
+    });
+	
+	$(function() {
+    var dialog, form,
+ 
+     dialog = $( "#dialog-form" ).dialog({
+      autoOpen: false,
+      height: 400,
+      width: 450,
+      modal: true,
+      buttons: {
+        "create": addUser,
+        Cancel: function() {
+          dialog.dialog( "close" );
+        }
+      },
+      close: function() {
+        form[ 0 ].reset();
+        //allFields.removeClass( "ui-state-error" );
+      }
+    });
+	
+    form = dialog.find( "form" ).on( "submit", function( event ) {
+      event.preventDefault();
+      addUser();
+    });
+ 
+    $( "#calendarAdd" ).bind( "click", function() {
+      dialog.dialog( "open" );
+    });
+	function addUser(){
+		htm1+=$("#trainee").val()+"</td><td>"+$("#calendar_address").val()+"</td><td> <a href='javascript:void(0)' onclick='delCalendlar(this)'>#springMessage("delete")</a> </td></tr>";
+		$("#calendlar_dl").show();
+		$("#calendar_table").append(htm1);
+		dialog.dialog( "close" );
+		htm1="";
+	}
+	
+  });
+function delCalendlar(obj){
+		$(obj).parent().parent().remove();
+	}
+</script>

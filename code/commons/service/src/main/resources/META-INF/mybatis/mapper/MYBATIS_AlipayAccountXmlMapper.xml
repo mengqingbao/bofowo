@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.AlipayAccountMapper">
+	<resultMap type="AlipayAccountModel" id="AlipayAccountModelMap">
+
+		<id property="id" column="ID" />
+		<result property="sellerId" column="SELLER_ID" />
+		<result property="aliPayAccount" column="ALI_PAY_ACCOUNT" />
+		<result property="createTime" column="CREATE_TIME" />
+		<result property="modifyTime" column="MODIFY_TIME" />
+		<result property="status" column="STATUS" />
+		
+	</resultMap>
+</mapper> 

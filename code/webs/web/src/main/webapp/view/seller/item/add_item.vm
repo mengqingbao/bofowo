@@ -1,0 +1,99 @@
+ <script type="text/javascript" charset="utf-8" src="plugins/ueditor/ueditor.config.js"></script>
+ <script type="text/javascript" charset="utf-8" src="plugins/ueditor/ueditor.all.min.js"> </script>
+ <script type="text/javascript" charset="utf-8" src="plugins/ueditor/lang/zh-cn/zh-cn.js"></script>    
+
+  <div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">表单</strong> / <small>商品发布-选择发布商品的类型</small></div>
+  </div>
+
+  <div class="am-tabs am-margin" data-am-tabs="">
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li class="am-active"><a href="#tab1">选择发布商品类型</a></li>
+    </ul>
+
+    <div class="am-tabs-bd" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      <div class="am-tab-panel am-active am-fade am-in" id="tab1">
+        <div class="am-g am-margin-top">
+          <div class="am-u-sm-4 am-u-md-4">
+            <select style="height:300px;width:200px" multiple="multiple" id="pid1">
+            #foreach($cate in $cates)
+              <option value="$cate.id">$cate.name</option>
+            #end
+            </select>
+          </div>
+          <div class="am-u-sm-4 am-u-md-4">
+            <select style="height:300px;width:200px" multiple="multiple" id="pid2">
+              
+             
+            </select>
+          </div>
+          <div class="am-u-sm-4 am-u-md-4">
+            <select style="height:300px;width:200px" multiple="multiple" id="pid3">
+              
+            </select>
+          </div>
+          <div></div>
+        </div>
+
+
+      </div>
+
+     
+	
+    </div>
+  </div>
+
+  <div class="am-margin">
+    <a class="am-btn am-btn-primary am-btn-xs" onclick="toAddDetail()" href="javascript:void(0)">下一步</a>
+  </div>
+
+<style>
+#editor {
+	font-size: 12px;
+}
+</style>
+<script src="resources/js/jquery.js"></script>
+<script>
+
+jQuery("#pid1").change(function(){
+
+	jQuery.ajax({
+     type: 'get',
+     url: 'get-sub-category.htm?pid='+$(this).val()+'&type=2',
+     dataType:'json',
+     success:function(data){
+     	$("#pid2").empty();
+     	$("#pid3").empty();
+     	jQuery.each(data, function(index,item){ 
+        	$("#pid2").prepend("<option value='"+item.id+"'>"+item.name+"</option>");
+         }); 
+     }
+});
+})
+
+jQuery("#pid2").change(function(){
+	var largestId=Number($(this).val());
+	jQuery.ajax({
+     type: 'get',
+     url: 'get-sub-category.htm?pid='+$(this).val()+'&type=2',
+     dataType:'json',
+     success:function(data){
+     	$("#pid3").empty();
+     	jQuery.each(data, function(index,item){ 
+        	$("#pid3").prepend("<option value='"+item.id+"'>"+item.name+"</option>");
+     
+         });    	
+
+     }
+   });
+});
+function toAddDetail(){
+	console.log(jQuery("#pid3").val()==null);
+	if(jQuery("#pid3").val()==""||jQuery("#pid3").val()==null){
+		alert("请选择分类");
+	}else{
+		window.location.href='provider-item-add-detail-'+jQuery("#pid3").val()+'.htm';
+	}
+}
+</script>
+  

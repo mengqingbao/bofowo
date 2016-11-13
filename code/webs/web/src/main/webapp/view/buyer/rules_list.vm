@@ -1,0 +1,50 @@
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>投诉管理</small></div>
+    </div>
+	
+    <div class="am-g">
+      <div class="am-u-sm-12">
+      <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li class="am-active"><a href="javascript:void(0)">我发起的投诉</a></li>
+      <li><a href="javascript:void(0)">我收到的投诉</a></li>
+    </ul>
+        <form class="am-form">
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                <th class="table-title">投诉编号</th><th class="table-type">订单编号</th><th class="table-date am-hide-sm-only">被投诉方</th><th class="table-date am-hide-sm-only">投诉原因</th><th class="table-date am-hide-sm-only">投诉状态</th><th class="table-date am-hide-sm-only">申请时间</th><th class="table-date am-hide-sm-only">操作</th>
+              </tr>
+          
+          #foreach($foo in [10000..10005])
+            <tr>
+              <td>65623553016902</td>
+               <td>65623553016902</td>
+              <td>rock旗舰店<br/>深圳市洛克拉瓦智能科技有限公司</td>
+              <td>产品质量问题</td>
+              <td>完成</td>
+              <td>2016-04-20</td>
+              <td>查看</td>
+            </tr>
+
+         #end
+           </table>
+          <div class="am-cf">
+  共 15 条记录
+  <div class="am-fr">
+    <ul class="am-pagination">
+      <li class="am-disabled"><a href="#">«</a></li>
+      <li class="am-active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">»</a></li>
+    </ul>
+  </div>
+</div>
+          <hr />
+          <p>注：.....</p>
+        </form>
+      </div>
+
+    </div>

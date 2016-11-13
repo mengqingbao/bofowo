@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>律云后台管理</title>
+  <meta name="description" content="这是一个 index 页面">
+  <meta name="keywords" content="index">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="assets/css/amazeui.css"/>
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <script src="resources/js/jquery.js"></script>
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，lymall 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<header class="am-topbar admin-header">
+  <div class="am-topbar-brand">
+    <strong>律云</strong> <small>后台管理</small>
+  </div>
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+	<ul class="am-tabs-nav am-nav am-nav-tabs  am-topbar-left am-topbar-nav" style="margin-left:50px;font-size:1.2rem;background:">
+      <li><span style="line-height:50px;color: #0e90d2;">快捷进入：</span></li>
+      <li><a href="#tab2">交易管理</a></li>
+      <li><a href="#tab2">商品管理</a></li>
+      <li><a href="#tab2">店铺管理</a></li>
+      <li><a href="#tab2">会员管理</a></li>
+    </ul>
+
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+     
+      <li><a href="javascript:;"><span class="am-icon-envelope-o"></span> 收件箱 <span class="am-badge am-badge-warning">5</span></a></li>
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          <span class="am-icon-users"></span> 管理员 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="#"><span class="am-icon-user"></span> 资料</a></li>
+          <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
+          <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+        </ul>
+      </li>
+      <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="am-cf admin-main">
+  <!-- sidebar start -->
+  <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
+    <div class="am-offcanvas-bar admin-offcanvas-bar">
+      <ul class="am-list admin-sidebar-list">
+        <li><a href="index.htm"><span class="am-icon-home"></span> 首页</a></li>
+        <li class="admin-parent">
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-trade-nav'}"><span class="am-icon-th"></span> 交易管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-trade-nav">
+            <li><a href="manage-search-trades.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 交易管理</a></li>
+            <li><a href="trade-back-request.htm"><span class="am-icon-puzzle-piece"></span> 退货管理</a></li>
+            <li><a href="trade-change-request.htm"><span class="am-icon-puzzle-piece"></span> 换货管理</a></li>
+            <li><a href="trade-comment-search.htm"><span class="am-icon-puzzle-piece"></span> 评价管理</a></li>
+         	<li><a href="trade-comment-search.htm"><span class="am-icon-puzzle-piece"></span> 投诉管理</a></li>
+          
+          </ul>
+        </li>
+        <li class="admin-parent">
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-product-nav'}"><span class="am-icon-th"></span> 商品管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-product-nav">
+            <li><a href="product-search.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 商品管理</a></li>
+            <li><a href="content-category.htm?type=2&pid=0"><span class="am-icon-puzzle-piece"></span> 分类管理</a></li>
+            <li><a href="product-properties-manage-8.htm"><span class="am-icon-puzzle-piece"></span> 属性管理</a></li>
+            <li><a href="product-properties-manage-9.htm"><span class="am-icon-puzzle-piece"></span> 规格管理</a></li>
+            <li><a href="content-taglib.htm?type=4"><span class="am-icon-puzzle-piece"></span> 标签管理</a></li>
+          </ul>
+        </li>
+        <li class="admin-parent">
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-shop-nav'}"><span class="am-icon-th"></span> 店铺管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-shop-nav">
+            <li><a href="shop-search.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 店铺管理</a></li>
+            <li><a href="shop-category.htm"><span class="am-icon-puzzle-piece"></span> 店铺分类管理</a></li>
+          </ul>
+        </li>
+        <li class="admin-parent">
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-member-nav'}"><span class="am-icon-th"></span> 会员管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-member-nav">
+            <li><a href="member-search.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 会员管理</a></li>
+            <li><a href="member-level.htm"><span class="am-icon-puzzle-piece"></span> 会员等级规则</a></li>
+            <li><a href="member-right.htm"><span class="am-icon-puzzle-piece"></span> 会员特权设置</a></li>
+          </ul>
+        </li>
+        <li class="admin-parent">
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-marketing-nav'}"><span class="am-icon-th"></span> 营销管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-marketing-nav">
+            <li><a href="marketing-manage.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 平台营销管理</a></li>
+            <li><a href="marketing-point-review.htm"><span class="am-icon-puzzle-piece"></span> 平台积分管理</a></li>
+            <li><a href="marketing-3part-manage.htm"><span class="am-icon-puzzle-piece"></span> 商家营销管理</a></li>
+          </ul>
+        </li>
+        <li class="admin-parent">
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-content-nav'}"><span class="am-icon-th"></span> 内容管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-content-nav">
+            <li><a href="content-search.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 内容管理</a></li>
+            <li><a href="content-category.htm?type=3&pid=0"><span class="am-icon-puzzle-piece"></span> 内容分类管理</a></li>
+            <li><a href="content-taglib.htm?type=3"><span class="am-icon-puzzle-piece"></span> 内容标签管理</a></li>
+
+          </ul>
+        </li>
+        <li class="admin-parent">
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-setting-nav'}"><span class="am-icon-th"></span> 系统管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-setting-nav">
+            <li><a href="nav-manage.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 定时任务触发</a></li>
+            <li><a href="cache-clean.htm"><span class="am-icon-puzzle-piece"></span> 缓存清理</a></li>
+            <li><a href="system-log.htm"><span class="am-icon-puzzle-piece"></span> 系统日志</a></li>
+            <li><a href="system-error-define.htm"><span class="am-icon-puzzle-piece"></span> 404定义</a></li>
+          </ul>
+        </li>
+       <li><a href="#"><span class="am-icon-sign-out"></span> 注销</a></li>
+      </ul>
+
+
+    </div>
+  </div>
+  <!-- sidebar end -->
+
+  <!-- content start -->
+  <div class="admin-content">
+	
+     $screen_content
+  </div>
+  <!-- content end -->
+
+</div>
+
+<a href="#" class="am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}">
+  <span class="am-icon-btn am-icon-th-list"></span>
+</a>
+
+<footer>
+  <hr>
+  <p class="am-padding-left">© 2014 404886, Inc.2016 404886公司版权所有.</p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+	var url=location.href;
+	var len=url.length;
+	var start=url.indexOf("/",7);
+	var str=url.substring(start+1,len);
+	console.log(str);
+	jQuery("a[href='"+str+"']").css("color","#0072bc");
+	//console.log(jQuery("a[href='"+str+"']").parents("ul").siblings(".am-cf").html());
+	jQuery("a[href='"+str+"']").parents("ul").siblings(".am-cf").trigger('click'); 
+</script>
+</body>
+</html>

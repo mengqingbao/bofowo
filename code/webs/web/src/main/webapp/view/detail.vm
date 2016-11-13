@@ -1,0 +1,270 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>bofowo.cn</title>
+  <meta name="description" content="bofowo.cn bofowo.com">
+  <meta name="keywords" content="index">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="assets/css/amazeui.css"/>
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="stylesheet" href="css/turnpic-ie.css?12">
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，lymall 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+#include("common/header.vm");
+
+<div class="am-cf admin-main">
+  
+  <!-- content start -->
+  <div class="admin-content">
+
+
+    
+    <!--第一行start-->
+<div class="am-g am-padding">
+      <div class="am-u-md-6">
+        <div class="am-panel am-panel-default">
+        	<section id="rt-showcase-surround">
+    <div id="rt-showcase" class="slider-container rt-overlay-dark">
+        <div class="rt-container slider-container">
+            <div class="rt-grid-12 rt-alpha rt-omega">
+                
+                <link rel="stylesheet" href="css/turnpic-style.css">
+                <!--[if IE]><link rel="stylesheet" href="css/turnpic-ie.css"><![endif]-->
+                <!--[if lte IE 9]><script type="text/javascript" src="js/turnpic-ie.js"></script><![endif]-->
+
+                <div class="csslider1 autoplay">
+                    <input name="cs_anchor1" autocomplete="off" id="cs_slide1_0" type="radio" class="cs_anchor slide" >
+                    <input name="cs_anchor1" autocomplete="off" id="cs_slide1_1" type="radio" class="cs_anchor slide" >
+                    <input name="cs_anchor1" autocomplete="off" id="cs_slide1_2" type="radio" class="cs_anchor slide" >
+                    <input name="cs_anchor1" autocomplete="off" id="cs_play1" type="radio" class="cs_anchor" checked>
+                    <input name="cs_anchor1" autocomplete="off" id="cs_pause1" type="radio" class="cs_anchor" >
+                    <ul>
+                    	#set($i=0)
+                    	#foreach($image in $images)
+                    	#if($i==0)
+                        <div style="width: 350px;  visibility: hidden; font-size: 0px; line-height: 0;height:350px;">
+                            <img src="item-image-$!{image}.htm" style="width: 100%;">
+                        </div>
+                        #end
+                        
+                        <li class="num${i} img">
+                            <img src="item-image-$!{image}.htm" alt="Clouds" title="Clouds" />
+                        </li>
+                        #set($i = $i + 1);
+                        #end
+                        
+                    </ul>
+                    <div class="cs_bullets">
+                    	#set($i=0)
+                    	#foreach($image in $images)
+                        <label class="num0" for="cs_slide1_0">
+                            <span class="cs_point"></span>
+                            <span class="cs_thumb"><img src="item-image-$!{image}.htm" width="80px;" height="45px;" /></span>
+                        </label>
+                        #set($i = $i + 1);
+                        #end
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</section>        <!-- /slider -->
+       
+        </div>
+       </div>
+        <div class="am-u-md-6">
+        	<div class="am-u-sm-12">
+      <form method="get" action="trade_add.htm" id="trade_now_form">
+      		<input type="hidden" id="goodsId" name="goodsId" value="${item.id}">
+			<input type="hidden" id="title" name="title" value="${item.name}">
+			<input type="hidden" id="spec" name="spec" value="">
+        <table class="am-table am-table-bd admin-content-table">
+          <tbody>
+          <tr><th colspan="2">$!{item.name}</th>
+          </tr>
+          <tr><td width="75px">价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：</td><td>$!{item.shopPrice}￥</td>
+            
+          </tr>
+          <tr><td>促&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销：</td><td>满250.00减20.00，满399.00减100.00，满799.00减200.00</td>
+          </tr>
+          <tr><td>
+          	配 &nbsp;送 &nbsp;至:</td><td>
+北京 请选择 有货支持
+货到付款
+店铺单笔订单不满1元，收运费6元 
+由巴拉巴拉童装专卖店负责发货，并提供售后服务。
+          </td>
+          </tr>
+          <tr>
+            <td>
+            	选择颜色：</td><td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            	选择尺码：</td><td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+            	数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量：</td><td><input type="text" name="quantity" id="quantity" value="1" size="2"/>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+            	 <input type="button" onclick="buynow()" value="立即购买" class="am-btn am-btn-default am-badge-danger"/>
+            	 &nbsp;&nbsp;
+            	  <input type="button" onclick="buy('$!{item.id}')" value="加入购物车" class="am-btn am-btn-default am-badge-secondary"/>
+            	  &nbsp;&nbsp;
+            	  <input type="button" onclick="collect('$!{item.id}')" value="收藏" class="am-btn am-btn-default am-badge-success"/>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+       </form> 
+      </div>
+    	
+  		</div>
+</div>
+    <!--第一行end-->
+    
+    <!--底部分类栏目 start-->
+    <div class="am-g">
+    	<div class="am-tabs am-margin" data-am-tabs="">
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li class="am-active"><a href="#tab1">详情</a></li>
+      <li class=""><a href="#tab2">评论</a></li>
+      <li class=""><a href="#tab3">咨询</a></li>
+    </ul>
+
+    <div class="am-tabs-bd" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      <div class="am-tab-panel am-fade am-active am-in" id="tab1">
+      		 <table class="am-table am-table-bd am-table-striped admin-content-table">
+          <tbody>
+          <tr><td>1</td><td>John Clark</td><td><a href="#">Business management</a></td> <td>2016-10-12</td> <td><span class="am-badge am-badge-success">+20</span></td>
+            <td>
+             
+            </td>
+          </tr>
+          <tr><td>2</td><td>风清扬</td><td><a href="#">公司LOGO设计</a> </td><td>2016-10-12</td><td><span class="am-badge am-badge-danger">+2</span></td>
+            <td>
+             
+            </td>
+          </tr>
+          <tr><td>3</td><td>詹姆斯</td><td><a href="#">开发一款业务数据软件</a></td><td>2016-10-12</td><td><span class="am-badge am-badge-warning">+10</span></td>
+            <td>
+             
+            </td>
+          </tr>
+          <tr><td>4</td><td>云适配</td><td><a href="#">适配所有网站</a></td><td>2016-10-12</td><td><span class="am-badge am-badge-secondary">+50</span></td>
+            <td>
+             
+            </td>
+          </tr>
+
+          <tr>
+            <td>5</td><td>呵呵呵</td>
+            <td><a href="#">基兰会获得BUFF</a></td>
+            <td>2016-10-12</td>
+            <td><span class="am-badge">+22</span></td>
+            <td>
+              
+            </td>
+          </tr>
+          </tbody>
+        </table>
+     		$!{item.content}
+      </div>
+
+      <div class="am-tab-panel am-fade" id="tab2">
+       <div class="am-u-sm-12">
+       		
+      </div>
+      </div>
+
+      <div class="am-tab-panel am-fade" id="tab3">
+      
+      </div>
+      </div>
+    </div>
+  </div>
+    
+    </div>
+	<!--底部分类栏目 end-->
+
+	
+  </div>
+  <!-- content end -->
+
+</div>
+
+
+
+<footer>
+  <hr>
+  <p class="am-padding-left">© 2014 404886, Inc.2016 404886公司版权所有.</p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+// 立即购买js
+function buynow(){ 
+var num=parseInt(jQuery("#quantity").val());
+if(num<1){
+	alert("数量必须大于1");
+}
+	jQuery("#trade_now_form").submit()
+}
+
+function buy(id){
+	jQuery.ajax({
+             type: "GET",
+             url: "purchaser-car-add.htm",
+             data: {id:id},
+             dataType: "json",
+             success: function(data){
+               console.log(data);
+               alert("success");
+               
+             }
+         });
+}
+function collect(id){
+	jQuery.ajax({
+             type: "GET",
+             url: "consumer-item-collect-add.htm",
+             data: {id:id},
+             dataType: "json",
+             success: function(data){
+               console.log(data);
+               alert("success");
+               
+             }
+         });
+}
+</script>
+</body>
+</html>

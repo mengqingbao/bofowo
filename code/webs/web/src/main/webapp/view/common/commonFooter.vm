@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="/css/common/commonFooter.css?1.2"  type="text/css" />
+
+<div class="cooperation">
+      <table cellspacing="0" class="cooperation_up">
+      <tr height="25">
+      	  <td width="30"></td>
+          <td width="120" style="text-align: center;"><h1>友情链接</h1></td>
+          <td width="60"><a href="http://www.yingkelawyer.com" target="_Blank">盈科律所</a></td>
+          <td width="60"><a href="http://www.yinghecapital.com" target="_Blank">盈赫资本</a></td>
+          <td width="60"><a href="http://www.ykkh.com.cn" target="_Blank">盈科凯鸿</a></td>
+          <td width="60"><a href="http://www.lvjinsuo.com" target="_Blank">律金所</a></td>
+<!--           <td width="70"><a href="https://www.fuiou.com" target="_Blank">富友支付</a></td> -->
+          <td width="60"><a href="http://www.yingdacapital.com" target="_Blank">盈达资本</a></td>
+          <td width="60"><a href="http://www.justing.com.cn" target="_Blank">静雅思听</a></td>
+          <td width="70"></td>
+          <td width="70"></td>
+       </tr>
+       <tr height="20">
+       		<td colspan="9" ><hr style="border-bottom: 1px solid #e5e5e5;"/></td>
+       </tr>
+		<tr height="20">
+			<td colspan="9" >
+			<ul class="cooperation_down">
+		        <li><a href="company_profile.htm" target="_Blank">公司简介</a></li>
+		        <li><a href="contact_us.htm" target="_Blank">联系我们</a></li>
+<!-- 		        <li><a href="mailto:Lawcloud@lyun.com" target="_Blank">投稿信箱</a></li> -->
+<!-- 		        <li><a href="mailto:Callcloud@lyun.com" target="_Blank">客户服务</a></li> -->
+<!-- 		        <li><a href="mailto:Lawcloud@lyun.com" target="_Blank">意见反馈</a></li> -->
+		        <li><a href="website_map.htm" target="_Blank">网站地图</a></li>
+		        <li style="border:0"><a href="privacy.htm" target="_Blank">隐私声明</a></li>
+		     </ul>
+		    </td>
+		</tr>
+		<tr height="20">
+       		<td colspan="9" ><hr style="border-bottom: 1px solid #e5e5e5;"/></td>
+       </tr>
+       <tr height="25">
+<!--        170 -->
+        	<td colspan="9" width="100%" style="text-align: center;"><a href="company_profile.htm" target="_Blank">上海律云科技有限公司版权所有 </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        		Copyright © 2013 Shanghai Law Cloud Technology Co., Ltd. All Rights Reserved<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;(沪ICP备15028476号)
+        	</td>
+       </tr>
+       <tr height="25">
+        	<td colspan="9" style="text-align: center;">客服热线：4000-167-167(8:00 - 20:00)</td>
+       </tr>
+        
+      </table>
+      
+      
+  </div>

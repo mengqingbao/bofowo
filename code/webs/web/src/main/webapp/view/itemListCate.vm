@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>bofowo.cn</title>
+  <meta name="description" content="bofowo.cn bofowo.com">
+  <meta name="keywords" content="index">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="assets/css/amazeui.css"/>
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="stylesheet" href="css/turnpic-ie.css?12">
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，lymall 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+#include("common/header.vm");
+
+<div class="am-cf admin-main">
+  
+  <!-- content start -->
+  <div class="admin-content">
+
+<style>
+.table-main {
+	  border: 1px solid #dddddd;
+}
+</style>
+
+<div class="am-g">
+<div class="am-cf am-padding">
+	<div class="am-u-md-6">
+			LOGO
+
+       </div>
+   		<div class="am-u-md-6">
+      
+     <form id="form1" action="search.htm" method="get">
+      <div class="am-u-sm-2">
+        <div class="am-form-group">
+          <select name="searchType" id="searchType" style="width:60px;font-size:12px" size="1">
+            <option value="item">宝贝</option>
+            <option value="shop">店铺</option>
+          </select>
+        </div>
+      </div>
+      <div class="am-u-sm-9">
+        <div class="am-input-group am-input-group-sm">
+          <input type="text" class="am-form-field" name="keyWord" placeholder="请输入要搜索的关键词">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button" onclick="search()">搜索</button>
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>   
+    
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-12">
+        
+        <ul class="am-nav-tabs">
+      	 <li class="am-active"><a href="#tab1">基本信息</a></li>
+     	 <li class=""><a href="#tab2">详细描述</a></li>
+     	 <li class=""><a href="#tab3">SEO 选项</a></li>
+       </ul>
+        
+      </div>
+     </div> 
+    
+
+	<div class="am-g">
+    <div class="am-tabs am-margin" data-am-tabs="">
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li class="am-active"><a href="#tab1">电脑，办公</a></li>
+    </ul>
+
+    <div class="am-tabs-bd" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      <div class="am-tab-panel am-fade am-active am-in" id="tab1">
+      <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-4 am-margin gallery-list">
+      #foreach($item in $items)
+      <li>
+        <a href="item-$!{item.id}-detail.htm">
+          <img style="width:180px;height:180px" src="item-image-${StringUtil.getImageId($item.images)}.htm" alt="">
+          <div class="gallery-title">
+          <div class="gallery-title">$item.name</div>
+          <div class="gallery-title"><small style="font-size: 1.0rem;">销量：1000  &nbsp;&nbsp; 价格：1000</small></div></div>
+        </a>
+      </li>
+      #end
+    </ul>
+    </div>
+  </div>
+
+
+         <div class="am-cf">
+ 			<form id="form1" name="form1></form>
+			#pageNavigation($!pageInfo,'form1')
+		</div>
+  </div>
+  <!-- content end -->
+
+</div>
+</div>
+</div>
+
+
+<footer>
+  <hr>
+  <p class="am-padding-left">© 2014 404886, Inc.2016 404886公司版权所有.</p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+// 立即购买js
+function buynow(){ 
+var num=parseInt(jQuery("#quantity").val());
+if(num<1){
+	alert("数量必须大于1");
+}
+	jQuery("#trade_now_form").submit()
+}
+
+function buy(id){
+	jQuery.ajax({
+             type: "GET",
+             url: "purchaser-car-add.htm",
+             data: {id:id},
+             dataType: "json",
+             success: function(data){
+               console.log(data);
+               alert("success");
+               
+             }
+         });
+}
+
+</script>
+</body>
+</html>
