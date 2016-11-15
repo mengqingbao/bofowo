@@ -6,3 +6,8 @@ bofowo开源多用户b2b2c商城系统，使用jboss基础服务容器。mysql�
 开源协议：BSD <br/>
 赞助我们可以获得商业授权许可，不需要遵循BSD协议。<br/>
 欢迎开源贡献者加入，请联系： lygmqb@163.com 或者qq：286474137<br/>
+
+
+<b>开发人员：</b>
+  塔克 - 个人主页：https://www.zhihu.com/people/ta-ke-56
+  
