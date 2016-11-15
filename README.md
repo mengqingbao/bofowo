@@ -15,7 +15,7 @@ bofowo开源多用户b2b2c商城系统，使用jboss基础服务容器。mysql�
   
   
   
-  # 技术框架<br/>
+# 技术框架。<br/>
   spring mvc <br/>
   velocity<br/>
   mybatis<br/>
