@@ -11,3 +11,20 @@ bofowo开源多用户b2b2c商城系统，使用jboss基础服务容器。mysql�
 # <b>开发组成员</b><br/>
   塔克 - 个人主页：https://www.zhihu.com/people/ta-ke-56
   
+  
+  
+  
+  
+  # 技术框架<br/>
+  spring mvc <br/>
+  velocity<br/>
+  mybatis<br/>
+  dubbo<br/>
+  reids<br/>
+  jquery
+  jquery.tip
+  amazeui
+  
+  
+  
+  
