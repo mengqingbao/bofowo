@@ -8,6 +8,6 @@ bofowo开源多用户b2b2c商城系统，使用jboss基础服务容器。mysql�
 欢迎开源贡献者加入，请联系： lygmqb@163.com 或者qq：286474137<br/>
 
 
-<b>开发人员：</b>
+<b>开发组成员</b><br/>
   塔克 - 个人主页：https://www.zhihu.com/people/ta-ke-56
   
