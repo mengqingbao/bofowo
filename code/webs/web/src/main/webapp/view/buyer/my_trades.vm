@@ -55,7 +55,6 @@
 
     <div class="am-g">
       <div class="am-u-sm-12">
-        <form class="am-form">
           <table class="am-table am-table-striped am-table-hover table-main">
             <thead>
               <tr>
@@ -75,18 +74,14 @@
             		<table style="width:100%">
             		#foreach($order in $item.orders)
             			<tr>
-            			  <td  class="table-title" width="120px"><image src="item-image-$!{StringUtil.getImageId($!{order.pic})}.htm" style="width:100px"></td>
+            			  <td  class="table-title" width="120px"><image src="item-image-$!{StringUtil.getImageId($!{order.pic})}.htm" style="width:100px;height:100px;"></td>
             			  <td  class="table-title" width="220px"><a href="#">$order.title</a></td>
             			  <td  class="table-title" width="60px">$order.price</td>
             			  <td class="am-hide-sm-only" width="60px">$order.num</td>
             			  <td  class="table-title" width="60px">$order.realPay</td>
-           				    <td  class="table-title" width="60px">$!order.status 等待签收</td>
+           				  <td  class="table-title" width="60px">$!TradeUtil.getTradeStatus($!item.status)</td>
              				 <td  class="table-title">
-             				 	退货 
-             				 	<br/>返修<br/>
-             				 	查看物流
-             				 	
-             				 
+             				 #tradeBuyerStep($!item.status,$!item.id,$!order.id)
              				 </td>
              				 </tr>
              		#end
@@ -98,13 +93,9 @@
           </tbody>
         </table>
          #end
-          <div class="am-cf">
- <form id="form1" name="form1></form>
-			#pageNavigation($!pageInfo,'form1')
-</div>
-          <hr />
-          <p>注：.....</p>
-        </form>
       </div>
-
     </div>
+ 	<form id="form1" name="form1" action="" method="get"></form>
+	 #pageNavigation($!pageInfo,'form1')
+
+<script src="js/bofowo-trade.js?v3"></script>

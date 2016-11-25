@@ -201,7 +201,7 @@ public class SellerController extends BaseController{
 	public String mySaleTrades(TradeQuery query,ModelMap model){
 		this.setLayout(LayoutType.SELLER);
 		query.setSellerId(CurrentUserUtil.getCurrentUserName());
-		query.setPageSize(15);
+		query.setPageSize(10);
 		query.setTotalItem(traderService.fetchPageCount(query));
 		List<TradeModel> trades=traderService.fetchPage(query);
 		Map<String,Object> map=new HashMap<String,Object>();

@@ -22,7 +22,7 @@
   以获得更好的体验！</p>
 <![endif]-->
 
-#include("common/header.vm");
+#parse("common/header.vm");
 
 <div class="am-cf admin-main">
   
@@ -31,31 +31,26 @@
 
 <div class="am-g">
 <div class="am-cf am-padding">
-	<div class="am-u-md-6">
+	  <div class="am-u-md-6">
 			LOGO
 
        </div>
-   		<div class="am-u-md-6">
+   <div class="am-u-md-6">
+
+      <form id="form1" action="search.htm" method="get">
       
-     <form id="form1" action="search.htm" method="get">
-      <div class="am-u-sm-2">
-        <div class="am-form-group">
-          <select name="searchType" id="searchType" style="width:60px;font-size:12px" size="1">
+          <select name="searchType" id="searchType">
             <option value="item">宝贝</option>
             <option value="shop">店铺</option>
           </select>
-        </div>
-      </div>
-      <div class="am-u-sm-9">
-        <div class="am-input-group am-input-group-sm">
-          <input type="text" class="am-form-field" name="keyWord" placeholder="请输入要搜索的关键词">
-          <span class="am-input-group-btn">
-            <button class="am-btn am-btn-default" type="button" onclick="search()">搜索</button>
-          </span>
-        </div>
-      </div>
-    </form>
-  </div>
+        
+          <input type="text" name="keyWord" placeholder="请输入要搜索的关键词">
+        
+          <button  type="button" onclick="search()">搜索</button>
+         
+      </form>
+
+ </div>
 </div>
 </div>
     

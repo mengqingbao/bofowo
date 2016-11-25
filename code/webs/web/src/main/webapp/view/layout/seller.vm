@@ -22,7 +22,7 @@
   以获得更好的体验！</p>
 <![endif]-->
 
-#include("common/header.vm");
+#parse("common/header.vm");
 
 <div class="am-cf admin-main">
   <!-- sidebar start -->
@@ -47,7 +47,7 @@
         <li class="admin-parent">
           <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-trade-nav'}"><span class="am-icon-th"></span> 交易管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
           <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-trade-nav">
-            <li><a href="my-sale-trades.htm?status=0" class="am-cf"><span class="am-icon-puzzle-piece"></span> 订单管理</a></li>
+            <li><a href="my-sale-trades.htm?status=1" class="am-cf"><span class="am-icon-puzzle-piece"></span> 订单管理</a></li>
             <!--li><a href="transport-shipments-setting.htm"><span class="am-icon-puzzle-piece"></span> 发货设置</a></li -->
          	<li><a href="transport-tool.htm"><span class="am-icon-puzzle-piece"></span> 物流模板</a></li>
           <li><a href="i-geted-rate.htm"><span class="am-icon-puzzle-piece"></span> 评价</a></li>

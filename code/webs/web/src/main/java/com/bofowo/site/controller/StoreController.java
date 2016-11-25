@@ -329,5 +329,19 @@ public class StoreController extends BaseController {
 		return "redirect:/store-prop-"+type+".htm";
 	}
 	
+	//排行榜单
+	@RequestMapping("shopHotList-{shopId}-{type}")
+	public String topList(@PathVariable("shopId") String shopId, @PathVariable("type") String type,ModelMap model){
+		this.setLayout(LayoutType.EMPTY);
+		Integer sid=Integer.valueOf(shopId);
+		ProductQuery query=new ProductQuery();
+		query.setPageSize(8);
+		query.setTotalItem(8);
+		query.setTablie(type);
+		query.setShopId(sid);
+		List<ProductModel> items=productService.getHotTop(query);
+		model.put("items", items);
+		return "shop/topList";
+	}
 }
 

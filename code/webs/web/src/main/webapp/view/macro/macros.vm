@@ -33,10 +33,11 @@
 
 #macro(pageNavigation $pageInfo $formName )
 	#if($pageInfo)
-	<div class="am-cf">
-  共 $!pageInfo.totalItem 条记录
-        <div class="am-fr">
-         <ul class="am-pagination">
+	<div class="am-margin am-cf">
+	 <hr/>
+  <p class="am-fl">共 $!pageInfo.totalItem 条记录</p>
+
+         <ul class="am-pagination am-fr">
        		
 		## 设置页码宽度，一边pageWidth个
 		#set($pageWidth = 5)
@@ -128,8 +129,8 @@
             	}
             	var pageInputName = "currentPage";
             	var pageInput = null;
-            	var form = document.getElementsByName(formName)[0];
-
+            	var form = document.getElementById(formName);
+				console.log(form);
             	if(document.getElementsByName(pageInputName).length != 0){
             		pageInput = document.getElementsByName(pageInputName)[0];
             		pageInput.value = pageNum;
@@ -159,4 +160,56 @@
 			</ul>
 		</li>
 	#end	
+#end
+#macro(tradeBuyerStep $key $tradeId $orderId)
+	<ol>
+		#if($key=='0')
+		 <a href="javascript:void(0)" onclick="doAction('1','$tradeId','$orderId')">立即支付</a> 
+		#elseif($key=='1')
+         <a href="javascript:void(0)" onclick="sendTip('$tradeId','$orderId')">提醒发货</a> 
+		#elseif($key=='2')
+          <a href="javascript:void(0)"  onclick="doAction('2','$tradeId','$orderId')">查看物流</a> 
+		#elseif($key=='3')
+      	 <a href="javascript:void(0)"  onclick="doFinishedAction('4','$tradeId','$orderId')">确认收货</a> 
+      	 #elseif($key=='4')
+      	 <a href="javascript:void(0)"  onclick="doAction('6','$tradeId','$orderId')">退货</a> 
+		#elseif($key=='5')
+		  <a href="javascript:void(0)"  onclick="tradeDetail('$tradeId','$orderId')">查看</a> 
+		#elseif($key=='51')
+		  <a href="javascript:void(0)" onclick="backProduct('$tradeId','$orderId')">买家发货</a> 
+		#elseif($key=='52')
+		  <a href="javascript:void(0)" onclick="tradeDetail('$tradeId','$orderId')">查看</a> 
+		#elseif($key=='53')
+		  <a href="javascript:void(0)" onclick="tradeDetail('$tradeId','$orderId')">查看</a> 
+		#elseif($key=='54')
+		  <a href="javascript:void(0)" onclick="tradeDetail('$tradeId','$orderId')">查看</a> 
+		#elseif($key=='55')
+		  <a href="javascript:void(0)" onclick="complaint('55','$tradeId','$orderId')">投诉</a> 
+		#elseif($key=='56')
+		  <a href="javascript:void(0)" onclick="customerCare('$tradeId','$orderId')">售后服务</a> 
+			
+		#elseif($key=='6')
+		  <a href="javascript:void(0)" onclick="tradeDetail('$tradeId','$orderId')">查看</a> 
+		#elseif($key=='61')
+		  <a href="javascript:void(0)" onclick="backProduct('62','$tradeId','$orderId')">确认退货</a> 
+		#elseif($key=='62')
+		   <a href="javascript:void(0)" onclick="tradeDetail('$tradeId','$orderId')">查看</a> 
+		#elseif($key=='63')
+		   <a href="javascript:void(0)" onclick="complaint('64','$tradeId','$orderId')">投诉</a> 
+		#elseif($key=='64')
+		   <a href="javascript:void(0)" onclick="tradeDetail('$tradeId','$orderId')">查看</a> 
+		#elseif($key=='65')
+		   <a href="javascript:void(0)" onclick="tradeDetail('$tradeId','$orderId')">查看</a> 
+		#elseif($key=='100')
+		   <a href="javascript:void(0)" onclick="customerCare('$tradeId','$orderId')">售后服务</a>
+		#end
+    <ol>
+#end
+
+#macro(tradeSellerStep $key $tradeId $orderId)
+	<ol>
+		#if($key=='1')
+          <a href="javascript:void(0)"  onclick="doExpressAction('2','$tradeId','$orderId')">发货</a> 
+		#end
+    <ol>
 #end

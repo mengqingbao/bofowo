@@ -22,26 +22,26 @@
   以获得更好的体验！</p>
 <![endif]-->
 
-#include("common/header.vm");
+#parse("common/header.vm");
 
 <div class="am-cf admin-main">
  
   <!-- content start -->
   <div class="admin-content">
-   <div class="am-g">
+<div class="am-g">
+<div class="am-cf am-padding">
 	<div class="am-u-md-6">
-		<div class="am-panel">
 			LOGO
-		</div>
+
        </div>
    <div class="am-u-md-6">
-        <div class="am-panel">
+
         	<select>
         		<option>全部</option>
         		<option>搜索本店</option>
         	</select>
         	<input type="text"/><input type="button" value="搜索"/>
-        </div>
+
         </div>
        </div>
 </div>
@@ -179,38 +179,16 @@
       <div class="am-u-md-3">
         <div class="am-panel am-panel-default">
           <div class="am-panel-hd am-cf">热卖榜</div>
-          <div id="collapse-panel-2" class="am-in">
-            <table class="am-table am-table-bd am-table-bdrs am-table-striped am-table-hover">
-              <tbody>
-              <tr>
-                <td><img style="width:175px;height:175px" src="item-image-1000087.htm" alt=""></td>
-              </tr>
-              #foreach($foo in [0..5])
-              <tr>
-              <td><a href="#" title="迪乐龙童鞋秋冬款加绒保暖男童运动鞋棉鞋中大童恐龙闪灯跑步鞋">迪乐龙童鞋秋冬款加绒保暖男童</a></td>
-              </tr>
-              #end
-              </tbody>
-            </table>
+          <div class="am-in" id="hotSaleList">
+            
           </div>
         </div>
         
         
         <div class="am-panel am-panel-default">
-          <div class="am-panel-hd am-cf">关注度</div>
-          <div id="collapse-panel-2" class="am-in">
-            <table class="am-table am-table-bd am-table-bdrs am-table-striped am-table-hover">
-              <tbody>
-              <tr>
-                <td><img style="width:175px;height:175px" src="item-image-1000087.htm" alt=""></td>
-              </tr>
-              #foreach($foo in [0..5])
-              <tr>
-              <td><a href="#" title="迪乐龙童鞋秋冬款加绒保暖男童运动鞋棉鞋中大童恐龙闪灯跑步鞋">迪乐龙童鞋秋冬款加绒保暖男童</a></td>
-              </tr>
-              #end
-              </tbody>
-            </table>
+          <div class="am-panel-hd am-cf">收藏榜</div>
+          <div class="am-in" id="collectionList">
+            
           </div>
         </div>
         
@@ -232,7 +210,6 @@
   <hr>
   <p class="am-padding-left">© 2014 404886, Inc.2016 404886公司版权所有.</p>
 </footer>
-
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
@@ -244,5 +221,26 @@
 <!--<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
 <script src="assets/js/app.js"></script>
+
+<script>
+jQuery.ajax({
+	     type: 'post',
+	     url: 'shopHotList-$!{shop.id}-hot.htm',
+	     dataType:'text',
+	     success:function(data){
+	     	console.log(data);
+	     	jQuery("#hotSaleList").html(data);
+	     }
+	});
+	
+jQuery.ajax({
+	     type: 'post',
+	     url: 'shopHotList-$!{shop.id}-collection.htm',
+	     dataType:'text',
+	     success:function(data){
+	     	jQuery("#collectionList").html(data);
+	     }
+	});
+</script>
 </body>
 </html>

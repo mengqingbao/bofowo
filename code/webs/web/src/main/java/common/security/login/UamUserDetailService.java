@@ -9,21 +9,20 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import com.bofowo.site.model.UserModel;
-import com.bofowo.site.service.UserService;
-
+import com.bofowo.site.model.AccountModel;
+import com.bofowo.site.service.AccountService;
 import common.util.StringUtil;
 
 public class UamUserDetailService implements UserDetailsService {
 
-//	@Resource
-//	private UserService userService;
+	@Resource
+	private AccountService accountService;
 
 	
 	@Override
 	public UserDetails loadUserByUsername(String username)
 			throws UsernameNotFoundException {
-		UserModel member = null;//userService.loadByUserName(username);
+		AccountModel member = accountService.getByUsername(username);
 
 		List<String> roles = new ArrayList<String>();
 		roles.add("ROLE_member");

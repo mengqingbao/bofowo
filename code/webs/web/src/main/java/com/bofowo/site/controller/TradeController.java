@@ -10,13 +10,21 @@
 package com.bofowo.site.controller;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.annotation.Resource;
+
+import net.sf.json.JSONObject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.alibaba.dubbo.common.json.JSONArray;
+import com.bofowo.core.handler.HandlerChain;
+import com.bofowo.core.trade.support.factory.TradeHandlerFactory;
 import com.bofowo.site.model.OrderModel;
 import com.bofowo.site.model.ProductModel;
 import com.bofowo.site.model.TradeModel;
@@ -25,6 +33,7 @@ import com.bofowo.site.service.OrderService;
 import com.bofowo.site.service.ProducimageService;
 import com.bofowo.site.service.ProductService;
 import com.bofowo.site.service.TradeService;
+import com.bofowo.util.TradeConstant;
 
 import common.security.login.CurrentUserUtil;
 import common.web.BaseController;
@@ -51,6 +60,30 @@ public class TradeController extends BaseController {
 	private TradeService tradeService;
 	@Resource
 	private OrderService orderService;
+	@Resource
+	private TradeHandlerFactory tradeHandlerFactory;
+	@RequestMapping("order-cancel")
+	public String backOrder(ModelMap model,Integer orderId,String status){
+		OrderModel order=orderService.getById(orderId);
+		order.setStatus(status);
+		orderService.update(order);
+		model.put("status", true);
+		return "common/json";
+	}
+	@RequestMapping(value="processTradeAction",method=RequestMethod.POST)
+	public String processTradeAction(ModelMap model,Integer tradeId,Integer orderId,String status,String actionType){
+		Map data=new HashMap();
+		data.put("tradeId", tradeId);
+		data.put("status", status);
+		data.put("orderId", orderId);
+		data.put("currentUserId", CurrentUserUtil.getCurrentUserName());
+		data.put("actionType",actionType);
+		HandlerChain chains=tradeHandlerFactory.getHandlerChain("");
+		chains.doExecute(data, chains);
+		data.get("");
+		model.put("json", JSONObject.fromObject(data).toString());
+		return "common/json";
+	}
 	
 	@RequestMapping("trade_add")
 	public String add(Integer goodsId,Integer quantity,String title,String spec,ModelMap model){
@@ -61,7 +94,7 @@ public class TradeController extends BaseController {
 		ProductModel pm=productService.getById(goodsId);
 		model.put("pm", pm);
 		model.put("num", quantity);
-		model.put("total",pm.getShopPrice()*quantity);
+		//model.put("total",pm.getShopPrice()*quantity);
 		return "trade_add";
 	}
 	@RequestMapping("trade_add_pay")
@@ -76,8 +109,10 @@ public class TradeController extends BaseController {
 		order.setItemId(goodsId);
 		//trade.setBuyerId(CurrentUserUtil.getCurrentUserName());
 		//order.setBuyerId(CurrentUserUtil.getCurrentUserName());
+		trade.setStatus(TradeConstant.WAITING_PAY);
 		trade.setTitle(pm.getName());
 		order.setTitle(pm.getName());
+		order.setStatus(TradeConstant.WAITING_PAY);
 		order.setPrice(pm.getShopPrice());
 		order.setNum(quantity);
 		trade.setNum(quantity);

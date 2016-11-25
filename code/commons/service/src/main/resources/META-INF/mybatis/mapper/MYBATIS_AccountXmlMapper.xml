@@ -17,6 +17,7 @@
 		<result property="wxUsername" column="WX_USERNAME" />
 		<result property="alipayUsername" column="ALIPAY_USERNAME" />
 		<result property="jdUsername" column="JD_USERNAME" />
+		<result property="createdTime" column="CREATED_TIME" />
 		
 	</resultMap>
 </mapper> 

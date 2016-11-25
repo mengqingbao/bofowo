@@ -3,7 +3,11 @@
   <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
 
   <div class="am-topbar-brand">
-    <small style="font-size: 1.0rem;">您好  test，欢迎来到 &nbsp; <a href="#"><span class="am-icon-power-off"></span> 退出</a></small>
+    #if($currentUserUtil.isAuthority())
+    	<small style="font-size: 1.0rem;">您好  $!currentUserUtil.getCurrentUserName()，欢迎来到 &nbsp; <a href="/logout"><span class="am-icon-power-off"></span> 退出</a></small>
+  	#else 
+  		<small style="font-size: 1.0rem;"> <a href="login.htm">登陆</a> | <a href="register.htm">注册</a></small>
+  	#end
   </div>
 
     <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
@@ -14,7 +18,7 @@
       </li>
      <li class="am-dropdown" data-am-dropdown>
         <a  href="purchaser-car.htm">
-          <span class="am-icon-users"></span> 购物车  <span class="am-badge am-badge-warning">5</span>
+          <span class="am-icon-users"></span> 购物车 
         </a>
        
       </li>

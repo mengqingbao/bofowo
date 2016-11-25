@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>律云后台管理</title>
+  <title>平台管理</title>
   <meta name="description" content="这是一个 index 页面">
   <meta name="keywords" content="index">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -24,7 +24,7 @@
 
 <header class="am-topbar admin-header">
   <div class="am-topbar-brand">
-    <strong>律云</strong> <small>后台管理</small>
+    <strong>BOFOWO</strong> <small>后台管理</small>
   </div>
   <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
 
@@ -110,7 +110,7 @@
             <li><a href="content-search.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 内容管理</a></li>
             <li><a href="content-category.htm?type=3&pid=0"><span class="am-icon-puzzle-piece"></span> 内容分类管理</a></li>
             <li><a href="content-taglib.htm?type=3"><span class="am-icon-puzzle-piece"></span> 内容标签管理</a></li>
-
+			<li><a href="content-taglib.htm?type=3"><span class="am-icon-puzzle-piece"></span> 首页管理</a></li>
           </ul>
         </li>
         <li class="admin-parent">

@@ -6,23 +6,27 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bofowo.site.model.AccountModel;
 import com.bofowo.site.model.CategoryModel;
 import com.bofowo.site.model.PageColumnModel;
 import com.bofowo.site.model.ProductModel;
 import com.bofowo.site.model.ShopModel;
 import com.bofowo.site.query.ProductQuery;
 import com.bofowo.site.query.ShopQuery;
+import com.bofowo.site.service.AccountService;
 import com.bofowo.site.service.CategoryService;
 import com.bofowo.site.service.PageColumnService;
 import com.bofowo.site.service.ProducimageService;
 import com.bofowo.site.service.ProductService;
 import com.bofowo.site.service.ShopService;
 
+import common.MD5Util;
 import common.util.StringUtil;
 
 /**
@@ -42,7 +46,8 @@ public class IndexController {
 	private CategoryService categoryService;
 	@Resource
 	private PageColumnService pageColumnService;
-
+	@Resource
+	private AccountService accountService;
 
 	@RequestMapping("/artist-web")
 	public String artist_web(ModelMap model,boolean error){
@@ -101,6 +106,34 @@ public class IndexController {
 	@RequestMapping("/baihuo")
 	public String baihuo(ModelMap model,boolean error){
 		return "baihuo";
+	}
+	
+	@RequestMapping("/login")
+	public String login(ModelMap model,boolean error){
+		return "login";
+	}
+	
+	@RequestMapping("/register")
+	public String register(ModelMap model,boolean error){
+		model.put("error", error);
+		return "register";
+	}
+	
+	@RequestMapping("/regAction")
+	public String regAction(String username,String password){
+		AccountModel account=accountService.getByUsername(username);
+		if(account==null){
+			account=new AccountModel();
+			account.setUsername(username);
+			Md5PasswordEncoder encoder=new Md5PasswordEncoder();
+			account.setPassword(encoder.encodePassword(password, username));
+			account.setStatus("1");
+			
+			accountService.insert(account);
+			return "redirect:/login.htm";
+		}
+		
+		return "redirect:/register.htm?error=true";
 	}
 	
 }

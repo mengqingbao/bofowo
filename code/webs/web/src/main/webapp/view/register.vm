@@ -32,7 +32,7 @@
 </head>
 
 <body>
-    #parse("common/head.vm")
+<br/><br/>
 <div class="ch-container">
 
 <div class="row" style="width:1000px;margin:0 auto">
@@ -42,47 +42,29 @@
             <ul class="breadcrumb">
 			        <h3>会员注册</h3>
 			    </ul>
-              		<form action="reg-save.htm" method="post" name="form1">
+              		<form action="regAction.htm" method="post" name="form1">
 	                <div class="input-group col-md-6" style="width:500px;margin:0 auto">
-	                  	  <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
-	                   	  <input type="text" name="username" class="form-control" placeholder="用户名(6~18为英文字母数字)">
+	                  	  <span class="input-group-addon">用 &nbsp;户 &nbsp;名</span>
+	                   	  <input type="text" name="username" class="form-control" placeholder="请输入手机号码快速注册">
 	                </div>
 	                
 	                <div class="input-group col-md-6" style="width:500px;margin:0 auto;margin-top:30px;">
-	                  	  <span class="input-group-addon"><i class="glyphicon glyphicon-lock red"></i></span>
-	                   	  <input type="text" name="password" class="form-control" placeholder="登录密码">
+	                  	  <span class="input-group-addon">登陆密码</span>
+	                   	  <input type="password" name="password" class="form-control" placeholder="登录密码">
 	                </div>
 	                
 	                <div class="input-group col-md-6" style="width:500px;margin:0 auto;margin-top:30px;">
-	                  	  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope red"></i></span>
-	                   	  <input type="text" name="email" class="form-control" placeholder="电子邮箱">
+	                  	  <span class="input-group-addon">确认密码</span>
+	                   	  <input type="password" name="repassword" class="form-control" placeholder="确认密码">
 	                </div>
 	                
-	                <div class="input-group col-md-6" style="width:500px;margin:0 auto;margin-top:30px;">
-	                  	  <span class="input-group-addon"><i class="glyphicon glyphicon-comment red"></i></span>
-	                   	  <select data-placeholder="Your Favorite Football Team" id="selectError2" data-rel="chosen" class="form-control">
-                            <option value=""></option>
-                            <optgroup label="工业">
-                                <option>手工</option>
-                                <option>小商品</option>
-                                <option>建材</option>
-                                <option>五金</option>
-                            </optgroup>
-                            <optgroup label="互联网">
-                                <option>网商</option>
-                                <option>游戏</option>
-                                <option>电子商务</option>
-                                <option>社交</option>
-                            </optgroup>
-                        </select>
-	                </div>
 	                
 	                <div class="input-group col-md-6" style="width:200px;margin:0 auto;margin-top:20px;">
-	                   	  <input type="checkbox" id="inlineCheckbox3" value="option3">同意 遵守DocDoi 条款
+	                   	  <input type="checkbox" id="inlineCheckbox3" value="option3">同意遵守BOFOWO条款
 	                </div>
 	                
 	                <div class="input-group col-md-6" style="width:400px;margin:0 auto;margin-top:30px;">
-	                  	  <a href="javascript:void(0)" class="btn btn-default btn-danger" onclick="submit()"><i class="glyphicon glyphicon-ok"></i>注册</a> <a href="" class="btn btn-default btn-success" style="margin-left:150px"><i class="glyphicon glyphicon-share-alt"></i>取消</a>
+	                  	  <input type="submit" value="注册"/>      <input type="button" value="取消" onclick="javascript:window.location.href='index.htm'"/>
 	                </div>
 	                
 	                <br/><br/><br/>
@@ -97,6 +79,6 @@
 		 				
     <hr>
 </div>
-   #include("common/footer.vm")
+
 </body>
 </html>

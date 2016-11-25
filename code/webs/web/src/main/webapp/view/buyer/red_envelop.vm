@@ -26,7 +26,7 @@
          #end
            </table>
                   <div class="am-cf">
- 	<form id="form1" name="form1></form>
+ 	<form id="form1" name="form1"></form>
 			#pageNavigation($!pageInfo,'form1')
 </div>  
           <hr />

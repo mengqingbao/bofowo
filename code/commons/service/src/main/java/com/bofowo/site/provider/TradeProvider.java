@@ -38,7 +38,7 @@ public class TradeProvider {
 	if(!StringUtil.isEmpty(query.getSellerId())){
 		sql+="AND SELLER_ID='"+query.getSellerId()+"' ";
 	}
-	if(!StringUtil.isEmpty(query.getStatus())&&!"0".equals(query.getStatus())){
+	if(!StringUtil.isEmpty(query.getStatus())){
 		sql+="AND STATUS='"+query.getStatus()+"' ";
 	}
 	sql+="limit #{startRow},#{endRow}";
@@ -53,10 +53,9 @@ public class TradeProvider {
 		if(!StringUtil.isEmpty(query.getSellerId())){
 			sql+="AND SELLER_ID='"+query.getSellerId()+"' ";
 		}
-		if(!StringUtil.isEmpty(query.getStatus())&&!"0".equals(query.getStatus())){
+		if(!StringUtil.isEmpty(query.getStatus())){
 			sql+="AND STATUS='"+query.getStatus()+"' ";
 		}
-		sql+="limit #{startRow},#{endRow}";
 		return sql;
 		}
 }

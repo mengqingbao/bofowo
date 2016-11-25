@@ -47,19 +47,7 @@
 	</filter-mapping>
 	<filter-mapping>
 		<filter-name>springSecurityFilterChain</filter-name>
-		<url-pattern>/j_spring_security_check</url-pattern>
-	</filter-mapping>
-	<filter-mapping>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<url-pattern>/lyun-json-login</url-pattern>
-	</filter-mapping>
-	<filter-mapping>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<url-pattern>/login</url-pattern>
-	</filter-mapping>
-	<filter-mapping>
-		<filter-name>springSecurityFilterChain</filter-name>
-		<url-pattern>/lyun-lawyer-login</url-pattern>
+		<url-pattern>/login-action-check</url-pattern>
 	</filter-mapping>
 	<filter-mapping>
 		<filter-name>springSecurityFilterChain</filter-name>
@@ -127,5 +115,5 @@
     <error-page>  
         <error-code>500</error-code>  
         <location>/view/error.jsp</location>  
-    </error-page>     
+    </error-page>
 </web-app>

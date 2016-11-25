@@ -1,6 +1,7 @@
 package com.bofowo.site.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class AccountModel implements Serializable{
 
@@ -16,6 +17,7 @@ public class AccountModel implements Serializable{
 		private String wxUsername;
 		private String alipayUsername;
 		private String jdUsername;
+		private Date createdTime;
 		
 		public int getId(){
 		return id;
@@ -53,6 +55,9 @@ public class AccountModel implements Serializable{
 		public String getJdUsername(){
 		return jdUsername;
 	}
+		public Date getCreatedTime(){
+		return createdTime;
+	}
 		
 		public void setId(int id){
 		this.id = id;
@@ -89,6 +94,9 @@ public class AccountModel implements Serializable{
 	}
 		public void setJdUsername(String jdUsername){
 		this.jdUsername = jdUsername;
+	}
+		public void setCreatedTime(Date createdTime){
+		this.createdTime = createdTime;
 	}
 		
 }

@@ -1,0 +1,63 @@
+ <div class="am-g">     	
+ 	<div class="am-tabs am-margin" data-am-tabs="">     
+ 		<ul class="am-tabs-nav am-nav am-nav-tabs">       
+ 		<li class="am-active"><a href="#tab1">电脑，办公</a></li>       
+ 		<li class=""><a href="#tab2">办公桌椅</a></li>       
+ 		<li class=""><a href="#tab3">文具办公用品</a></li>       
+ 		<li class=""><a href="#tab4">电脑</a></li>       
+ 		<li class=""><a href="#tab5">办公耗材</a></li>     
+ 		</ul>      
+ 		<div class="am-tabs-bd" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">      
+ 		 <div class="am-tab-panel am-fade am-active am-in" id="tab1">      
+ 		  <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-4 am-margin gallery-list">       
+ 		  #foreach($item in $items)
+ 		  	<li>
+ 		  	 <a href="#"><img class="am-img-thumbnail am-img-bdrs" src="http://s.amazeui.org/media/i/demos/bing-1.jpg" alt="">          
+ 		  	 <div class="gallery-title"><div class="gallery-title"><small style="font-size: 1.0rem;">销量：1000  &nbsp;&nbsp; 价格：1000</small></div></div>         </a>       
+ 		   </li> 
+ 		  #end      
+ 		  </ul>        
+ 		  </div>        
+ 		  <div class="am-tab-panel am-fade" id="tab2">
+ 		  	<ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-4 am-margin gallery-list">       
+ 		  #foreach($item in $items)
+ 		  	<li>
+ 		  	 <a href="#"><img class="am-img-thumbnail am-img-bdrs" src="http://s.amazeui.org/media/i/demos/bing-1.jpg" alt="">          
+ 		  	 <div class="gallery-title"><div class="gallery-title"><small style="font-size: 1.0rem;">销量：1000  &nbsp;&nbsp; 价格：1000</small></div></div>         </a>       
+ 		   </li> 
+ 		  #end      
+ 		  </ul> 
+ 		  </div>
+		 <div class="am-tab-panel am-fade" id="tab3">
+		 	<ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-4 am-margin gallery-list">       
+ 		  #foreach($item in $items)
+ 		  	<li>
+ 		  	 <a href="#"><img class="am-img-thumbnail am-img-bdrs" src="http://s.amazeui.org/media/i/demos/bing-1.jpg" alt="">          
+ 		  	 <div class="gallery-title"><div class="gallery-title"><small style="font-size: 1.0rem;">销量：1000  &nbsp;&nbsp; 价格：1000</small></div></div>         </a>       
+ 		   </li> 
+ 		  #end      
+ 		  </ul> 
+		 </div>
+		 <div class="am-tab-panel am-fade" id="tab4">
+		 	<ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-4 am-margin gallery-list">       
+ 		  #foreach($item in $items)
+ 		  	<li>
+ 		  	 <a href="#"><img class="am-img-thumbnail am-img-bdrs" src="http://s.amazeui.org/media/i/demos/bing-1.jpg" alt="">          
+ 		  	 <div class="gallery-title"><div class="gallery-title"><small style="font-size: 1.0rem;">销量：1000  &nbsp;&nbsp; 价格：1000</small></div></div>         </a>       
+ 		   </li> 
+ 		  #end      
+ 		  </ul> 
+		 </div>
+		 <div class="am-tab-panel am-fade" id="tab5">
+		 	<ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-4 am-margin gallery-list">       
+ 		  #foreach($item in $items)
+ 		  	<li>
+ 		  	 <a href="#"><img class="am-img-thumbnail am-img-bdrs" src="http://s.amazeui.org/media/i/demos/bing-1.jpg" alt="">          
+ 		  	 <div class="gallery-title"><div class="gallery-title"><small style="font-size: 1.0rem;">销量：1000  &nbsp;&nbsp; 价格：1000</small></div></div>         </a>       
+ 		   </li> 
+ 		  #end      
+ 		  </ul> 
+		 </div>
+ </div>
+</div>
+</div>

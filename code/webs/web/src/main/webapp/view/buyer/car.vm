@@ -10,7 +10,6 @@
     
     <div class="am-g">
       <div class="am-u-sm-12">
-        <form class="am-form">
            <table class="am-table am-table-striped am-table-hover table-main">
           <tbody>
           	<tr>
@@ -27,9 +26,16 @@
             			  <td class="am-hide-sm-only" width="60px">$!item.num</td>
             			  
              				 <td  class="table-title">
-             				 	立即支付 
              				 	<br/>
-             				 	删除
+             				 	  <form method="get" action="trade_add.htm" method="get">
+      								<input type="hidden" id="goodsId" name="goodsId" value="$!{item.id}">
+									<input type="hidden" id="title" name="title" value="$!{item.name}">
+									<input type="hidden" id="spec" name="spec" value="">
+									<input type="hidden" id="quantity" name="quantity" value="1">
+             				 		<input type="submit" value="立即支付" />
+                 			      </form>
+                 			   	<br/><br/>
+                 			    <a href="javascript:void(0)" class="btn-del" title="删除" id="$!item.id">删除</a>
              				 	
              				 
              				 </td>
@@ -39,9 +45,6 @@
             <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>总计：$!item.total</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
           </tbody>
         </table>
-          
-        
-        </form>
       </div>
 
     </div>
@@ -58,3 +61,54 @@
           <p>注：.....</p>
       </div>
     </div>
+    <script type="text/javascript" charset-"utf-8" src="js/jsAddress.js"></script>
+    <script type="text/javascript" charset-"utf-8" src="js/jquery-1.8.2.min.js"></script>
+    <link href='/css/jquery.qtip.min.css' rel='stylesheet'>
+	<link href='/css/jquery.qtip.css' rel='stylesheet'>
+	<script src="/js/jquery.qtip.min.js"></script>    
+    <script>
+    function buyNow(id){ 
+    	console.log(id);
+			//var num=parseInt(jQuery("#quantity").val());
+			//if(num<1){
+			//	alert("数量必须大于1");
+			//}
+			console.log(jQuery("#"+id));
+			jQuery("#"+id).submit()
+		}
+
+      jQuery(".btn-del").each(function(){jQuery(this).qtip({
+		content: {
+			text: "#springMessage("confirm")<br/><br/><input type='button' value='#springMessage("delete")' onclick='del("+jQuery(this).attr('id')+")' class='btn btn-danger'>  <input type='button' value='#springMessage("cancel")' class='btn cancel'>",
+			title: "#springMessage("delete")",
+			button: "#springMessage("cancel")",
+		},
+		
+		position: {
+			my: 'bottom right',
+			at: 'top center'
+		 },
+		style: {
+			classes: 'qtip-shadow qtip-bootstrap'
+		},
+		show: {
+			event: 'click', // Show it on click...
+			solo: true, // ...and hide all other tooltips...
+			modal: true // ...and make it modal
+		  },
+		hide: true,
+		events: {
+            render: function(event, api) {
+                $('.cancel').click(function(e) {
+                    api.hide(e);
+                });
+            },
+          //  hide: function(event, api) { api.destroy(); }
+        }
+
+	});});
+	
+	function del(id){
+		window.location.href='purchaser-car-del.htm?id='+id;
+	}
+     </script>

@@ -18,6 +18,7 @@ import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.bofowo.site.model.AccountModel;
 import com.bofowo.site.model.UserModel;
 import com.bofowo.site.service.UserService;
 
@@ -30,9 +31,6 @@ import com.bofowo.site.service.UserService;
 public class CurrentUserUtil {
 
 	public static String getCurrentUserName() {
-		if(0==0){
-			return "test";
-		}
 	    //	 SecurityContext context = getSecurityContext();
 	    	if(getAuthentication()!=null){
 	    	if(getAuthentication().getPrincipal() instanceof UserDetails){
@@ -40,14 +38,13 @@ public class CurrentUserUtil {
 				    		    .getPrincipal();
 				    	if(userdetails!=null){
 				    		String username=userdetails.getUsername();
-				    		//return username;
-				    		return "lygmqb";
+				    		return username;
 						}else{
-							return "lygmqb";
+							return "visitor";
 						}    		 
 	    		  }
 	    	}
-	    	return "lygmqb";
+	    	return "visitor";
 
 	    }
    
@@ -162,8 +159,8 @@ public class CurrentUserUtil {
 	
 	public static void setUserLoginedStatus(String username,String password,String nick,String picture){
 		SecurityContext context = getSecurityContext();
-    	UserModel aModel=new UserModel();
-    	aModel.setUserName(username);
+    	AccountModel aModel=new AccountModel();
+    	aModel.setUsername(username);
     	aModel.setPassword(password);
     	List<String> roles = new ArrayList<String>();
     	roles.add("ROLE_member");

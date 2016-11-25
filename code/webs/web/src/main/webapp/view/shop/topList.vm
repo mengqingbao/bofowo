@@ -1,0 +1,12 @@
+			<table class="am-table am-table-bd am-table-bdrs am-table-striped am-table-hover">
+              <tbody>
+              <tr>
+                <td><img style="width:175px;height:175px" src="item-image-1000087.htm" alt=""></td>
+              </tr>
+              #foreach($item in $items)
+              <tr>
+              <td><a href="item-$!{item.id}-detail.htm">$item.name</a></td>
+              </tr>
+              #end
+              </tbody>
+            </table>

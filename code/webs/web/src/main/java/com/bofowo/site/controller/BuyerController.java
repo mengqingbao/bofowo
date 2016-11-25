@@ -79,12 +79,25 @@ public class BuyerController extends BaseController{
 	private AccountService accountService;
 	@Resource
 	private MyCouponService myCouponService;
-	
+	/**
+	 * 
+	 * index:我购买的产品，登陆后可以访问. <br/>
+	 * TODO(这里描述这个方法适用条件 – 可选).<br/>
+	 * TODO(这里描述这个方法的执行流程 – 可选).<br/>
+	 * TODO(这里描述这个方法的使用方法 – 可选).<br/>
+	 * TODO(这里描述这个方法的注意事项 – 可选).<br/>
+	 *
+	 * @author mqb
+	 * @param query
+	 * @param model
+	 * @return
+	 * @since JDK 1.7
+	 */
 	@RequestMapping("consumer-myitem")
 	public String index(TradeQuery query,ModelMap model){
 		this.setLayout(LayoutType.BUYER);
 		query.setCurrentUserName(CurrentUserUtil.getCurrentUserName());
-		query.setPageSize(15);
+		query.setPageSize(10);
 		query.setTotalItem(traderService.fetchPageCount(query));
 		List<TradeModel> trades=traderService.fetchPage(query);
 		Map<String,Object> map=new HashMap<String,Object>();
@@ -251,6 +264,12 @@ public class BuyerController extends BaseController{
 		model.put("json", JSONObject.fromObject(map).toString());
 		carService.insert(item);
 		return "common/json";
+	}
+	
+	@RequestMapping("purchaser-car-del")
+	public String purchaserCarDel(Integer id){
+		carService.del(id);
+		return "redirect:/purchaser-car.htm";
 	}
 	
 	@RequestMapping("consumer-reset-password")

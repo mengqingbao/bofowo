@@ -32,12 +32,12 @@
 		<property name="testConnectionOnCheckout" value="true" />
 	</bean>
 
-	<bean id="routingDataSource" class="org.mybatis.spring.datasource.CspRoutingDataSource">
+	<!-- <bean id="routingDataSource" class="org.mybatis.spring.datasource.CspRoutingDataSource">
 	   <property name="defaultDataSource" ref="dataSource" >  </property>
-	</bean>
+	</bean> -->
 
 	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="routingDataSource" />
+		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations" value="classpath:META-INF/mybatis/mapper/MYBATIS_*.xml" />  
       	<property name="typeAliasesPackage" value="com.bofowo.site.model" />
       <!-- 	 <property name="configLocation" value="classpath:mybatis/sqlMapConfig.xml" /> -->

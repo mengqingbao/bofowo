@@ -1,6 +1,6 @@
 /** Project Name:lymall-service
  * File Name:CategoryProvider.java
- * Package Name:com.bofowo.site.provider
+ * Package Name:com.lyun.site.provider
  * Date:2016年3月17日下午11:56:22
  * Copyright (c) 2016, 404886 Technology Co., Ltd. All Rights Reserved.
  *
@@ -25,10 +25,10 @@ import common.util.StringUtil;
  */
 public class AccountProvider {
 	
-																																																																																																																													
-	public String columns="ID,USERNAME,PASSWORD,POINT,IS_SELLER,STATUS,LEVEL,AVATAR,SCORE,WX_USERNAME,ALIPAY_USERNAME,JD_USERNAME";
-																																																																																																																														
-	public String property="#{id},#{username},#{password},#{point},#{isSeller},#{status},#{level},#{avatar},#{score},#{wxUsername},#{alipayUsername},#{jdUsername}";
+																																																																																																																																							
+	public String columns="ID,USERNAME,PASSWORD,POINT,IS_SELLER,STATUS,LEVEL,AVATAR,SCORE,WX_USERNAME,ALIPAY_USERNAME,JD_USERNAME,CREATED_TIME";
+																																																																																																																																								
+	public String property="#{id},#{username},#{password},#{point},#{isSeller},#{status},#{level},#{avatar},#{score},#{wxUsername},#{alipayUsername},#{jdUsername},#{createdTime}";
 	
 	public String getSearchSql(AccountQuery query){
 	String sql="select "+columns+" FROM T_ACCOUNT where 1=1 ";

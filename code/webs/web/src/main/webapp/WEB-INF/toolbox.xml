@@ -21,6 +21,16 @@
 		<class>common.util.StringUtil</class>
 	</tool>
 	<tool>
+		<key>CountUtil</key>
+		<scope>application</scope>
+		<class>com.bofowo.util.CountUtil</class>
+	</tool>
+	<tool>
+		<key>TradeUtil</key>
+		<scope>application</scope>
+		<class>com.bofowo.util.TradeStringUtil</class>
+	</tool>
+	<tool>
 		<key>StyleUtil</key>
 		<scope>application</scope>
 		<class>common.util.StyleUtil</class>

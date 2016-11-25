@@ -9,12 +9,20 @@
 
 package com.bofowo.site.controller;
 
-import java.lang.invoke.MethodType;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.bofowo.core.handler.HandlerChain;
+import com.bofowo.core.trade.support.factory.TradeHandlerFactory;
+
+import common.security.login.CurrentUserUtil;
 import common.web.BaseController;
 
 /**
@@ -31,6 +39,8 @@ import common.web.BaseController;
 @Controller
 public class TradeController extends BaseController {
 
+	@Resource
+	private TradeHandlerFactory tradeHandlerFactory;
 	/**
 	 * 
 	 * searchTradeList:订单查询. <br/>
@@ -47,6 +57,21 @@ public class TradeController extends BaseController {
 	public String searchTradeList(){
 		
 		return "biz/trade/trades";
+	}
+	
+	@RequestMapping(value="doTradeAction",method=RequestMethod.GET)
+	public String tradeProcess(ModelMap model,Integer tradeId,Integer orderId,String status,String actionUserType){
+		Map data=new HashMap();
+		data.put("tradeId", tradeId);
+		data.put("status", status);
+		data.put("orderId", orderId);
+		data.put("actionUserType", actionUserType);
+		data.put("currentUserId", CurrentUserUtil.getCurrentUserName());
+		HandlerChain chains=tradeHandlerFactory.getHandlerChain("");
+		chains.doExecute(data, chains);
+		data.get("");
+		model.put("json", "{}");
+		return "common/json";
 	}
 	
 	@RequestMapping("trade-back-request")

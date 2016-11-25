@@ -12,6 +12,8 @@
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 	<context:component-scan base-package="com.bofowo.site.serviceimpl" />
+	<context:component-scan base-package="com.bofowo.core.trade.support.factory" />
+	<context:component-scan base-package="com.bofowo.core.trade.support.handler" />
 	<!-- 引用ehCache的配置 -->
 	<bean id="defaultCacheManager"
 		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">

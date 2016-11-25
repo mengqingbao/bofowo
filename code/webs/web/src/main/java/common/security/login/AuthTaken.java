@@ -8,7 +8,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.GrantedAuthorityImpl;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.bofowo.site.model.UserModel;
+import com.bofowo.site.model.AccountModel;
 
 public class AuthTaken implements UserDetails {
 
@@ -24,10 +24,11 @@ public class AuthTaken implements UserDetails {
 
 	}
 
-	public AuthTaken(UserModel member, String nick, String picture,
+	
+	public AuthTaken(AccountModel member, String nick, String picture,
 			List<String> roles) {
 		if (member != null) {
-			username = member.getUserName();
+			username = member.getUsername();
 			password = member.getPassword();
 			status = "1";
 			this.nick = nick;

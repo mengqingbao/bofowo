@@ -41,6 +41,9 @@ public class ProductProvider {
 	if(query.getCateId()!=null){
 		sql+="and SHOP_CATEGORY_ID='"+query.getCateId()+"' ";
 	}
+	if(!StringUtil.isEmpty(query.getTablie())){
+		sql+="and TIGLIB='"+query.getTablie()+"' ";
+	}
 	if(!StringUtil.isEmpty(query.getKeyWord())){
 		sql+="and NAME like '%"+query.getKeyWord()+"%' ";
 	}
@@ -58,6 +61,9 @@ public class ProductProvider {
 		}
 		if(query.getCateId()!=null){
 			sql+="and SHOP_CATEGORY_ID='"+query.getCateId()+"' ";
+		}
+		if(!StringUtil.isEmpty(query.getTablie())){
+			sql+="and TIGLIB='"+query.getTablie()+"' ";
 		}
 		if(!StringUtil.isEmpty(query.getKeyWord())){
 			sql+="and NAME like '%"+query.getKeyWord()+"%' ";
