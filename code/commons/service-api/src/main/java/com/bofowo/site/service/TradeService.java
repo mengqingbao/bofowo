@@ -1,9 +1,11 @@
 package com.bofowo.site.service;
 
+import com.bofowo.site.biz.model.CarCountItem;
 import com.bofowo.site.model.TradeModel;
 import com.bofowo.site.query.TradeQuery;
 
 import java.util.List;
+import java.util.Map;
 
 
 public interface TradeService{
@@ -27,4 +29,6 @@ public interface TradeService{
 	 * @since JDK 1.7
 	 */
 	void pay(Integer tid, String status);
+	
+	public Map<String, CarCountItem> submitTrade(String ids,String username);
 } 

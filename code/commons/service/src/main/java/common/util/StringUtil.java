@@ -70,6 +70,9 @@ public class StringUtil
 		if(!StringUtil.isEmpty(str)&&str.contains(";")){
 			return str.substring(0,str.indexOf(";"));
 		}
+		if(!StringUtil.isEmpty(str)){
+			return str;
+		}
 		return "000";
 	}
 	

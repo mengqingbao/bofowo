@@ -21,6 +21,7 @@
      	<custom-filter position="REMEMBER_ME_FILTER"  ref="rememberMeFilter"/>
      	<custom-filter position="LOGOUT_FILTER" ref="logoutFilter" />
        <!-- <remember-me key="springRocks"/> -->
+       	<csrf/>
 </http>
  <authentication-manager alias="authenticationManager">
     <authentication-provider user-service-ref='uamUserDetailService'>

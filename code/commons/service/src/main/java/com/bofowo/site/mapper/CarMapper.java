@@ -15,6 +15,7 @@ import com.bofowo.site.query.CarQuery;
 import org.apache.ibatis.mapping.StatementType;
 
 import java.util.List;
+import java.util.Map;
 
 public interface CarMapper{
 																																																																																																																																																												
@@ -43,5 +44,9 @@ public interface CarMapper{
 	public long insert(CarModel car);
 
 	@Update("update T_CAR set "+update+" where ID=#{id}")
-	public long update(CarModel carModel); 
+	public long update(CarModel carModel);
+
+	@Select("select * from T_CAR where BUYER_ID=#{username} and ID in (${ids})")
+	@ResultMap(value="com.bofowo.site.mapper.CarMapper.CarModelMap")
+	public List<CarModel> getItemsByIds(Map<String, String> condition); 
 }

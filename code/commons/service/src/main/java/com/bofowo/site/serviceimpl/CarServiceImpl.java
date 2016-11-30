@@ -1,14 +1,16 @@
 package com.bofowo.site.serviceimpl;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.bofowo.site.mapper.CarMapper;
 import com.bofowo.site.model.CarModel;
 import com.bofowo.site.query.CarQuery;
 import com.bofowo.site.service.CarService;
-
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 
 @Component("carService")
@@ -33,5 +35,12 @@ public class CarServiceImpl implements CarService{
 	}
 	public long update(CarModel car){
 		return carMapper.update(car);
+	}
+	@Override
+	public List<CarModel> getItemsByIds(String ids, String username) {
+		Map<String,String> condition=new HashMap<String,String>();
+		condition.put("username", username);
+		condition.put("ids", ids);
+		return carMapper.getItemsByIds(condition);
 	}
 } 

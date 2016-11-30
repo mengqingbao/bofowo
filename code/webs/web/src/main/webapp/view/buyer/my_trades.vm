@@ -64,16 +64,16 @@
           </table>
           
           #foreach($item in $!items)
-           <table class="am-table am-table-striped am-table-hover table-main">
+           <table class="am-table am-table-striped table-main">
           <tbody>
           	<tr>
           		<td>订单号： $!item.id</td><td>创建时间： $dateFormat.toDateStr($item.createdTime)</td><td>店铺：$!item.shopName</td><td>商家ID：$!item.sellerId</td>
           	</tr>
             <tr>
             	<td colspan= 4>
-            		<table style="width:100%">
+            		<table style="width:100%" class="am-table am-table-striped am-table-hover">
             		#foreach($order in $item.orders)
-            			<tr>
+            		    <tr>
             			  <td  class="table-title" width="120px"><image src="item-image-$!{StringUtil.getImageId($!{order.pic})}.htm" style="width:100px;height:100px;"></td>
             			  <td  class="table-title" width="220px"><a href="#">$order.title</a></td>
             			  <td  class="table-title" width="60px">$order.price</td>
@@ -83,7 +83,7 @@
              				 <td  class="table-title">
              				 #tradeBuyerStep($!item.status,$!item.id,$!order.id)
              				 </td>
-             				 </tr>
+             			</tr>
              		#end
              		
             		</table>

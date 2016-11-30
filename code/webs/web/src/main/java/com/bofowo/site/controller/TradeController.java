@@ -11,6 +11,7 @@ package com.bofowo.site.controller;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
@@ -22,20 +23,25 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.alibaba.dubbo.common.json.JSONArray;
 import com.bofowo.core.handler.HandlerChain;
 import com.bofowo.core.trade.support.factory.TradeHandlerFactory;
+import com.bofowo.site.biz.model.CarCountItem;
+import com.bofowo.site.model.CarModel;
 import com.bofowo.site.model.OrderModel;
 import com.bofowo.site.model.ProductModel;
 import com.bofowo.site.model.TradeModel;
+import com.bofowo.site.service.CarService;
 import com.bofowo.site.service.CategoryService;
 import com.bofowo.site.service.OrderService;
 import com.bofowo.site.service.ProducimageService;
 import com.bofowo.site.service.ProductService;
 import com.bofowo.site.service.TradeService;
+import com.bofowo.site.util.CarDivideUtil;
 import com.bofowo.util.TradeConstant;
 
 import common.security.login.CurrentUserUtil;
+import common.util.LayoutType;
+import common.util.StringUtil;
 import common.web.BaseController;
 
 /**
@@ -61,6 +67,8 @@ public class TradeController extends BaseController {
 	@Resource
 	private OrderService orderService;
 	@Resource
+	private CarService carService;
+	@Resource
 	private TradeHandlerFactory tradeHandlerFactory;
 	@RequestMapping("order-cancel")
 	public String backOrder(ModelMap model,Integer orderId,String status){
@@ -85,6 +93,37 @@ public class TradeController extends BaseController {
 		return "common/json";
 	}
 	
+	/**
+	 * 
+	 * 结算购物车，分单处理
+	 * @author mqb
+	 * @param ids
+	 * @param model
+	 * @return
+	 * @since JDK 1.7
+	 */
+	@RequestMapping("trade_add_batch")
+	public String addBatch(String submitItemIds,ModelMap model){
+		submitItemIds=submitItemIds.substring(0, submitItemIds.lastIndexOf(",")).replace(",", "\",\"");
+		submitItemIds="\""+submitItemIds+"\"";
+		//查询所有提交的购物车内容
+		String username=CurrentUserUtil.getCurrentUserName();
+		Map<String, CarCountItem> map=tradeService.submitTrade(submitItemIds, username);
+		this.setLayout(LayoutType.CAR);
+		return "buyer/trade_pay_batch";
+	}
+	
+	/**
+	 * 立即购买产品，单独购买。
+	 * @author mqb
+	 * @param goodsId
+	 * @param quantity
+	 * @param title
+	 * @param spec
+	 * @param model
+	 * @return
+	 * @since JDK 1.7
+	 */
 	@RequestMapping("trade_add")
 	public String add(Integer goodsId,Integer quantity,String title,String spec,ModelMap model){
 		if(quantity<1||goodsId<0){

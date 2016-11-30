@@ -22,6 +22,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bofowo.site.biz.model.CarCountItem;
 import com.bofowo.site.model.AccountModel;
 import com.bofowo.site.model.BuyerAddressModel;
 import com.bofowo.site.model.BuyerCollectionModel;
@@ -43,6 +44,7 @@ import com.bofowo.site.service.MyCouponService;
 import com.bofowo.site.service.OrderService;
 import com.bofowo.site.service.ProductService;
 import com.bofowo.site.service.TradeService;
+import com.bofowo.site.util.CarDivideUtil;
 
 import common.MD5Util;
 import common.security.login.CurrentUserUtil;
@@ -229,7 +231,8 @@ public class BuyerController extends BaseController{
 		query.setPageSize(50);
 		query.setBuyerId(CurrentUserUtil.getCurrentUserName());
 		List<CarModel> cars=carService.fetchPage(query);
-		model.put("items", cars);
+		Map<String,CarCountItem> items = CarDivideUtil.toDivide(cars);
+		model.put("items", items);
 		return "buyer/car";
 	}
 	
