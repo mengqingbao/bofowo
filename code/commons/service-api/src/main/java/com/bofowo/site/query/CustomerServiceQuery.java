@@ -7,6 +7,8 @@ public class CustomerServiceQuery extends QueryBase implements Serializable {
 	private String type;
 	
 	private String buyerId;
+	
+	private String sellerId;
 
 	public String getType() {
 		return type;
@@ -22,6 +24,14 @@ public class CustomerServiceQuery extends QueryBase implements Serializable {
 
 	public void setBuyerId(String buyerId) {
 		this.buyerId = buyerId;
+	}
+
+	public String getSellerId() {
+		return sellerId;
+	}
+
+	public void setSellerId(String sellerId) {
+		this.sellerId = sellerId;
 	}
 	
 	

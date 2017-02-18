@@ -32,7 +32,9 @@
 <div class="am-g">
 <div class="am-cf am-padding">
 	  <div class="am-u-md-6">
-			LOGO
+			<strong style="font-size:20px">暴风网（bofowo.com）</strong>
+			<br/>
+			纯净，绿色，自然，健康，正品，无忧
 
        </div>
    <div class="am-u-md-6">
@@ -61,7 +63,7 @@
         <table class="am-table admin-content-table am-table-hover">
           #foreach($cate in $cates)
           <tr>
-            <td><a href="item-list-cate.htm?cateid=${cate.id}">$!cate.name</a></td>
+            <td><a href="item-list-cate.htm?cateId=${cate.id}&level=1" style="color: #0e90d2;">$!cate.name</a></td>
           </tr>
          #end
           </tbody>
@@ -80,65 +82,60 @@
                 <!--[if lte IE 9]><script type="text/javascript" src="js/turnpic-ie.js"></script><![endif]-->
 
                 <div class="csslider1 autoplay">
-                    <input name="cs_anchor1" autocomplete="off" id="cs_slide1_0" type="radio" class="cs_anchor slide" >
-                    <input name="cs_anchor1" autocomplete="off" id="cs_slide1_1" type="radio" class="cs_anchor slide" >
-                    <input name="cs_anchor1" autocomplete="off" id="cs_slide1_2" type="radio" class="cs_anchor slide" >
+                
+                  #set($i=0)
+                        #foreach($ssm in $ssms)
+                            <input name="cs_anchor1" autocomplete="off" id="cs_slide1_$i" type="radio" class="cs_anchor slide" >
+                        #set($i=$i+1)
+                        #end
                     <input name="cs_anchor1" autocomplete="off" id="cs_play1" type="radio" class="cs_anchor" checked>
                     <input name="cs_anchor1" autocomplete="off" id="cs_pause1" type="radio" class="cs_anchor" >
                     <ul>
                         <div style="width: 750px;  visibility: hidden; font-size: 0px; line-height: 0;height:350px;">
                             <img src="images/1.jpg" style="width: 100%;">
                         </div>
-                        <li class="num0 img">
-                            <img src="images/1.jpg" alt="Clouds" title="Clouds" />
+                          #set($i=0)
+                        #foreach($ssm in $ssms)
+                        <li class="num$i img">
+                            <img src="$!{imageService}$ssm.pic" alt="Clouds" title="Clouds" />
                         </li>
-                        <li class="num1 img">
-                            <img src="images/2.jpg" alt="Typewriter" title="Typewriter" />
-                        </li>
-                        <li class="num2 img">
-                            <img src="images/3.jpg" alt="Bicycle" title="Bicycle" />
-                        </li>
-                    
+                        #set($i=$i+1)
+                        #end
                     </ul>
                     <div class="cs_description">
-                        <label class="num0">
-                            <span class="cs_title"><span class="cs_wrapper">复古自行车 2000￥</span></span>
-                            
+                         #set($i=0)
+                        #foreach($ssm in $ssms)
+                        <label class="num$i">
+                            <span class="cs_title"><span class="cs_wrapper">$ssm.title</span></span>
                         </label>
-                        <label class="num1">
-                            <span class="cs_title"><span class="cs_wrapper">复古打印机 5000￥</span></span>
-                            
-                        </label>
-                        <label class="num2">
-                            <span class="cs_title"><span class="cs_wrapper">摄影器材 10000￥起</span></span>
-                            
-                        </label>
+                       #set($i=$i+1)
+                        #end
                     </div>
                     
                     <div class="cs_arrowprev">
-                        <label class="num0" for="cs_slide1_0"></label>
-                        <label class="num1" for="cs_slide1_1"></label>
-                        <label class="num2" for="cs_slide1_2"></label>
+                       #set($i=0)
+                        #foreach($ssm in $ssms)
+                        <label class="num$i" for="cs_slide1_$i"></label>
+                       #set($i=$i+1)
+                        #end
                     </div>
                     <div class="cs_arrownext">
-                        <label class="num0" for="cs_slide1_0"></label>
-                        <label class="num1" for="cs_slide1_1"></label>
-                        <label class="num2" for="cs_slide1_2"></label>
+                        #set($i=0)
+                        #foreach($ssm in $ssms)
+                        <label class="num$i" for="cs_slide1_0"></label>
+                       #set($i=$i+1)
+                        #end
                     </div>
                     
                     <div class="cs_bullets">
-                        <label class="num0" for="cs_slide1_0">
+                        #set($i=0)
+                        #foreach($ssm in $ssms)
+                        <label class="num$i" for="cs_slide1_$i">
                             <span class="cs_point"></span>
-                            <span class="cs_thumb"><img src="images/small/1.jpg" alt="Clouds" title="Clouds" /></span>
+                            <span class="cs_thumb"><img src="$!{imageService}$ssm.pic" alt="$ssm.title" title="$ssm.title" height="50px" width="75px;"/></span>
                         </label>
-                        <label class="num1" for="cs_slide1_1">
-                            <span class="cs_point"></span>
-                            <span class="cs_thumb"><img src="images/small/2.jpg" alt="Typewriter" title="Typewriter" /></span>
-                        </label>
-                        <label class="num2" for="cs_slide1_2">
-                            <span class="cs_point"></span>
-                            <span class="cs_thumb"><img src="images/small/3.jpg" alt="Bicycle" title="Bicycle" /></span>
-                        </label>
+                       #set($i=$i+1)
+                        #end
                     </div>
                 </div>
             </div>
@@ -151,62 +148,44 @@
 </div>
     <!--第一行end-->
 
-    <ul class="am-avg-sm-1 am-avg-md-4 am-margin am-padding am-text-center admin-content-list ">
+    <!--ul class="am-avg-sm-1 am-avg-md-4 am-margin am-padding am-text-center admin-content-list ">
       <li><a href="#" class="am-text-success"><span class="am-icon-btn am-icon-file-text"></span><br>新增订单<br>2300</a></li>
       <li><a href="#" class="am-text-warning"><span class="am-icon-btn am-icon-briefcase"></span><br>成交订单<br>308</a></li>
       <li><a href="#" class="am-text-danger"><span class="am-icon-btn am-icon-recycle"></span><br>昨日访问<br>80082</a></li>
       <li><a href="#" class="am-text-secondary"><span class="am-icon-btn am-icon-user-md"></span><br>在线用户<br>3000</a></li>
-    </ul>
+    </ul -->
 
     <div class="am-g">
     <div class="am-u-sm-12">
      <div class="am-panel am-panel-default">
-     <div class="am-panel-hd am-cf">卖家排行<span class="am-icon-th am-fr"></span></div>
+     <div class="am-panel-hd am-cf">明星店铺<span class="am-icon-th am-fr"></span></div>
       
         <table class="am-table am-table-bd am-table-striped admin-content-table">
           <thead>
           <tr>
-            <th>ID</th><th>卖家</th><th>最后成交</th><th>最后交易时间</th><th>成交总量</th><th>交易总额</th>
+            <th>店铺名称</th><th>卖家ID</th><th>简介</th>
           </tr>
           </thead>
           <tbody>
-          <tr><td>1</td><td>John Clark</td><td><a href="#">Business management</a></td> <td>2016-10-12</td> <td><span class="am-badge am-badge-success">+20</span></td>
-            <td>
-              1222
-            </td>
-          </tr>
-          <tr><td>2</td><td>风清扬</td><td><a href="#">公司LOGO设计</a> </td><td>2016-10-12</td><td><span class="am-badge am-badge-danger">+2</span></td>
-            <td>
-             1222
-            </td>
-          </tr>
-          <tr><td>3</td><td>詹姆斯</td><td><a href="#">开发一款业务数据软件</a></td><td>2016-10-12</td><td><span class="am-badge am-badge-warning">+10</span></td>
-            <td>
-             1222
-            </td>
-          </tr>
-          <tr><td>4</td><td>云适配</td><td><a href="#">适配所有网站</a></td><td>2016-10-12</td><td><span class="am-badge am-badge-secondary">+50</span></td>
-            <td>
-              1222
-            </td>
-          </tr>
-
-          <tr>
-            <td>5</td><td>呵呵呵</td>
-            <td><a href="#">基兰会获得BUFF</a></td>
-            <td>2016-10-12</td>
-            <td><span class="am-badge">+22</span></td>
-            <td>
-              
-            </td>
-          </tr>
+          #foreach($shop in $shops)
+            <tr>
+             
+             <td><a href="http://localhost:8082/shop-detail.htm?id=$shop.id" style="color: #0e90d2;">$shop.name</a></td>
+             <td>$!shop.sellerId</td> 
+             
+             <td>
+               $!shop.desc
+             </td>
+            </tr>
+          #end
           </tbody>
         </table>
       </div>
     </div>
     </div>
+
 	<!--留言之类的-->
-    
+  	<!--  
     <div class="am-g">
       <div class="am-u-md-6">
         <div class="am-panel am-panel-default">
@@ -300,7 +279,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--留言之类的end-->
    	#foreach($column in $columns)
    		$column.content

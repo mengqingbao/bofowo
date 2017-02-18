@@ -31,6 +31,11 @@
 		<result property="modifier" column="MODIFIER" />
 		<result property="num" column="NUM" />
 		<result property="images" column="IMAGES" />
-		
+		<result property="categoryAId" column="CATEGORY_A_ID" />
+		<result property="categoryBId" column="CATEGORY_B_ID" />
+		<result property="soldNum" column="SOLD_NUM" />
+		<result property="pcChannel" column="PC_CHANNEL" />
+		<result property="mChannel" column="M_CHANNEL" />
+		<result property="postId" column="POST_ID" />
 	</resultMap>
 </mapper> 

@@ -10,6 +10,7 @@
 package com.bofowo.site.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Resource;
@@ -21,8 +22,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.bofowo.core.handler.HandlerChain;
 import com.bofowo.core.trade.support.factory.TradeHandlerFactory;
+import com.bofowo.site.model.OrderModel;
+import com.bofowo.site.model.TradeModel;
+import com.bofowo.site.query.TradeQuery;
+import com.bofowo.site.service.CategoryService;
+import com.bofowo.site.service.CommentService;
+import com.bofowo.site.service.CustomerServiceService;
+import com.bofowo.site.service.OrderService;
+import com.bofowo.site.service.ProducimageService;
+import com.bofowo.site.service.ProductrademarkService;
+import com.bofowo.site.service.TradeService;
 
 import common.security.login.CurrentUserUtil;
+import common.util.LayoutType;
+import common.util.StringUtil;
 import common.web.BaseController;
 
 /**
@@ -38,7 +51,23 @@ import common.web.BaseController;
 
 @Controller
 public class TradeController extends BaseController {
-
+	@Resource
+	private CategoryService categoryService;
+	
+	@Resource
+	private ProducimageService producimageService;
+	@Resource
+	private ProductrademarkService productrademarkService;
+	
+	@Resource
+	private TradeService traderService;
+	@Resource
+	private OrderService orderService;
+	@Resource
+	private CommentService commentService;
+	@Resource
+	private CustomerServiceService customerServiceService;
+	
 	@Resource
 	private TradeHandlerFactory tradeHandlerFactory;
 	/**
@@ -54,8 +83,22 @@ public class TradeController extends BaseController {
 	 * @since JDK 1.7
 	 */
 	@RequestMapping(value="manage-search-trades",method=RequestMethod.GET)
-	public String searchTradeList(){
-		
+	public String searchTradeList(TradeQuery query,ModelMap model){
+		query.setPageSize(10);
+		query.setTotalItem(traderService.fetchPageCount(query));
+		List<TradeModel> trades=traderService.fetchPage(query);
+		Map<String,Object> map=new HashMap<String,Object>();
+		for(TradeModel trade :trades){
+			long tid=trade.getId();
+			List<OrderModel> orders=orderService.getOrderByTid(trade.getId());
+			trade.setOrders(orders);
+		}
+		model.put("pageInfo", query);
+		model.put("items", trades);
+		if(StringUtil.isEmpty(query.getStatus())){
+			query.setStatus("0");
+		}
+		model.put("status", query.getStatus());
 		return "biz/trade/trades";
 	}
 	

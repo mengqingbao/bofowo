@@ -1,51 +1,47 @@
+<script type="text/javascript" charset="utf-8" src="js/ajaxfileupload.js?v2"></script>  
+   <script type="text/javascript" charset="utf-8" src="js/ajaxupload-ly.js?v19"></script>  
+   <link href='css/uploadify.css' rel='stylesheet'>
 <style>
 .table-main {
 	  border: 1px solid #dddddd;
 }
 </style>
+
     <div class="am-cf am-padding">
       <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>我的积分</small></div>
     </div>
 
-    <div class="am-u-sm-12 am-u-md-6 ">
-<div class="am-panel am-panel-default">
-          <div class="am-panel-bd">
-            <div class="user-info">
-              <p>等级信息</p>
-              <div class="am-progress am-progress-sm">
-                <div class="am-progress-bar" style="width: 60%"></div>
-              </div>
-              <p class="user-info-order">当前等级：<strong>LV $!{item.level}</strong></p>
-            </div>
-            <div class="user-info">
-              <p>信用信息</p>
-              <div class="am-progress am-progress-sm">
-                <div class="am-progress-bar am-progress-bar-success" style="width: 80%"></div>
-              </div>
-              <p class="user-info-order">信用等级：$!{item.status} 信用积分：<strong>$!{item.score}</strong></p>
-            </div>
+       <div class="am-g am-margin-top">
+          <div class="am-u-sm-4 am-u-md-2 am-text-right">账号:</div>
+          <div class="am-u-sm-8 am-u-md-10">${account.username}</div>
+        </div>
+        <div class="am-g am-margin-top">
+          <div class="am-u-sm-4 am-u-md-2 am-text-right">头像</div>
+          <div class="am-u-sm-8 am-u-md-10">
+          		#if($StringUtil.isEmpty($account.avatar))
+          		 <image src="/images/noimage.jpg" id="avatarImage" style="width:180px;height:80px;" />
+         		#else
+           		 <image src="$!{imageService}$!{account.avatar}" id="avatarImage" style="width:180px;height:80px;" />
+         		#end
+         	  <input type="file" name="logoImgFile" id="logoImgFile" onchange="avatarUpload()">
+          </div>
+       </div>
+        <div class="am-g am-margin-top">
+          <div class="am-u-sm-4 am-u-md-2 am-text-right">积分</div>
+          <div class="am-u-sm-8 am-u-md-10">
+            ${account.point}
           </div>
         </div>
-        </div>
-
-  <div class="am-u-sm-12 am-u-md-6 ">
-<div class="am-panel am-panel-default">
-          <div class="am-panel-bd">
-            <div class="am-g">
-              <div class="am-u-md-4">
-                <img class="am-img-circle am-img-thumbnail" src="item-image-$!{item.avatar}.htm" alt="">
-              </div>
-              <div class="am-u-md-8">
-                <p>上传头像。 </p>
-                <form class="am-form">
-                  <div class="am-form-group">
-                    <input type="file" id="user-pic">
-                    <p class="am-form-help">请选择要上传的文件...</p>
-                    <button type="button" class="am-btn am-btn-primary am-btn-xs">保存</button>
-                  </div>
-                </form>
-              </div>
-            </div>
+        <div class="am-g am-margin-top">
+          <div class="am-u-sm-4 am-u-md-2 am-text-right">会员等级</div>
+          <div class="am-u-sm-8 am-u-md-10">
+            ${account.level}
           </div>
         </div>
-        </div>
+<br/><br/><br/>
+    <ul class="am-avg-sm-1 am-avg-md-4 am-margin am-padding am-text-center admin-content-list ">
+      <li><a href="#" class="am-text-success">贴牌会员<br><br>积分要求：0</a></li>
+      <li><a href="#" class="am-text-warning">铜牌会员<br><br>积分要求：3000</a></li>
+      <li><a href="#" class="am-text-danger">银牌会员<br><br>积分要求：4000</a></li>
+      <li><a href="#" class="am-text-secondary">金牌会员<br><br>积分要求：5000</a></li>
+   </ul>

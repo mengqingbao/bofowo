@@ -1,0 +1,115 @@
+   <script type="text/javascript" charset-"utf-8" src="js/jsAddress.js"></script>
+   <script type="text/javascript" charset="utf-8" src="js/ajaxfileupload.js?v2"></script>  
+   <script type="text/javascript" charset="utf-8" src="js/ajaxupload-ly.js?v15"></script>  
+   <link href='css/uploadify.css' rel='stylesheet'>
+  
+   <style>
+     .margin30{
+     	margin-top:30;
+     }
+     .table-main{
+     	border:0;
+     }
+   </style>
+   
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>首页轮播</small></div>
+    </div>
+	
+    <div class="am-g">
+     <div class="am-u-sm-12 am-u-md-8"></div>
+
+      <div class="am-u-sm-12 am-u-md-3">
+        <div class="am-input-group am-input-group-sm">
+          <input type="text" class="am-form-field">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button">搜索</button>
+          </span>
+        </div>
+      </div>
+    </div>
+   <div class="am-g">
+      <div class="am-u-sm-12">
+      <ul class="am-tabs-nav am-nav am-nav-tabs">
+      	<li><a href="shop-setting.htm">店铺设置</a></li>
+      	<li class="am-active"><a href="javascript:void(0)">轮播设置</a></li>
+      </ul>
+      <table class="am-table am-table-hover table-main">
+          
+            <tr>
+              <td align="right">图片</td>
+              <td>标题</td>
+              <td>状态</td>
+              <td>操作</td>
+            </tr>
+            
+            #foreach($scroll in $scrolls)
+            <tr>
+              <td align="right"><image src="$!{imageService}$!scroll.pic" height="90px"/></td>
+              <td>$!{scroll.title}</td>
+              <td>#if($!scroll.status=="1") 有效 #else 失效 #end</td>
+              <td><a href="javascript:void(0)" onclick="modify('$!{scroll.id}','$!{scroll.url}','$!{scroll.title}','$!{scroll.status}','$!{scroll.pic}')">修改</a></td>
+            </tr>
+            #end
+   </table>
+   
+	<form action="shop-scroll-update.htm" method="post" name="form1">
+       
+        <table class="am-table am-table-hover table-main">
+          
+            <tr>
+              <td align="right">链接URL：<input type="hidden" name="id" id="id"/></td>
+              <td><input type="text" name="url" id="url"/></td>
+              <td></td>
+            </tr>
+            
+            <tr>
+              <td align="right">标题：</td>
+              <td><input type="text" name="title" id="title"/></td>
+              <td></td>
+            </tr>
+            
+             <tr>
+              <td align="right">状态：</td>
+              <td><input type="radio" name="status" id="status1" value="1"/>有效  &nbsp <input type="radio" name="status" id="status0" value="0" />无效</td>
+              <td></td>
+            </tr>
+            
+            <tr>
+              <td align="right">店铺logo：</td>
+               <td>
+              <image src="images/noimage.jpg" id="shopLogoImage" style="width:180px;height:80px;" /><br/>
+              <input type="file" name="logoImgFile" id="logoImgFile" onchange="shopLogoUpload()">
+              <input type="hidden" name="logoImg" id="logoImg" value="$!{item.logImg}"/>
+              </td>
+              <td>*建议使用宽200像素-高60像素<br/>*内的GIF或PNG透明图片；点击下方<br/>*"提交"按钮后生效。</td>
+            </tr>
+          
+           </table>  
+		
+		  <div class="am-form-group">
+            <div class="am-u-sm-9 am-u-sm-push-3">
+              <button type="submit" class="am-btn am-btn-primary">提交</button>
+            </div>
+          </div>
+		
+		</form>
+      </div>
+
+    </div>
+    
+    <script>
+    function modify(id,url,title,status,pic){
+    	jQuery("#id").val(id);
+    	jQuery("#url").val(url);
+    	jQuery("#title").val(title);
+    	if(status==1){
+    	 jQuery("#status1").attr("checked",true);
+    	}else{
+    	 jQuery("#status0").attr("checked",true);
+    	}
+    	console.log(status);
+    	jQuery("#logoImg").val(pic);
+    	jQuery("#shopLogoImage").attr("src","$!{imageService}"+pic);
+    }
+    </script>

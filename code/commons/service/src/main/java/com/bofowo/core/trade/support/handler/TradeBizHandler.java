@@ -42,7 +42,7 @@ public class TradeBizHandler implements Handler {
 	@Override
 	public void execute(Map data, HandlerChain chain) {
 		String payAction = (String) data.get("actionType");
-		if ("payAction".equals(payAction)||"finishedAction".equals(payAction)) {
+		if ("payAction".equals(payAction)) {
 			Integer tradeId = (Integer) data.get("tradeId");
 			Integer orderId = (Integer) data.get("orderId");
 			String status = (String) data.get("status");

@@ -34,10 +34,10 @@ function sendTip(tradeId,orderId){
 }
 
 //确认收货
-function doFinishedAction(status,tradeId,orderId){
+function doFinishedAction(status,tradeId,orderId,csfr){
 	jQuery.ajax({
 	     type: 'post',
-	     url: 'processTradeAction.htm?tradeId='+tradeId+'&orderId='+orderId+'&actionType=finishedAction&status='+status,
+	     url: 'processTradeAction.htm?tradeId='+tradeId+'&orderId='+orderId+'&actionType=finishedAction&status='+status+'&_csrf='+csfr,
 	     dataType:'json',
 	     success:function(data){
 	     	alert(data.message);
@@ -45,13 +45,24 @@ function doFinishedAction(status,tradeId,orderId){
 	});
 }
 //其他综合操作
-function doAction(status,tradeId,orderId){
+function doAction(status,tradeId,actionType){
 	jQuery.ajax({
 	     type: 'post',
-	     url: 'processTradeAction.htm?tradeId='+tradeId+'&orderId='+orderId+'&actionType=tipAction&status='+status,
+	     url: 'processTradeAction.htm?tradeId='+tradeId+'&actionType='+actionType+'&status='+status+'&_csrf='+window.csrf_,
 	     dataType:'json',
 	     success:function(data){
-	     	alert(data.message);
+	     	window.location.reload();
+	     }
+	});
+}
+
+function submitForm(){
+	jQuery.ajax({
+	     type: 'post',
+	     url: 'processTradeAction.htm?tradeId='+tradeId+'&actionType='+actionType+'&status='+status+'&_csrf='+window.csrf_,
+	     dataType:'json',
+	     success:function(data){
+	     	window.location.reload();
 	     }
 	});
 }

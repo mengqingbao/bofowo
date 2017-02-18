@@ -31,7 +31,7 @@
 <div class="am-g">
 <div class="am-cf am-padding">
 	<div class="am-u-md-6">
-			LOGO
+			<image src="$!{imageService}$!{shop.logoImg}" id="shopLogoImage" style="width:60px;height:40px;" />
 
        </div>
    <div class="am-u-md-6">
@@ -78,56 +78,50 @@
                         <div style="width: 750px;  visibility: hidden; font-size: 0px; line-height: 0;height:350px;">
                             <img src="images/1.jpg" style="width: 100%;">
                         </div>
-                        <li class="num0 img">
-                            <img src="images/1.jpg" alt="Clouds" title="Clouds" />
+                        #set($i=0)
+                        #foreach($ssm in $ssms)
+                        <li class="num$i img">
+                            <img src="$!{imageService}$ssm.pic" alt="Clouds" title="Clouds" />
                         </li>
-                        <li class="num1 img">
-                            <img src="images/2.jpg" alt="Typewriter" title="Typewriter" />
-                        </li>
-                        <li class="num2 img">
-                            <img src="images/3.jpg" alt="Bicycle" title="Bicycle" />
-                        </li>
+                        #set($i=$i+1)
+                        #end
+                        
                     
                     </ul>
                     <div class="cs_description">
-                        <label class="num0">
-                            <span class="cs_title"><span class="cs_wrapper">复古自行车 2000￥</span></span>
-                            
+                        #set($i=0)
+                        #foreach($ssm in $ssms)
+                        <label class="num$i">
+                            <span class="cs_title"><span class="cs_wrapper">$ssm.title</span></span>
                         </label>
-                        <label class="num1">
-                            <span class="cs_title"><span class="cs_wrapper">复古打印机 5000￥</span></span>
-                            
-                        </label>
-                        <label class="num2">
-                            <span class="cs_title"><span class="cs_wrapper">摄影器材 10000￥起</span></span>
-                            
-                        </label>
+                       #set($i=$i+1)
+                        #end
                     </div>
                     
                     <div class="cs_arrowprev">
-                        <label class="num0" for="cs_slide1_0"></label>
-                        <label class="num1" for="cs_slide1_1"></label>
-                        <label class="num2" for="cs_slide1_2"></label>
+                    	#set($i=0)
+                        #foreach($ssm in $ssms)
+                        <label class="num$i" for="cs_slide1_0"></label>
+                       #set($i=$i+1)
+                        #end
                     </div>
                     <div class="cs_arrownext">
-                        <label class="num0" for="cs_slide1_0"></label>
-                        <label class="num1" for="cs_slide1_1"></label>
-                        <label class="num2" for="cs_slide1_2"></label>
+                    #set($i=0)
+                        #foreach($ssm in $ssms)
+                        <label class="num0" for="cs_slide1_$i"></label>
+                        #set($i=$i+1)
+                        #end
                     </div>
                     
                     <div class="cs_bullets">
-                        <label class="num0" for="cs_slide1_0">
+                     #set($i=0)
+                        #foreach($ssm in $ssms)
+                        <label class="num$i" for="cs_slide1_$i">
                             <span class="cs_point"></span>
-                            <span class="cs_thumb"><img src="images/small/1.jpg" alt="Clouds" title="Clouds" /></span>
+                            <span class="cs_thumb"><img src="$!{imageService}$ssm.pic" alt="$ssm.title" title="$ssm.title" height="50px" width="75px;"/></span>
                         </label>
-                        <label class="num1" for="cs_slide1_1">
-                            <span class="cs_point"></span>
-                            <span class="cs_thumb"><img src="images/small/2.jpg" alt="Typewriter" title="Typewriter" /></span>
-                        </label>
-                        <label class="num2" for="cs_slide1_2">
-                            <span class="cs_point"></span>
-                            <span class="cs_thumb"><img src="images/small/3.jpg" alt="Bicycle" title="Bicycle" /></span>
-                        </label>
+                       #set($i=$i+1)
+                        #end
                     </div>
                 </div>
             </div>
@@ -143,7 +137,7 @@
       <div class="am-u-md-9">
       
        <div class="am-panel am-panel-default">
-          <div class="am-panel-hd am-cf">新品发布<span class="am-icon-chevron-down am-fr">查看更多</span></div>
+          <div class="am-panel-hd am-cf">新品发布</div>
           <div id="collapse-panel-2" class="am-in">
             <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-3 am-margin gallery-list">
             
@@ -159,7 +153,7 @@
         </div>
       
         <div class="am-panel am-panel-default">
-          <div class="am-panel-hd am-cf">掌柜推荐<span class="am-icon-chevron-down am-fr">查看更多</span></div>
+          <div class="am-panel-hd am-cf">掌柜推荐</div>
           <div id="collapse-panel-2" class="am-in">
             <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-3 am-margin gallery-list">
       			#foreach($new in $hots)

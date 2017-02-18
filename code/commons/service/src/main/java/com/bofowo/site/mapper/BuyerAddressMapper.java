@@ -47,5 +47,9 @@ public interface BuyerAddressMapper{
 	public long update(BuyerAddressModel buyeraddressModel);
 	
 	@Update("update T_BUYER_ADDRESS set IS_DEFAULT='0' where BUYER_ID=#{buyerId}")
-	public void clearDefault(String buyerId); 
+	public void clearDefault(String buyerId);
+
+	@Select("select * from T_BUYER_ADDRESS where BUYER_ID=#{username}")
+	@ResultMap(value="com.bofowo.site.mapper.BuyerAddressMapper.BuyerAddressModelMap")
+	public List<BuyerAddressModel> getBuyerAddress(String username); 
 }

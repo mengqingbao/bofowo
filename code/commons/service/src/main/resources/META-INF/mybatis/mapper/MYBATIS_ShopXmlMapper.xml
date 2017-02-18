@@ -11,7 +11,7 @@
 		<result property="logoImg" column="LOGO_IMG" />
 		<result property="creator" column="CREATOR" />
 		<result property="url" column="URL" />
-		<result property="owner" column="OWNER" />
+		<result property="owner" column="OWNER_" />
 		<result property="createdTime" column="CREATED_TIME" />
 		<result property="serviceScoreTotal" column="SERVICE_SCORE_TOTAL" />
 		<result property="drawScoreTotal" column="DRAW_SCORE_TOTAL" />
@@ -24,7 +24,7 @@
 		<result property="layoutColumnTotal" column="LAYOUT_COLUMN_TOTAL" />
 		<result property="footer" column="FOOTER" />
 		<result property="order" column="ORDER_" />
-		<result property="status" column="STATUS" />
+		<result property="status" column="STATUS_" />
 		<result property="body" column="BODY" />
 		<result property="shopId" column="SHOP_ID" />
 		<result property="sellerId" column="SELLER_ID" />

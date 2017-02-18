@@ -1,0 +1,37 @@
+<style>
+.table-main {
+	  border: 1px solid #dddddd;
+}
+</style>
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>售后服务</small></div>
+    </div>
+
+  <div class="am-g">
+      <div class="am-u-sm-12 am-u-sm-centered">
+        <h2>售后服务流程</h2>
+        <p>维修流程：买家发起售后服务--->卖家确认--->买家发货--->卖家确认收货--->维修完成--->卖家发货--->买家确认收货--->完成</p>
+        <p>退货流程：买家发起退货--->卖家同意--->买家发货--->卖家确认收货--->卖家退款--->完成</p>
+        <hr>
+      </div>
+
+      <div class="am-u-sm-12 am-u-md-8 am-u-md-pull-4">
+      <form action="customer-service-submit.htm" method="post" name="form1">
+      	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+      	<input type="hidden" name="tradeId" value="${trade.id}"/>
+        <h3>交易信息</h3>
+        <p>交易单号：${trade.id} 交易时间：$dateFormat.toDateStr($trade.createdTime) 买家ID:${trade.sellerId}</p>
+        <ol>
+        #foreach($order in $orders)
+          
+         	 <li>#if($order.status!='8')<input type="checkbox" name="orderIds" value="$order.id"/>#else &nbsp; &nbsp;#end <a href="">$order.title</a> #if($order.status=='8') [售后服务中] #end</li>
+          
+		#end
+        </ol>
+        <p>问题描述</p>
+        <p><input type="radio" name="type" value="care"/>:维修 &nbsp; <input type="radio" name="type" value="refund"/>:退货 &nbsp; <input type="radio" name="type" value="complaint"/>:投诉 &nbsp; <input type="radio" name="type" value="report"/>:举报 </p>
+        <p><textarea name="question"></textarea></p>
+        <p><input type="submit" value="提交" class="am-btn am-btn-default"/></p>
+        </form>
+      </div>
+    </div>

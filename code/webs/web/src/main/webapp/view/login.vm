@@ -78,6 +78,7 @@
 		        </div>
 		        <form  action="login-action-check" method="post">
 		        	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+		        	<input type="hidden" name="redirect" value="${redirect}"/>
 		            <fieldset>
 		                <div class="input-group input-group-lg">
 		                    <span class="input-group-addon">用户名</span>

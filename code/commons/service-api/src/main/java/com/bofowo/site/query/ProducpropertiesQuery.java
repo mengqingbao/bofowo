@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 public class ProducpropertiesQuery extends QueryBase implements Serializable {
 	private String type;
+	private Integer cateId;
 
 	public String getType() {
 		return type;
@@ -13,7 +14,15 @@ public class ProducpropertiesQuery extends QueryBase implements Serializable {
 	public void setType(String type) {
 		this.type = type;
 	}
+
+	public Integer getCateId() {
+		return cateId;
+	}
+
+	public void setCateId(Integer cateId) {
+		this.cateId = cateId;
+	}
 	
-	
+
 	
 }

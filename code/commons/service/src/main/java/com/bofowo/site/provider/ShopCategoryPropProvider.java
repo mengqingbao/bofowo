@@ -35,6 +35,12 @@ public class ShopCategoryPropProvider {
 	if(!StringUtil.isEmpty(query.getType())){
 		sql+="and TYPE='"+query.getType()+"' ";
 	}
+	if(!StringUtil.isEmpty(query.getCurrentUserName())){
+		sql+="and SELLER_ID='"+query.getCurrentUserName()+"' ";
+	}
+	if(!StringUtil.isEmpty(query.getShopCateId())){
+		sql+="and CATEGORY_ID='"+query.getShopCateId()+"' ";
+	}
 	sql+="limit #{startRow},#{endRow}";
 	return sql;
 	}
@@ -43,6 +49,9 @@ public class ShopCategoryPropProvider {
 		String sql="select count(*) FROM T_SHOP_CATEGORY_PROP where 1=1 ";
 		if(!StringUtil.isEmpty(query.getType())){
 			sql+="and TYPE='"+query.getType()+"' ";
+		}
+		if(!StringUtil.isEmpty(query.getCurrentUserName())){
+			sql+="and SELLER_ID='"+query.getCurrentUserName()+"' ";
 		}
 		return sql;
 		}

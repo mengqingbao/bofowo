@@ -9,6 +9,8 @@ public class TradeQuery extends QueryBase implements Serializable {
 	private String byerId;
 	
 	private String status;
+	
+	private String keyword;
 
 	public String getSellerId() {
 		return sellerId;
@@ -32,6 +34,14 @@ public class TradeQuery extends QueryBase implements Serializable {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public String getKeyword() {
+		return keyword;
+	}
+
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
 	}
 	
 	

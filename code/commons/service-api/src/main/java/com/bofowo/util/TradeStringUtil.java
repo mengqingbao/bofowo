@@ -22,6 +22,15 @@ public class TradeStringUtil {
 	public static String getTradeStatus(String key){
 		return (String) TradeConstant.map.get(key);
 	}
+	public static String getRefundStatus(String key){
+		return (String) TradeConstant.serviceMap.get(key);
+	}
+	public static String getFixStatus(String key){
+		return (String) TradeConstant.fixMap.get(key);
+	}
+	public static String getCommonStatus(String key){
+		return (String) TradeConstant.commonMap.get(key);
+	}
 	
 	public static String getButton(String key){
 		Integer flage=(Integer) TradeConstant.map.get(key);

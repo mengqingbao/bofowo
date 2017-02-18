@@ -1,11 +1,12 @@
 package com.bofowo.site.service;
 
-import com.bofowo.site.biz.model.CarCountItem;
-import com.bofowo.site.model.TradeModel;
-import com.bofowo.site.query.TradeQuery;
-
 import java.util.List;
 import java.util.Map;
+
+import com.bofowo.site.biz.model.TradeCountItem;
+import com.bofowo.site.model.OrderModel;
+import com.bofowo.site.model.TradeModel;
+import com.bofowo.site.query.TradeQuery;
 
 
 public interface TradeService{
@@ -28,7 +29,18 @@ public interface TradeService{
 	 * @param status 0 等待支付 1：已支付 2：已发货 3：已签收。4：以评论
 	 * @since JDK 1.7
 	 */
-	void pay(Integer tid, String status);
+	public void pay(Integer tid,String status,String username) ;
 	
-	public Map<String, CarCountItem> submitTrade(String ids,String username);
+	public Map<String, TradeCountItem> submitTrade(String ids,String username);
+	/**
+	 * 更新交易订单信息。交易的子订单全选，则trade交易总价不变。
+	 * <br>trade 子订单未全选，则更新订单的单价信息，和交易title。
+	 * <br>返回tradeId 的数组。
+	 * @author mqb
+	 * @param orderMap
+	 * @return
+	 * @since JDK 1.7
+	 */
+	public List<Integer> updateTradeStatus(
+			Map<Integer, List<OrderModel>> orderMap,String orderIds);
 } 

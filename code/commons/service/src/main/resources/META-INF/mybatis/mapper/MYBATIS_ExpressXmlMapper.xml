@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.ExpressMapper">
+	<resultMap type="ExpressModel" id="ExpressModelMap">
+
+		<id property="id" column="ID" />
+		<result property="expCompany" column="EXP_COMPANY" />
+		<result property="fId" column="F_ID" />
+		<result property="type" column="TYPE" />
+		<result property="sellerId" column="SELLER_ID" />
+		<result property="buyerId" column="BUYER_ID" />
+		<result property="content" column="CONTENT" />
+		<result property="status" column="STATUS" />
+		<result property="modifiedTime" column="MODIFIED_TIME" />
+		
+	</resultMap>
+</mapper> 

@@ -25,6 +25,9 @@
 		<result property="shopId" column="SHOP_ID" />
 		<result property="shopName" column="SHOP_NAME" />
 		<result property="repalyRate" column="REPALY_RATE" />
+		<result property="status" column="STATUS" />
+		<result property="expressCode" column="EXPRESS_CODE" />
+		<result property="expressContent" column="EXPRESS_CONTENT" />
 		
 	</resultMap>
 </mapper> 

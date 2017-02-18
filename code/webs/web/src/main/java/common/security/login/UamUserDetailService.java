@@ -10,13 +10,18 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.bofowo.site.model.AccountModel;
+import com.bofowo.site.model.ShopModel;
 import com.bofowo.site.service.AccountService;
+import com.bofowo.site.service.ShopService;
 import common.util.StringUtil;
 
 public class UamUserDetailService implements UserDetailsService {
 
 	@Resource
 	private AccountService accountService;
+	
+	@Resource
+	private ShopService shopService;
 
 	
 	@Override
@@ -28,10 +33,14 @@ public class UamUserDetailService implements UserDetailsService {
 		roles.add("ROLE_member");
 		
 		String nick=StringUtil.getMaskPhone(username);
-
+		int shopId=0;
+		ShopModel shop=shopService.getByUsername(username);
+		if(shop!=null){
+			shopId=shop.getId();
+		}
 		
 		//accountService.setNewbieTask(userInfo,member);
-		AuthTaken taken = new AuthTaken(member,nick,"",roles);
+		AuthTaken taken = new AuthTaken(member,nick,"",roles,shopId);
 		
 		
 		

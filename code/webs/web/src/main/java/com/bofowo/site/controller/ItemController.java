@@ -21,13 +21,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import cn.bofowo.content.BofowoContent;
 
+import com.bofowo.site.biz.model.CategoryTree;
 import com.bofowo.site.model.CategoryModel;
 import com.bofowo.site.model.ProducimageModel;
+import com.bofowo.site.model.ProducpropertiesModel;
 import com.bofowo.site.model.ProductModel;
+import com.bofowo.site.model.ShopCategoryPropModel;
+import com.bofowo.site.query.ProducpropertiesQuery;
 import com.bofowo.site.query.ProductQuery;
+import com.bofowo.site.query.ShopCategoryPropQuery;
 import com.bofowo.site.service.CategoryService;
 import com.bofowo.site.service.ProducimageService;
+import com.bofowo.site.service.ProducpropertiesService;
 import com.bofowo.site.service.ProductService;
+import com.bofowo.site.service.ShopCategoryPropService;
 
 import common.constant.WebConstant;
 import common.security.login.CurrentUserUtil;
@@ -54,7 +61,10 @@ public class ItemController extends BaseController {
 	private ProducimageService producimageService;
 	@Resource
 	private CategoryService categoryService;
-	
+	@Resource
+	private ShopCategoryPropService shopCategoryPropService;
+	@Resource
+	private ProducpropertiesService producpropertiesService;
 	@RequestMapping("product-search")
 	public String productSearch(){
 		return "product/searchProduct";
@@ -84,6 +94,7 @@ public class ItemController extends BaseController {
 	public String createProductDetailInsert(ProductModel productModel){
 		productModel.setCreatedTime(new Date());
 		productModel.setSellerId(CurrentUserUtil.getCurrentUserName());
+		productModel.setShopId(CurrentUserUtil.getShopId());
 		productModel.setModifiedTime(new Date());
 		productModel.setStatus("1");
 		productService.insert(productModel);
@@ -109,6 +120,7 @@ public class ItemController extends BaseController {
 		this.setLayout(LayoutType.SELLER);
 		query.setPageSize(15);
 		query.setType(type);
+		query.setCurrentUserName(CurrentUserUtil.getCurrentUserName());
 		query.setTotalItem(productService.fetchPageCount(query));
 		List<ProductModel> items=productService.fetchPage(query);
 		model.put("list", items);
@@ -166,17 +178,75 @@ public class ItemController extends BaseController {
 	
 	@RequestMapping("item-list-cate")
 	public String itemSearchList(ProductQuery query,ModelMap model){
-		query.setPageSize(15);
+		query.setPageSize(16);
 		//根据父id查询子分类
-	//	List<CategoryModel> cates=categoryService.getAllByParendid(query.getCateId(), BofowoContent.CATEGORY_ITEM_CATE_TYPE);
-	//	model.put("cates", cates);
-		
+		List<CategoryModel> cates=categoryService.getAllByParendid(query.getCateId(), BofowoContent.CATEGORY_ITEM_CATE_TYPE);
+		model.put("cates", cates);
+		CategoryTree ct=categoryService.getTreeByCateId(query.getCateId());
+		model.put("cateTree", ct);
 		//查询分类下的产品信息
 		query.setTotalItem(productService.fetchPageCount(query));
 		List<ProductModel> items=productService.fetchPage(query);
 		model.put("pageInfo", query);
 		model.put("items",items);
 		return "itemListCate";
+	}
+	
+	/**
+	 * 获得店铺属性规格的html，根据店铺所选的分类。
+	 * generateShopHtml:(这里用一句话描述这个方法的作用). <br/>
+	 * TODO(这里描述这个方法适用条件 – 可选).<br/>
+	 * TODO(这里描述这个方法的执行流程 – 可选).<br/>
+	 * TODO(这里描述这个方法的使用方法 – 可选).<br/>
+	 * TODO(这里描述这个方法的注意事项 – 可选).<br/>
+	 *
+	 * @author mqb
+	 * @param query
+	 * @param model
+	 * @return
+	 * @since JDK 1.7
+	 */
+	@RequestMapping("getShopCateProp")
+	public String generateShopHtml(ShopCategoryPropQuery query,ModelMap model){
+		this.setLayout(LayoutType.EMPTY);
+		query.setTotalItem(10);
+		query.setPageSize(10);
+		//规格查询
+		query.setType("spec");
+		List<ShopCategoryPropModel> list=shopCategoryPropService.getByShopCateId(query);
+		model.put("items", list);
+		//属性
+		query.setType("prop");
+		List<ShopCategoryPropModel> props=shopCategoryPropService.getByShopCateId(query);
+		model.put("props", props);
+		if(props.size()<1&&list.size()<1){
+			return "common/empty";
+		}
+		
+		return "seller/item/html_shop_prop";
+	}
+	/**
+	 * 获得系统的属性规格html 根据所选的类目id
+	 * generateOrgHtml:(这里用一句话描述这个方法的作用). <br/>
+	 * TODO(这里描述这个方法适用条件 – 可选).<br/>
+	 * TODO(这里描述这个方法的执行流程 – 可选).<br/>
+	 * TODO(这里描述这个方法的使用方法 – 可选).<br/>
+	 * TODO(这里描述这个方法的注意事项 – 可选).<br/>
+	 *
+	 * @author mqb
+	 * @param query
+	 * @param model
+	 * @return
+	 * @since JDK 1.7
+	 */
+	@RequestMapping("getCateProp")
+	public String generateOrgHtml(ProducpropertiesQuery query,ModelMap model){
+		this.setLayout(LayoutType.EMPTY);
+		query.setTotalItem(10);
+		query.setPageSize(10);
+		List<ProducpropertiesModel> list=producpropertiesService.getByCateId(query);
+		model.put("items", list);
+		return "seller/item/html_prop";
 	}
 	
 }

@@ -13,4 +13,13 @@ public interface ProducpropertiesService{
 	public void del(long id);
 	public long insert(ProducpropertiesModel producproperties);
 	public long update(ProducpropertiesModel producproperties);
+	/**
+	 * 查询属性
+	 *
+	 * @author mqb
+	 * @param query
+	 * @return
+	 * @since JDK 1.7
+	 */
+	public List<ProducpropertiesModel> getByCateId(ProducpropertiesQuery query);
 } 

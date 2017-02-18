@@ -70,7 +70,8 @@
 	</div>
 
         <form class="am-form">
-        已保存了18条地址，还能保存2条地址
+      
+        已保存了${pageInfo.totalItem}条地址，还能保存${leftnum}条地址
           <table class="am-table am-table-striped am-table-hover table-main">
             <thead>
               <tr>

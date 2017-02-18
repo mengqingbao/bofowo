@@ -1,8 +1,10 @@
 package com.bofowo.site.mapper;
+import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.ResultMap;
-import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectKey;
 import org.apache.ibatis.annotations.SelectProvider;
@@ -12,8 +14,6 @@ import org.apache.ibatis.mapping.StatementType;
 import com.bofowo.site.model.OrderModel;
 import com.bofowo.site.provider.OrderProvider;
 import com.bofowo.site.query.OrderQuery;
-
-import java.util.List;
 
 public interface OrderMapper{
 																																																																																																																																																																																										
@@ -47,5 +47,14 @@ public interface OrderMapper{
 	@Select("select * from T_ORDER where TID=#{tid}")
 	@ResultMap(value="com.bofowo.site.mapper.OrderMapper.OrderModelMap")
 	public List<OrderModel> getOrderByTradeId(long tid);
+	
+	@Select("select * from T_ORDER where BUYER_ID=#{username} and ID in (${ids})")
+	@ResultMap(value="com.bofowo.site.mapper.OrderMapper.OrderModelMap")
+	public List<OrderModel> getOrderByOrderIds(Map condition);
+
+	@Update("update T_ORDER set STATUS=#{status} where SELLER_ID=#{sellerName} and TID=#{tradeId}")
+	public void updateOrderByTid(Map<String, String> condition);
+	@Update("update T_ORDER set STATUS=#{status} where SELLER_ID=#{sellerName} and TID in (${orderIds})")
+	public void updateStatusByids(Map<String, String> condition);
 
 }

@@ -20,8 +20,8 @@
         <custom-filter after="REMEMBER_ME_FILTER" ref="rememberMeFilter"/>
      	<custom-filter position="REMEMBER_ME_FILTER"  ref="rememberMeFilter"/>
      	<custom-filter position="LOGOUT_FILTER" ref="logoutFilter" />
-       <!-- <remember-me key="springRocks"/> -->
-       	<csrf/>
+       <!-- <remember-me key="springRocks"/> <csrf/> -->
+       	
 </http>
  <authentication-manager alias="authenticationManager">
     <authentication-provider user-service-ref='uamUserDetailService'>
@@ -67,11 +67,11 @@
 	<beans:bean id="failureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
 		
 		<beans:property name="defaultFailureUrl" value="/login.htm?error=true" />
-		<beans:property name="useForward" value="false"/>
+		<beans:property name="useForward" value="true"/>
 	</beans:bean>
 	<beans:bean id="successHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler">
 		<beans:property name="alwaysUseDefaultTargetUrl" value="false"/>
-	
+		<beans:property name="targetUrlParameter" value="redirect"></beans:property>
 		 <beans:property name="defaultTargetUrl" value="/consumer-myitem.htm"/>
 		
 	</beans:bean>

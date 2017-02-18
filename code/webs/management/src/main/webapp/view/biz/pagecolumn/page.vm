@@ -1,49 +1,36 @@
-<div class="row">
-<div class="box col-md-12">
-	<div class="box-inner">
-		<div class="box-header well" data-original-title="">
-			<h2>PageColumn Management</h2>
-			<div class="box-icon">
-				<a href="#" class="btn btn-minimize btn-round btn-default"><i
-						class="glyphicon glyphicon-chevron-up"></i></a>
-				<a href="#" class="btn btn-close btn-round btn-default"><i
-						class="glyphicon glyphicon-remove"></i></a>
-			</div>
-		</div>
-		<div class="box-content">
-<div class="row"><div class="col-md-12 box"><a href="/pagecolumn-add.htm" class="btn btn-success"><strong>Add</strong></a> </div></div>
-<div class="row"><div class="col-md-12 box">
-<table class="table table-striped table-bordered responsive">
- <thead>
-  <tr>
-	<td><label for="status">#springMessage("id")</label></td>
-	<td><label for="status">#springMessage("pageId")</label></td>
-	<td><label for="status">#springMessage("content")</label></td>
-	<td><label for="status">#springMessage("status")</label></td>
-	<td><label for="status">#springMessage("dataJson")</label></td>
-	<td>Operation</td>
-  </tr>
- </thead>
- <tbody>
-#foreach($item in $items)
-  <tr>
-	<td> $!{item.id} </td>
-	<td><a href="/pagecolumn-detail.htm?id=$!{item.id}"> $!{item.pageId} </td>
-	<td> $!{item.content} </a></td>
-	<td> $!{item.status} </td>
-	<td> $!{item.dataJson} </td>
-	<td><a href="/pagecolumn-edit.htm?id=$!{item.id}"  class="btn btn-info">Modify</a><a href="/pagecolumn-del.htm?id=$!{item.id}"  class="btn btn-danger">Del</a></td>
-  </tr>
-#end
- </tbody>
-</table>
-</div></div>
-<form id="form1" name="form1"></form>
-			#pageNavigation($!pageInfo,'form1')
+<div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">表单</strong> / <small>form</small></div>
+  </div>
 
-		</div><!--box-content end-->
-	</div>
-</div>
-<!--/span-->
+  <div class="am-tabs am-margin" data-am-tabs="">
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+     #set($i=1)
+    #foreach($item in $items)
+      <li class="#if($i==1)am-active#end"><a href="#tab$i">首页$i楼</a></li>
+     #set($i=$i+1)
+     #end
+     
+    </ul>
 
-</div><!--/row-->
+    <div class="am-tabs-bd" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      
+    #set($i=1)
+    #foreach($item in $items)
+      <div class="am-tab-panel am-fade #if($i==1) am-active am-in #end" id="tab$i">
+      <form action="pagecolumn-update.htm" method="post" name="form1">
+      	<input type="hidden" name="id" value="$item.id">
+      	<input type="hidden" name="pageId" value="$item.pageId">
+		<textarea rows="30" name="content" cols="160">$item.content</textarea>
+		 <div class="am-margin">
+    		状态：<input type="radio" name="status" value="1" #if($item.status==1) checked #end/>有效 &nbsp;&nbsp; <input type="radio" name="status" value="0" #if($item.status==0) checked #end/>失效
+  		</div>
+		 <div class="am-margin">
+    		<button type="submit" class="am-btn am-btn-primary am-btn-xs">提交保存</button>
+  		</div>
+  	   </form>
+      </div>
+      #set($i=$i+1)
+	#end
+    </div>
+  </div>
+

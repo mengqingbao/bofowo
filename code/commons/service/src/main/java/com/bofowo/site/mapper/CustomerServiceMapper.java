@@ -7,22 +7,19 @@ import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectKey;
 import org.apache.ibatis.annotations.SelectProvider;
 import org.apache.ibatis.annotations.Update;
-
 import com.bofowo.site.model.CustomerServiceModel;
-import com.bofowo.site.provider.CustomerServiceProvider;
 import com.bofowo.site.query.CustomerServiceQuery;
-
+import com.bofowo.site.provider.CustomerServiceProvider;
 import org.apache.ibatis.mapping.StatementType;
-
 import java.util.List;
 
 public interface CustomerServiceMapper{
-																																																																																																																																																																																																														
-	public String columns="ID,BUYER_ID,SELLER_ID,TRADE_ID,ORDER_ID,NAME,PIC,PRICE,QUESTION,REPLAY,RESULT,SERVICER,TYPE,ITEM_ID,CREATED_TIME,REPLAY_TIME,END_TIME,SHOP_ID,SHOP_NAME,REPALY_RATE";
-																																																																																																																																																																																																														
-	public String property="#{id},#{buyerId},#{sellerId},#{tradeId},#{orderId},#{name},#{pic},#{price},#{question},#{replay},#{result},#{servicer},#{type},#{itemId},#{createdTime},#{replayTime},#{endTime},#{shopId},#{shopName},#{repalyRate}";
-																																																																																																																																																																																																																							
-	public String update="BUYER_ID=#{buyerId},SELLER_ID=#{sellerId},TRADE_ID=#{tradeId},ORDER_ID=#{orderId},NAME=#{name},PIC=#{pic},PRICE=#{price},QUESTION=#{question},REPLAY=#{replay},RESULT=#{result},SERVICER=#{servicer},TYPE=#{type},ITEM_ID=#{itemId},CREATED_TIME=#{createdTime},REPLAY_TIME=#{replayTime},END_TIME=#{endTime},SHOP_ID=#{shopId},SHOP_NAME=#{shopName},REPALY_RATE=#{repalyRate}";
+																																																																																																																																																																																																																																												
+	public String columns="ID,BUYER_ID,SELLER_ID,TRADE_ID,ORDER_ID,NAME,PIC,PRICE,QUESTION,REPLAY,RESULT,SERVICER,TYPE,ITEM_ID,CREATED_TIME,REPLAY_TIME,END_TIME,SHOP_ID,SHOP_NAME,REPALY_RATE,STATUS,EXPRESS_CODE,EXPRESS_CONTENT";
+																																																																																																																																																																																																																																												
+	public String property="#{id},#{buyerId},#{sellerId},#{tradeId},#{orderId},#{name},#{pic},#{price},#{question},#{replay},#{result},#{servicer},#{type},#{itemId},#{createdTime},#{replayTime},#{endTime},#{shopId},#{shopName},#{repalyRate},#{status},#{expressCode},#{expressContent}";
+																																																																																																																																																																																																																																																								
+	public String update="BUYER_ID=#{buyerId},SELLER_ID=#{sellerId},TRADE_ID=#{tradeId},ORDER_ID=#{orderId},NAME=#{name},PIC=#{pic},PRICE=#{price},QUESTION=#{question},REPLAY=#{replay},RESULT=#{result},SERVICER=#{servicer},TYPE=#{type},ITEM_ID=#{itemId},CREATED_TIME=#{createdTime},REPLAY_TIME=#{replayTime},END_TIME=#{endTime},SHOP_ID=#{shopId},SHOP_NAME=#{shopName},REPALY_RATE=#{repalyRate},STATUS=#{status},EXPRESS_CODE=#{expressCode},EXPRESS_CONTENT=#{expressContent}";
 	
 	@SelectProvider(type=CustomerServiceProvider.class,method="getSearchSql")
 	@ResultMap(value="com.bofowo.site.mapper.CustomerServiceMapper.CustomerServiceModelMap")

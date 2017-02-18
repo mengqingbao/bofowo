@@ -43,4 +43,9 @@ public class BuyerAddressServiceImpl implements BuyerAddressService{
 		//condition.put("id", "1");
 		buyeraddressMapper.clearDefault(bueryId);
 	}
+	@Override
+	public List<BuyerAddressModel> getBuyerAddress(String username) {
+		
+		return buyeraddressMapper.getBuyerAddress(username);
+	}
 } 

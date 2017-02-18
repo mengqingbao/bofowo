@@ -22,7 +22,7 @@ ul {
 .admin-main {
   background: #ffffff;
   margin: 0 auto;
-  width: 900px;
+  width: 1150px;
 }
 
 .admin-menu {
@@ -33,7 +33,7 @@ ul {
 }
 
 .admin-sidebar {
-  width: 160px;
+  width: 200px;
   min-height: 100%;
   float: left;
  /*  border-right: 1px solid #cecece; */

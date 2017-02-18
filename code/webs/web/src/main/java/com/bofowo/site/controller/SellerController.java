@@ -23,19 +23,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.bofowo.site.model.CategoryModel;
 import com.bofowo.site.model.CommentModel;
+import com.bofowo.site.model.CustomerServiceModel;
 import com.bofowo.site.model.OrderModel;
+import com.bofowo.site.model.PostemplateModel;
 import com.bofowo.site.model.ProducimageModel;
 import com.bofowo.site.model.ProductrademarkModel;
+import com.bofowo.site.model.ShopCategoryModel;
 import com.bofowo.site.model.TradeModel;
 import com.bofowo.site.query.CategoryQuery;
 import com.bofowo.site.query.CommentQuery;
+import com.bofowo.site.query.CustomerServiceQuery;
+import com.bofowo.site.query.PostemplateQuery;
 import com.bofowo.site.query.ProductrademarkQuery;
 import com.bofowo.site.query.TradeQuery;
 import com.bofowo.site.service.CategoryService;
 import com.bofowo.site.service.CommentService;
+import com.bofowo.site.service.CustomerServiceService;
 import com.bofowo.site.service.OrderService;
+import com.bofowo.site.service.PostemplateService;
 import com.bofowo.site.service.ProducimageService;
 import com.bofowo.site.service.ProductrademarkService;
+import com.bofowo.site.service.ShopCategoryService;
 import com.bofowo.site.service.TradeService;
 
 import common.constant.WebConstant;
@@ -72,6 +80,12 @@ public class SellerController extends BaseController{
 	private OrderService orderService;
 	@Resource
 	private CommentService commentService;
+	@Resource
+	private CustomerServiceService customerServiceService;
+	@Resource
+	private ShopCategoryService shopCategoryService;
+	@Resource
+	private PostemplateService postemplateService;
 	
 	@RequestMapping("seller-index")
 	public String index(){
@@ -93,7 +107,7 @@ public class SellerController extends BaseController{
 	
 	@RequestMapping("provider-item-add-detail-{categoryId}")
 	public String itemAddDetail(@PathVariable("categoryId") String cateId,ModelMap model){
-		this.setLayout(LayoutType.UAM);
+		this.setLayout(LayoutType.SELLER);
 		String seller=CurrentUserUtil.getCurrentUserName();
 		int cate3id=0;
 		if(!StringUtil.isEmpty(cateId)){
@@ -113,9 +127,22 @@ public class SellerController extends BaseController{
 		
 		model.put("topCates", topCate);
 		
+		//店铺自定义分类
+		List<ShopCategoryModel> shopcates=shopCategoryService.getCatesBySellerId(CurrentUserUtil.getCurrentUserName());
+		model.put("shopCates", shopcates);
 		//查询没有没有被关联上传的图片。
 		List<ProducimageModel> pims=producimageService.getSellerUnRefImage(seller);
 		model.put("pims", pims);
+		
+		
+		//查询邮件模板
+		PostemplateQuery query=new PostemplateQuery();
+		query.setPageSize(15);
+		query.setTotalItem(15);
+		
+		query.setCurrentUserName(CurrentUserUtil.getCurrentUserName());
+		List<PostemplateModel> ptms=postemplateService.fetchPage(query);
+		model.put("ptms", ptms);
 		return "seller/item/add_item_detail";
 	}
 	
@@ -197,7 +224,7 @@ public class SellerController extends BaseController{
 		return "seller/item/from_jd";
 	}
 	
-	@RequestMapping("my-sale-trades")
+	@RequestMapping("provider-trades")
 	public String mySaleTrades(TradeQuery query,ModelMap model){
 		this.setLayout(LayoutType.SELLER);
 		query.setSellerId(CurrentUserUtil.getCurrentUserName());
@@ -217,6 +244,31 @@ public class SellerController extends BaseController{
 		}
 		model.put("status", query.getStatus());
 		return "seller/trade/trades";
+	}
+	@RequestMapping("provider-trades-service")
+	public String mySaleTradesService(CustomerServiceQuery query,ModelMap model){
+		this.setLayout(LayoutType.SELLER);
+		query.setType("complaint");
+		query.setSellerId(CurrentUserUtil.getCurrentUserName());
+		query.setPageSize(20);
+		query.setTotalItem(customerServiceService.fetchPageCount(query));
+		model.put("pageInfo", query);
+		List<CustomerServiceModel> items=customerServiceService.fetchPage(query);
+		model.put("items", items);
+		return "seller/trade/trades_service";
+	}
+	
+	@RequestMapping("provider-trades-fix")
+	public String mySaleTradesBack(CustomerServiceQuery query,ModelMap model){
+		this.setLayout(LayoutType.SELLER);
+		query.setType("complaint");
+		query.setSellerId(CurrentUserUtil.getCurrentUserName());
+		query.setPageSize(20);
+		query.setTotalItem(customerServiceService.fetchPageCount(query));
+		model.put("pageInfo", query);
+		List<CustomerServiceModel> items=customerServiceService.fetchPage(query);
+		model.put("items", items);
+		return "seller/trade/trades_service_fix";
 	}
 	
 	@RequestMapping("i-geted-rate")

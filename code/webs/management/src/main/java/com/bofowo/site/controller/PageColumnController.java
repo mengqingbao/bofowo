@@ -38,7 +38,7 @@ public class PageColumnController extends BaseController{
 		return "redirect:/pagecolumn-page.htm";
 	}
 	
-	@RequestMapping("pagecolumn-page")
+	@RequestMapping("manage-index-content")
 	public String page_pagecolumn(PageColumnQuery query,ModelMap model){
 		query.setPageSize(10);
 		query.setTotalItem(pagecolumnService.fetchPageCount(query));
@@ -46,7 +46,7 @@ public class PageColumnController extends BaseController{
 		
 		model.put("pageInfo", query);
 		model.put("items",items);
-		return "pagecolumn/page";
+		return "biz/pagecolumn/page";
 	}
 	
 	@RequestMapping("/pagecolumn-detail")
@@ -65,6 +65,6 @@ public class PageColumnController extends BaseController{
 	@RequestMapping("pagecolumn-update")
 	public String update_pagecolumn(PageColumnModel pagecolumn,ModelMap model){
 		pagecolumnService.update(pagecolumn);
-		return "redirect:/pagecolumn-detail.htm";
+		return this.redirectRefer(request);
 	}
 }

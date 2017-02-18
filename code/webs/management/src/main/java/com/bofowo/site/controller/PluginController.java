@@ -9,6 +9,7 @@ import java.io.OutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.baidu.ueditor.ActionEnter;
+import com.bofowo.site.model.ProducimageModel;
+import com.bofowo.site.service.ProducimageService;
 
 import common.security.login.CurrentUserUtil;
 import common.util.LayoutType;
@@ -27,6 +30,8 @@ public class PluginController extends BaseController{
 
 	@Value("#{settings['upload.lyun.path']}")
 	private String path;
+	@Autowired
+	private ProducimageService producimageService;
 	
 	@RequestMapping("ueditor")
 	public String editorController(HttpServletRequest request,ModelMap model){
@@ -85,5 +90,56 @@ public class PluginController extends BaseController{
 	       
 		
 	}
-	
+	@RequestMapping(value="item-image-{id}")
+	public void  itemImage(ModelMap model,HttpServletResponse response,@PathVariable("id") Integer id){	
+		String fileName=request.getSession().getServletContext().getRealPath("/")+"/images/noimage.jpg";
+		
+		if(id==null||id==0){
+			fileName=request.getSession().getServletContext().getRealPath("/")+"/images/noimage.jpg";
+		}
+		ProducimageModel pim=producimageService.getById(id);
+		if(pim==null){
+			fileName=request.getSession().getServletContext().getRealPath("/")+"/images/noimage.jpg";
+		}else{
+			
+			fileName=pim.getPath();
+		}
+			
+	        File file = new File(fileName);
+	        if(!file.exists()){
+	        	file=new File(request.getSession().getServletContext().getRealPath("/")+"/images/noimage.jpg");
+	        }
+	        byte[] data = new byte[(int)file.length()];	
+	        OutputStream stream=null;
+	        FileInputStream inputStream =null;
+	        
+	        try {
+	        	  inputStream = new FileInputStream(file);
+	        	  int length = inputStream.read(data);
+	        	  String str=file.getName().substring(file.getName().lastIndexOf(".")+1);
+	        	  
+	        	 response.setContentType("image/"+str);
+	 	         stream = response.getOutputStream();
+	 	         stream.write(data);
+	 	         stream.flush();
+	 	        
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				log.error(e.getMessage());
+			}finally{
+				 try {
+					 
+					 if(stream!=null)
+					stream.close();
+					 if(inputStream!=null)
+					inputStream.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					log.error(e.getMessage());
+				}
+				
+			}
+	       
+		
+	}
 }

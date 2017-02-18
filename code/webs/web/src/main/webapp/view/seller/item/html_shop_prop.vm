@@ -1,0 +1,41 @@
+         
+        <div class="am-g am-margin-top">
+          <div class="am-u-sm-4 am-u-md-2 am-text-right">规格</div>
+          <div class="am-u-sm-6 am-u-md-6">
+            <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                <th width="10%"><input type="checkbox" id="specAllCheck" /></th><th width="20%">名称</th><th width="20%">值</td><th>价格</th><th>库存</th>
+              </tr>
+            </thread>
+            <body>
+            #foreach($item in $items)
+              #foreach($spec in $item.options)
+            	<tr><td><input type="checkbox" class="specCheck"/></td><td>$item.name</td><td>$!{spec}</td><td><input type="text" name=""/></td><td><input type="text" name=""/></td></tr>
+              #end
+            #end
+            </body>
+            </table>
+           </div>
+           <div class="am-u-sm-2 am-u-md-3"></div>
+        </div>
+        
+        <div class="am-g am-margin-top">
+          <div class="am-u-sm-4 am-u-md-2 am-text-right">属性</div>
+          <div class="am-u-sm-8 am-u-md-6">
+             <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                <th width="10%"><input type="checkbox" id="propAllCheck"/></th><th width="30%">名称</th><th>内容</th>
+              </tr>
+            </thread>
+            <body>
+             #foreach($item in $items)
+            	<tr><td><input type="checkbox" class="propCheck"/></td><td>$item.name</td><td><input type="text" name=""/></td></tr>
+             #end
+            </body>
+            </table>
+           </div>
+            <div class="am-u-sm-8 am-u-md-6"></div>
+        </div>
+      

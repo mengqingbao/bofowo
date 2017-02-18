@@ -33,7 +33,10 @@ public class BuyerCollectionProvider {
 	public String getSearchSql(BuyerCollectionQuery query){
 	String sql="select "+columns+" FROM T_BUYER_COLLECTION where 1=1 ";
 	if(!StringUtil.isEmpty(query.getBuyerId())){
-		sql+="and BUYER_ID='"+query.getBuyerId()+"'";
+		sql+="and BUYER_ID='"+query.getBuyerId()+"' ";
+	}
+	if(!StringUtil.isEmpty(query.getType())){
+		sql+="and TYPE_='"+query.getType()+"' ";
 	}
 	sql+="limit #{startRow},#{endRow}";
 	return sql;
@@ -42,7 +45,10 @@ public class BuyerCollectionProvider {
 	public String getSearchSqlCount(BuyerCollectionQuery query){
 		String sql="select count(*) FROM T_BUYER_COLLECTION where 1=1 ";
 		if(!StringUtil.isEmpty(query.getBuyerId())){
-			sql+="and BUYER_ID='"+query.getBuyerId()+"'";
+			sql+="and BUYER_ID='"+query.getBuyerId()+"' ";
+		}
+		if(!StringUtil.isEmpty(query.getType())){
+			sql+="and TYPE_='"+query.getType()+"' ";
 		}
 		return sql;
 		}

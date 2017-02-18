@@ -193,8 +193,8 @@ public class AlipayController extends BaseController {
 	
 		@RequestMapping("alipay")
 		public String submit2alipay(Integer tid,ModelMap model){
-			
-			tradeService.pay(tid,"1");
+			String username=CurrentUserUtil.getCurrentUserName();
+			tradeService.pay(tid,"1",username);
 			//支付流程添加后 删除 该返回内容
 			if(1==1)
 			return "redirect:my-sale-trades.htm?status=0";

@@ -21,6 +21,15 @@
 		<result property="payWay" column="PAY_WAY" />
 		<result property="createdTime" column="CREATED_TIME" />
 		<result property="modifyTime" column="MODIFY_TIME" />
-		
+		<result property="receiverName" column="RECEIVER_NAME" />
+		<result property="receiverProvince" column="RECEIVER_PROVINCE" />
+		<result property="receiverCity" column="RECEIVER_CITY" />
+		<result property="receiverArea" column="RECEIVER_AREA" />
+		<result property="receiverAddr" column="RECEIVER_ADDR" />
+		<result property="receiverPostid" column="RECEIVER_POSTID" />
+		<result property="receiverTele" column="RECEIVER_TELE" />
+		<result property="expressId" column="EXPRESS_ID" />
+		<result property="expressCompanyName" column="EXPRESS_COMPANY_NAME" />
+		<result property="orderIds" column="ORDER_IDS" />
 	</resultMap>
 </mapper> 

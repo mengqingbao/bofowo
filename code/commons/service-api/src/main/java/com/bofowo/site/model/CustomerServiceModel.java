@@ -25,6 +25,9 @@ public class CustomerServiceModel implements Serializable{
 		private int shopId;
 		private String shopName;
 		private int repalyRate;
+		private String status;
+		private String expressCode;
+		private String expressContent;
 		
 		public int getId(){
 		return id;
@@ -86,6 +89,15 @@ public class CustomerServiceModel implements Serializable{
 		public int getRepalyRate(){
 		return repalyRate;
 	}
+		public String getStatus(){
+		return status;
+	}
+		public String getExpressCode(){
+		return expressCode;
+	}
+		public String getExpressContent(){
+		return expressContent;
+	}
 		
 		public void setId(int id){
 		this.id = id;
@@ -146,6 +158,15 @@ public class CustomerServiceModel implements Serializable{
 	}
 		public void setRepalyRate(int repalyRate){
 		this.repalyRate = repalyRate;
+	}
+		public void setStatus(String status){
+		this.status = status;
+	}
+		public void setExpressCode(String expressCode){
+		this.expressCode = expressCode;
+	}
+		public void setExpressContent(String expressContent){
+		this.expressContent = expressContent;
 	}
 		
 }

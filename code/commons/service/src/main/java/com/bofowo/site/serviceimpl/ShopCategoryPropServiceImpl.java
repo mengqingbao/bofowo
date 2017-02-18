@@ -34,4 +34,8 @@ public class ShopCategoryPropServiceImpl implements ShopCategoryPropService{
 	public long update(ShopCategoryPropModel shopcategoryprop){
 		return shopcategorypropMapper.update(shopcategoryprop);
 	}
+	
+	public List<ShopCategoryPropModel> getByShopCateId(ShopCategoryPropQuery query){
+		return shopcategorypropMapper.fetchPageList(query);
+	}
 } 

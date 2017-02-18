@@ -34,4 +34,9 @@ public class ProducpropertiesServiceImpl implements ProducpropertiesService{
 	public long update(ProducpropertiesModel producproperties){
 		return producpropertiesMapper.update(producproperties);
 	}
+	@Override
+	public List<ProducpropertiesModel> getByCateId(ProducpropertiesQuery query) {
+		
+		return producpropertiesMapper.fetchPageList(query);
+	}
 } 

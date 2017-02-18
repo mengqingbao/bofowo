@@ -4,32 +4,36 @@
 }
 </style>
     <div class="am-cf am-padding">
-      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>交易管理</small></div>
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">#springMessage("index")</strong> / <small>#springMessage("my.favorites")</small></div>
     </div>
 
     <div class="am-g">
       <div class="am-u-sm-12">
 	<ul class="am-tabs-nav am-nav am-nav-tabs">
-      <li class="am-active"><a href="consumer-item-collect.htm">我收藏的宝贝</a></li>
-      <li><a href="consumer-shop-collect.htm">我收藏的店铺</a></li>
+      <li class="am-active"><a href="consumer-item-collect.htm">#springMessage("my.item.favorite")</a></li>
+      <li><a href="consumer-shop-collect.htm">#springMessage("my.shop.favorite")</a></li>
     </ul>
-
-          <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-4 am-margin gallery-list">
+#if($!pageInfo.totalItem>0)
+     <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-4 am-margin gallery-list">
           #foreach($item in $items)
          <li>
-        <a href="item-$!{item.itemId}-detail.htm">
-          <img class="am-img-thumbnail am-img-bdrs" src="item-image-$!{item.image}.htm" alt="">
-          <div class="gallery-title"><small>$!{item.title}</small></div>
-        </a>
-      </li>
+          <a href="item-$!{item.itemId}-detail.htm">
+           <img class="am-img-thumbnail am-img-bdrs" src="item-image-$!{item.image}.htm" alt="">
+           <div class="gallery-title"><small>$!{item.title}</small></div>
+          </a>
+        </li>
       #end
     </ul>
         <div class="am-cf">
- 	<form id="form1" name="form1"></form>
+ 		<form id="form1" name="form1"></form>
 			#pageNavigation($!pageInfo,'form1')
-</div>  
-          <hr />
-          <p>注：.....</p>
+	</div>  
+#else
+		 <div class="am-cf">
+		 	<br/><br/><br/><br/><br/><br/>
+ 			<center>您暂时没有收藏任何店铺~</center>
+		 </div>
+		#end
       </div>
 
     </div>

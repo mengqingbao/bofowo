@@ -2,6 +2,9 @@ package com.bofowo.site.model;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
+
+import com.sun.xml.internal.ws.util.StringUtils;
 
 public class ProducpropertiesModel implements Serializable{
 
@@ -15,6 +18,7 @@ public class ProducpropertiesModel implements Serializable{
 		private String val;
 		private String creator;
 		private Date createdDate;
+		private List<String> props;
 		
 		public int getId(){
 		return id;
@@ -77,5 +81,15 @@ public class ProducpropertiesModel implements Serializable{
 		public void setCreatedDate(Date createdDate){
 		this.createdDate = createdDate;
 	}
+		public String[] getProps() {
+			if(val==null||val==""){
+				
+				return null;
+			}
+			return val.split(",");
+		}
+		public void setProps(List<String> props) {
+			this.props = props;
+		}
 		
 }

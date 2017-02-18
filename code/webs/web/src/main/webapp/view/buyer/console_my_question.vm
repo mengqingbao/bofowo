@@ -9,6 +9,8 @@
       <li #if($type=="question") class="am-active" #end><a href="consumer-console-question.htm">收到的提问</a></li>
       <li #if($type=="answer") class="am-active" #end><a href="consumer-console-answer.htm">我的提问</a></li>
      </ul>
+     
+ #if($!pageInfo.totalItem>0) 
         <form class="am-form">
           <table class="am-table am-table-striped am-table-hover table-main">
             <thead>
@@ -30,9 +32,11 @@
  			 <form id="form1" name="form1"></form>
 			  #pageNavigation($!pageInfo,'form1')
 		  </div>  
-          <hr />
-          <p>注：.....</p>
         </form>
+  #else
+  		<br/><br/><br/><br/><br/>
+		<center>暂时还没有数据~</center>
+  #end 
       </div>
 
     </div>

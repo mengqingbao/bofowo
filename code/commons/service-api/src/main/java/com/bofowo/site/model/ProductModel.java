@@ -31,7 +31,12 @@ public class ProductModel implements Serializable{
 		private String modifier;
 		private int num;
 		private String images;
-		
+		private String categoryAId;
+		private String categoryBId;
+		private int soldNum;
+		private String pcChannel;
+		private String mChannel;
+		private int postId;
 		public int getId(){
 		return id;
 	}
@@ -189,5 +194,41 @@ public class ProductModel implements Serializable{
 		public void setImages(String images){
 		this.images = images;
 	}
+		public String getCategoryAId() {
+			return categoryAId;
+		}
+		public void setCategoryAId(String categoryAId) {
+			this.categoryAId = categoryAId;
+		}
+		public String getCategoryBId() {
+			return categoryBId;
+		}
+		public void setCategoryBId(String categoryBId) {
+			this.categoryBId = categoryBId;
+		}
+		public int getSoldNum() {
+			return soldNum;
+		}
+		public void setSoldNum(int soldNum) {
+			this.soldNum = soldNum;
+		}
+		public String getPcChannel() {
+			return pcChannel;
+		}
+		public void setPcChannel(String pcChannel) {
+			this.pcChannel = pcChannel;
+		}
+		public String getmChannel() {
+			return mChannel;
+		}
+		public void setmChannel(String mChannel) {
+			this.mChannel = mChannel;
+		}
+		public int getPostId() {
+			return postId;
+		}
+		public void setPostId(int postId) {
+			this.postId = postId;
+		}
 		
 }

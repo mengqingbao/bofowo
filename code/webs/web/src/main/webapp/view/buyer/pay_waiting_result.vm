@@ -1,0 +1,27 @@
+<style>
+.table-main {
+	  border: 1px solid #dddddd;
+}
+</style>
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>等待支付结果</small></div>
+    </div>
+
+    
+    <div class="am-g">
+      <div class="am-u-sm-12">
+     	<div class="am-panel ">
+          <div id="collapse-panel-4" class="am-panel-bd am-collapse am-in">
+            	<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            	等待支付
+       	       <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+       	       <input type="submit" value="支付成功" class="am-btn am-btn-default"/> <input type="submit" value="支付失败" class="am-btn am-btn-default"/> 
+     	
+            <br/><br/><br/>
+            <br/><br/><br/>
+            <br/><br/><br/>	
+          </div>
+        </div>
+     	
+      </div>
+    </div>

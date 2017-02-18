@@ -26,10 +26,9 @@ import common.util.StringUtil;
 public class TradeProvider {
 	
 																																																																																																																																																																					
-	public String columns="ID,TITLE,TOTAL,REAL_PAY,STATUS,PIC,NUM,NOTE,PRODUCT_ID,SHOP_PRACE,SELLER_ID,BUYER_ID,SHOP_NAME,PAY_WAY,CREATED_TIME,MODIFY_TIME";
-																																																																																																																																																																						
-	public String property="#{id},#{title},#{total},#{realPay},#{status},#{pic},#{num},#{note},#{productId},#{shopPrace},#{sellerId},#{buyerId},#{shopName},#{payWay},#{createdTime},#{modifyTime}";
+	public String columns="ID,TITLE,TOTAL,REAL_PAY,STATUS,PIC,NUM,NOTE,PRODUCT_ID,SHOP_PRACE,SELLER_ID,BUYER_ID,SHOP_NAME,PAY_WAY,CREATED_TIME,MODIFY_TIME,RECEIVER_NAME,RECEIVER_PROVINCE,RECEIVER_CITY,RECEIVER_AREA,RECEIVER_ADDR,RECEIVER_POSTID,RECEIVER_TELE,EXPRESS_ID,EXPRESS_COMPANY_NAME,ORDER_IDS";
 	
+	public String property="#{id},#{title},#{total},#{realPay},#{status},#{pic},#{num},#{note},#{productId},#{shopPrace},#{sellerId},#{buyerId},#{shopName},#{payWay},#{createdTime},#{modifyTime},#{receiverName},#{receiverProvince},#{receiverCity},#{receiverArea},#{receiverAddr},#{receiverPostid},#{receiverTele},#{expressId},#{expressCompanyName},#{orderIds}";
 	public String getSearchSql(TradeQuery query){
 	String sql="select "+columns+" FROM T_TRADE where 1=1 ";
 	if(!StringUtil.isEmpty(query.getByerId())){
@@ -41,6 +40,7 @@ public class TradeProvider {
 	if(!StringUtil.isEmpty(query.getStatus())){
 		sql+="AND STATUS='"+query.getStatus()+"' ";
 	}
+	sql+="order by CREATED_TIME desc ";
 	sql+="limit #{startRow},#{endRow}";
 	return sql;
 	}

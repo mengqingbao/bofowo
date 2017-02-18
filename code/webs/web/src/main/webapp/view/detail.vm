@@ -55,7 +55,7 @@
                     	#foreach($image in $images)
                     	#if($i==0)
                         <div style="width: 350px;  visibility: hidden; font-size: 0px; line-height: 0;height:350px;">
-                            <img src="item-image-$!{image}.htm" style="width: 100%;">
+                            <img src="item-image-$!{image.id}.htm" style="width: 100%;">
                         </div>
                         #end
                         
@@ -152,7 +152,7 @@
 
     <div class="am-tabs-bd" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
       <div class="am-tab-panel am-fade am-active am-in" id="tab1">
-      		 <table class="am-table am-table-bd am-table-striped admin-content-table">
+      	<!--<table class="am-table am-table-bd am-table-striped admin-content-table">
           <tbody>
           <tr><td>1</td><td>John Clark</td><td><a href="#">Business management</a></td> <td>2016-10-12</td> <td><span class="am-badge am-badge-success">+20</span></td>
             <td>
@@ -185,7 +185,7 @@
             </td>
           </tr>
           </tbody>
-        </table>
+        </table>-->
      		$!{item.content}
       </div>
 

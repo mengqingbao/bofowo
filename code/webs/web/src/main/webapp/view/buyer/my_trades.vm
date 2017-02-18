@@ -4,98 +4,159 @@
 }
 </style>
     <div class="am-cf am-padding">
-      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>已购买的商品</small></div>
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">#springMessage("index")</strong> / <small>#springMessage("my.trade")</small></div>
     </div>
 
     <div class="am-g">
-      <div class="am-u-sm-12 am-u-md-6">
-        <div class="am-form-group am-input-group-sm">
-         <input type="text" class="am-form-field" value="买家ID">
-        </div>
-      </div>
-      <div class="am-u-sm-12 am-u-md-6">
-        <div class="am-form-group am-input-group-sm">
-         <input type="text" class="am-form-field" value="卖家ID">
-        </div>
-      </div>
-      </div>
-      <div class="am-g">
+    <form id="form1" name="form1" action="" method="get">
       <div class="am-u-sm-12 am-u-md-4">
-        <div class="am-form-group">
-          <select data-am-selected="{btnSize: 'sm'}">
-            <option value="option1">交易状态</option>
-            <option value="option2">等待付款</option>
-            <option value="option3">等待发货</option>
-            <option value="option3">买家确认收货</option>
-          </select>
-        </div>
-      </div>
-      <div class="am-u-sm-12 am-u-md-4">
-        <div class="am-form-group">
-          <select data-am-selected="{btnSize: 'sm'}">
-            <option value="option1">所有类别</option>
-            <option value="option2">IT业界</option>
-            <option value="option3">数码产品</option>
-            <option value="option3">笔记本电脑</option>
-            <option value="option3">平板电脑</option>
-            <option value="option3">只能手机</option>
-            <option value="option3">超极本</option>
-          </select>
+        <div class="am-form-group am-input-group-sm">
+         
         </div>
       </div>
       <div class="am-u-sm-12 am-u-md-4">
         <div class="am-input-group am-input-group-sm">
-          <input type="text" class="am-form-field">
+          <input type="text" class="am-form-field" name="keyword" value="$!{pageInfo.keyword}">
           <span class="am-input-group-btn">
-            <button class="am-btn am-btn-default" type="button">搜索</button>
+            <button class="am-btn am-btn-default" type="button">#springMessage("search")</button>
           </span>
         </div>
       </div>
+      </form>
     </div>
 
+<br/>
     <div class="am-g">
       <div class="am-u-sm-12">
-          <table class="am-table am-table-striped am-table-hover table-main">
+          <table class="am-table">
             <thead>
               <tr>
-                <th  class="table-title" width="120px;">图片</th><th class="table-title" width="220px;">标题</th><th class="table-title"  width="60px">单价</th><th  class="table-title"  width="60px">数量</th><th  class="table-title"  width="60px">实付金额</th><th  class="table-title"  width="60px">交易状态</th><th  class="table-title">售后服务</th>
+               <th width="100px"><input type="checkbox" id="allPayCheck" name="allPayCheck"/></th> <th  class="table-title" width="140px;">#springMessage("picture")</th><th class="table-title" width="220px;">#springMessage("item.name")</th><th class="table-title"  width="65px">#springMessage("price")</th><th  class="table-title"  width="65px">#springMessage("number")</th><th  class="table-title"  width="70px">#springMessage("real.pay")</th><th  class="table-title"  width="60px">#springMessage("trade.status")</th><th  class="table-title"></th>
               </tr>
           </thead>
           </table>
-          
+        #if($!pageInfo.totalItem>0)  
           #foreach($item in $!items)
            <table class="am-table am-table-striped table-main">
           <tbody>
           	<tr>
-          		<td>订单号： $!item.id</td><td>创建时间： $dateFormat.toDateStr($item.createdTime)</td><td>店铺：$!item.shopName</td><td>商家ID：$!item.sellerId</td>
+          		
+          		<td>#if($item.status=="0")<input type="checkbox" class="tradeCheckBox tradeBox" id="ck$!{item.id}" name="allTradeCheck"/>#end </td><td>订单号： $!item.id</td><td>创建时间： $dateFormat.toDateStr($item.createdTime)</td><td>店铺：$!item.shopName</td><td>商家ID：$!item.sellerId</td>
           	</tr>
             <tr>
-            	<td colspan= 4>
-            		<table style="width:100%" class="am-table am-table-striped am-table-hover">
+            	<td colspan="4">
+            		<table style="width:100%" class="am-table am-table-hover">
             		#foreach($order in $item.orders)
             		    <tr>
+            		      <td class="am-hide-sm-only" width="20px">#if($item.status=="0")<input type="checkbox" class="orderCheckBox ck$!{item.id} tradeBox" id="ck$!{order.id}" parentId="ck$!{item.id}" name="orderCheck" value="$order.id"/>#end</td>
             			  <td  class="table-title" width="120px"><image src="item-image-$!{StringUtil.getImageId($!{order.pic})}.htm" style="width:100px;height:100px;"></td>
             			  <td  class="table-title" width="220px"><a href="#">$order.title</a></td>
             			  <td  class="table-title" width="60px">$order.price</td>
             			  <td class="am-hide-sm-only" width="60px">$order.num</td>
             			  <td  class="table-title" width="60px">$order.realPay</td>
            				  <td  class="table-title" width="60px">$!TradeUtil.getTradeStatus($!item.status)</td>
-             				 <td  class="table-title">
-             				 #tradeBuyerStep($!item.status,$!item.id,$!order.id)
-             				 </td>
              			</tr>
              		#end
              		
             		</table>
             	</td>
+            	<td style="vertical-align:middle">
+            		 #tradeBuyerStep($!item.status,$!item.id,'0')
+            	</td>
             </tr>
-            <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>总计：$item.realPay</td></tr>
+            <tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>总计：$item.realPay</td></tr>
           </tbody>
         </table>
          #end
-      </div>
-    </div>
- 	<form id="form1" name="form1" action="" method="get"></form>
-	 #pageNavigation($!pageInfo,'form1')
 
-<script src="js/bofowo-trade.js?v3"></script>
+	<input type="button" id="payNowButton" name="payNowButton" value="#springMessage("pay")" class="am-btn am-btn-default am-badge-danger"/>
+    <form action="count-update-trade-by-orderids.htm" method="get" id="orderForm" name="orderForm">
+    	<input type="hidden" name="orderIds" id="orderIds">
+    	
+    </form>
+ 	
+	 #pageNavigation($!pageInfo,'form1')
+  #else
+		<center>#springMessage("no.data")</center>
+  #end 
+        </div>
+    </div>
+<script src="js/bofowo-trade.js?v51"></script>
+
+<script>
+	jQuery(".orderCheckBox").click(function(){
+		var parentId=jQuery(this).attr("parentId");
+		var isParentChecked=true;
+		jQuery("."+parentId).each(function(){
+			
+			if(!jQuery(this).is(':checked')){
+				isParentChecked=false;
+			}
+  		});
+  		
+  		if(isParentChecked){
+  			jQuery("#"+parentId).prop("checked",true);
+  		}else{
+  			jQuery("#"+parentId).prop("checked",false);
+  		}
+  		globalVal();
+	});
+	
+	//交易选项checkbox
+	jQuery(".tradeCheckBox").click(function(){
+		if(jQuery(this).is(":checked")){
+			var clzName=jQuery(this).attr("id");
+			jQuery("."+clzName).each(function(){
+			jQuery(this).prop("checked",true);
+  			});
+		}else{
+			var clzName=jQuery(this).attr("id");
+			jQuery("."+clzName).each(function(){
+			jQuery(this).prop("checked",false);
+  			});
+		}
+		globalVal();
+	});
+	
+	//当前页全选
+	jQuery("#allPayCheck").click(function(){
+		if(jQuery(this).is(":checked")){
+			jQuery("input[type='checkbox']").each(function(){
+				jQuery(this).prop("checked",true);
+			});
+		}else{
+			jQuery("input[type='checkbox']").each(function(){
+				jQuery(this).prop("checked",false);
+			});
+		}
+		globalVal();
+	});
+	
+	function globalVal(){
+		var isAllChecked=true;
+		jQuery(".tradeBox").each(function(){
+				if(!jQuery(this).is(":checked")){
+					isAllChecked=false;
+				}
+			});
+		if(isAllChecked){
+			jQuery("#allPayCheck").prop("checked",true);
+		}else{
+			jQuery("#allPayCheck").prop("checked",false);
+		}
+		
+		var orderIds="";
+		jQuery(".orderCheckBox").each(function(){
+			if(jQuery(this).is(":checked")){
+				orderIds+=jQuery(this).val()+",";
+			}
+			
+		});
+		jQuery("#orderIds").val(orderIds);
+	}
+	
+	jQuery("#payNowButton").click(function(){
+		jQuery("#orderForm").submit();
+	});
+	window.csrf_='${_csrf.token}';
+</script>

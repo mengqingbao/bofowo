@@ -18,3 +18,8 @@ filter:alpha(opacity:0);
     opacity: 0;
     width:260px
 }
+.table-border{border:solid 1px #ddd;}
+.margintop12{margin-top: 12px;}
+.margintop9{margin-top: 9px;}
+.margintop6{margin-top: 6px;}
+.margintop3{margin-top: 3px;}

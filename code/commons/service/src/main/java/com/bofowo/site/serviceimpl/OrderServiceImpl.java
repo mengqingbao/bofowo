@@ -1,6 +1,8 @@
 package com.bofowo.site.serviceimpl;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -37,5 +39,31 @@ public class OrderServiceImpl implements OrderService{
 	@Override
 	public List<OrderModel> getOrderByTid(long id) {
 		return orderMapper.getOrderByTradeId(id);
+	}
+	@Override
+	public List<OrderModel> getOrderByOrderIds(String ids,String username) {
+		Map<String,String> condition=new HashMap<String,String>();
+		condition.put("username", username);
+		condition.put("ids", ids);
+		return orderMapper.getOrderByOrderIds(condition);
+	}
+	@Override
+	public void updateOrderByTid(int id, String tRADE_CLOSE, String userName) {
+		Map<String,String> condition=new HashMap<String,String>();
+		condition.put("tradeId", String.valueOf(id));
+		condition.put("status", tRADE_CLOSE);
+		condition.put("sellerName", userName);
+		orderMapper.updateOrderByTid(condition);
+		
+	}
+	@Override
+	public void updateStatusByids(String orderIds, String wAITING_SELLER_SEND,
+			String userName) {
+		Map<String,String> condition=new HashMap<String,String>();
+		condition.put("orderIds", orderIds);
+		condition.put("status", wAITING_SELLER_SEND);
+		condition.put("sellerName", userName);
+		orderMapper.updateStatusByids(condition);
+		
 	}
 } 

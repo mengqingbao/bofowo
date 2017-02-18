@@ -18,14 +18,14 @@
 		class="org.springframework.beans.factory.config.ext.CspPropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath:bfw.config.properties</value>
+				<value>classpath:application.properties</value>
 			</list>
 		</property>
 	</bean>
 	<bean id="settings" class="org.springframework.beans.factory.config.ext.CspPropertiesFactoryBean">
 		<property name="locations">
 			<list>
-				<value>classpath:bfw.config.properties</value>
+				<value>classpath:application.properties</value>
 			</list>
 		</property>
 	</bean>
@@ -35,9 +35,9 @@
 		<property name="maxUploadSize" value="20460000" />
 	</bean>
 	<bean id="simpleMailSender" class="common.util.SimpleMailSender">
-		<constructor-arg><value>smtp.exmail.qq.com</value></constructor-arg>
-		<constructor-arg><value>information@lyun.com</value></constructor-arg>
-		<constructor-arg><value>Ly123456!</value></constructor-arg>
+		<constructor-arg><value>smtp.exmail.163.com</value></constructor-arg>
+		<constructor-arg><value>m@asset.win</value></constructor-arg>
+		<constructor-arg><value>meng1234567</value></constructor-arg>
 	
 	</bean>
 	

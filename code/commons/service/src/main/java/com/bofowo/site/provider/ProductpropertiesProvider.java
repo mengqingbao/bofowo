@@ -33,6 +33,10 @@ public class ProductpropertiesProvider {
 		if(!StringUtil.isEmpty(query.getType())){
 			sql+="and type='"+query.getType()+"' ";
 		}
+		if(0!=query.getCateId()){
+			sql+="and CATEGORY_ID='"+query.getCateId()+"' ";
+		}
+		
 		sql+="limit #{startRow},#{endRow}";
 		return sql;
 	}
@@ -42,6 +46,9 @@ public class ProductpropertiesProvider {
 		if(!StringUtil.isEmpty(query.getType())){
 			sql+="and type='"+query.getType()+"' ";
 		};
+		if(0!=query.getCateId()){
+			sql+="and CATEGORY_ID='"+query.getCateId()+"' ";
+		}
 		return sql;
 	}
 	

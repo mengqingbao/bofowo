@@ -26,12 +26,13 @@ public class AuthTaken implements UserDetails {
 
 	
 	public AuthTaken(AccountModel member, String nick, String picture,
-			List<String> roles) {
+			List<String> roles,int shopId) {
 		if (member != null) {
 			username = member.getUsername();
 			password = member.getPassword();
 			status = "1";
 			this.nick = nick;
+			this.shopId=shopId;
 			this.setPicture(picture);
 			grantedAuthorities = new ArrayList<GrantedAuthority>();
 			if (null != roles) {

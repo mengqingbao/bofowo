@@ -23,17 +23,20 @@ import com.bofowo.site.model.ProductModel;
 import com.bofowo.site.model.ShopCategoryModel;
 import com.bofowo.site.model.ShopCategoryPropModel;
 import com.bofowo.site.model.ShopModel;
+import com.bofowo.site.model.ShopScrollModel;
 import com.bofowo.site.query.PostemplateQuery;
 import com.bofowo.site.query.ProducpropertiesQuery;
 import com.bofowo.site.query.ProductQuery;
 import com.bofowo.site.query.ShopCategoryPropQuery;
 import com.bofowo.site.query.ShopCategoryQuery;
+import com.bofowo.site.query.ShopScrollQuery;
 import com.bofowo.site.service.PostemplateService;
 import com.bofowo.site.service.ProducpropertiesService;
 import com.bofowo.site.service.ProductService;
 import com.bofowo.site.service.ProductrademarkService;
 import com.bofowo.site.service.ShopCategoryPropService;
 import com.bofowo.site.service.ShopCategoryService;
+import com.bofowo.site.service.ShopScrollService;
 import com.bofowo.site.service.ShopService;
 
 import common.security.login.CurrentUserUtil;
@@ -70,6 +73,8 @@ public class StoreController extends BaseController {
 	private ProductService productService;
 	@Resource
 	private ShopService shopService;
+	@Resource
+	private ShopScrollService shopScrollService;
 	
 
 	@RequestMapping("/shop-detail")
@@ -95,7 +100,9 @@ public class StoreController extends BaseController {
 				query.setTablie("new");
 				List<ProductModel> news=productService.getNewsTop(query);
 				model.put("news",news);
-				
+		//店铺滚动图片
+		List<ShopScrollModel> ssms = shopScrollService.getScrollByshopId(id);
+		model.put("ssms", ssms);
 		return "shopDetail";
 	}
 	
@@ -109,9 +116,9 @@ public class StoreController extends BaseController {
 		}
 		
 		//店铺分类信息
-		List<ShopCategoryModel> cates=shopCategoryService.getListByShopId(shop.getId());
+		List<ShopCategoryModel> cates=shopCategoryService.getListByShopId(shopId);
 		model.put("cates", cates);
-		query.setCateId(cateId);
+		query.setShopCategoryId(cateId);
 		query.setShopId(shopId);
 		query.setPageSize(12);
 		query.setTotalItem(productService.fetchPageCount(query));
@@ -202,6 +209,7 @@ public class StoreController extends BaseController {
 	public String storeCategory(ShopCategoryQuery query,ModelMap model){
 		this.setLayout(LayoutType.SELLER);
 		query.setPageSize(10);
+		query.setSellerId(CurrentUserUtil.getCurrentUserName());
 		query.setTotalItem(shopCategoryService.fetchPageCount(query));
 		List<ShopCategoryModel> items=shopCategoryService.fetchPage(query);
 		model.put("pageInfo", query);
@@ -219,6 +227,8 @@ public class StoreController extends BaseController {
 	@RequestMapping("provider-store-category-insert")
 	public String insertStoreBrand(ShopCategoryModel shopcategory){
 		this.setLayout(LayoutType.SELLER);
+		shopcategory.setSellerId(CurrentUserUtil.getCurrentUserName());
+		shopcategory.setShopId(CurrentUserUtil.getShopId());
 		shopCategoryService.insert(shopcategory);
 		return "redirect:/provider-store-category.htm";
 	}
@@ -250,16 +260,69 @@ public class StoreController extends BaseController {
 	public String shopSetting(ModelMap model){
 		this.setLayout(LayoutType.SELLER);
 		ShopModel shop=shopService.getByUsername(CurrentUserUtil.getCurrentUserName());
-		model.put("item", shop);
+		if(shop!=null){
+			model.put("item", shop);
+		}
 		return "shop/shop_setting";
 	}
+	@RequestMapping("shop-turn-pic")
+	public String shopSettingTurnPic(ModelMap model){
+		this.setLayout(LayoutType.SELLER);
+		ShopModel shop=shopService.getByUsername(CurrentUserUtil.getCurrentUserName());
+		if(shop==null){
+			model.put("hasShop", false);
+		}
+		model.put("shop", shop);
+		Integer shopId=shop.getShopId();
+		ShopScrollQuery ssq=new ShopScrollQuery();
+		ssq.setCurrentUserName(CurrentUserUtil.getCurrentUserName());
+		ssq.setPageSize(10);
+		ssq.setTotalItem(shopScrollService.fetchPageCount(ssq));
+		List<ShopScrollModel> ssms=shopScrollService.fetchPage(ssq);
+		model.put("scrolls", ssms);
+		
+		return "shop/shop_setting_turnpic";
+	}
+	
+	@RequestMapping("shop-scroll-update")
+	public String shopScrollUpdate(ModelMap model,Integer id,String url,String title,String logoImg,String status){
+		ShopModel shopModel=shopService.getByUsername(CurrentUserUtil.getCurrentUserName());
+		if(shopModel==null){
+			return "redirect:shop-setting.htm";
+		}
+		ShopScrollModel scm=null;
+		if(id==null){
+			scm=new ShopScrollModel();
+		
+		}else{
+			scm=shopScrollService.getById(id);
+		}
+		scm.setPic(logoImg);
+		scm.setSellerId(CurrentUserUtil.getCurrentUserName());
+		scm.setTitle(title);
+		scm.setUrl(url);
+		scm.setStatus(status);
+		scm.setShopId(shopModel.getId());
+		if(id==null){
+			shopScrollService.insert(scm);
+		}else{
+			shopScrollService.update(scm);
+		}
+		
+		return "redirect:/shop-turn-pic.htm";
+	}
+	
 	@RequestMapping("shop-update")
 	public String shopUpdate(ModelMap model,ShopModel shop){
 		this.setLayout(LayoutType.SELLER);
+		shop.setSellerId(CurrentUserUtil.getCurrentUserName());
 		ShopModel shopModel=shopService.getByUsername(CurrentUserUtil.getCurrentUserName());
+		if(shopModel==null){
+			shopService.insert(shop);
+		}else{
 		BeanUtils.copyProperties(shop, shopModel);
 		shopService.update(shopModel);
-		
+		}
 		return "redirect:/shop-setting.htm";
 	}
 	
@@ -274,6 +337,7 @@ public class StoreController extends BaseController {
 		this.setLayout(LayoutType.SELLER);
 		query.setPageSize(15);
 		query.setType(type);
+		query.setCurrentUserName(CurrentUserUtil.getCurrentUserName());
 		query.setTotalItem(shopCategoryPropService.fetchPageCount(query));
 		List<ShopCategoryPropModel> scpms=shopCategoryPropService.fetchPage(query);
 		model.put("type", type);
@@ -343,5 +407,6 @@ public class StoreController extends BaseController {
 		model.put("items", items);
 		return "shop/topList";
 	}
+	
 }
 

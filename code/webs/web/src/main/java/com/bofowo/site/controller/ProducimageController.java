@@ -134,4 +134,15 @@ public class ProducimageController extends BaseController{
 	     model.put("json", pim.getId());
 		return "common/json";
 	}
+	@RequestMapping("deleteImage")
+	public String deleteImage(Integer id,ModelMap model){
+		this.setLayout(LayoutType.EMPTY);
+		ProducimageModel pm=producimageService.getById(id);
+		File file=new File(pm.getPath());
+		if(file.exists()){
+			file.delete();
+		}
+		producimageService.del(id);
+		return "common/json";
+	}
 }

@@ -12,6 +12,7 @@
       </div>
     </div>
    <div class="am-g">
+   #if($!pageInfo.totalItem>0) 
       <div class="am-u-sm-12">
           <table class="am-table am-table-striped am-table-hover table-main">
             <thead>
@@ -44,7 +45,10 @@
           <p>注：最多可以设置5个模板</p>
 
       </div>
-
+  #else
+  		<br/><br/><br/><br/><br/>
+		<center>暂时还没有数据~</center>
+  #end 
     </div>
     
         <link href='/css/jquery.qtip.min.css' rel='stylesheet'>

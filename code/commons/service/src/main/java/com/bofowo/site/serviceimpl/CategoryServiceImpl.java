@@ -7,10 +7,12 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.bofowo.site.biz.model.CategoryTree;
 import com.bofowo.site.mapper.CategoryMapper;
 import com.bofowo.site.model.CategoryModel;
 import com.bofowo.site.query.CategoryQuery;
 import com.bofowo.site.service.CategoryService;
+import common.util.BeanUtils;
 
 
 @Component("categoryService")
@@ -42,5 +44,22 @@ public class CategoryServiceImpl implements CategoryService{
 		condition.put("pid", pid);
 		condition.put("type", type);
 		return categoryMapper.getAllByParendid(condition);
+	}
+	@Override
+	public CategoryTree getTreeByCateId(Integer cateId) {
+		CategoryModel cm=this.getById(cateId);
+		CategoryTree ct=new CategoryTree();
+		BeanUtils.copyProperties(cm, ct);
+		initCategoryTree(ct);
+		return ct;
+	}
+	private void initCategoryTree(CategoryTree ct){
+		if(ct.getPid()!=0){
+			CategoryModel cm=this.getById(ct.getPid());
+			CategoryTree ct2=new CategoryTree();
+			BeanUtils.copyProperties(cm, ct2);
+			ct2.setChildCategoryModel(ct2);
+			initCategoryTree(ct2);
+		}
 	}
 } 

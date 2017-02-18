@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class ShopModel implements Serializable{
 
-		private int id;
+		private Integer id;
 		private String name;
 		private String desc;
 		private String logoImg;
@@ -40,7 +40,7 @@ public class ShopModel implements Serializable{
 		private String area;
 		private int categoryId;
 		
-		public int getId(){
+		public Integer getId(){
 		return id;
 	}
 		public String getName(){
@@ -143,7 +143,7 @@ public class ShopModel implements Serializable{
 		return categoryId;
 	}
 		
-		public void setId(int id){
+		public void setId(Integer id){
 		this.id = id;
 	}
 		public void setName(String name){

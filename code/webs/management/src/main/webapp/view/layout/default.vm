@@ -14,7 +14,7 @@
   <meta name="apple-mobile-web-app-title" content="Amaze UI" />
   <link rel="stylesheet" href="assets/css/amazeui.css"/>
   <link rel="stylesheet" href="assets/css/admin.css">
-  <script src="resources/js/jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="js/jquery-1.11.0.min.js"></script> 
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -28,13 +28,13 @@
   </div>
   <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
 
-	<ul class="am-tabs-nav am-nav am-nav-tabs  am-topbar-left am-topbar-nav" style="margin-left:50px;font-size:1.2rem;background:">
+	<!--ul class="am-tabs-nav am-nav am-nav-tabs  am-topbar-left am-topbar-nav" style="margin-left:50px;font-size:1.2rem;background:">
       <li><span style="line-height:50px;color: #0e90d2;">快捷进入：</span></li>
       <li><a href="#tab2">交易管理</a></li>
       <li><a href="#tab2">商品管理</a></li>
       <li><a href="#tab2">店铺管理</a></li>
       <li><a href="#tab2">会员管理</a></li>
-    </ul>
+    </ul -->
 
     <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
      
@@ -60,6 +60,14 @@
     <div class="am-offcanvas-bar admin-offcanvas-bar">
       <ul class="am-list admin-sidebar-list">
         <li><a href="index.htm"><span class="am-icon-home"></span> 首页</a></li>
+        <li class="admin-parent">
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-index-nav'}"><span class="am-icon-th"></span> 页面管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-index-nav">
+            <li><a href="manage-index-content.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 首页内容管理</a></li>
+         	<li><a href="manage-index-scroll.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 轮播图设置</a></li>
+         	
+          </ul>
+        </li>
         <li class="admin-parent">
           <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-trade-nav'}"><span class="am-icon-th"></span> 交易管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
           <ul class="am-list am-collapse admin-sidebar-sub" id="collapse-trade-nav">
@@ -147,16 +155,6 @@
   <hr>
   <p class="am-padding-left">© 2014 404886, Inc.2016 404886公司版权所有.</p>
 </footer>
-
-<!--[if lt IE 9]>
-<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
-<![endif]-->
-
-<!--[if (gte IE 9)|!(IE)]><!-->
-<script src="assets/js/jquery.min.js"></script>
-<!--<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
 <script src="assets/js/app.js"></script>
 <script>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.ProductaglibMapper">
+	<resultMap type="ProductaglibModel" id="ProductaglibModelMap">
+
+		<id property="id" column="ID" />
+		<result property="productId" column="PRODUCT_ID" />
+		<result property="taglib" column="TAGLIB" />
+		<result property="ableData" column="ABLE_DATA" />
+		<result property="taglibId" column="TAGLIB_ID" />
+		<result property="type" column="TYPE_" />
+		<result property="order" column="ORDER_" />
+		<result property="status" column="STATUS" />
+		<result property="sellerId" column="SELLER_ID" />
+		<result property="shopId" column="SHOP_ID" />
+		
+	</resultMap>
+</mapper> 

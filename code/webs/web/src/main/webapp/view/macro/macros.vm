@@ -161,18 +161,20 @@
 		</li>
 	#end	
 #end
-#macro(tradeBuyerStep $key $tradeId $orderId)
+#macro(tradeBuyerStep $key $tradeId $actionType)
 	<ol>
 		#if($key=='0')
 		 <a href="javascript:void(0)" onclick="doAction('1','$tradeId','$orderId')">立即支付</a> 
 		#elseif($key=='1')
          <a href="javascript:void(0)" onclick="sendTip('$tradeId','$orderId')">提醒发货</a> 
 		#elseif($key=='2')
-          <a href="javascript:void(0)"  onclick="doAction('2','$tradeId','$orderId')">查看物流</a> 
+          <a href="javascript:void(0)"  onclick="doAction('2','$tradeId','$orderId')">查看物流</a> <br/><br/>
+          
 		#elseif($key=='3')
-      	 <a href="javascript:void(0)"  onclick="doFinishedAction('4','$tradeId','$orderId')">确认收货</a> 
+			
+      	 <a href="javascript:void(0)"  onclick="doAction('4','$tradeId','finishedAction')">确认收货</a> 
       	 #elseif($key=='4')
-      	 <a href="javascript:void(0)"  onclick="doAction('6','$tradeId','$orderId')">退货</a> 
+      	 <a href="customer-service.htm?tradeId=${tradeId}">售后服务</a> 
 		#elseif($key=='5')
 		  <a href="javascript:void(0)"  onclick="tradeDetail('$tradeId','$orderId')">查看</a> 
 		#elseif($key=='51')
@@ -191,7 +193,7 @@
 		#elseif($key=='6')
 		  <a href="javascript:void(0)" onclick="tradeDetail('$tradeId','$orderId')">查看</a> 
 		#elseif($key=='61')
-		  <a href="javascript:void(0)" onclick="backProduct('62','$tradeId','$orderId')">确认退货</a> 
+		  <a href="javascript:void(0)" onclick="doAction('62','$tradeId','commonStatusAction')">已退货</a> 
 		#elseif($key=='62')
 		   <a href="javascript:void(0)" onclick="tradeDetail('$tradeId','$orderId')">查看</a> 
 		#elseif($key=='63')
@@ -209,7 +211,17 @@
 #macro(tradeSellerStep $key $tradeId $orderId)
 	<ol>
 		#if($key=='1')
-          <a href="javascript:void(0)"  onclick="doExpressAction('2','$tradeId','$orderId')">发货</a> 
+          <a href="javascript:void(0)"  onclick="sendExpress('$tradeId')">发货</a> 
+		#end
+		#if($key=='6')
+          <a href="javascript:void(0)"  onclick="doAction('61','$tradeId','commonStatusAction')">同意</a> 
+          <a href="javascript:void(0)"  onclick="doAction('64','$tradeId','commonStatusAction')">不同意</a>
+		#end
+		#if($key=='62')
+          <a href="javascript:void(0)"  onclick="doAction('63','$tradeId','commonStatusAction')">确认收货</a> 
+		#end
+		#if($key=='63')
+          <a href="javascript:void(0)"  onclick="doAction('64','$tradeId','commonStatusAction')">确认退款</a> 
 		#end
     <ol>
 #end

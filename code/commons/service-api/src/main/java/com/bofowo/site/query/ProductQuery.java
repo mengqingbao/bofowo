@@ -6,9 +6,11 @@ import java.io.Serializable;
 public class ProductQuery extends QueryBase implements Serializable {
 	private String type;
 	private String tablie;
-	private Integer shopId;
-	private Integer cateId;
+	private Integer shopId=0;
+	private Integer cateId=0;
+	private Integer shopCategoryId;
 	private String keyWord;
+	private Integer level=0;
 	public String getType() {
 		return type;
 	}
@@ -49,7 +51,20 @@ public class ProductQuery extends QueryBase implements Serializable {
 		this.keyWord = keyWord;
 	}
 
+	public Integer getLevel() {
+		return level;
+	}
 
-	
+	public void setLevel(Integer level) {
+		this.level = level;
+	}
+
+	public Integer getShopCategoryId() {
+		return shopCategoryId;
+	}
+
+	public void setShopCategoryId(Integer shopCategoryId) {
+		this.shopCategoryId = shopCategoryId;
+	}
 	
 }

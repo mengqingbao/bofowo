@@ -6,6 +6,7 @@ import java.io.Serializable;
 public class BuyerCollectionQuery extends QueryBase implements Serializable {
 	private String sellerId;
 	private String buyerId;
+	private String type;
 	public String getSellerId() {
 		return sellerId;
 	}
@@ -17,6 +18,12 @@ public class BuyerCollectionQuery extends QueryBase implements Serializable {
 	}
 	public void setBuyerId(String buyerId) {
 		this.buyerId = buyerId;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
 	}
 	
 	

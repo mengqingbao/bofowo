@@ -2,7 +2,7 @@
  <script type="text/javascript" charset="utf-8" src="plugins/ueditor/ueditor.all.min.js"> </script>
  <script type="text/javascript" charset="utf-8" src="plugins/ueditor/lang/zh-cn/zh-cn.js"></script>    
  <script type="text/javascript" charset="utf-8" src="js/uploadify/ajaxfileupload.js"></script>  
- <script type="text/javascript" charset="utf-8" src="js/ajaxupload-ly.js?15"></script>      
+ <script type="text/javascript" charset="utf-8" src="js/ajaxupload-ly.js?v31"></script> 
   <div class="am-cf am-padding">
     <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">表单</strong> / <small>商品发布</small></div>
   </div>
@@ -13,12 +13,13 @@
 
     </ul>
  <form action="add-product-detail-insert.htm" method="post" class="am-form am-form-inline">
+ <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
     <div class="am-tabs-bd" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
       <div class="am-tab-panel am-active am-fade am-in" id="tab1">
         <div class="am-g am-margin-top">
           <div class="am-u-sm-4 am-u-md-2 am-text-right">所属类别</div>
           <div class="am-u-sm-8 am-u-md-10">
-            <select data-am-selected="{btnSize: 'sm'}" style="display: none;" name="pid1" id="pid1">
+            <select data-am-selected="{btnSize: 'sm'}" style="display: none;" name="categoryAId" id="pid1">
              
               <option value="">请选择分类</option>
 
@@ -26,7 +27,7 @@
 					<option value="$cate.id" #if($cate1.id==$cate.id) selected #end >$cate.name</option>
 				#end
             </select>
-            <select data-am-selected="{btnSize: 'sm'}" style="display: none;">
+            <select data-am-selected="{btnSize: 'sm'}" style="display: none;" name="categoryBId">
               <option value="$!cate2.id">$!cate2.name</option>
               
             </select>
@@ -73,6 +74,23 @@
           </div>
         </div>
 
+		 <div class="am-g am-margin-top">
+          <div class="am-u-sm-4 am-u-md-2 am-text-right">店铺分类</div>
+          <div class="am-u-sm-8 am-u-md-10">
+            <select data-am-selected="{btnSize: 'sm'}" style="display: none;" name="shopCategoryId" id="shopCategoryId" onchange="reviewDefineProperties(this.value)">
+             
+              <option value="">请选择自定义分类</option>
+				#foreach($cate in $shopCates)
+					<option value="$cate.id">$cate.name</option>
+				#end
+            </select>
+           </div>
+        </div>
+        
+        <div id="shopDefindeProp">
+        
+        </div>
+        
           <div class="am-g am-margin-top">
             <div class="am-u-sm-4 am-u-md-2 am-text-right">
               商品标题
@@ -114,6 +132,32 @@
             <div class="am-hide-sm-only am-u-md-6">*必须大于0，否则自动下架</div>
           </div>
 
+		  <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              邮费模板
+            </div>
+            <div class="am-u-sm-8 am-u-md-4">
+              <select name="postId">
+              	<option value="0">请选择物流模板</option>
+              	#foreach($post in $ptms)
+              		<option value="${post.id}">${post.tittle}</option>
+              	#end
+              </select>
+            </div>
+            <div class="am-u-sm-12 am-u-md-6">选择邮费模板，或者<a href="transport-tool-add.htm">新建</a>运费模板</div>
+          </div>
+          
+           <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              发布渠道
+            </div>
+            <div class="am-u-sm-8 am-u-md-4">
+              <input type="checkbox" name="mChannel" class="cccv" value="false">微信端  &nbsp;&nbsp;&nbsp;
+              <input type="checkbox" name="pcChannel"  class="cccv"  value="false">pc端
+            </div>
+            <div class="am-u-sm-12 am-u-md-6">选择邮费模板，或者<a href="transport-tool-add.htm">新建</a>运费模板</div>
+          </div>
+
           <div class="am-g am-margin-top">
             <div class="am-u-sm-4 am-u-md-2 am-text-right">
               商家自定义编码
@@ -129,7 +173,7 @@
               上传图片 
             </div>
             <div class="am-u-sm-10 am-u-md-10">
-         <div class="am-panel am-panel-default admin-sidebar-panel">
+         <div class="am-panel am-panel-default admin-sidebar-panel" style="height: 120px;">
           <div class="am-panel-bd">
           #set($ids="")
           #foreach($pim in $pims)
@@ -138,11 +182,16 @@
           #else
           	#set($ids=$ids+";"+$pim.id)
           #end
-          	<img src="item-image-${pim.id}.htm" width="90px" height="90px" class="itemImage" imageId="${pim.id}"/>
+          	<div style="float: left;" class="imgdiv" id="imgdiv$pim.id">
+          	 <div style="position:relative;">
+          	    <img src="item-image-${pim.id}.htm" width="90px" height="90px" class="itemImage" imageId="${pim.id}"/>
+          		<input type="button" value="删除" style="position:absolute; top:0; right:0; z-index:99;" onclick="deleteImage('${pim.id}')"/>
+          	</div>
+          	</div>
           #end
           
           #if($pims.size()<6)
-           <a class="fl"><image src="images/add.jpg" height="50px"/><input type="file" id="itemImageFile" name="itemImageFile"  onchange="ajaxFileUpload('$!item.id')"/></a>
+           <div id="fldiv"><a class="fl"><image src="images/add.jpg" height="50px"/><input type="file" id="itemImageFile" name="itemImageFile"  onchange="ajaxFileUpload('$!item.id')"/></a></div>
           #end
           <input type="hidden" name="images" id="images" value="${ids}"/>
          </div>
@@ -207,8 +256,85 @@
     //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
    var ue = UE.getEditor('editor');
    
-           
+   function reviewDefineProperties(id){
+   	  jQuery.ajax({
+  　　	 url: "getShopCateProp.htm?shopCateId="+id,
+  　　	 type: "GET",
+  　　	 dataType:'html',
+  　　	 success:function(data){
+			jQuery("#shopDefindeProp").html(data);
+			 bindClick();
+		 },
+  　　    error:function(er){}
+  	   });
+   }
 </script>
+  <script>
+  function bindClick(){
+  	jQuery("#specAllCheck").bind("click",specAllCheck);
+	jQuery("#propAllCheck").bind("click",propAllCheck); 
+	jQuery(".propCheck").bind("click",propCheckClick);
+	jQuery(".specCheck").bind("click",specCheckClick);
+  }
+  function propCheckClick(){
+  	var isAllChecked=true;
+  	jQuery(".propCheck").each(function(){
+			if(!jQuery(this).is(':checked')){
+				isAllChecked=false;
+			}
+  	});
+  	if(isAllChecked){
+  		jQuery("#propAllCheck").prop("checked",true);
+  	}else{
+  		jQuery("#propAllCheck").prop("checked",false);
+  	}
+  }
+  function specCheckClick(){
+  	var isAllChecked=true;
+  	jQuery(".specCheck").each(function(){
+			if(!jQuery(this).is(':checked')){
+				isAllChecked=false;
+			}
+  	});
+  	if(isAllChecked){
+  		jQuery("#specAllCheck").prop("checked",true);
+  	}else{
+  		jQuery("#specAllCheck").prop("checked",false);
+  	}
+  }
+ function propAllCheck(){
+ 	if(jQuery(this).is(':checked')){
+ 		jQuery(".propCheck").each(function(){
+			jQuery(this).prop("checked",true);
+  			});
+ 	}else{
+ 		jQuery(".propCheck").each(function(){
+			jQuery(this).prop("checked",false);
+  			});
+ 	}
+ }
+ 
+ function specAllCheck(){
+ 	if(jQuery(this).is(':checked')){
+ 		jQuery(".specCheck").each(function(){
+			jQuery(this).prop("checked",true);
+  		 });
+ 	}else{
+ 		jQuery(".specCheck").each(function(){
+			jQuery(this).prop("checked",false);
+  		});
+ 	}
+ }
+ jQuery(".cccv").click(function(){
+ 	if(jQuery(this).is(":checked")){
+ 	   jQuery(this).val("true");
+ 	}else{
+ 		jQuery(this).val("false");
+ 	}
+ 
+ });
+
+ </script>
 <style>
 #editor {
 	font-size: 12px;

@@ -52,50 +52,47 @@
       </div>
     </div>
 
-    <div class="am-g">
+   <div class="am-g">
       <div class="am-u-sm-12">
-        <form class="am-form">
-          <table class="am-table am-table-striped am-table-hover table-main">
+          <table class="am-table am-table-hover">
             <thead>
               <tr>
-                <th class="table-id">商品</th><th class="table-title">单价</th><th class="table-type">数量</th><th class="table-date am-hide-sm-only">实付金额</th><th class="table-set">交易状态</th><th class="table-set">交易操作</th>
+                <th class="table-title" width="210px;"><input type="checkbox" id="allPayCheck" name="allPayCheck"/> &nbsp;&nbsp; 图片</th><th class="table-title" width="240px">商品名称</th><th class="table-title" width="60px">价格</th><th class="table-title" width="60px">数量</th><th>规格</th>
               </tr>
           </thead>
           </table>
-          
-          #foreach($foo in [10000..10005])
-           <table class="am-table am-table-striped am-table-hover table-main">
+        #if($!pageInfo.totalItem>0)
+          #foreach($item in $!items)
+           <table class="am-table am-table-striped table-main">
           <tbody>
           	<tr>
-          		<td>2015-09-12</td><td>订单号： 1334312877470269</td><td>飞利浦旗舰店</td><td>商家ID：lygmqb</td><td><a class="am-btn am-btn-default am-btn-xs am-text-secondary" title="备注"><span class="am-icon-pencil-square-o"></span></a></td>
+          		<td><input type="checkbox" class="tradeCheckBox tradeBox" id="ck$!{item.id}" name="allTradeCheck" value="$item.id"/></td><td colspan="3">订单号： $item.id </td><td>买家ID：$item.buyerId </td><td>卖家ID：$item.sellerId</td><td> <a class="am-btn am-btn-default am-btn-xs am-text-secondary" title="备注"><span class="am-icon-pencil-square-o"></span></a></td><td>日期：</td><td width="120px"></td>
           	</tr>
+          	<tr><td td colspan="7">
+          	<table style="width:100%" class="am-table am-table-hover">
+          	#foreach($order in $item.orders)
             <tr>
-              <td><image src="/img/huawei_wifi.jpg"></td>
-              <td><a href="#">华为E5573联通3G4g无线路由器车载移动随身wifi 电信mifi上网卡宝[交易快照]</a></td>
-              <td>default</td>
-              <td class="am-hide-sm-only">测试1号</td>
-              <td class="am-hide-sm-only">2014年9月4日 7:28:47</td>
+              <td></td>
+              <td width="110px"><image src="item-image-$!{StringUtil.getImageId($!{order.pic})}.htm" style="width:100px;height:100px;"></td>
+              <td width="220px" colspan="2"><a href="#">$order.title</a><br/><br/>$!order.properties</td>
+              <td width="60px">$order.price</td>
+              <td style="width:60px">$order.num</td>
             </tr>
+            #end
+            </table>
+            </td>
+            <td  style="vertical-align:middle">
+            $!TradeUtil.getTradeStatus($!item.status)<br/>
+            </td>
+            </tr>
+            <tr><td colspan="7">收货地址：$!item.receiverProvince $!item.receiverCity $!item.receiverArea $!item.receiverAddr</td><td>总计：$item.realPay</td></tr>
           </tbody>
         </table>
          #end
-          <div class="am-cf">
-  共 15 条记录
-  <div class="am-fr">
-    <ul class="am-pagination">
-      <li class="am-disabled"><a href="#">«</a></li>
-      <li class="am-active"><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#">»</a></li>
-    </ul>
-  </div>
-</div>
-          <hr />
-          <p>注：.....</p>
-        </form>
+			#pageNavigation($!pageInfo,'form1')
+		#else
+			<center>#springMessage("no.data")</center>
+		#end
       </div>
 
     </div>

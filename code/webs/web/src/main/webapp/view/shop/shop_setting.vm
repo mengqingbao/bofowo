@@ -1,6 +1,8 @@
-  <script type="text/javascript" charset-"utf-8" src="js/jsAddress.js"></script>
-  <script src="js/jquery.uploadify-3.1.min.js"></script>
-  <link href='css/uploadify.css' rel='stylesheet'>
+   <script type="text/javascript" charset-"utf-8" src="js/jsAddress.js"></script>
+   <script type="text/javascript" charset="utf-8" src="js/ajaxfileupload.js?v2"></script>  
+   <script type="text/javascript" charset="utf-8" src="js/ajaxupload-ly.js?v18"></script>  
+   <link href='css/uploadify.css' rel='stylesheet'>
+  
    <style>
      .margin30{
      	margin-top:30;
@@ -11,7 +13,7 @@
    </style>
    
     <div class="am-cf am-padding">
-      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>满就减</small></div>
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>店铺设置</small></div>
     </div>
 	
     <div class="am-g">
@@ -30,15 +32,19 @@
       <div class="am-u-sm-12">
       <ul class="am-tabs-nav am-nav am-nav-tabs">
       	<li class="am-active"><a href="javascript:void(0)">店铺设置</a></li>
-      	<li class=""><a href="#tab2">轮播设置</a></li>
+      	<li class=""><a href="shop-turn-pic.htm">轮播设置</a></li>
       </ul>
 	<form action="shop-update.htm" method="post" name="form1">
-        <input type="hidden" name="id" name="id" value="$!item.id"/>
+	    #if(""==$item)
+          <input type="hidden" name="id" name="id" value="0"/>
+        #else
+          <input type="hidden" name="id" name="id" value="$!{item.id}"/>
+        #end
         <table class="am-table am-table-hover table-main">
           
             <tr>
               <td align="right">店铺名称：</td>
-              <td>#if($!item.name=="") <a href="javascript:void(0)">点击修改</a> #else $!item.name #end</td>
+              <td><input type="text" name="name" value="$!item.name"/> </td>
               <td>*填写后不可修改，请仔细确认（必填项）</td>
             </tr>
             
@@ -50,8 +56,12 @@
             
             <tr>
               <td align="right">店铺logo：</td>
-              <td><image src="images/logo.jpg"/><br/>
-              <input type="file" name="logoImg" id="logoImg"></td>
+              <td>
+              <image src="$!{imageService}$!{item.logoImg}" id="shopLogoImage" style="width:180px;height:80px;" /><br/>
+              <input type="file" name="logoImgFile" id="logoImgFile" onchange="shopLogoUpload()">
+              <input type="hidden" name="logoImg" id="logoImg" value="$!{item.logImg}"/>
+              </td>
+              
               <td>*建议使用宽200像素-高60像素<br/>*内的GIF或PNG透明图片；点击下方<br/>*"提交"按钮后生效。</td>
             </tr>
             
@@ -139,12 +149,4 @@
 		addressInit("province","city","area","北京","市辖区","东城区");
 	#end
 	
-	$(function() {
-	$("#logoImg").uploadify({
-		height        : 30,
-		swf           : '/uploadify/uploadify.swf',
-		uploader      : '/uploadify/uploadify.php',
-		width         : 120
-	});
-});
 	</script>

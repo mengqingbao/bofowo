@@ -10,20 +10,15 @@
     
     <div class="am-g">
       <div class="am-u-sm-12">
-        <table class="am-table am-table-striped am-table-hover table-main">
-          <tbody>
-          	<tr>
-          		<td width="30px"><input type="checkbox" name="allCheck" id="allCheck"/></td><td width="120px">图片</td><td width="320px">标题</td><td width="60px">价格</td><td width="60px">数量</td><td>操作</td>
-          	</tr>
-			</tbody>
-        </table>
+		#set($ids="")
         #foreach($item in $items.entrySet())
+        #set($ids=$ids+$item.value.tradeModel.id+",")
         <table class="am-table am-table-striped am-table-hover table-main">
          	<tbody>
          	<tr><td colspan="7"> 店铺：<a href="">$item.key</a></td></tr>
             		#foreach($obj in $item.value.items)
             			<tr>
-            			  <td  width="30px"><input type="checkbox" name="payCheck" class="payCheckBox" price="$!obj.price" itemId="$!obj.id"/>
+            			  <td></td>
             			  <td  class="table-title" width="120px"><a href="item-$!{obj.itemId}-detail.htm"><image src="item-image-$!{obj.pic}.htm" style="width:80px;height:80px"><a/></td>
             			  <td  class="table-title" width="320px"><a href="item-$!{obj.itemId}-detail.htm">$!obj.title</a></td>
             			  <td  class="table-title" width="60px">$!obj.price</td>
@@ -31,30 +26,53 @@
             			  
              				 <td  class="table-title">
              				 	<br/>
-             				 	  <form method="get" action="trade_add.htm" method="get">
-      								<input type="hidden" id="goodsId" name="goodsId" value="$!{obj.id}">
-									<input type="hidden" id="title" name="title" value="$!{obj.name}">
-									<input type="hidden" id="spec" name="spec" value="">
-									<input type="hidden" id="quantity" name="quantity" value="1">
-             				 		<input type="submit" value="立即支付" />
-                 			      </form>
-                 			   	<br/><br/>
-                 			    <a href="javascript:void(0)" class="btn-del" title="删除" id="$!obj.id">删除</a>
+             				 	 
              				 	
              				 
              				 </td>
              				 </tr>
              		#end
-             	
+             <tr><td colspan="5" style="line-height:60px;"> 
+             	  </td><td style="line-height:60px;"></td></tr>	
             <tr><td>&nbsp;</td><td>&nbsp;</td><td>总计：$!item.value.totalPrice</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
           </tbody>
         </table>
+        <input type="hidden" name="ids" value="$!{ids}"/>
         #end
       </div>
 
     </div>
-    <div class="am-g">
+    <form action="save-payway-address.htm" method="post"> 
+     <div class="am-g">
       <div class="am-u-sm-12">
+       收货地址：
+             		<select name="receiverAddrId">
+             			#foreach($addr in $addrs)
+             			<option value="$!{addr.id}">$!{addr.province}$!{addr.city}$!{addr.area}$!{addr.address}  $!{addr.realName}  $!{addr.mobile}</option>
+             			#end
+             		</select>   
+      	</div>
+   	 </div>
+    
+    <div class="am-g am-margin-top">
+          <div class="am-u-sm-12">
+          	支付方式：
+            <div class="am-btn-group" data-am-button="">
+              <label class="am-btn am-btn-default am-btn-xs">
+                <input type="radio" name="payWay" value="alipay"> 支付宝
+              </label>
+              <label class="am-btn am-btn-default am-btn-xs">
+                <input type="radio" name="payWay" value="weixin"> 微信
+              </label>
+              <label class="am-btn am-btn-default am-btn-xs">
+                <input type="radio" name="payWay" value="jd"> 京东金融
+              </label>
+            </div>
+        </div>
+    
+    <div class="am-g am-margin-top">
+      <div class="am-u-sm-12">
+      <br/>
          总计价金额：<span id="showTotalPrice" style="color:red;font-size:14px">0</span>
          <br/><br/>
          
@@ -63,18 +81,16 @@
     
     <div class="am-g">
       <div class="am-u-sm-12">
-       <form action="trade_add_batch.htm" method="post">
-       	 <input type="hidden" name="submitItemIds" id="submitItemIds"/>
+       	 <input type="hidden" name="tradeIds" id="tradeIds" value="$!{ids}"/>
        	 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-         <input type="submit" value="提交订单" class="am-btn am-btn-default"/>
-       </form>
+         <input type="submit" value="确认支付" class="am-btn am-btn-default"/>
       </div>
     </div>
-    
+   </form> 
+   
     <div class="am-g">
       <div class="am-u-sm-12">
-        <hr />
-          <p>注：.....</p>
+		&nbsp;
       </div>
     </div>
     <script type="text/javascript" charset-"utf-8" src="js/jsAddress.js"></script>

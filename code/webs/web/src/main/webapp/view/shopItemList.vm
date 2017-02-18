@@ -64,14 +64,14 @@
             <ul class="am-avg-sm-2 am-avg-md-4 am-avg-lg-3 am-margin gallery-list">
       			#foreach($item in $items)
       			<li>
-       			    <a href="item-1000043-detail.htm">
-         			  <img style="width:175px;height:175px" src="item-image-1000087.htm" alt="">
+       			    <a href="item-$!{item.id}-detail.htm">
+         			  <img style="width:175px;height:175px" src="item-image-${StringUtil.getImageId($item.images)}.htm" alt="">
         			 </a>
                 </li>
                 #end
    			 </ul>
    			 <div class="am-margin am-cf">
-      <hr/>
+
       <form id="form1" name="form1"></form>
   <div class="am-pagination">
   

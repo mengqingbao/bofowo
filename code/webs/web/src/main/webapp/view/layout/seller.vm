@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>lymall 商家中心</title>
-  <meta name="description" content="商家中心">
+  <title>#springMessage("seller.center")</title>
+  <meta name="description" content="#springMessage("seller.center")">
   <meta name="keywords" content="index">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="renderer" content="webkit">
@@ -14,7 +14,11 @@
   <meta name="apple-mobile-web-app-title" content="Amaze UI" />
   <link rel="stylesheet" href="assets/css/amazeui.css"/>
   <link rel="stylesheet" href="assets/css/admin.css">
-  <script type="text/javascript" charset="utf-8" src="js/jquery-1.8.3.min.js"></script>    
+  <script type="text/javascript" charset="utf-8" src="js/jquery-1.11.0.min.js"></script> 
+  <script>
+   var imageService='$!{imageService}';
+   console.log(imageService);
+  </script>   
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -27,50 +31,52 @@
 <div class="am-cf admin-main">
   <!-- sidebar start -->
   <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
-    <div class="am-offcanvas-bar admin-offcanvas-bar">
+    <div class="am-offcanvas-bar admin-offcanvas-bar" style="height:880px;">
       <ul class="am-list admin-sidebar-list">
-        <li class="admin-parent"><a class="am-cf am-collapsed" href="shop-detail.htm?id=100091"><span class="am-icon-home"></span> 进入店铺</a></li>
+        <li class="admin-parent"><a class="am-cf am-collapsed" href="shop-detail.htm?id=100091"><span class="am-icon-home"></span> #springMessage("seller.enter.shop")</a></li>
         <li class="admin-parent">
-          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-product-nav'}"><span class="am-icon-th"></span> 商品管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-product-nav'}"><span class="am-icon-th"></span> #springMessage("seller.item.manage") <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
           <ul class="am-list am-collapse admin-sidebar-sub  am-in" id="collapse-product-nav">
-            <li><a href="provider-item-add.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 商品发布</a></li>
-            <li><a href="provider-item-search-1.htm"><span class="am-icon-puzzle-piece"></span> 出售中的商品</a></li>
-            <li><a href="provider-item-search-2.htm"><span class="am-icon-puzzle-piece"></span> 仓库中的商品</a></li>
-            <li><a href="provider-item-search-3.htm"><span class="am-icon-puzzle-piece"></span> 违规下架的商品</a></li>
-            <li><a href="provider-item-search-4.htm"><span class="am-icon-puzzle-piece"></span> 下架的商品</a></li>
-            <li><a href="provider-item-search-5.htm"><span class="am-icon-puzzle-piece"></span> 待审核的商品</a></li>
-            <li><a href="provider-item-search-6.htm"><span class="am-icon-puzzle-piece"></span> 已拒绝的商品</a></li>
+            <li><a href="provider-item-add.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.create.item")</a></li>
+            <li><a href="provider-item-search-1.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.saling.item")</a></li>
+            <li><a href="provider-item-search-2.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.stored.item")</a></li>
+            <li><a href="provider-item-search-3.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.Illegal.item")</a></li>
+            <li><a href="provider-item-search-4.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.off.shelf")</a></li>
+            <li><a href="provider-item-search-5.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.padding.audit")</a></li>
+            <li><a href="provider-item-search-6.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.refrend.item")</a></li>
             <!--  <li><a href="provider-item-from-taobao.htm"><span class="am-icon-puzzle-piece"></span> 淘宝导入的商品</a></li>
             <li><a href="provider-item-from-jd.htm"><span class="am-icon-puzzle-piece"></span> 京东导入的商品</a></li> -->
           </ul>
         </li>
         <li class="admin-parent">
-          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-trade-nav'}"><span class="am-icon-th"></span> 交易管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-trade-nav'}"><span class="am-icon-th"></span> #springMessage("seller.trade.manage") <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
           <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-trade-nav">
-            <li><a href="my-sale-trades.htm?status=1" class="am-cf"><span class="am-icon-puzzle-piece"></span> 订单管理</a></li>
+            <li><a href="provider-trades.htm?status=1" class="am-cf"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.order.manage")</a></li>
+            <li><a href="provider-trades-service.htm?status=6" class="am-cf"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.refund.manage")</a></li>
+            <li><a href="provider-trades-fix.htm?status=120" class="am-cf"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.careservice.manage")</a></li>
             <!--li><a href="transport-shipments-setting.htm"><span class="am-icon-puzzle-piece"></span> 发货设置</a></li -->
-         	<li><a href="transport-tool.htm"><span class="am-icon-puzzle-piece"></span> 物流模板</a></li>
-          <li><a href="i-geted-rate.htm"><span class="am-icon-puzzle-piece"></span> 评价</a></li>
+         	<li><a href="transport-tool.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.logistics.manage")</a></li>
+          <li><a href="i-geted-rate.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.comment")</a></li>
           </ul>
         </li>
         <li class="admin-parent">
-          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-shop-nav'}"><span class="am-icon-th"></span> 店铺管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-shop-nav'}"><span class="am-icon-th"></span> #springMessage("seller.shop.manage") <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
           <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-shop-nav">
             <!--<li><a href="shop-search.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 店铺类目管理</a></li>-->
-            <li><a href="shop-detail.htm?id=100091"><span class="am-icon-puzzle-piece"></span> 我的店铺</a></li>
-            <li><a href="shop-setting.htm"><span class="am-icon-puzzle-piece"></span> 店铺设置</a></li>
-            <li><a href="provider-store-category.htm"><span class="am-icon-puzzle-piece"></span> 自定义分类</a></li>
-            <li><a href="store-prop-spec.htm"><span class="am-icon-puzzle-piece"></span> 属性规格</a></li>
-            <li><a href="provider-store-brand.htm"><span class="am-icon-puzzle-piece"></span> 品牌列表</a></li>
-            <li><a href="shop-theme-setting.htm"><span class="am-icon-puzzle-piece"></span> 主题设置</a></li>
-            <li><a href="store-bill-setting.htm"><span class="am-icon-puzzle-piece"></span> 结算信息设置</a></li>
+            <li><a href="shop-detail.htm?id=$currentUserUtil.getShopId()"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.my.shop")</a></li>
+            <li><a href="shop-setting.htm"><span class="am-icon-puzzle-piece"></span>  #springMessage("seller.shop.setting")</a></li>
+            <li><a href="provider-store-category.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.category.manage")</a></li>
+            <li><a href="store-prop-spec.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.category.properties")</a></li>
+            <li><a href="provider-store-brand.htm"><span class="am-icon-puzzle-piece"></span>  #springMessage("seller.brand.manage")</a></li>
+            <li><a href="shop-theme-setting.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.theme.manage")</a></li>
+            <li><a href="store-bill-setting.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.finance.account")</a></li>
           </ul>
         </li>
         <li class="admin-parent">
-          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-marketing-nav'}"><span class="am-icon-th"></span> 营销管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-marketing-nav'}"><span class="am-icon-th"></span> #springMessage("seller.marketing.manage") <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
           <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-marketing-nav">
-            <li><a href="store-manjian.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 满就减</a></li>
-            <li><a href="store-free-shipment.htm"><span class="am-icon-puzzle-piece"></span> 满免邮</a></li>
+            <li><a href="store-manjian.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.manjian")</a></li>
+            <li><a href="store-free-shipment.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("seller.free.active")</a></li>
             <!--<li><a href="youhuiqian.htm"><span class="am-icon-puzzle-piece"></span> 优惠券管理</a></li>-->
             
           </ul>
@@ -99,13 +105,13 @@
 </footer>
 
 <!--[if lt IE 9]>
-<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
 <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="assets/js/jquery.min.js"></script>
+
 <!--<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
 <script src="assets/js/app.js"></script>

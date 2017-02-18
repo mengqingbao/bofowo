@@ -22,8 +22,10 @@ import com.bofowo.core.trade.support.handler.BackBizHandler;
 import com.bofowo.core.trade.support.handler.CommonSmsHandler;
 import com.bofowo.core.trade.support.handler.ExpressHandler;
 import com.bofowo.core.trade.support.handler.OrderBizHandler;
+import com.bofowo.core.trade.support.handler.SignHandler;
 import com.bofowo.core.trade.support.handler.TipSellerHandler;
 import com.bofowo.core.trade.support.handler.TradeBizHandler;
+import com.bofowo.core.trade.support.handler.TradeCommonStatusHandler;
 
 /**
  * ClassName:TradeFactory <br/>
@@ -53,6 +55,10 @@ public class TradeHandlerFactory implements HandlerFactory {
 	private TipSellerHandler tipSellerHandler;
 	@Resource
 	private TradeBizHandler tradeBizHandler;
+	@Resource
+	private SignHandler signHandler;
+	@Resource
+	private TradeCommonStatusHandler tradeCommonStatusHandler;
 	private HandlerChain chains;
 	public TradeHandlerFactory(){
 		
@@ -67,6 +73,8 @@ public class TradeHandlerFactory implements HandlerFactory {
 			chains.addHandler(orderBizHandler);
 			chains.addHandler(tipSellerHandler);
 			chains.addHandler(tradeBizHandler);
+			chains.addHandler(signHandler);
+			chains.addHandler(tradeCommonStatusHandler);
 		}
 		chains.setPos(0);
 		return chains;

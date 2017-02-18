@@ -164,7 +164,7 @@ public class CurrentUserUtil {
     	aModel.setPassword(password);
     	List<String> roles = new ArrayList<String>();
     	roles.add("ROLE_member");
-    	UserDetails auth = new AuthTaken(aModel,nick,picture,roles);
+    	UserDetails auth = new AuthTaken(aModel,nick,picture,roles,0);
     	Authentication authentication = new UsernamePasswordAuthenticationToken(
     			auth, password,auth.getAuthorities());
     	context.setAuthentication(authentication);

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>买家中心</title>
-  <meta name="description" content="买家中心">
+  <title>#springMessage("buyer.center")</title>
+  <meta name="description" content="#springMessage("buyer.center")">
   <meta name="keywords" content="index">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta name="renderer" content="webkit">
@@ -14,6 +14,10 @@
   <meta name="apple-mobile-web-app-title" content="Amaze UI" />
   <link rel="stylesheet" href="assets/css/amazeui.css"/>
   <link rel="stylesheet" href="assets/css/admin.css">
+  <script type="text/javascript" charset="utf-8" src="js/jquery-1.11.0.min.js"></script>
+     <script>
+   	window.imageService='${imageService}';
+   </script>
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -26,38 +30,38 @@
 <div class="am-cf admin-main">
   <!-- sidebar start -->
   <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
-    <div class="am-offcanvas-bar admin-offcanvas-bar">
+    <div class="am-offcanvas-bar admin-offcanvas-bar" style="height:460px;">
       <ul class="am-list admin-sidebar-list">
-        <li class="admin-parent"><a class="am-cf am-collapsed" href="purchaser-car.htm"><span class="am-icon-home"></span> 我的购物车</a></li>
+        <li class="admin-parent"><a class="am-cf am-collapsed" href="purchaser-car.htm"><span class="am-icon-home"></span> #springMessage("my.car")</a></li>
         <li class="admin-parent">
-          <a class="am-cf am-collapsed" href="consumer-myitem.htm"><span class="am-icon-puzzle-piece"></span> 已购买的商品 </span></a>
+          <a class="am-cf am-collapsed" href="consumer-myitem.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("payed.product.list") </span></a>
         </li>
       <li class="admin-parent">
-          <a class="am-cf am-collapsed" href="consumer-item-collect.htm"><span class="am-icon-puzzle-piece"></span> 我的收藏 </span></a>
+          <a class="am-cf am-collapsed" href="consumer-item-collect.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("my.favorites")</span></a>
         </li>
         <li class="admin-parent">
-          <a class="am-cf am-collapsed" href="consumer-vip.htm"><span class="am-icon-puzzle-piece"></span> 我的积分 </span></a>
+          <a class="am-cf am-collapsed" href="consumer-vip.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("my.info") </span></a>
         </li>
         <li class="admin-parent">
-          <a class="am-cf am-collapsed" href="consumer-red-envelop.htm?type=mj"><span class="am-icon-puzzle-piece"></span> 我的优惠信息 </span></a>
+          <a class="am-cf am-collapsed" href="consumer-red-envelop.htm?type=mj"><span class="am-icon-puzzle-piece"></span> #springMessage("my.coupon") </span></a>
         </li>
         <li class="admin-parent">
-          <a class="am-cf am-collapsed" href="consumer-rate.htm"><span class="am-icon-puzzle-piece"></span> 评价/咨询 </span></a>
+          <a class="am-cf am-collapsed" href="consumer-rate.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("console.and.comment") </span></a>
         </li>
        <li class="admin-parent">
-          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-marketing-nav'}"><span class="am-icon-th"></span> 退款维权 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+          <a class="am-cf am-collapsed" data-am-collapse="{target: '#collapse-marketing-nav'}"><span class="am-icon-th"></span> #springMessage("refun.and.right") <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
           <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-marketing-nav">
-            <li><a href="consumer_service_refund.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> 我的退款</a></li>
-            <li><a href="consumer-service-care.htm"><span class="am-icon-puzzle-piece"></span> 售后服务</a></li>
-            <li><a href="consumer-service-complaint.htm"><span class="am-icon-puzzle-piece"></span> 我的投诉</a></li>
-            <li><a href="consumer-service-report.htm"><span class="am-icon-puzzle-piece"></span> 我的举报</a></li>
+            <li><a href="consumer_service_refund.htm" class="am-cf"><span class="am-icon-puzzle-piece"></span> #springMessage("my.refun")</a></li>
+            <li><a href="consumer-service-care.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("my.fix")</a></li>
+            <li><a href="consumer-service-complaint.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("my.complaint")</a></li>
+            <li><a href="consumer-service-report.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("my.report")</a></li>
           </ul>
         </li>
          <li class="admin-parent">
-          <a class="am-cf am-collapsed" href="consumer-deliver-address.htm"><span class="am-icon-puzzle-piece"></span> 收货地址管理 </a>
+          <a class="am-cf am-collapsed" href="consumer-deliver-address.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("my.address") </a>
         </li>
          <li class="admin-parent">
-          <a class="am-cf am-collapsed" href="consumer-reset-password.htm"><span class="am-icon-puzzle-piece"></span> 修改密码 </a>
+          <a class="am-cf am-collapsed" href="consumer-reset-password.htm"><span class="am-icon-puzzle-piece"></span> #springMessage("modify.password") </a>
         </li>
       </ul>
 
@@ -91,9 +95,6 @@
 <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
 
-<!--[if (gte IE 9)|!(IE)]><!-->
-<script src="assets/js/jquery.min.js"></script>
-<!--<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
 <script src="assets/js/app.js"></script>
 </body>

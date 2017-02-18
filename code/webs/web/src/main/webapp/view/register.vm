@@ -44,6 +44,7 @@
 			    </ul>
               		<form action="regAction.htm" method="post" name="form1">
 	                <div class="input-group col-md-6" style="width:500px;margin:0 auto">
+	                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 	                  	  <span class="input-group-addon">用 &nbsp;户 &nbsp;名</span>
 	                   	  <input type="text" name="username" class="form-control" placeholder="请输入手机号码快速注册">
 	                </div>

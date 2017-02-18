@@ -14,4 +14,12 @@ public interface BuyerAddressService{
 	public long insert(BuyerAddressModel buyeraddress);
 	public long update(BuyerAddressModel buyeraddress);
 	void clearDefault(String bueryId);
+	/**
+	 * 获得买家收货地址
+	 * @author mqb
+	 * @param username
+	 * @return
+	 * @since JDK 1.7
+	 */
+	public List<BuyerAddressModel> getBuyerAddress(String username);
 } 

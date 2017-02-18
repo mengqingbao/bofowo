@@ -1,10 +1,10 @@
 
     <div class="am-cf am-padding">
-      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>商品管理</small></div>
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">#springMessage("index")</strong> / <small>#springMessage("seller.item.manage")</small></div>
     </div>
-
+<form id="form1" name="form1">
     <div class="am-g">
-      <div class="am-u-sm-12 am-u-md-3">
+      <!--div class="am-u-sm-12 am-u-md-3">
         <div class="am-form-group">
          <span></span><input type="text" class="am-form-field" value="商品编码">
         </div>
@@ -35,35 +35,37 @@
             <option value="option3">超极本</option>
           </select>
         </div>
-      </div>
+      </div-->
       <div class="am-u-sm-12 am-u-md-3">
         <div class="am-input-group am-input-group-sm">
           <input type="text" class="am-form-field">
           <span class="am-input-group-btn">
-            <button class="am-btn am-btn-default" type="button">搜索</button>
+            <button class="am-btn am-btn-default" type="button">#springMessage("search")</button>
           </span>
         </div>
       </div>
-    </div>
-
-
-	<div class="am-g">
+      
       <div class="am-u-sm-12 am-u-md-6">
-        <div class="am-btn-toolbar">
-          <div class="am-btn-group am-btn-group-xs">
-            <a class="am-btn am-btn-default" href="provider-item-add.htm"><span class="am-icon-plus"></span> 新增</a>
-          </div>
+        <div class="am-form-group">
         </div>
       </div>
+      #if($pageInfo.type=='1')
+      <div class="am-u-sm-12 am-u-md-3">
+        <div class="am-form-group">
+           <a class="am-btn am-btn-default" href="provider-item-add.htm"><span class="am-icon-plus"></span> #springMessage("add")</a>
+        </div>
     </div>
-
+    #end
+</form>
+	</div>
     <div class="am-g">
       <div class="am-u-sm-12">
+      #if($!pageInfo.totalItem>0) 
         <form class="am-form">
           <table class="am-table am-table-striped am-table-hover table-main">
             <thead>
               <tr>
-                <th class="table-title">商品标题</th><th class="table-type">价格</th><th class="table-author am-hide-sm-only">库存</th><th class="table-type">总销量</th><th class="table-date am-hide-sm-only">发布时间</th><th class="table-set">操作</th>
+                <th class="table-title">#springMessage("title")</th><th class="table-type">#springMessage("price")</th><th class="table-author am-hide-sm-only">#springMessage("shop.price")</th><th class="table-type">#springMessage("store.number")</th><th class="table-date am-hide-sm-only">#springMessage("create.date")</th><th class="table-set">#springMessage("operation")</th>
               </tr>
           </thead>
           <tbody>
@@ -86,17 +88,17 @@
             #end
           </tbody>
         </table>
-         <form id="form1" name="form1"></form>
   <div class="am-pagination">
   
    #pageNavigation($pageInfo,"form1")
    </div>
-          <hr />
-          <p>注：.....</p>
         </form>
-      </div>
-
-    </div>
+  #else
+  		<br/><br/><br/><br/><br/>
+		<center>#springMessage("no.data")</center>
+  #end 
+</div>
+</div>
     
 <link href='/css/jquery.qtip.min.css' rel='stylesheet'>
 <link href='/css/jquery.qtip.css' rel='stylesheet'>

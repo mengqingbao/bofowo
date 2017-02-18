@@ -1,2 +1,1 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%> 
-<script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8" homePageUrl="http://www.law-cloud.com.cn" homePageName="回到主页"></script>
+404

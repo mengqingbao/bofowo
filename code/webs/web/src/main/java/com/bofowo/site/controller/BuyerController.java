@@ -98,7 +98,7 @@ public class BuyerController extends BaseController{
 	@RequestMapping("consumer-myitem")
 	public String index(TradeQuery query,ModelMap model){
 		this.setLayout(LayoutType.BUYER);
-		query.setCurrentUserName(CurrentUserUtil.getCurrentUserName());
+		query.setByerId(CurrentUserUtil.getCurrentUserName());
 		query.setPageSize(10);
 		query.setTotalItem(traderService.fetchPageCount(query));
 		List<TradeModel> trades=traderService.fetchPage(query);
@@ -118,6 +118,7 @@ public class BuyerController extends BaseController{
 		this.setLayout(LayoutType.BUYER);
 		query.setBuyerId(CurrentUserUtil.getCurrentUserName());
 		query.setPageSize(20);
+		query.setType("1");
 		query.setTotalItem(buyerCollectionService.fetchPageCount(query));
 		model.put("pageInfo", query);
 		List<BuyerCollectionModel>  bcs=buyerCollectionService.fetchPage(query);
@@ -153,6 +154,7 @@ public class BuyerController extends BaseController{
 		this.setLayout(LayoutType.BUYER);
 		query.setBuyerId(CurrentUserUtil.getCurrentUserName());
 		query.setPageSize(20);
+		query.setType("2");
 		query.setTotalItem(buyerCollectionService.fetchPageCount(query));
 		model.put("pageInfo", query);
 		List<BuyerCollectionModel>  bcs=buyerCollectionService.fetchPage(query);
@@ -163,9 +165,19 @@ public class BuyerController extends BaseController{
 	public String consumerVip(ModelMap model){
 		this.setLayout(LayoutType.BUYER);
 		AccountModel account=accountService.getByUsername(CurrentUserUtil.getCurrentUserName());
-		model.put("item",account);
+		model.put("account",account);
 		return "buyer/vip";
 	}
+	
+	@RequestMapping("save-avatar")
+	public String saveAvatar(ModelMap model,String path){
+		AccountModel account=accountService.getByUsername(CurrentUserUtil.getCurrentUserName());
+		account.setAvatar(path);
+		accountService.update(account);
+		model.put("success", true);
+		return "common/json";
+	}
+	
 	@RequestMapping("consumer-red-envelop")
 	public String redEnvelop(MyCouponQuery query,ModelMap model,String type){
 		this.setLayout(LayoutType.BUYER);
@@ -183,11 +195,14 @@ public class BuyerController extends BaseController{
 	@RequestMapping("consumer-deliver-address")
 	public String deliverAddress(BuyerAddressQuery query,ModelMap model){
 		this.setLayout(LayoutType.BUYER);
-		query.setPageSize(50);
-		query.setTotalItem(50);
+		query.setPageSize(20);
 		query.setBuyerId(CurrentUserUtil.getCurrentUserName());
+		query.setTotalItem(buyerAddressService.fetchPageCount(query));
+		
 		List<BuyerAddressModel> addrs=buyerAddressService.fetchPage(query);
 		model.put("items", addrs);
+		model.put("pageInfo", query);
+		model.put("leftnum", query.getPageSize()-query.getTotalItem());
 		return "buyer/deliver_address";
 	}
 	
@@ -209,7 +224,7 @@ public class BuyerController extends BaseController{
 		this.setLayout(LayoutType.BUYER);
 	   BuyerAddressModel bam = buyerAddressService.getById(id);
 	   model.put("item", bam);
-		return "buyer/deliver_address_edit";
+	   return "buyer/deliver_address_edit";
 	}
 	
 	@RequestMapping("consumer-deliver-address-update")
@@ -230,9 +245,11 @@ public class BuyerController extends BaseController{
 		query.setTotalItem(50);
 		query.setPageSize(50);
 		query.setBuyerId(CurrentUserUtil.getCurrentUserName());
+		query.setTotalItem(carService.fetchPageCount(query));
 		List<CarModel> cars=carService.fetchPage(query);
 		Map<String,CarCountItem> items = CarDivideUtil.toDivide(cars);
 		model.put("items", items);
+		model.put("pageInfo", query);
 		return "buyer/car";
 	}
 	
@@ -257,7 +274,7 @@ public class BuyerController extends BaseController{
 		item.setTitle(pm.getName());
 		String imageStr=pm.getImages();
 		if(!StringUtil.isEmpty(imageStr)){
-		item.setPic(imageStr.substring(0, imageStr.indexOf(";")));
+		item.setPic(StringUtil.getImageId(imageStr));
 		}else{
 		item.setPic("000");
 		}

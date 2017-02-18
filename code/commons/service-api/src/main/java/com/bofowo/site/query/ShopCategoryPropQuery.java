@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 public class ShopCategoryPropQuery extends QueryBase implements Serializable {
 	private String type;
-
+	private String shopCateId;
 	public String getType() {
 		return type;
 	}
@@ -15,6 +15,14 @@ public class ShopCategoryPropQuery extends QueryBase implements Serializable {
 		this.type = type;
 	}
 
+	public String getShopCateId() {
+		return shopCateId;
+	}
+
+	public void setShopCateId(String shopCateId) {
+		this.shopCateId = shopCateId;
+	}
+	
 	
 	
 }

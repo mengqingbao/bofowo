@@ -18,7 +18,7 @@ import java.util.List;
 
 public interface ShopMapper{
 																																																																																																																																																																																																																																																																																																																																																										
-	public String columns="ID,NAME,DESC_,LOGO_IMG,CREATOR,URL,OWNER,CREATED_TIME,SERVICE_SCORE_TOTAL,DRAW_SCORE_TOTAL,POST_SCORE_TOTAL,COMMENT_TIMES,LEVEL_,NOTICE,HEADER,LAYOUT,LAYOUT_COLUMN_TOTAL,FOOTER,ORDER_,STATUS,BODY,SHOP_ID,SELLER_ID,TYPE_,ADDRESS,TELE,QQ,WANGWANG,SEO_KEY,SEO_CONTENT,PROVINCE,CITY,AREA,CATEGORY_ID";
+	public String columns="ID,NAME,DESC_,LOGO_IMG,CREATOR,URL,OWNER_,CREATED_TIME,SERVICE_SCORE_TOTAL,DRAW_SCORE_TOTAL,POST_SCORE_TOTAL,COMMENT_TIMES,LEVEL_,NOTICE,HEADER,LAYOUT,LAYOUT_COLUMN_TOTAL,FOOTER,ORDER_,STATUS_,BODY,SHOP_ID,SELLER_ID,TYPE_,ADDRESS,TELE,QQ,WANGWANG,SEO_KEY,SEO_CONTENT,PROVINCE,CITY,AREA,CATEGORY_ID";
 																																																																																																																																																																																																																																																																																																																																																										
 	public String property="#{id},#{name},#{desc},#{logoImg},#{creator},#{url},#{owner},#{createdTime},#{serviceScoreTotal},#{drawScoreTotal},#{postScoreTotal},#{commentTimes},#{level},#{notice},#{header},#{layout},#{layoutColumnTotal},#{footer},#{order},#{status},#{body},#{shopId},#{sellerId},#{type},#{address},#{tele},#{qq},#{wangwang},#{seoKey},#{seoContent},#{province},#{city},#{area},#{categoryId}";
 																																																																																																																																																																																																																																																																																																																																																																																	
@@ -45,7 +45,7 @@ public interface ShopMapper{
 	@Update("update T_SHOP set "+update+" where ID=#{id}")
 	public long update(ShopModel shopModel); 
 	
-	@Select("select * from T_SHOP where OWNER=#{currentUserName}")
+	@Select("select * from T_SHOP where SELLER_ID=#{currentUserName}")
 	@ResultMap(value="com.bofowo.site.mapper.ShopMapper.ShopModelMap")
 	public ShopModel getByUsername(String currentUserName); 
 }
