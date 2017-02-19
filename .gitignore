@@ -87,3 +87,11 @@ code/commons/service/.classpath
 *.component
 
 code/commons/service-web/.classpath
+
+code/webs/management/.classpath
+
+code/commons/service-web/.settings/org.eclipse.wst.common.component
+
+code/webs/common/.classpath
+
+code/commons/service-web/.settings/org.eclipse.wst.common.component
