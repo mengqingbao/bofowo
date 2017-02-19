@@ -8,7 +8,7 @@
        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
        http://www.chinasoft.pro/schema/dubbo 
        http://www.chinasoft.pro/schema/dubbo/dubbo.xsd ">
-       <dubbo:application name="yun-web-public" />
+       <dubbo:application name="bfwmall-web-public" />
 		<!-- zookeeper 祖册中心-->
 	   <dubbo:registry address="zookeeper://172.16.252.141:2181" timeout="30000"/>
 	   

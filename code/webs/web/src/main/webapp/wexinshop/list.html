@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BOFOWO-www.bofowo.com</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="css/sm.css">
+    <link rel="stylesheet" href="css/sm-extend.css">
+	<link rel="stylesheet" href="css/swiper.css">
+  </head>
+  <body ontouchstart>
+   <style type="text/css">
+      .infinite-scroll-preloader {
+        /*margin-top:20px;*/
+      }
+   </style>
+   
+   <div class="page-group">
+      <!-- 你的html代码 -->
+      <div class="page">
+          <header class="bar bar-nav">
+              <a class="button button-link button-nav pull-left" href="./search.html">
+                  <span class="icon icon-search"></span>
+              </a>
+              <a class="button button-link button-nav pull-left" href="./editor.html">
+              	<span class="icon icon-edit"></span>
+              </a>
+              <h1 class="title">BOFOWO</h1>
+               <a class="button button-link button-nav pull-right" href="./menu-list.html">
+              <span class="icon icon-app"></span>
+              </a>
+          </header>
+          <nav class="bar bar-tab">
+              <a class="tab-item external active" href="index.html">
+                  <span class="icon icon-home"></span>
+                  <span class="tab-label">首页</span>
+              </a>
+              <a class="tab-item external" href="cart.html">
+                  <span class="icon icon-cart"></span>
+                  <span class="tab-label">购物车</span>
+              </a>
+              <a class="tab-item external" href="trades.html">
+                  <span class="icon icon-menu"></span>
+                  <span class="tab-label">我的订单</span>
+              </a>
+              <a class="tab-item external" href="setting.html">
+                  <span class="icon icon-me"></span>
+                  <span class="tab-label">个人中心</span>
+              </a>
+          </nav>
+          <div class="content infinite-scroll infinite-scroll-bottom pull-to-refresh-content" data-distance="100"  data-ptr-distance="55">
+          	   <!--下拉刷新-->
+          	   <div class="pull-to-refresh-layer">
+        			<div class="preloader"></div>
+        			<div class="pull-to-refresh-arrow"></div>
+    		   </div>
+          	   <!--下拉刷新 end-->
+              <!-- 这里是页面内容区 -->
+              <div class="page-index list-container">
+                  <div class="card">
+                      <div valign="bottom" class="card-header color-white no-border">BOFOWO新版本上线</div>
+                      <div class="card-content">
+                          <div class="card-content-inner">
+                              <p class="color-gray">发表于 2015/01/15</p>
+                              <p>BOFOWO启用www.bofowo.com域名，新域名新起点。</p>
+                          </div>
+                      </div>
+                      <div class="card-footer">
+                          <a href="#" class="link">赞(8)</a>
+                          <a href="#" class="link">踩(1)</a>
+                          <a href="#" class="link">评论(1)</a>
+                          <a href="#" class="link">收藏(5)</a>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <div valign="bottom" class="card-header color-white no-border">旅途的山</div>
+                      <div class="card-content">
+                          <div class="card-content-inner">
+                              <p class="color-gray">发表于 2015/01/15</p>
+                              <p>此处是内容...</p>
+                          </div>
+                      </div>
+                      <div class="card-footer">
+                          <a href="#" class="link">赞(8)</a>
+                          <a href="#" class="link">踩(1)</a>
+                          <a href="#" class="link">评论(1)</a>
+                          <a href="#" class="link">收藏(5)</a>
+                      </div>
+                  </div>
+                  <div class="card">
+                      <div valign="bottom" class="card-header color-white no-border">旅途的山</div>
+                      <div class="card-content">
+                          <div class="card-content-inner">
+                              <p class="color-gray">发表于 2015/01/15</p>
+                              <p>此处是内容...</p>
+                          </div>
+                      </div>
+                      <div class="card-footer">
+                          <a href="#" class="link">赞(8)</a>
+                          <a href="#" class="link">踩(1)</a>
+                          <a href="#" class="link">评论(1)</a>
+                          <a href="#" class="link">收藏(5)</a>
+                      </div>
+                  </div>
+              </div>
+               <!-- 加载提示符 -->
+         	 <div class="infinite-scroll-preloader">
+              <div class="preloader"></div>
+          	 </div>
+          	 <!--加载提示符 end-->
+          </div>
+      </div>
+  </div>
+     <script type='text/javascript' src='js/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/sm.js' charset='utf-8'></script>
+    <script type='text/javascript' src='js/sm-extend.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='./js/demo.js' charset='utf-8'></script>
+<script>
+    
+   	// 加载flag
+      var loading = false;
+      // 最多可加载的条目
+      var maxItems = 100;
+
+      // 每次加载添加多少条目
+      var itemsPerLoad = 10;
+
+      function addItems(number, lastIndex) {
+              // 生成新条目的HTML
+              var html = '';
+              for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
+                   html=" <div class=\"card\">"+
+                      "<div  valign=\"bottom\" class=\"card-header color-white no-border\">旅途的山"+i+"</div>"+
+                      "<div class=\"card-content\">"+
+                           "<div class=\"card-content-inner\">"+
+                               "<p class=\"color-gray\">发表于 2015/01/15</p>"+
+                               "<p>此处是内容...</p>"+
+                           "</div>"+
+                       "</div>"+
+                       "<div class=\"card-footer\">"+
+                           "<a href=\"#\" class=\"link\">赞(8)</a>"+
+                           "<a href=\"#\" class=\"link\">踩(1)</a>"+
+                           "<a href=\"#\" class=\"link\">评论(1)</a>"+
+                           "<a href=\"#\" class=\"link\">收藏(5)</a>"+
+                       "</div>"+
+                   "</div>";
+                   // 添加新条目
+              $('.infinite-scroll-bottom .list-container').append(html);
+
+              }
+              
+
+          }
+          //预先加载20条
+      //addItems(itemsPerLoad, 0);
+
+      // 上次加载的序号
+
+      var lastIndex = 20;
+		 
+      // 注册'infinite'事件处理函数
+      $(document).on('infinite', '.infinite-scroll-bottom',function(e, id, page) {
+		   console.log("+++++");
+          // 如果正在加载，则退出
+          if (loading) return;
+
+          // 设置flag
+          loading = true;
+
+          // 模拟1s的加载过程
+          setTimeout(function() {
+              // 重置加载flag
+              loading = false;
+
+              if (lastIndex >= maxItems) {
+                  // 加载完毕，则注销无限加载事件，以防不必要的加载
+                  $.detachInfiniteScroll($('.infinite-scroll'));
+                  // 删除加载提示符
+                  $('.infinite-scroll-preloader').remove();
+                  return;
+              }
+
+              // 添加新条目
+              addItems(itemsPerLoad, lastIndex);
+              // 更新最后加载的序号
+              lastIndex = $('.list-container div').length;
+              //容器发生改变,如果是js滚动，需要刷新滚动
+              $.refreshScroller();
+          }, 1000);
+      });
+ 	
+ 	// 添加'refresh'监听器
+$(document).on('refresh', '.pull-to-refresh-content',function(e) {
+    // 模拟2s的加载过程
+    setTimeout(function() {
+        var cardNumber = $(e.target).find('.card').length + 1;
+        var cardHTML = '<div class="card">' +
+                          '<div class="card-header">card'+cardNumber+'</div>' +
+                          '<div class="card-content">' +
+                            '<div class="card-content-inner">' +
+                                '这里是第' + cardNumber + '个card，下拉刷新会出现第' + (cardNumber + 1) + '个card。' +
+                            '</div>' +
+                          '</div>' +
+                      '</div>';
+
+        $(e.target).find('.list-container').prepend(cardHTML);
+        // 加载完毕需要重置
+        $.pullToRefreshDone('.pull-to-refresh-content');
+    }, 2000);
+});
+
+   </script>
+  </body>
+</html>
