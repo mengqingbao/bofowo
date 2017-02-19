@@ -44,3 +44,13 @@ Thumbs.db
 .metadata
 *.iml
 *.ipr
+code/commons/service-api/.settings/org.eclipse.jdt.core.prefs
+code/commons/service-api/.settings/org.eclipse.jdt.core.prefs
+code/commons/service-web/.settings/org.eclipse.jdt.core.prefs
+code/commons/service/.classpath
+code/commons/service/.settings/org.eclipse.wst.common.project.facet.core.xml
+code/webs/common/.settings/org.eclipse.jdt.core.prefs
+code/webs/management/.classpath
+code/webs/management/.settings/org.eclipse.wst.common.component
+code/webs/management/.settings/org.eclipse.wst.common.project.facet.core.xml
+code/webs/web/.settings/org.eclipse.jdt.core.prefs
