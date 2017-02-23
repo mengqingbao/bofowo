@@ -31,7 +31,7 @@ public interface ShopCategoryMapper{
 	@SelectProvider(type=ShopCategoryProvider.class,method="getSearchSqlCount")
 	public int fetchPageCount(ShopCategoryQuery query);
 	
-	@Select("select * from T_SHOP_CATEGORY where ID=#{id}")
+	@Select("select "+columns+" from T_SHOP_CATEGORY where ID=#{id}")
 	@ResultMap(value="com.bofowo.site.mapper.ShopCategoryMapper.ShopCategoryModelMap")
 	public ShopCategoryModel getById(long id);
 	

@@ -245,7 +245,8 @@ public class StoreController extends BaseController {
 	public String updateStoreBrand(ShopCategoryModel shopCategoryModel,Integer id){
 		ShopCategoryModel scm=shopCategoryService.getById(id);
 		BeanUtils.copyProperties(shopCategoryModel, scm);
-		shopCategoryService.update(shopCategoryModel);
+		scm.setShopId(CurrentUserUtil.getShopId());
+		shopCategoryService.update(scm);
 		return "redirect:/provider-store-category.htm";
 	}
 	

@@ -1,9 +1,7 @@
 package com.bofowo.site.model;
 
 import java.io.Serializable;
-import java.util.List;
 
-import com.sun.xml.internal.ws.util.StringUtils;
 
 public class ShopCategoryPropModel implements Serializable {
 

@@ -152,7 +152,7 @@
               发布渠道
             </div>
             <div class="am-u-sm-8 am-u-md-4">
-              <input type="checkbox" name="mChannel" class="cccv" value="false">微信端  &nbsp;&nbsp;&nbsp;
+              <input type="checkbox" name="mChannel" class="cccv" value="false">移动端  &nbsp;&nbsp;&nbsp;
               <input type="checkbox" name="pcChannel"  class="cccv"  value="false">pc端
             </div>
             <div class="am-u-sm-12 am-u-md-6">选择邮费模板，或者<a href="transport-tool-add.htm">新建</a>运费模板</div>

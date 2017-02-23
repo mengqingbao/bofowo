@@ -2,6 +2,33 @@
  <script type="text/javascript" charset="utf-8" src="plugins/ueditor/ueditor.all.min.js"> </script>
  <script type="text/javascript" charset="utf-8" src="plugins/ueditor/lang/zh-cn/zh-cn.js"></script>    
 
+  <link href="css/jquery-ui.css" rel="stylesheet">
+  <script src="js/jquery-ui.js"></script>
+  <style>
+	
+	#icons {
+		margin: 0;
+		padding: 0;
+	}
+	#icons li {
+		margin: 2px;
+		position: relative;
+		padding: 4px 0;
+		cursor: pointer;
+		float: left;
+		list-style: none;
+	}
+	#icons span.ui-icon {
+		float: left;
+		margin: 0 4px;
+	}
+	.fakewindowcontain .ui-widget-overlay {
+		position: absolute;
+	}
+	select {
+		width: 200px;
+	}
+	</style>
   <div class="am-cf am-padding">
     <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">表单</strong> / <small>添加分类</small></div>
   </div>
@@ -16,6 +43,25 @@
       <div class="am-tab-panel am-active am-fade am-in" id="tab1">
         <div class="am-g am-margin-top">
         <form class="am-form" name="myForm" id="myForm" action="provider-store-category-insert.htm" method="post" >
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              渠道:
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end">
+              手机：<input type="radio" name="type" value="m"/> PC端:<input type="radio" name="type" checked value="pc"/>
+            </div>
+          </div>
+          
+          <div class="am-g am-margin-top-sm" id="mDiv">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">
+              ICO:<input type="hidden" name="image" id="image">
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end">
+             <a href="" id="btn-addIco">选择</a>
+              <span id="yulan"></span>
+            </div>
+          </div>
+          
           <div class="am-g am-margin-top-sm">
             <div class="am-u-sm-4 am-u-md-2 am-text-right">
               分类名称:
@@ -54,11 +100,61 @@
     </div>
   </div>
 </div>
+
+<!--dialog start-->
+   <div id="dialog" title="图标选择">
+	
+	<ul id="icons" class="ui-widget ui-helper-clearfix">
+	
+   </ul>
+	
+</div>
+<!--dialog end-->
 <script>
 function formSubmit()
   {
   document.getElementById("myForm").submit()
   }
+
+  $( function() {
+    $( "#dialog" ).dialog({
+	autoOpen: false,
+	width: 400,
+	buttons: [
+		{
+			text: "Ok",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		},
+		{
+			text: "Cancel",
+			click: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	]
+});
+  } );	
+  
+  $( "#btn-addIco" ).click(function( event ) {
+	$( "#dialog" ).dialog( "open" );
+	event.preventDefault();
+	$("#icons").html(createIcoHtml());
+});
+function createIcoHtml(){
+	var html='';
+	for(var i=1;i<91;i++){
+		html+='<li class="ui-state-default ui-corner-all" title=".ui-icon-caret-1-n"><image class="ui-icon" onclick="setIco(this.src)" src="images/ico/64 x 64-'+i+'.png"></li>';
+	}
+	return html;
+}
+function setIco(src){
+	$( "#dialog" ).dialog( "close" );
+	event.preventDefault();
+	jQuery("#yulan").html("<image src='"+src+"'>");
+	jQuery("#image").val(src);
+}
 </script>  
 
   
