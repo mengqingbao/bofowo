@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.OrderProcessMapper">
+	<resultMap type="OrderProcessModel" id="OrderProcessModelMap">
+
+		<id property="id" column="ID" />
+		<result property="tid" column="TID" />
+		<result property="oid" column="OID" />
+		<result property="desc" column="DESC" />
+		<result property="status" column="STATUS" />
+		<result property="createdTime" column="CREATED_TIME" />
+		<result property="statusId" column="STATUS_ID" />
+		
+	</resultMap>
+</mapper> 

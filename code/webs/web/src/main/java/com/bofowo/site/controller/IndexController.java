@@ -2,6 +2,7 @@ package com.bofowo.site.controller;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -17,25 +18,39 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.LocaleResolver;
 
+import com.bofowo.content.BofowoContaint;
 import com.bofowo.site.model.AccountModel;
+import com.bofowo.site.model.BuyerBrowseHistoryModel;
 import com.bofowo.site.model.CategoryModel;
+import com.bofowo.site.model.CouponModel;
 import com.bofowo.site.model.PageColumnModel;
+import com.bofowo.site.model.ProducpropValModel;
+import com.bofowo.site.model.ProducstockModel;
 import com.bofowo.site.model.ProductModel;
 import com.bofowo.site.model.ShopModel;
 import com.bofowo.site.model.ShopScrollModel;
+import com.bofowo.site.model.WebContentModel;
+import com.bofowo.site.query.CouponQuery;
 import com.bofowo.site.query.ProductQuery;
 import com.bofowo.site.query.ShopQuery;
 import com.bofowo.site.query.ShopScrollQuery;
+import com.bofowo.site.query.WebContentQuery;
 import com.bofowo.site.service.AccountService;
+import com.bofowo.site.service.BuyerBrowseHistoryService;
 import com.bofowo.site.service.CategoryService;
+import com.bofowo.site.service.CouponService;
 import com.bofowo.site.service.PageColumnService;
+import com.bofowo.site.service.PageService;
 import com.bofowo.site.service.ProducimageService;
+import com.bofowo.site.service.ProducpropValService;
+import com.bofowo.site.service.ProducstockService;
 import com.bofowo.site.service.ProductService;
 import com.bofowo.site.service.ShopScrollService;
 import com.bofowo.site.service.ShopService;
-
-import common.MD5Util;
+import com.bofowo.site.service.WebContentService;
+import common.security.login.CurrentUserUtil;
 import common.util.StringUtil;
+import common.web.BaseController;
 
 /**
  * 前台首页
@@ -43,7 +58,7 @@ import common.util.StringUtil;
  * 2015-11-17
  */
 @Controller
-public class IndexController {
+public class IndexController extends BaseController{
 	@Resource
 	private ProductService productService;
 	@Resource
@@ -55,11 +70,24 @@ public class IndexController {
 	@Resource
 	private PageColumnService pageColumnService;
 	@Resource
+	private PageService pageService;
+	@Resource
 	private AccountService accountService;
 	@Resource
 	public ShopScrollService shopScrollService;
 	 @Autowired  
 	private LocaleResolver localeResolver;
+	 @Resource
+	 private ProducpropValService producpropValService; 
+	 @Resource
+	 private ProducstockService producstockService;
+	 @Resource
+	 private CouponService couponService;
+	 @Resource
+	 private WebContentService webContentService;
+	 @Resource
+	 private BuyerBrowseHistoryService buyerBrowseHistoryService;
+	 
 	@RequestMapping("/artist-web")
 	public String artist_web(ModelMap model,boolean error){
 		return "search/artist_web";
@@ -71,15 +99,49 @@ public class IndexController {
 		List<CategoryModel> cms=categoryService.getAllByParendid(0, "2");
 		model.put("cates", cms);
 		
-		//店铺列表
+		//新入住店铺列表
 		ShopQuery squery=new ShopQuery();
 		squery.setTotalItem(8);
 		squery.setPageSize(8);
 		
 		List<ShopModel> shops=shopService.fetchPage(squery);
 		model.put("shops",shops);
+		//推荐店铺列表
+		ShopQuery recomdquery=new ShopQuery();
+		recomdquery.setTotalItem(8);
+		recomdquery.setPageSize(8);
 		
-		List<PageColumnModel> columns=pageColumnService.getByPageId(1);
+		List<ShopModel> recomdshops=shopService.fetchPage(recomdquery);
+		model.put("recomdshops",recomdshops);
+		
+		//推荐单盘
+		ProductQuery productQuery=new ProductQuery();
+		productQuery.setTotalItem(6);
+		productQuery.setPageSize(6);
+		productQuery.setTaglib("recommend");
+		List<ProductModel> recommendItem=productService.fetchPage(productQuery);
+		model.put("recommendItems", recommendItem);
+		//抢购
+		productQuery.setTaglib("hot");
+		List<ProductModel> hotItems=productService.fetchPage(productQuery);
+		model.put("hotItems", hotItems);
+		//优惠信息
+		CouponQuery couponQuery=new CouponQuery();
+		couponQuery.setTotalItem(14);
+		couponQuery.setPageSize(14);
+		List<CouponModel> couponModels=couponService.fetchPage(couponQuery);
+		model.put("coupons", couponModels);
+		
+		//首页新闻内容
+		WebContentQuery wcQuery=new WebContentQuery();
+		wcQuery.setTotalItem(4);
+		wcQuery.setPageSize(4);
+		wcQuery.setTablibId(BofowoContaint.WebContent.INDEX_TAGLIB);
+		List<WebContentModel> wcContents=webContentService.fetchPage(wcQuery);
+		model.put("wcContents", wcContents);
+		
+		//首页栏位底部的信息
+		List<PageColumnModel> columns=pageColumnService.getByPageId(2);
 		model.put("columns", columns);
 		
 		ShopScrollQuery ssq=new ShopScrollQuery();
@@ -89,6 +151,11 @@ public class IndexController {
 		//滚动推片
 		List<ShopScrollModel> ssms=shopScrollService.fetchPage(ssq);
 		model.put("ssms", ssms);
+		//首页栏位
+//		PageQuery pageQuery=new PageQuery();
+//		pageQuery.setType("nav");
+//		List<PageModel> pages=pageService.fetchPage(pageQuery);
+//		model.put("pages", pages);
 		return "index";
 	}
 	
@@ -128,6 +195,32 @@ public class IndexController {
 			images.addAll(Arrays.asList(strs));
 		}
 		model.put("images", images);
+		//查询规格属性
+		List<ProducpropValModel> pvms=producpropValService.getListByItemId(id);
+		model.put("pvms", pvms);
+		//规格
+		List<ProducstockModel> pss=producstockService.getListByItemId(id);
+		model.put("pss",pss);
+		
+		//查询店铺详情
+		ShopModel shop=shopService.getById(productModel.getShopId());
+		model.put("shop", shop);
+		
+		//所属分类
+		CategoryModel catA=categoryService.getById(Long.valueOf(productModel.getCategoryAId()));
+		model.put("catea", catA);
+		CategoryModel catB=categoryService.getById(Long.valueOf(productModel.getCategoryBId()));
+		model.put("cateb", catB);
+		CategoryModel catC=categoryService.getById(Long.valueOf(productModel.getCategoryId()));
+		model.put("catec", catC);
+		//记录查看记录
+		BuyerBrowseHistoryModel bvhm=new BuyerBrowseHistoryModel();
+		bvhm.setPid(id);
+		bvhm.setCreatedDate(new Date());
+		bvhm.setLastVisitDate(new Date());
+		bvhm.setTimes(1);
+		bvhm.setBuyerId(CurrentUserUtil.getCurrentUserName());
+		buyerBrowseHistoryService.countVisitTimes(bvhm);
 		return "detail";
 	}
 	

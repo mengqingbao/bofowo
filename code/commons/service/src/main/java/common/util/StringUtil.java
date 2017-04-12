@@ -344,18 +344,24 @@ public class StringUtil
     	
     	
     }
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	public static boolean isNotEmpty(String str) {
+		
+		if(str==null || "".equals(str))
+		{
+			return false;
+		}
+		else
+		{
+			if(!"".equals(str.trim()))
+			{
+			  return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+	}
 }
 

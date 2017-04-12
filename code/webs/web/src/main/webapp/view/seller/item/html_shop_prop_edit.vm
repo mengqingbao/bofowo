@@ -1,0 +1,76 @@
+         
+        <div class="am-g am-margin-top">
+          <div class="am-u-sm-4 am-u-md-2 am-text-right">规格</div>
+          <div class="am-u-sm-6 am-u-md-6">
+            <table class="am-table am-table-striped am-table-hover table-main" id="tableSpec">
+            <thead>
+              <tr>
+                <th width="10%"><input type="checkbox" id="specAllCheck" /></th><th width="20%">名称</th><th width="20%">值</td><th>价格</th><th>库存</th>
+              </tr>
+            </thread>
+            <body>
+            #foreach($item in $items)
+              #foreach($spec in $item.options)
+      			#if($pss.size()<=0)
+      			
+      					<tr><td><input type="checkbox" class="specCheck"/></td><td>$item.name<input type="hidden" value="$item.name"/></td><td>$!{spec}<input type="hidden" value="$!{spec}"/></td><td><input type="text" name=""/></td><td><input type="text" name=""/></td></tr>
+      			
+      			#else
+      				#set($stock=0)
+      				#set($price=0)
+      				#foreach($ps in $pss)
+      				 	#if($spec==$ps.propValue)
+      				 		#set($stock=$ps.stockNum)
+      				 		#set($price=$ps.price)
+      				 	#end
+      				#end
+                 	 #if($price!=0)
+            			<tr><td><input type="checkbox" class="specCheck" checked/></td><td>$item.name<input type="hidden" value="$item.name"/></td><td>$!{spec}<input type="hidden" value="$!{spec}"/></td><td><input type="text" name="" value="$price"/></td><td><input type="text" name="" value="$stock"/></td></tr>
+              		  #else
+              		    <tr><td><input type="checkbox" class="specCheck"/></td><td>$item.name<input type="hidden" value="$item.name"/></td><td>$!{spec}<input type="hidden" value="$!{spec}"/></td><td><input type="text" name=""/></td><td><input type="text" name=""/></td></tr>
+              		  #end
+      			#end
+              #end
+            #end
+            </body>
+            </table>
+           </div>
+           <input type="hidden" name="productSpec" id="productSpec">
+           <div class="am-u-sm-2 am-u-md-3"></div>
+        </div>
+        
+        <div class="am-g am-margin-top">
+          <div class="am-u-sm-4 am-u-md-2 am-text-right">属性</div>
+          <div class="am-u-sm-8 am-u-md-6">
+             <table class="am-table am-table-striped am-table-hover table-main" id="propTable">
+            <thead>
+              <tr>
+                <th width="10%"><input type="checkbox" id="propAllCheck"/></th><th width="30%">名称</th><th>内容</th>
+              </tr>
+            </thread>
+            <body>
+             #foreach($item in $items)
+             	#if($pvms.size()<=0)
+             			<tr><td><input type="checkbox" class="propCheck"/></td><td>$item.name<input type="hidden" value="$item.name"/></td><td><input type="text" name=""/></td></tr>
+             	#else
+             		  #set($propVal="")
+             			#foreach($pvm in $pvms)
+             				#if($pvm.propName==$item.name)
+             				#set($propVal=$pvm.propVal)
+             				#end
+             			#end
+             	 			 #if($propVal!="")
+             				 	<tr><td><input type="checkbox" class="propCheck" checked/></td><td>$item.name<input type="hidden" value="$item.name"/></td><td><input type="text" name="" value="$propVal"/></td></tr>
+             	  			#else
+             	  			 	 <tr><td><input type="checkbox" class="propCheck"/></td><td>$item.name<input type="hidden" value="$item.name"/></td><td><input type="text" name=""/></td></tr>
+             	 			 #end
+              			 
+             	#end
+             #end
+            </body>
+            </table>
+           </div>
+           <input type="hidden" name="productProp" id="productProp"/>
+            <div class="am-u-sm-8 am-u-md-6"></div>
+        </div>
+      

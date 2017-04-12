@@ -15,4 +15,5 @@ public interface ProductService{
 	public long update(ProductModel product);
 	public List<ProductModel> getHotTop(ProductQuery query);
 	public List<ProductModel> getNewsTop(ProductQuery query);
+	public List<ProductModel> getBrowsedProductTop5(String currentUserName);
 } 

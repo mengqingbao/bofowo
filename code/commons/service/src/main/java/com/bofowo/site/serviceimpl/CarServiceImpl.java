@@ -43,4 +43,18 @@ public class CarServiceImpl implements CarService{
 		condition.put("ids", ids);
 		return carMapper.getItemsByIds(condition);
 	}
+	@Override
+	public CarModel getByItemId(Integer id, String username) {
+		Map<String,String> condition=new HashMap<String,String>();
+		condition.put("username", username);
+		condition.put("id", String.valueOf(id));
+		return carMapper.getByItemId(condition);
+	}
+	@Override
+	public void deleteByIdAndUsername(Integer id, String username) {
+		Map<String,String> condition=new HashMap<String,String>();
+		condition.put("username", username);
+		condition.put("id", String.valueOf(id));
+		carMapper.deleteByIdAndUsername(condition);
+	}
 } 

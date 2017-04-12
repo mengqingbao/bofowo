@@ -1,0 +1,83 @@
+ <div class="am-g">
+      <div class="am-u-sm-12" style="min-height:500px;">
+        <form class="am-form">
+          <table class="am-table am-table-striped am-table-hover table-main">
+          <tbody>
+        <tr>
+        <td><label for="status">ID:</label></td>
+        <td>
+            $!{sellerinfo.id}
+        </td>
+     </tr>
+    <tr>
+        <td><label for="status">姓名：</label></td>
+        <td>
+            $!{sellerinfo.name}
+        </td>
+    </tr>
+    <tr>
+        <td><label for="status">身份证号码：</label></td>
+        <td>
+            $!{sellerinfo.idCard}
+        </td>
+    </tr>
+    <tr>
+        <td><label for="status">身份证图片：</label></td>
+        <td>
+            <image src="${imageService}$!{sellerinfo.idCardPic}" style="width:400px;height:230px;"/>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="status">店铺类型</label></td>
+        <td>
+            $!{sellerinfo.type}
+        </td>
+    </tr>
+    <tr>
+        <td><label for="status">当前状态</label></td>
+        <td>
+            $!{sellerinfo.status}
+        </td>
+    </tr>
+    <tr>
+        <td><label for="status">申请时间</label></td>
+        <td>
+            $!{sellerinfo.createdDate}
+        </td>
+    </tr>
+    <tr>
+        <td><label for="status">用户ID</label></td>
+        <td>
+            $!{sellerinfo.userId}
+        </td>
+    </tr>
+    <tr>
+        <td><label for="status">公司执照</label></td>
+        <td>
+           <image src="${imageService}$!{sellerinfo.idCardPic}" style="width:400px;height:230px;"/>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="status">代理公司证明</label></td>
+        <td>
+           <image src="${imageService}$!{sellerinfo.idCardPic}" style="width:400px;height:230px;"/>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="status">一级代理公司证明</label></td>
+        <td>
+           <image src="${imageService}$!{sellerinfo.idCardPic}" style="width:400px;height:230px;"/>
+        </td>
+    </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+<div class="am-u-sm-12" style="min-height:30px;">
+                 <div class="input-group col-md-6" style="width:400px;margin:0 auto;margin-top:30px;">
+                          <a class="am-btn am-btn-primary am-btn-xs" href="sellerinfo_pass.htm?id=$!{sellerinfo.id}&status=1">通过</a> &nbsp; &nbsp;    
+                          <a class="am-btn am-btn-primary am-btn-xs" href="sellerinfo_pass.htm?id=$!{sellerinfo.id}&status=2">驳回</a>
+                    </div>
+</div>
+    </div>

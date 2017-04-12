@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.CategoryMapper">
+	<resultMap type="CategoryModel" id="CategoryModelMap">
+
+		<id property="id" column="ID" />
+		<result property="pid" column="PID" />
+		<result property="name" column="NAME" />
+		<result property="status" column="STATUS" />
+		<result property="createdDate" column="CREATED_DATE" />
+		<result property="creator" column="CREATOR" />
+		<result property="isDelete" column="IS_DELETE" />
+		<result property="type" column="TYPE_" />
+		<result property="desc" column="DESC_" />
+		
+	</resultMap>
+</mapper> 

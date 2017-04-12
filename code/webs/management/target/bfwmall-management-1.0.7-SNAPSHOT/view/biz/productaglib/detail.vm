@@ -1,0 +1,83 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Productaglib Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<table class="table table-striped table-bordered responsive">
+	<tr>
+		<td><label for="status">#springMessage("id")</label></td>
+		<td>
+			$!{productaglib.id}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("productId")</label></td>
+		<td>
+			$!{productaglib.productId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("taglib")</label></td>
+		<td>
+			$!{productaglib.taglib}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("ableData")</label></td>
+		<td>
+			$!{productaglib.ableData}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("taglibId")</label></td>
+		<td>
+			$!{productaglib.taglibId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("type")</label></td>
+		<td>
+			$!{productaglib.type}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("order")</label></td>
+		<td>
+			$!{productaglib.order}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("status")</label></td>
+		<td>
+			$!{productaglib.status}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("sellerId")</label></td>
+		<td>
+			$!{productaglib.sellerId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("shopId")</label></td>
+		<td>
+			$!{productaglib.shopId}
+		</td>
+	</tr>
+</table>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

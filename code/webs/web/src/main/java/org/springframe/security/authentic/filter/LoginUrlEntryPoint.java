@@ -17,7 +17,7 @@ public class LoginUrlEntryPoint extends LoginUrlAuthenticationEntryPoint{
 	            throws IOException, ServletException {
 	        String returnUrl = buildHttpReturnUrlForRequest(request);
 	        request.getSession().setAttribute("redirect", returnUrl);
-	        response.sendRedirect("/login.htm?redirect="+returnUrl);
+	        response.sendRedirect("/login.htm?redirect="+java.net.URLEncoder.encode(returnUrl));
 	        
 	    }
 	 protected String buildHttpReturnUrlForRequest(HttpServletRequest request)

@@ -1,0 +1,59 @@
+<link href="css/page.css" rel="stylesheet" type="text/css" />
+  <div class="page_change">
+     #if($query.currentPage > 1 )
+       #set($beforePage =  $query.currentPage - 1 )
+       #else 
+         #set($beforePage = $query.currentPage)         
+     #end
+     #if($query.currentPage < $query.totalPage)
+        #set($nextPage = $query.currentPage + 1 )
+      #else
+        #set ($nextPage = $query.totalPage )
+     #end
+      <a  class="prev_page btn_status1" href="$query.pageUrl?currentPage=$beforePage" >＜上一页</a>
+      <ul class="page_number">
+      #set($pageList = [1..5])
+   
+      #foreach($page in $pageList)
+          #if($velocityCount > $query.totalPage)
+            #break
+         #end   
+           #if($velocityCount == $query.currentPage)
+               <li class="btn_status3" >$velocityCount</li>
+           #else
+              <li class="btn_status4">$velocityCount</li>
+           #end
+      #end
+        <li>…</li>
+      </ul>
+      <a  class="prev_page btn_status2"  href="$query.pageUrl?currentPage=$nextPage" />下一页＞</a>
+      <a style="margin-left:2px;">共$query.totalPage页，到</a>
+      <input type="text" class="page_input" id="pageNo" />
+      <a>页</a>
+      <a  class="confirm" href="#" onclick="gotoPage()"/> 确定</a>
+      <script type="text/javascript" src="resources/scripts/jquery-1.3.2.min.js"></script>
+      <script type="text/javascript">
+          function gotoPage(){
+        	   var pageNo= document.getElementById("pageNo").value;
+        	  if(pageNo>0&&pageNo<=$query.totalPage){
+        		  window.location="$query.pageUrl?currentPage="+pageNo;
+        	  }
+        	  
+          }
+        
+          $(function(){
+        	  $(".page_number li").each(function(i){
+        		  if(i<=4)       			  
+        		  $(this).click(function(){
+        			  window.location="$query.pageUrl?currentPage="+(i+1);
+        		  });
+        		  	  
+        	  });
+        	  
+          });
+          
+          
+      
+      </script>
+      
+    </div>

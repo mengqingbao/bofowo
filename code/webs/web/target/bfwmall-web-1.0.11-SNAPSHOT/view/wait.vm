@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	font-family:"微软雅黑";
+	font-size:15px;
+	color:#6e7d86;
+	text-decoration:none;
+	list-style:none;}
+	
+img{
+	border:0}
+	
+body{
+	background:#67ace4;}
+	
+.fault{
+	width:448px;
+	height:440px;
+	margin:100px auto;}
+	
+.fault p{
+	font-size:28px;
+	line-height:140px;
+	text-align:center;
+	color:#fff;}
+	
+.back_btn{
+	width:180px;
+	height:40px;
+	line-height:40px;
+	margin:0 134px;
+	background:#fff;
+	font-size:18px;
+	color:#506c83;
+	-moz-border-radius:4px;
+	border-radius:4px;
+	-webkit-border-radius:4px;}
+
+.foot{
+	width:100%;
+	height:207px;
+	margin:0 auto;
+	background:url(../img/common/404_foot.png);
+	position:fixed;
+	bottom:0;}
+	
+</style>
+</head>
+<body>
+
+<div class="fault">
+  <img src="../img/common/404.png" />
+  <p>很抱歉，云律师正忙，请稍后提问！</p>
+    <a href="index.htm"><input type="button" value="返回律云首页" class="back_btn" /></a>
+</div>
+<div class="foot"></div>
+</body>

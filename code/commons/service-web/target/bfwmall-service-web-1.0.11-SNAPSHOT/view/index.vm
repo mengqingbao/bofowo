@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>多才多艺群策网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
+
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="bower_components/jquery/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    #parse("common/head.vm")
+<div class="ch-container">
+    <div class="row">
+
+			<div id="myCarousel" class="carousel slide">
+		   <!-- 轮播（Carousel）指标 -->
+		   <ol class="carousel-indicators">
+			  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			  <li data-target="#myCarousel" data-slide-to="1"></li>
+			  <li data-target="#myCarousel" data-slide-to="2"></li>
+		   </ol>   
+		   <!-- 轮播（Carousel）项目 -->
+		   <div class="carousel-inner">
+			  <div class="item active">
+				 <img src="/img/slider/2.jpg" alt="First slide" width="100%" style="height:400px">
+				 <div class="carousel-caption">标题 1</div>
+			  </div>
+			  <div class="item">
+				 <img src="/img/slider/5.jpg" alt="Second slide" width="100%" style="height:400px">
+				 <div class="carousel-caption">标题 2</div>
+			  </div>
+			  <div class="item">
+				 <img src="/img/slider/4.jpg" alt="Third slide" width="100%" style="height:400px">
+				 <div class="carousel-caption">标题 3</div>
+			  </div>
+		   </div>
+		   <!-- 轮播（Carousel）导航 -->
+		   <a class="carousel-control left" href="#myCarousel" 
+			  data-slide="prev">&lsaquo;</a>
+		   <a class="carousel-control right" href="#myCarousel" 
+			  data-slide="next">&rsaquo;</a>
+		</div> 
+		
+    </div><!--end row-->
+	<div class="row" style="width:1024px;margin:0 auto">
+		<div class="page-header">
+			<p><span class="h3class">成功项目</span></a> <span style="float:right;height:30px;margin-top:15px;"><a href="">查看更多</a></span></p>
+		</div>
+		#foreach($topic in $hotFinishedTopic)
+		<div class="box col-md-4"><!--column start-->
+					<div class="box-inner">
+						<div class="box-content">
+							<p>
+									<a href="topic-detail.htm?id=${topic.id}">
+									   <img src="/img/slider/3.jpg" style="width:100%;height:180px;">
+									   
+									</a>
+									<hr>
+									<a href="#"><h4>金融管理企业软件解决方案</h4></a>
+									<p>参与人数：<a>50</a>人  完成度:100%</p>
+									<p>发起人: <a href="#">张三</a></p>
+							   </p>
+						</div>
+					</div>
+				</div><!--column end-->
+		#end		
+				
+	</div><!--end row-->
+	
+	<div class="row" style="width:1024px;margin:0 auto">
+		<div class="page-header">
+			<p><span class="h3class">策划专家</span></a> <span style="float:right;height:30px;margin-top:15px;"><a href="">查看更多</a></span></p>
+		</div>
+		<table class="table table-bordered" style="background-color: #F9F9F9;">
+			<tbody>
+				<tr>
+				#set($countFlag=0)
+				#foreach($user in $hotPeoples)
+					#set($countFlag=$countFlag+1)
+						<td class="center"><img src="/upload/avatar/huawei.jpg"  style="width:155px;height:155px;" class="dashboard-avatar"></td>
+					#if($countFlag>4)
+						</tr>
+						<tr>
+					#end
+				#end		
+				</tr>
+				
+			</tbody>
+		</table>
+		
+	</div><!--end row-->
+	<div class="row" style="background-color: #F9F9F9;">
+		<div style="width:1024px;margin:0 auto">
+			 <img src="/upload/banner/banner.png"  style="width:100%;height:300px;">
+		</div><!--end row-->
+	</div>
+	<div class="row" style="width:1024px;margin:0 auto">
+		<div class="page-header">
+			<p><span class="h3class">热门项目</span></a> <span style="float:right;height:30px;margin-top:15px;"><a href="">查看更多</a></span></p>
+		</div>
+			#foreach($topic in $hotTopics)
+				<div class="box col-md-4"><!--column start-->
+					<div class="box-inner">
+						<div class="box-content">
+							<p>
+									<a href="topic-detail-${topic.id}.htm">
+									   <img src="/img/slider/4.jpg"  style="width:100%;height:180px;">
+									   
+									</a>
+									<hr>
+									<a href="#"><h4>$topic.title</h4></a>
+									<p>参与人数：<a>50</a>人  完成度:100%</p>
+									<p>发起人: <a href="#">$topic.creator</a></p>
+							   </p>
+						</div>
+					</div>
+				</div><!--column end-->
+			#end	
+			
+	
+	</div>
+    <hr>
+</div>
+    
+
+#include("common/footer.vm")
+
+
+<script>
+$('#myCarousel').carousel({
+  interval: 2000
+})
+$('#myCarousel').carousel('cycle')
+</script>
+<style>
+.h3class{
+font-family:"Microsoft YaHei";
+font-weight: 500;
+line-height: 1.1;
+color: #317EAC;
+font-size: 24px;
+}
+
+</style>
+
+</body>
+</html>

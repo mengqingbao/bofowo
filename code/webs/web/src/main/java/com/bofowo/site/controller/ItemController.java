@@ -21,20 +21,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import cn.bofowo.content.BofowoContent;
 
+import com.bofowo.content.BofowoContaint;
 import com.bofowo.site.biz.model.CategoryTree;
 import com.bofowo.site.model.CategoryModel;
 import com.bofowo.site.model.ProducimageModel;
+import com.bofowo.site.model.ProducpropValModel;
 import com.bofowo.site.model.ProducpropertiesModel;
+import com.bofowo.site.model.ProducstockModel;
 import com.bofowo.site.model.ProductModel;
+import com.bofowo.site.model.ShopCategoryModel;
 import com.bofowo.site.model.ShopCategoryPropModel;
+import com.bofowo.site.provider.ProductpropertiesProvider;
 import com.bofowo.site.query.ProducpropertiesQuery;
 import com.bofowo.site.query.ProductQuery;
 import com.bofowo.site.query.ShopCategoryPropQuery;
 import com.bofowo.site.service.CategoryService;
+import com.bofowo.site.service.CustomerServiceService;
+import com.bofowo.site.service.PostemplateService;
 import com.bofowo.site.service.ProducimageService;
+import com.bofowo.site.service.ProducpropValService;
 import com.bofowo.site.service.ProducpropertiesService;
+import com.bofowo.site.service.ProducstockService;
 import com.bofowo.site.service.ProductService;
 import com.bofowo.site.service.ShopCategoryPropService;
+import com.bofowo.site.service.ShopCategoryService;
 
 import common.constant.WebConstant;
 import common.security.login.CurrentUserUtil;
@@ -65,6 +75,18 @@ public class ItemController extends BaseController {
 	private ShopCategoryPropService shopCategoryPropService;
 	@Resource
 	private ProducpropertiesService producpropertiesService;
+	@Resource
+	private ProducstockService producstockService;
+	@Resource
+	private ProducpropValService producpropValService;
+	@Resource
+	private CustomerServiceService customerServiceService;
+	@Resource
+	private ShopCategoryService shopCategoryService;
+	@Resource
+	private PostemplateService postemplateService;
+	
+	
 	@RequestMapping("product-search")
 	public String productSearch(){
 		return "product/searchProduct";
@@ -91,7 +113,7 @@ public class ItemController extends BaseController {
 	}
 	
 	@RequestMapping("add-product-detail-insert")
-	public String createProductDetailInsert(ProductModel productModel){
+	public String createProductDetailInsert(ProductModel productModel,String productProp,String productSpec){
 		productModel.setCreatedTime(new Date());
 		productModel.setSellerId(CurrentUserUtil.getCurrentUserName());
 		productModel.setShopId(CurrentUserUtil.getShopId());
@@ -99,6 +121,33 @@ public class ItemController extends BaseController {
 		productModel.setStatus("1");
 		productService.insert(productModel);
 		producimageService.updateStatus(productModel.getImages(),productModel.getId());
+		
+		//插入库存
+		if(!StringUtil.isEmpty(productSpec)){
+			String[] strs=productSpec.split("\\|");
+			for(String str:strs){
+				String[] temp=str.split(";");
+				ProducstockModel psm=new ProducstockModel();
+				psm.setItemId(productModel.getId());
+				psm.setPropName(temp[0]);
+				psm.setPropValue(temp[1]);
+				psm.setPrice(Float.valueOf(temp[2]));
+				psm.setStockNum(Integer.valueOf(temp[3]));
+				producstockService.insert(psm);
+			}
+		}
+		//插入属性
+		if(!StringUtil.isEmpty(productProp)){
+			String[] strs=productProp.split("\\|");
+			for(String str:strs){
+				String[] temp=str.split(";");
+				ProducpropValModel pvm=new ProducpropValModel();
+				pvm.setProductId(productModel.getId());
+				pvm.setPropName(temp[0]);
+				pvm.setPropVal(temp[1]);
+				producpropValService.insert(pvm);
+			}
+		}
 		return "redirect:provider-item-add.htm";
 	}
 	
@@ -137,7 +186,7 @@ public class ItemController extends BaseController {
 	
 	@RequestMapping("item-modify-{id}")
 	public String providerItemModify(@PathVariable("id") Integer id,ModelMap model){
-		this.setLayout(LayoutType.UAM);
+		this.setLayout(LayoutType.SELLER);
 		String seller=CurrentUserUtil.getCurrentUserName();
 		
 		ProductModel item=productService.getById(id);
@@ -157,6 +206,9 @@ public class ItemController extends BaseController {
 		
 		model.put("topCates", topCate);
 		
+		//店铺自定义分类
+		List<ShopCategoryModel> shopcates=shopCategoryService.getCatesBySellerId(CurrentUserUtil.getCurrentUserName());
+		model.put("shopCates", shopcates);
 		//查询没有没有被关联上传的图片。
 		List<ProducimageModel> pims=producimageService.fetchImagesByPid(item.getId());
 		model.put("pims", pims);
@@ -165,7 +217,7 @@ public class ItemController extends BaseController {
 	}
 	
 	@RequestMapping("item-update")
-	public String updateProductDetailInsert(ProductModel productModel){
+	public String updateProductDetailInsert(ProductModel productModel,String productProp,String productSpec){
 		productModel.setCreatedTime(new Date());
 		productModel.setSellerId(CurrentUserUtil.getCurrentUserName());
 		productModel.setModifiedTime(new Date());
@@ -173,12 +225,78 @@ public class ItemController extends BaseController {
 		ProductModel oldPM=productService.getById(productModel.getId());
 		BeanUtils.copyProperties(productModel, oldPM);
 		productService.update(oldPM);
+		
+		//清楚先前的属性值。
+		
+		//插入库存
+				producstockService.delByItemId(productModel.getId());
+				if(!StringUtil.isEmpty(productSpec)){
+					String[] strs=productSpec.split("\\|");
+					for(String str:strs){
+						String[] temp=str.split(";");
+						ProducstockModel psm=new ProducstockModel();
+						psm.setItemId(productModel.getId());
+						psm.setPropName(temp[0]);
+						psm.setPropValue(temp[1]);
+						psm.setPrice(Float.valueOf(temp[2]));
+						psm.setStockNum(Integer.valueOf(temp[3]));
+						producstockService.insert(psm);
+					}
+				}
+				//插入属性
+				producpropValService.delByItemId(productModel.getId());
+				if(!StringUtil.isEmpty(productProp)){
+					String[] strs=productProp.split("\\|");
+					for(String str:strs){
+						String[] temp=str.split(";");
+						ProducpropValModel pvm=new ProducpropValModel();
+						pvm.setProductId(productModel.getId());
+						pvm.setPropName(temp[0]);
+						pvm.setPropVal(temp[1]);
+						producpropValService.insert(pvm);
+					}
+				}
 		return this.redirectRefer(request);
 	}
 	
 	@RequestMapping("item-list-cate")
 	public String itemSearchList(ProductQuery query,ModelMap model){
-		query.setPageSize(16);
+		query.setPageSize(20);
+		List<CategoryModel> topCates=categoryService.getAllByParendid(0, BofowoContaint.CategoryType.ITEM_CATE);
+		model.put("topCates", topCates);
+		switch (query.getLevel()) {
+		case 1:
+			model.put("selectedTopId", query.getCateId());
+			List<CategoryModel> secCates=categoryService.getAllByParendid(query.getCateId(), BofowoContaint.CategoryType.ITEM_CATE);
+			model.put("secCates", secCates);
+			if(secCates.size()>0){
+				List<CategoryModel> thridCates=categoryService.getAllByParendid(secCates.get(0).getId(), BofowoContaint.CategoryType.ITEM_CATE);
+				model.put("thridCates", thridCates);
+			}
+			break;
+		case 2:
+			CategoryModel cm=categoryService.getById(query.getCateId());
+			model.put("selectedTopId", cm.getPid());
+			model.put("selectedSecId", cm.getId());
+			List<CategoryModel> secCates2=categoryService.getAllByParendid(cm.getPid(), BofowoContaint.CategoryType.ITEM_CATE);
+			model.put("secCates", secCates2);
+				List<CategoryModel> thridCates=categoryService.getAllByParendid(cm.getId(), BofowoContaint.CategoryType.ITEM_CATE);
+				model.put("thridCates", thridCates);
+			break;
+		case 3:
+			CategoryModel thirdCM=categoryService.getById(query.getCateId());
+			CategoryModel secCM=categoryService.getById(thirdCM.getPid());
+			model.put("selectedTopId", secCM.getPid());
+			model.put("selectedSecId", secCM.getId());
+			model.put("selectedThirdId", thirdCM.getId());
+			List<CategoryModel> secCates3=categoryService.getAllByParendid(secCM.getPid(), BofowoContaint.CategoryType.ITEM_CATE);
+			model.put("secCates", secCates3);
+			List<CategoryModel> thridCates3=categoryService.getAllByParendid(thirdCM.getPid(), BofowoContaint.CategoryType.ITEM_CATE);
+			model.put("thridCates", thridCates3);
+			break;
+		default:
+			break;
+		}
 		//根据父id查询子分类
 		List<CategoryModel> cates=categoryService.getAllByParendid(query.getCateId(), BofowoContent.CATEGORY_ITEM_CATE_TYPE);
 		model.put("cates", cates);
@@ -210,7 +328,7 @@ public class ItemController extends BaseController {
 	public String generateShopHtml(ShopCategoryPropQuery query,ModelMap model){
 		this.setLayout(LayoutType.EMPTY);
 		query.setTotalItem(10);
-		query.setPageSize(10);
+		query.setPageSize(30);
 		//规格查询
 		query.setType("spec");
 		List<ShopCategoryPropModel> list=shopCategoryPropService.getByShopCateId(query);
@@ -222,9 +340,35 @@ public class ItemController extends BaseController {
 		if(props.size()<1&&list.size()<1){
 			return "common/empty";
 		}
-		
-		return "seller/item/html_shop_prop";
+		return "seller/item/html_shop_prop_edit";
 	}
+	
+	@RequestMapping("getEditShopCateProp")
+	public String generateEditShopHtml(ShopCategoryPropQuery query,ModelMap model,Integer itemId){
+		this.setLayout(LayoutType.EMPTY);
+		query.setTotalItem(10);
+		query.setPageSize(30);
+		//规格查询
+		query.setType("spec");
+		List<ShopCategoryPropModel> list=shopCategoryPropService.getByShopCateId(query);
+		model.put("items", list);
+		//属性
+		query.setType("prop");
+		List<ShopCategoryPropModel> props=shopCategoryPropService.getByShopCateId(query);
+		model.put("props", props);
+		if(props.size()<1&&list.size()<1){
+			return "common/empty";
+		}
+		//规格库存查询
+		List<ProducstockModel> pss=producstockService.getListByItemId(itemId);
+		model.put("pss", pss);
+		
+		//属性查询
+		List<ProducpropValModel> pvms=producpropValService.getListByItemId(itemId);
+		model.put("pvms", pvms);
+		return "seller/item/html_shop_prop_edit";
+	}
+	
 	/**
 	 * 获得系统的属性规格html 根据所选的类目id
 	 * generateOrgHtml:(这里用一句话描述这个方法的作用). <br/>

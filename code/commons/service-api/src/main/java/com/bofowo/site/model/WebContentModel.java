@@ -24,6 +24,7 @@ public class WebContentModel implements Serializable{
 		private String seoTittle;
 		private String seoKey;
 		private String seoDesc;
+		private String pic;
 		
 		public int getId(){
 		return id;
@@ -140,5 +141,11 @@ public class WebContentModel implements Serializable{
 		public void setSeoDesc(String seoDesc){
 		this.seoDesc = seoDesc;
 	}
+		public String getPic() {
+			return pic;
+		}
+		public void setPic(String pic) {
+			this.pic = pic;
+		}
 		
 }

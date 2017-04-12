@@ -23,3 +23,19 @@ filter:alpha(opacity:0);
 .margintop9{margin-top: 9px;}
 .margintop6{margin-top: 6px;}
 .margintop3{margin-top: 3px;}
+.button_line{
+	width: 100%;
+    padding: 5px 0;
+    overflow: hidden;
+    border-bottom: 1px dashed #e5e5e5;
+    font-size: 14px;
+    position: relative;
+}
+.cateSelect{
+    line-height:35px;
+    text-align:right;
+    font-size:1.5rem;
+    font-family: "微软雅黑";
+    color: #4a4a4a;	
+    
+}

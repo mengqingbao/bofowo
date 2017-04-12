@@ -16,10 +16,13 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import com.bofowo.site.model.CategoryModel;
 import com.bofowo.site.model.CommentModel;
@@ -28,6 +31,7 @@ import com.bofowo.site.model.OrderModel;
 import com.bofowo.site.model.PostemplateModel;
 import com.bofowo.site.model.ProducimageModel;
 import com.bofowo.site.model.ProductrademarkModel;
+import com.bofowo.site.model.SellerInfoModel;
 import com.bofowo.site.model.ShopCategoryModel;
 import com.bofowo.site.model.TradeModel;
 import com.bofowo.site.query.CategoryQuery;
@@ -43,8 +47,10 @@ import com.bofowo.site.service.OrderService;
 import com.bofowo.site.service.PostemplateService;
 import com.bofowo.site.service.ProducimageService;
 import com.bofowo.site.service.ProductrademarkService;
+import com.bofowo.site.service.SellerInfoService;
 import com.bofowo.site.service.ShopCategoryService;
 import com.bofowo.site.service.TradeService;
+import com.bofowo.util.FileUploadUtil;
 
 import common.constant.WebConstant;
 import common.security.login.CurrentUserUtil;
@@ -86,6 +92,77 @@ public class SellerController extends BaseController{
 	private ShopCategoryService shopCategoryService;
 	@Resource
 	private PostemplateService postemplateService;
+	@Resource
+	private SellerInfoService sellerInfoService;
+
+	@Value("#{settings['upload.lyun.path']}")
+	private String path;
+	
+	@RequestMapping("reg_shop_owner")
+	public String registerSaller(ModelMap model){
+		SellerInfoModel sim=sellerInfoService.getBySellerId(CurrentUserUtil.getCurrentUserName());
+		if(sim==null){
+			return "seller/reg_shop_owner";
+		}else{
+			model.put("shop", sim);
+			return "seller/reg_shop_owner_status";
+		}
+		
+	}
+	
+	@RequestMapping("reg_shop_owner_action")
+	public String registerSallerAction(SellerInfoModel sellerInfo,ModelMap model,@RequestParam("photoImageFile") CommonsMultipartFile photoFile,@RequestParam("companyCertFile") CommonsMultipartFile companyCert,@RequestParam("proxyCertFile") CommonsMultipartFile proxyCert,@RequestParam("fistProxyCertFile") CommonsMultipartFile fistProxyCert){
+		SellerInfoModel sim=sellerInfoService.getBySellerId(CurrentUserUtil.getCurrentUserName());
+		if(sim==null){
+			String filename="";
+			try {
+				filename = FileUploadUtil.saveFile(photoFile, path);
+			} catch (Exception e) {
+				log.error(e.getMessage());
+			}
+			sellerInfo.setIdCardPic(filename);
+			sellerInfo.setUserId(CurrentUserUtil.getCurrentUserName());
+			sellerInfo.setStatus("0");
+			sellerInfo.setCreatedDate(new Date());
+			
+			//保存公司证书
+			String image1 = null;
+			try {
+				image1 = FileUploadUtil.saveFile(companyCert, path);
+			} catch (Exception e) {
+				
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				
+			}
+			sellerInfo.setCompanyCert(image1);
+			
+			//代理证书
+			String image2 = null;
+			try {
+				image2 = FileUploadUtil.saveFile(proxyCert, path);
+			} catch (Exception e) {
+				
+			}
+			sellerInfo.setProxyCert(image2);
+			
+			
+			//一级代理证书
+			String image3 = null;
+			try {
+				image3 = FileUploadUtil.saveFile(fistProxyCert, path);
+			} catch (Exception e) {
+				
+			}
+			sellerInfo.setFistProxyCert(image3);
+			
+			sellerInfoService.insert(sellerInfo);
+			return "seller/reg_shop_owner_status";
+		}else{
+			model.put("shop", sim);
+			return "seller/reg_shop_owner_status";
+		}
+	}
 	
 	@RequestMapping("seller-index")
 	public String index(){

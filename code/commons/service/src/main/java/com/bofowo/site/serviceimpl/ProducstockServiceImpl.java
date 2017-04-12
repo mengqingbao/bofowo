@@ -34,4 +34,15 @@ public class ProducstockServiceImpl implements ProducstockService{
 	public long update(ProducstockModel producstock){
 		return producstockMapper.update(producstock);
 	}
+	@Override
+	public List<ProducstockModel> getListByItemId(Integer itemId) {
+		
+		return producstockMapper.getListByItemId(itemId);
+	}
+	@Override
+	public void delByItemId(int id) {
+		
+		producstockMapper.delByItemId(id);
+		
+	}
 } 

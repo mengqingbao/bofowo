@@ -1,0 +1,97 @@
+	<script type="text/javascript" src="/plugin/ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="/plugin/ckfinder/ckfinder.js"></script>
+	<script type="text/javascript" src="/js/pcasunzip.js"></script>
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Topic Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<form action="member-topic-insert.htm" method="post"> 
+	<table class="table table-striped table-bordered responsive">
+		<tr>
+				<td><label for="status">#springMessage("title")</label></td>
+				<td>
+					<input type="text" name="title" id="title"/>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="status">#springMessage("districtId")</label></td>
+				<td>
+					<select name="province"></select><select name="city"></select><select name="area"></select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="status">#springMessage("pic")</label></td>
+				<td>
+					<input type="text" name="pic" id="pic"/>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="status">#springMessage("industryCategoryId")</label></td>
+				<td>
+					<select name="categoryId" id="categoryId">
+						<option value='0'>--请选择--</option>
+						#foreach($category in $categories)
+						<option value='$category.id'>$category.categoryName</option>
+						#end
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="status">#springMessage("desc")</label></td>
+				<td>
+					<textarea name="desc" cols="50" rows="4"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="status">#springMessage("content")</label></td>
+				<td>
+				<div style="postion:abstract;">
+				<textarea cols="80" id="contentDetail" name="contentDetail" rows="10"></textarea>
+				</div>
+				<script type="text/javascript">
+				//<![CDATA[
+	
+					var obj=CKEDITOR.replace( 'contentDetail',
+						{
+							fullPage : false,
+							extraPlugins : 'docprops'
+						});
+					//CKFinder.SetupCKEditor(obj, '/plugin/ckfinder/')
+				//]]>
+				</script>					
+
+				</td>
+			</tr>
+			<tr>
+				<td><label for="status">是否公开</label></td>
+				<td>
+					<select name="categoryId" id="categoryId">
+						<option value=''>--请选择--</option>
+						<option value='1'>是</option>
+						<option value='0'>否</option>
+					</select>
+				</td>
+			</tr>
+	</table>
+	<input type="submit" value="#springMessage("save")"/>
+</form>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->
+<script>
+new PCAS("province","city","area");
+</script>

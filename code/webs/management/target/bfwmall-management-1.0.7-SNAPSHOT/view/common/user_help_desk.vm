@@ -1,0 +1,13 @@
+﻿<div class="sidebar_box">
+                <div class="sidebar_box_top"></div>
+                <div class="sidebar_box_content">
+                <h3>#springMessage("user-help-desk")</h3>
+                <img src="images/info.png" alt="" title="" class="sidebar_icon_right" />
+                <p>
+					<br/>
+					TELE:+86 021-88888888
+					<br/>&nbsp;
+                </p>                
+                </div>
+                <div class="sidebar_box_bottom"></div>
+</div>

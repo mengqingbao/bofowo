@@ -39,7 +39,7 @@ public class PluginController extends BaseController{
 	@Autowired
 	private ProducimageService producimageService;
 	
-	@RequestMapping("ueditor")
+	@RequestMapping("uedit")
 	public String editorController(HttpServletRequest request,ModelMap model){
 		this.setLayout(LayoutType.EMPTY);
 		String exec = new ActionEnter(request,path).exec();

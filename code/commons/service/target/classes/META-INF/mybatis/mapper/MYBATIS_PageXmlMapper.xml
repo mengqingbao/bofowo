@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.PageMapper">
+	<resultMap type="PageModel" id="PageModelMap">
+
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="url" column="URL" />
+		<result property="type" column="TYPE_" />
+		<result property="status" column="STATUS" />
+		<result property="layout" column="LAYOUT" />
+		<result property="themeId" column="THEME_ID" />
+		<result property="content" column="CONTENT" />
+		<result property="header" column="HEADER" />
+		<result property="footer" column="FOOTER" />
+		
+	</resultMap>
+</mapper> 

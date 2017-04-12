@@ -13,6 +13,6 @@ public interface ShopCategoryService{
 	public void del(long id);
 	public long insert(ShopCategoryModel shopcategory);
 	public long update(ShopCategoryModel shopcategory);
-	public List<ShopCategoryModel> getListByShopId(int id);
+	public List<ShopCategoryModel> getListByShopId(int id,String type);
 	public List<ShopCategoryModel> getCatesBySellerId(String currentUserName);
 } 

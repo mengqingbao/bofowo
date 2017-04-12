@@ -11,6 +11,7 @@ public class ProductQuery extends QueryBase implements Serializable {
 	private Integer shopCategoryId;
 	private String keyWord;
 	private Integer level=0;
+	private String taglib;
 	public String getType() {
 		return type;
 	}
@@ -66,5 +67,12 @@ public class ProductQuery extends QueryBase implements Serializable {
 	public void setShopCategoryId(Integer shopCategoryId) {
 		this.shopCategoryId = shopCategoryId;
 	}
-	
+
+	public String getTaglib() {
+		return taglib;
+	}
+
+	public void setTaglib(String taglib) {
+		this.taglib = taglib;
+	}
 }

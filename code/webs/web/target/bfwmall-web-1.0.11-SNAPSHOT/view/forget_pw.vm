@@ -1,0 +1,294 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" href="/css/find_passWord/forget_pw.css"
+	type="text/css" media="all" />
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<script src="js/common/jquery-1.8.2.min.js"></script>
+
+</head>
+
+
+
+
+<body>
+	#parse("/head.vm")
+	<div class="forget_pw">
+		<div class="forget_pw_title">
+			<p class="forget_pw_title_01">忘记密码</p>
+			<p class="forget_pw_title_02" id="forget_pw_title_02">
+				<a href="index.htm">返回首页></a>
+			</p>
+		</div>
+
+		<div class="forget_pw_cont">
+			<p class="forget_pw_cont_title">请按照以下步骤操作</p>
+
+			<ul class="forget_pw_cont_tab">
+				<li class="status2" style="margin: 0;" id="step3">第三步：完成</li>
+				<li class="status2" id="step2">第二步：设置新密码</li>
+				<li class="status1" id="step1">第一步：身份验证</li>
+			</ul>
+
+			<div class="forget_pw_cont_tab_cont" id="page1">
+				<div class="tab_cont_row">
+					<p class="input_label">账号：</p>
+					<input type="text" class="input_text" id="userName" /> <input
+						type="button" value="获取短信验证码" class="forget_pw_btn position1"
+						id="findPassWord_code_btn" />
+				</div>
+
+				<div class="tab_cont_row">
+					<p class="input_label">验证码：</p>
+					<input type="text" class="input_text" id="findPassWord_code" />
+				</div>
+
+				<input type="button" value="下一步" class="forget_pw_btn position2"
+					id="next1" /><span id="messageCode" style="color: red"></span>
+			</div>
+
+
+			<div class="forget_pw_cont_tab_cont" id="page2">
+				<div class="tab_cont_row">
+					<p class="input_label">账号：</p>
+					<p class="account">
+						<input type="text" class="input_text" id="account"
+							readonly="readonly"></input>
+					</p>
+				</div>
+
+				<div class="tab_cont_row">
+					<p class="input_label">请设置新密码：</p>
+					<input type="password" class="input_text" id="passWord" />
+				</div>
+
+				<div class="tab_cont_row">
+					<p class="input_label">确认密码：</p>
+					<input type="password" class="input_text" id="passwordagain" />
+				</div>
+
+				<input type="button" value="保存新密码" class="forget_pw_btn position2"
+					id="checkForm" /><span id="messagePass" style="color: red"></span>
+
+			</div>
+
+
+			<div class="forget_pw_cont_tab_cont" id="page3">
+				<p class="new_pw_setOK">恭喜您，您设置的新密码已生效，请牢记！</p>
+				<input type="button" value="确定" class="forget_pw_btn position2"
+					onclick="window.location.href='/logintest.htm'" />
+			</div>
+			`
+
+
+
+		</div>
+
+	</div>
+	#parse("/bottom.vm")
+</body>
+<script>
+	var findPassWord_flag = "true";
+	var check_findPassWord_code = "false";
+	var wait = 60;
+	var countDown = 1;
+	$(function() {
+		$("#page1").show();
+		$("#page2").hide();
+		$("#page3").hide();
+	});
+
+	function updateNum() {
+		if (countDown == 0 || countDown == 60) {
+
+			$("#findPassWord_code_btn").removeAttr("disabled");
+			findPassWord_flag = "true";
+			check_findPassWord_code = "false";
+			if (countDown == 0) {
+				$("#userName").attr("disabled",false);
+				$("#findPassWord_code_btn").val("点击重新发送");
+			}
+		} else {
+			var temp = countDown + "秒后可以重新发送";
+			$("#findPassWord_code_btn").val(temp);
+			countDown = countDown - 1;
+		}
+	}
+	function test() {
+		$("#findPassWord_code_btn").attr("disabled", "disabled");
+		setInterval('updateNum()', 1000);
+
+	}
+	function checkImgCode() {
+		jQuery.ajax({
+			url : "send-findPassWord-sms.htm",
+			async : false,
+			data : "userName=" + $("#userName").val() + "&countTime="
+					+ countDown,
+			type : "POST",
+			dataType : "text",
+			success : function(msg) {
+				msg = Number(msg);
+				if (msg > 0) {
+					countDown = msg;
+				} else {
+					countDown = 60;
+				}
+
+				test();
+			}
+
+		});
+		findPassWord_flag = "false";
+
+		return false;
+
+		// 获得Event对象，用于兼容IE和FireFox
+		function getEvent() {
+			return window.event || arguments.callee.caller.arguments[0];
+		}
+
+	}
+
+	$(function() {
+
+		//可以发送验证码
+		$("#findPassWord_code_btn").click(function() {
+			var userName = $("#userName").val();
+			if (userName == "" || userName.length == 0) {
+				alert("账号不能为空！");
+				return false;
+			}
+			jQuery.ajax({
+				url : "checkUserName.htm",
+				type : "POST",
+				dataType : "text",
+				data : "userName=" + userName,
+				success : function(result) {
+					if (result == "true") {
+						$("#userName").attr("disabled",true);
+						checkImgCode();
+					} else {
+						alert("该账号不存在！");
+
+					}
+				}
+
+			});
+
+			return false;
+
+		});
+		//分层
+		$("#next1").click(
+				function() {
+
+					var userName = $("#userName").val();
+
+					jQuery
+							.ajax({
+								url : "findMyPassWordToToken.htm",
+								type : "POST",
+								dataType : "text",
+								data : "userName=" + userName + "&code="
+										+ $("#findPassWord_code").val()
+										+ "&status=0",
+								success : function(result) {
+									if (result > 0) {
+										//   $("#showtitle").html("找回密码成功");
+										//	$("#check_phone").show();
+										//$("#check_index").hide();
+										$("#page1").hide();
+										$("#page2").show();
+										$("#page3").hide();
+										$("#step1").removeClass("status1");
+										$("#step1").addClass("status2");
+										$("#step2").removeClass("status2");
+										$("#step2").addClass("status1");
+										userName = $("#userName").val();
+										$("#account").val(userName);
+										return false;
+
+									} else if (result < 0) {
+										$("#messageCode").html("请输入正确的账号或者验证码")
+												.fadeIn(1000).delay(1000)
+												.fadeOut(1000);
+										return false;
+
+									} else if (result == "error") {
+										$("#messageCode")
+												.html("找回密码失败,请联系管理员！").fadeIn(
+														1000).delay(1000)
+												.fadeOut(1000);
+										return false;
+
+									}
+								}
+
+							});
+
+				});
+
+		//
+		$("#checkForm").click(
+				function() {
+					var reg = /^[A-Za-z0-9]{6,16}$/;
+					var userName = $("#account").val();
+					var password = $("#passWord").val();
+					var passwordagain = $("#passwordagain").val();
+					if (password == "" || passwordagain == "") {
+						cleanForm();
+						$("#messagePass").html("密码不能为空!").fadeIn(1000).delay(
+								1000).fadeOut(1000);
+					} else if (!reg.test(password)) {
+						cleanForm();
+						$("#messagePass").html("密码是6~16位数字或字母").fadeIn(1000)
+								.delay(1000).fadeOut(1000);
+					} else if (password != passwordagain) {
+						cleanForm();
+						$("#messagePass").html("对不起！两次输入的密码不一致！请重新输入！").fadeIn(
+								1000).delay(1000).fadeOut(1000);
+					} else {
+						jQuery.ajax({
+							url : "changeMyPassWord2.htm",
+							type : "POST",
+							dataType : "text",
+							data : "userName=" + userName + "&password="
+									+ password,
+							success : function(result) {
+								if (result == "true") {
+									$("#page1").hide();
+									$("#page2").hide();
+									$("#page3").show();
+									$("#step2").removeClass("status1");
+									$("#step2").addClass("status2");
+									$("#step3").removeClass("status2");
+									$("#step3").addClass("status1");
+									return true;
+								} else {
+									alert("密码设置失败！");
+									return false;
+
+								}
+							}
+
+						});
+					}
+				});
+	});
+
+	//清空密码
+	function cleanForm() {
+		$("#passWord").val("");
+		$("#passwordagain").val("");
+		return false;
+	}
+
+	/*        $("input:password").bind("copy cut paste",function(e){
+	 return false;
+	 }); */
+</script>
+</html>

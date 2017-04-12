@@ -15,6 +15,7 @@ import com.bofowo.site.query.BuyerCollectionQuery;
 import org.apache.ibatis.mapping.StatementType;
 
 import java.util.List;
+import java.util.Map;
 
 public interface BuyerCollectionMapper{
 																																																																																																																														
@@ -45,7 +46,11 @@ public interface BuyerCollectionMapper{
 	@Update("update T_BUYER_COLLECTION set "+update+" where ID=#{id}")
 	public long update(BuyerCollectionModel buyercollectionModel);
 
-	@Select("select * from T_BUYER_COLLECTION where ITEM_ID=#{id}")
+	@Select("select * from T_BUYER_COLLECTION where ITEM_ID=#{id} and BUYER_ID='${buyerId}' and TYPE_='2'")
 	@ResultMap(value="com.bofowo.site.mapper.BuyerCollectionMapper.BuyerCollectionModelMap")
-	public BuyerCollectionModel getByProductId(Integer id); 
+	public BuyerCollectionModel getByProductId(Map condition);
+
+	@Select("select * from T_BUYER_COLLECTION where SHOP_ID=#{id} and BUYER_ID='${buyerId}' and TYPE_='1'")
+	@ResultMap(value="com.bofowo.site.mapper.BuyerCollectionMapper.BuyerCollectionModelMap")
+	public BuyerCollectionModel getByShopId(Map condition); 
 }

@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+	<title>#if($page_title) $page_title #else 弹出页面标题 #end</title>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+    #parse("/control/css.vm")
+    #parse("/control/javascript.vm")
+</head>
+<body>
+    <div class="page" style="margin:0">
+        <div class="page_body_content">
+            $screen_content
+        </div>
+	</div>
+    #parse("/control/showMessage.vm")
+</body>
+</html>

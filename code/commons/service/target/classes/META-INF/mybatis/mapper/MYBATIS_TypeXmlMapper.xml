@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.TypeMapper">
+	<resultMap type="TypeModel" id="TypeModelMap">
+
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="order" column="ORDER_" />
+		<result property="desc" column="DESC_" />
+		<result property="status" column="STATUS" />
+		<result property="isDelete" column="IS_DELETE" />
+		
+	</resultMap>
+</mapper> 

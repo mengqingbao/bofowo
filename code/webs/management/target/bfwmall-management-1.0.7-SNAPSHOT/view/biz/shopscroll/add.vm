@@ -1,0 +1,68 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>ShopScroll Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<form action="shopscroll-insert.htm" method="post"> 
+	<table class="table table-striped table-bordered responsive">
+															<tr>
+				<td><label for="status">#springMessage("url")</label></td>
+				<td>
+					<input type="text" name="url" id="url"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("title")</label></td>
+				<td>
+					<input type="text" name="title" id="title"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("desc")</label></td>
+				<td>
+					<input type="text" name="desc" id="desc"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("pic")</label></td>
+				<td>
+					<input type="text" name="pic" id="pic"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("sellerId")</label></td>
+				<td>
+					<input type="text" name="sellerId" id="sellerId"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("status")</label></td>
+				<td>
+					<input type="text" name="status" id="status"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("shopId")</label></td>
+				<td>
+					<input type="text" name="shopId" id="shopId"/>
+				</td>
+			</tr>
+						</table>
+	<input type="submit" value="#springMessage("save")"/>
+</form>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

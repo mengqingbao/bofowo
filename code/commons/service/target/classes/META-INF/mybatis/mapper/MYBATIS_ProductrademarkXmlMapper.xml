@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.ProductrademarkMapper">
+	<resultMap type="ProductrademarkModel" id="ProductrademarkModelMap">
+
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="desc" column="DESC_" />
+		<result property="logoImg" column="LOGO_IMG" />
+		<result property="modifyDate" column="MODIFY_DATE" />
+		<result property="creator" column="CREATOR" />
+		<result property="shopId" column="SHOP_ID" />
+		<result property="sellerId" column="SELLER_ID" />
+		<result property="tProductTrademarkcol" column="T_PRODUCT_TRADEMARKcol" />
+		<result property="createdDate" column="CREATED_DATE" />
+		<result property="status" column="STATUS" />
+		
+	</resultMap>
+</mapper> 

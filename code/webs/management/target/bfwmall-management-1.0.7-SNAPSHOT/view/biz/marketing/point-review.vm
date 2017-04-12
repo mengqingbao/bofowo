@@ -1,0 +1,36 @@
+ <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>平台积分管理</small></div>
+    </div>
+
+    <ul class="am-avg-sm-1 am-avg-md-4 am-margin am-padding am-text-center admin-content-list ">
+      <li><a href="#" class="am-text-success"><span class="am-icon-btn am-icon-file-text"></span><br/>昨日发送积分<br/>2300</a></li>
+      <li><a href="#" class="am-text-warning"><span class="am-icon-btn am-icon-briefcase"></span><br/>昨日抵扣积分<br/>308</a></li>
+      <li><a href="#" class="am-text-danger"><span class="am-icon-btn am-icon-recycle"></span><br/>昨日成交总量<br/>80082</a></li>
+      <li><a href="#" class="am-text-secondary"><span class="am-icon-btn am-icon-user-md"></span><br/>昨天成交客户数<br/>3000</a></li>
+    </ul>
+
+    <div class="am-g">
+      <div class="am-u-sm-12">
+        <table class="am-table am-table-bd am-table-striped admin-content-table">
+          <thead>
+          <tr>
+            <th>排名</th><th>店铺名称</th><th>卖家ID</th><th>支出总积分</th><th>日期</th>
+          </tr>
+          </thead>
+          <tbody>
+          #foreach($foo in [1..10])
+          <tr><td>$foo</td><td>jockjones旗舰店</td><td><a href="#">lygmqb</a></td> <td><span class="am-badge am-badge-success">200</span></td><td>2014-9-4</td>
+          </tr>
+          #end
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+	<div class="am-g">
+      <div class="am-u-sm-12" align="right">
+      		<a href="marketing-point.htm">查看更多</a>
+      </div>
+    </div>
+    
+    </div>

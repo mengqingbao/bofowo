@@ -1,0 +1,21 @@
+<div class="page_head_tabs">
+      <ul>
+		#foreach($menu in $menuTool.getMenus())
+            #if($menuTool.hasPermission($menu))
+    		#if($menuTool.isSelected($request,$menu))
+    			<li class="head_tab_item_selected_big">
+					<a href="#springUrl(${menu.hrefUrl})"><span>${menu.name}</span></a>
+				</li>
+    		#else
+    			<li class="head_tab_item_big">
+					<a href="#springUrl(${menu.hrefUrl})"><span>${menu.name}</span></a>
+				</li>
+            #end
+            #end
+		#end
+      </ul>
+</div>
+	
+
+
+      

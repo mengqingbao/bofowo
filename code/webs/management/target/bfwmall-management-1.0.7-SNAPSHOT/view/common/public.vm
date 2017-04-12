@@ -1,0 +1,82 @@
+  <!-- 暂替代头部文件 -->
+  <script type="text/javascript" src="plugin/ueditor/ueditor.config.js"></script>
+        <script type="text/javascript" src="plugin/ueditor/ueditor.all.min.js"></script>
+  
+  <div class="head">
+<p class=signout id="#signout">退出</p>     <p class="loginUser">当前登陆用户:admin</p>
+  </div>
+  
+  <!-- 左边菜单 -->
+  <div class="right-menu">
+    <ul>
+
+      <li class="right-menu-li customer">客户中心</li>
+	  <li class="right-menu-li private">私人订制</li>
+	  <li class="right-menu-li commodity">艺术品中心</li>
+	  <li class="right-menu-li arttype">艺术品类型</li>
+	  <li class="right-menu-li pagetype">页面中心</li>
+	  <li class="right-menu-li commoditymanage">内容中心</li>
+	  <li class="right-menu-li auction">拍卖中心</li>
+	  <li class="right-menu-li auctiontype">拍卖页面</li>
+	  <li class="right-menu-li auctioncontext">拍卖内容</li>
+	  <li class="right-menu-li spike">秒杀中心</li>
+	  <li class="right-menu-li commodityOrder">订单中心</li>
+    </ul>  
+  </div>
+  <script>
+//左侧菜单,动态高亮
+
+  $(".right-menu-li")
+  .mouseenter(function () {
+  	if(!$(this).hasClass("highLight")){
+  		$(this).css({"background-color":"#9297A2","color":"#fff","border":"none","width":"100%+2"});
+  	}
+  	
+  }).mouseleave(function () {
+  	if(!$(this).hasClass("highLight")){
+  		 $(this).css({"background-color":"#fff","color":"#000","border":"solid 1px #FF785A","width":"100%+2","border-top":"none"});
+  	}
+  	
+  });
+  
+  //菜单点击事件,当前页面刷新,其他页面跳转
+  
+  $(".right-menu").find(".right-menu-li").click(function(){
+	 if($(this).hasClass("dashboard")){
+		 window.location.href ="manage-dashboard.htm";//首页
+	 }else if($(this).hasClass("customer")){
+		 window.location.href="query-page.htm";//客户中心
+	 }else if($(this).hasClass("commodity")){
+		 window.location.href="commodity-page.htm";//商品中心
+	 }else if($(this).hasClass("private")){
+		 window.location.href="reservation-page.htm";//私人订制
+	 }else if($(this).hasClass("arttype")){
+		 window.location.href="arttype-page.htm";//艺术品类型
+	 }else if($(this).hasClass("pagetype")){
+		 window.location.href="pagetype-page.htm";//页面中心
+	 }else if($(this).hasClass("commoditymanage")){
+		 window.location.href="commoditymanage-page.htm";//拍卖品中心
+	 }else if($(this).hasClass("auction")){
+		 window.location.href="auction-page.htm";//拍卖中心
+	 }else if($(this).hasClass("auctiontype")){
+		 window.location.href="auctiontype-page.htm";//拍卖页面
+	 }else if($(this).hasClass("auctioncontext")){
+		 window.location.href="auctionmanage-page.htm";//拍卖内容
+	 }else if($(this).hasClass("spike")){
+		 window.location.href="spike-page.htm";//秒杀中心
+	 }else if($(this).hasClass("commodityOrder")){
+		 window.location.href="order-page.htm";//订单中心
+	 }
+	 
+	
+  });
+ 
+	 $(".signout").click(function(){
+	  window.location="login.htm";
+
+ });
+
+
+  
+  
+  </script>

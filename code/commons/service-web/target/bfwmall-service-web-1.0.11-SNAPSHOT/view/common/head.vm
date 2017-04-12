@@ -1,0 +1,42 @@
+<!-- topbar starts -->
+    <div class="navbar navbar-default" >
+        <div class="navbar-inner" style="width: 1024px;margin: 0 auto;">
+            <a class="navbar-brand" href="index.htm"> <img alt="Charisma Logo" src="img/logo20.png" class="hidden-xs"/>
+                <span>DOCDOI</span></a>
+
+
+            <ul class="collapse navbar-collapse nav navbar-nav top-menu" style="margin:0 auto;">
+                <li style="width: 100px;text-font:20px"><a href="index.htm"><i class="glyphicon glyphicon-globe"></i> 首页 </a></li>
+				<li style="width: 100px;"><a href="program.htm"><i class="glyphicon glyphicon-globe"></i> 项目 </a></li>
+				<li style="width: 120px;"><a href="talent.htm"><i class="glyphicon glyphicon-globe"></i> 策划师 </a></li>
+				<li style="width: 120px;"><a href="tranty.htm"><i class="glyphicon glyphicon-globe"></i> 条约 </a></li>
+				<li style="width: 120px;"><a href="aboutus.htm"><i class="glyphicon glyphicon-globe"></i> 关于我们 </a></li>
+				#if($currentUserUtil.isAuthority())
+					<li style="width: 120px;">
+						<a class="btn btn-default btn-info" style="width: 150px;" href="member-center.htm">
+	                    <i class="glyphicon glyphicon-tint"></i><span
+	                        class="hidden-sm hidden-xs"> $currentUserUtil.getCurrentUserName()  </span>                    
+						</a>
+					</li>
+				
+				#else
+					<li style="width: 120px;">
+						<a class="btn btn-default btn-danger" style="width:100px;" href="reg.htm">
+	                    <i class="glyphicon glyphicon-tint"></i><span
+	                        class="hidden-sm hidden-xs"> 注册 </span>
+						</a>
+					</li>
+					
+					<li style="width: 120px;">
+						<a class="btn btn-default btn-success" style="width: 100px;" href="login.htm">
+	                    <i class="glyphicon glyphicon-tint"></i><span
+	                        class="hidden-sm hidden-xs"> 登录 </span>                    
+						</a>
+					</li>
+				
+				#end
+            </ul>
+
+        </div>
+    </div>
+    <!-- topbar ends -->

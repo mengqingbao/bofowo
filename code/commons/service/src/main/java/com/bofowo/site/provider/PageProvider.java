@@ -32,14 +32,18 @@ public class PageProvider {
 	
 	public String getSearchSql(PageQuery query){
 	String sql="select "+columns+" FROM T_PAGE where 1=1 ";
-
+	if(StringUtil.isNotEmpty(query.getType())){
+		sql+="and TYPE_='"+query.getType()+"' ";
+	}
 	sql+="limit #{startRow},#{endRow}";
 	return sql;
 	}
 	
 	public String getSearchSqlCount(PageQuery query){
 		String sql="select count(*) FROM T_PAGE where 1=1 ";
-
+		if(StringUtil.isNotEmpty(query.getType())){
+			sql+="and TYPE_='"+query.getType()+"' ";
+		}
 		sql+="limit #{startRow},#{endRow}";
 		return sql;
 		}

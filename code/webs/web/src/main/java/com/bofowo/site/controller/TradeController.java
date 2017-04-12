@@ -27,9 +27,11 @@ import com.bofowo.core.handler.HandlerChain;
 import com.bofowo.core.trade.support.factory.TradeHandlerFactory;
 import com.bofowo.site.biz.model.TradeCountItem;
 import com.bofowo.site.model.BuyerAddressModel;
+import com.bofowo.site.model.CarModel;
 import com.bofowo.site.model.CustomerServiceModel;
 import com.bofowo.site.model.OrderModel;
 import com.bofowo.site.model.ProductModel;
+import com.bofowo.site.model.ShopModel;
 import com.bofowo.site.model.TradeModel;
 import com.bofowo.site.service.BuyerAddressService;
 import com.bofowo.site.service.CarService;
@@ -38,6 +40,7 @@ import com.bofowo.site.service.CustomerServiceService;
 import com.bofowo.site.service.OrderService;
 import com.bofowo.site.service.ProducimageService;
 import com.bofowo.site.service.ProductService;
+import com.bofowo.site.service.ShopService;
 import com.bofowo.site.service.TradeService;
 import com.bofowo.util.TradeConstant;
 
@@ -77,6 +80,8 @@ public class TradeController extends BaseController {
 	private BuyerAddressService buyerAddressService;
 	@Resource
 	private CustomerServiceService customerServiceService;
+	@Resource
+	private ShopService shopService;
 	@RequestMapping("order-cancel")
 	public String backOrder(ModelMap model,Integer orderId,String status){
 		OrderModel order=orderService.getById(orderId);
@@ -117,13 +122,13 @@ public class TradeController extends BaseController {
 		String username=CurrentUserUtil.getCurrentUserName();
 		Map<String, TradeCountItem> map=tradeService.submitTrade(submitItemIds, username);
 		model.put("items", map);
-		this.setLayout(LayoutType.CAR);
+		this.setLayout(LayoutType.PAY);
 		List<BuyerAddressModel> buyerAddress=buyerAddressService.getBuyerAddress(username);
 		model.put("addrs", buyerAddress);
 		return "buyer/trade_pay_batch";
 	}
 	
-	@RequestMapping("pay")
+	@RequestMapping("member-pay")
 	public String pay(String tradeIds){
 		String[] tids=tradeIds.split(",");
 		String username=CurrentUserUtil.getCurrentUserName();
@@ -135,13 +140,24 @@ public class TradeController extends BaseController {
 			
 		}
 		
-		return "redirect:/pay-result.htm?tradeIds="+tradeIds;
+		return "redirect:/member-pay-result.htm?tradeIds="+tradeIds;
 	}
 	
-	@RequestMapping("pay-result")
+	@RequestMapping("member-pay-result")
 	public String payResult(String tradeIds){
 		this.setLayout(LayoutType.UAM);
 		return "buyer/pay_waiting_result";
+	}
+	/**
+	 * 支付宝回调接口，订单确认
+	 */
+	@RequestMapping("alipay-call-back")
+	public String payBackCallUrl(String ids,String flage,ModelMap model){
+		Map<String,String> result=new HashMap<String,String>();
+		result.put("code", "1001");
+		result.put("message", "success");
+		model.put("json", JSONObject.fromObject(result).toString());
+		return "success";
 	}
 	
 	
@@ -196,6 +212,188 @@ public class TradeController extends BaseController {
 		model.put("addrs", buyerAddress);
 		return "buyer/trade_pay_batch";
 	}
+	
+	@RequestMapping("member_buy_now")
+	public String buyNow(String goodsId,ModelMap model,Integer quantity,String spec){
+		String username=CurrentUserUtil.getCurrentUserName();
+		ProductModel pm=productService.getById(Long.valueOf(goodsId));
+		model.put("item", pm);
+		model.put("spec", spec);
+		this.setLayout(LayoutType.CAR);
+		List<BuyerAddressModel> buyerAddress=buyerAddressService.getBuyerAddress(username);
+		model.put("addrs", buyerAddress);
+		return "buyer/trade_pay_review";
+	}
+	
+	//确认订单action
+	@RequestMapping("member_create_trade_immediately")
+	public String buyNowAddTrade(String goodsId,ModelMap model,Integer quantity,String spec,Integer receiverAddrId,String payWay){
+		String username=CurrentUserUtil.getCurrentUserName();
+		BuyerAddressModel buyerAddress=buyerAddressService.getById(receiverAddrId);
+		ProductModel pm=productService.getById(Long.valueOf(goodsId));
+		ShopModel shop=shopService.getByUsername(pm.getSellerId());
+		TradeModel trade=new TradeModel();
+		trade.setBuyerId(username);
+		trade.setNum(quantity);
+		//tm.setShopName(pm.getShopId());
+		trade.setCreatedTime(new Date());
+		trade.setBuyerId(username);
+		trade.setSellerId(pm.getSellerId());
+		//order.setBuyerId(CurrentUserUtil.getCurrentUserName());
+		trade.setStatus(TradeConstant.WAITING_PAY);
+		trade.setTitle(pm.getName());
+		trade.setShopName(shop.getName());
+		//设置收件人
+		trade.setReceiverProvince(buyerAddress.getProvince());
+		trade.setReceiverCity(buyerAddress.getCity());
+		trade.setReceiverArea(buyerAddress.getArea());
+		trade.setReceiverAddr(buyerAddress.getAddress());
+		trade.setReceiverPostid(buyerAddress.getPostCode());
+		trade.setReceiverTele(buyerAddress.getTele());
+		//设置收件人 end
+		trade.setPic(pm.getImages());
+		trade.setPayWay(payWay);
+		trade.setCreatedTime(new Date());
+		trade.setStatus("0");
+		trade.setTotal(pm.getShopPrice()*quantity);
+		trade.setRealPay(pm.getShopPrice()*quantity);
+		tradeService.insert(trade);
+		Integer tradeId=trade.getId();
+		String orderIds="";
+		//跟新添加order信息
+			OrderModel order=new OrderModel();
+			order.setTid(trade.getId());
+			order.setPayWay(payWay);
+			order.setTitle(pm.getName());
+			order.setCreatedTime(new Date());
+			order.setSellerId(pm.getSellerId());
+			order.setBuyerId(username);
+			order.setPic(pm.getImages());
+			order.setPrice(pm.getShopPrice());
+			order.setProperties(spec);
+			order.setNum(quantity);
+			order.setItemId(pm.getId());
+			order.setStatus("0");
+			orderService.insert(order);
+			
+			trade.setOrderIds(String.valueOf(order.getId()));
+			tradeService.update(trade);
+		//------------插入交易数据结束------------
+			
+			model.put("tradeId", trade.getId());
+			model.put("spec", spec);
+			this.setLayout(LayoutType.PAY);
+			
+			return "redirect:/member-pay.htm?tradeIds="+trade.getId();
+	}
+	
+		//从购物车中结算单个商品
+		@RequestMapping("member_create_trade_immediately_from_car")
+		public String buyNowAddTradeFromCar(String goodsId,ModelMap model,Integer quantity,String spec,Integer receiverAddrId,String payWay){
+			String username=CurrentUserUtil.getCurrentUserName();
+			BuyerAddressModel buyerAddress=buyerAddressService.getById(receiverAddrId);
+			ProductModel pm=productService.getById(Long.valueOf(goodsId));
+			ShopModel shop=shopService.getByUsername(pm.getSellerId());
+			TradeModel trade=new TradeModel();
+			trade.setBuyerId(username);
+			trade.setNum(quantity);
+			//tm.setShopName(pm.getShopId());
+			trade.setCreatedTime(new Date());
+			trade.setBuyerId(username);
+			trade.setSellerId(pm.getSellerId());
+			//order.setBuyerId(CurrentUserUtil.getCurrentUserName());
+			trade.setStatus(TradeConstant.WAITING_PAY);
+			trade.setTitle(pm.getName());
+			trade.setShopName(shop.getName());
+			//设置收件人
+			trade.setReceiverProvince(buyerAddress.getProvince());
+			trade.setReceiverCity(buyerAddress.getCity());
+			trade.setReceiverArea(buyerAddress.getArea());
+			trade.setReceiverAddr(buyerAddress.getAddress());
+			trade.setReceiverPostid(buyerAddress.getPostCode());
+			trade.setReceiverTele(buyerAddress.getTele());
+			//设置收件人 end
+			trade.setPic(pm.getImages());
+			trade.setPayWay(payWay);
+			trade.setCreatedTime(new Date());
+			trade.setStatus("0");
+			trade.setTotal(pm.getShopPrice()*quantity);
+			trade.setRealPay(pm.getShopPrice()*quantity);
+			tradeService.insert(trade);
+			Integer tradeId=trade.getId();
+			String orderIds="";
+			//跟新添加order信息
+				OrderModel order=new OrderModel();
+				order.setTid(trade.getId());
+				order.setPayWay(payWay);
+				order.setTitle(pm.getName());
+				order.setCreatedTime(new Date());
+				order.setSellerId(pm.getSellerId());
+				order.setBuyerId(username);
+				order.setPic(pm.getImages());
+				order.setPrice(pm.getShopPrice());
+				order.setProperties(spec);
+				order.setNum(quantity);
+				order.setItemId(pm.getId());
+				order.setStatus("0");
+				orderService.insert(order);
+				
+				trade.setOrderIds(String.valueOf(order.getId()));
+				tradeService.update(trade);
+			//------------插入交易数据结束------------
+				
+				model.put("tradeId", trade.getId());
+				model.put("spec", spec);
+				this.setLayout(LayoutType.PAY);
+				
+				//删除购物车内容
+				//CarModel car=carService.getByItemId(Integer.valueOf(goodsId), username);
+				carService.deleteByIdAndUsername(Integer.valueOf(goodsId), username);
+				return "redirect:/member-pay.htm?tradeIds="+trade.getId();
+		}
+	
+	/**
+	 * 立即购买相应事件
+	 * @author mqb
+	 */
+	@RequestMapping("member_checkout_immediately")
+	public String checkoutImmediately(String goodsId,ModelMap model,Integer quantity,String spec){
+		
+		//查询所有提交的购物车内容
+		String username=CurrentUserUtil.getCurrentUserName();
+		ProductModel pm=productService.getById(Long.valueOf(goodsId));
+		model.put("item", pm);
+		ShopModel shopModel=shopService.getById(pm.getShopId());
+		model.put("shop", shopModel);
+		this.setLayout(LayoutType.PAY);
+		List<BuyerAddressModel> buyerAddress=buyerAddressService.getBuyerAddress(username);
+		model.put("addrs", buyerAddress);
+		model.put("quantity", quantity);
+		model.put("goodsId", goodsId);
+		model.put("spec", spec);
+		model.put("total", pm.getShopPrice()*quantity);
+		return "buyer/buyer_checkout_immediately";
+	}
+	
+	@RequestMapping("member_checkout_immediately_from_car")
+	public String checkoutImmediatelyFromCar(String goodsId,ModelMap model,Integer quantity,String spec){
+		
+		//查询所有提交的购物车内容
+		String username=CurrentUserUtil.getCurrentUserName();
+		ProductModel pm=productService.getById(Long.valueOf(goodsId));
+		model.put("item", pm);
+		ShopModel shopModel=shopService.getById(pm.getShopId());
+		model.put("shop", shopModel);
+		this.setLayout(LayoutType.PAY);
+		List<BuyerAddressModel> buyerAddress=buyerAddressService.getBuyerAddress(username);
+		model.put("addrs", buyerAddress);
+		model.put("quantity", quantity);
+		model.put("goodsId", goodsId);
+		model.put("spec", spec);
+		model.put("total", pm.getShopPrice()*quantity);
+		return "buyer/buyer_checkout_immediately_from_car";
+	}
+	
 	/**
 	 * orderid 更新 订单信息。 只在我的订单提交支付请求是调用。
 	 * @author mqb
@@ -235,19 +433,12 @@ public class TradeController extends BaseController {
 		//order.setBuyerId(CurrentUserUtil.getCurrentUserName());
 		trade.setStatus(TradeConstant.WAITING_PAY);
 		trade.setTitle(pm.getName());
-		order.setTitle(pm.getName());
-		order.setStatus(TradeConstant.WAITING_PAY);
 		order.setPrice(pm.getShopPrice());
 		order.setNum(quantity);
-		trade.setNum(quantity);
 		trade.setRealPay(pm.getShopPrice()*quantity);
-		order.setRealPay(pm.getShopPrice()*quantity);
-		order.setPic(pm.getImages());
 		trade.setPic(pm.getImages());
 		trade.setPayWay("taobao");
-		order.setPayWay("taobao");
 		trade.setCreatedTime(new Date());
-		order.setCreatedTime(new Date());
 		tradeService.insert(trade);
 		order.setTid(trade.getId());
 		orderService.insert(order);

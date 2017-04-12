@@ -48,5 +48,12 @@ public interface CarMapper{
 
 	@Select("select * from T_CAR where BUYER_ID=#{username} and ID in (${ids})")
 	@ResultMap(value="com.bofowo.site.mapper.CarMapper.CarModelMap")
-	public List<CarModel> getItemsByIds(Map<String, String> condition); 
+	public List<CarModel> getItemsByIds(Map<String, String> condition);
+
+	@Select("select * from T_CAR where BUYER_ID=#{username} and ITEM_ID=#{id}")
+	@ResultMap(value="com.bofowo.site.mapper.CarMapper.CarModelMap")
+	public CarModel getByItemId(Map<String, String> condition);
+
+	@Delete("delete from T_CAR where ITEM_ID=#{id} and BUYER_ID=#{username}")
+	public void deleteByIdAndUsername(Map<String, String> condition); 
 }

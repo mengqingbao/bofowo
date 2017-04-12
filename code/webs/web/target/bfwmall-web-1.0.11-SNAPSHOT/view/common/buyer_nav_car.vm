@@ -1,0 +1,32 @@
+<div class="main-content">
+  <div class="am-cf am-padding">
+    <div class="am-u-md-7">
+            <strong style="font-size:25px;color:#5a2705">个人中心</strong>
+            
+            <span style="color:#3bb4f2">品质生活从此开始</span>
+
+       </div>
+    <div class="am-u-md-5">
+   <form id="form1" action="search.htm" method="get">
+    <div  style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      <div class="am-tab-panel am-fade am-active am-in">
+         <select class="bfw-search-before-select">
+            <option>商户</option>
+             <option>商品</option>
+         </select>
+         <input type="text"  name="keyWord" placeholder="  请输入要搜索的关键词" class="bfw-search-input-car">
+          <button  type="button" class="bfw-search-button" onclick="search()">搜索</button>
+      </div>
+  </div>
+</form>
+</div>
+</div>
+</div>
+<style>
+.bfw-search-before-select{
+ border: 1px solid #ccc;
+}
+.bfw-search-input-car{
+ border: 1px solid #ccc;
+}
+</style>

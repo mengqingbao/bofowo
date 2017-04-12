@@ -1,0 +1,74 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Postemplate Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<form action="postemplate-update.htm" method="post"> 
+	<table class="table table-striped table-bordered responsive">
+															<tr>
+				<td><label for="status">#springMessage("sellerId")</label></td>
+				<td>
+					<input type="text" name="sellerId" id="sellerId" value="$!{postemplate.sellerId}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("tittle")</label></td>
+				<td>
+					<input type="text" name="tittle" id="tittle" value="$!{postemplate.tittle}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("fee")</label></td>
+				<td>
+					<input type="text" name="fee" id="fee" value="$!{postemplate.fee}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("firstFee")</label></td>
+				<td>
+					<input type="text" name="firstFee" id="firstFee" value="$!{postemplate.firstFee}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("exWeight")</label></td>
+				<td>
+					<input type="text" name="exWeight" id="exWeight" value="$!{postemplate.exWeight}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("exWeightFee")</label></td>
+				<td>
+					<input type="text" name="exWeightFee" id="exWeightFee" value="$!{postemplate.exWeightFee}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("freeArea")</label></td>
+				<td>
+					<input type="text" name="freeArea" id="freeArea" value="$!{postemplate.freeArea}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("status")</label></td>
+				<td>
+					<input type="text" name="status" id="status" value="$!{postemplate.status}"/>
+				</td>
+			</tr>
+						</table>
+	<input type="submit" value="#springMessage("save")"/>
+</form>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

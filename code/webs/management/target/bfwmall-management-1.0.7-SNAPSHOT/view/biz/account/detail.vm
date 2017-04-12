@@ -1,0 +1,95 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Account Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<table class="table table-striped table-bordered responsive">
+	<tr>
+		<td><label for="status">#springMessage("id")</label></td>
+		<td>
+			$!{account.id}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("username")</label></td>
+		<td>
+			$!{account.username}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("password")</label></td>
+		<td>
+			$!{account.password}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("point")</label></td>
+		<td>
+			$!{account.point}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("isSeller")</label></td>
+		<td>
+			$!{account.isSeller}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("status")</label></td>
+		<td>
+			$!{account.status}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("level")</label></td>
+		<td>
+			$!{account.level}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("avatar")</label></td>
+		<td>
+			$!{account.avatar}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("score")</label></td>
+		<td>
+			$!{account.score}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("wxUsername")</label></td>
+		<td>
+			$!{account.wxUsername}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("alipayUsername")</label></td>
+		<td>
+			$!{account.alipayUsername}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("jdUsername")</label></td>
+		<td>
+			$!{account.jdUsername}
+		</td>
+	</tr>
+</table>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

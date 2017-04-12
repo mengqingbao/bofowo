@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-import com.sun.xml.internal.ws.util.StringUtils;
-
 public class ProducpropertiesModel implements Serializable{
 
 		private int id;

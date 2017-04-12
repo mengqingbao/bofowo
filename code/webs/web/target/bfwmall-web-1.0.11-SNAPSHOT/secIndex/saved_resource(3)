@@ -1,0 +1,14 @@
+/* product-cleaning/1.0.0 p-category.js Date:2015-10-29 17:08:44 */
+!function(){$("#p-category").delegate(".item","mouseenter",function(){var a=$(this).index();$(this).addClass("hover").siblings().removeClass("hover"),$(".c-layer").eq(a).addClass("curr").siblings().removeClass("curr")}),$("#p-category").bind("mouseleave",function(){$(this).find(".title>.item").removeClass("hover"),$(this).find(".c-layer").removeClass("curr")})}();
+/* product-cleaning/1.0.0 p-slider.js Date:2015-10-29 17:08:44 */
+seajs.use(["jdf/1.0.0/ui/switchable/1.0.0/switchable"],function(){var a=$(".p-slider");a.switchable({type:"focus",navItem:"ui-slider-trigger-item",navSelectedClass:"selected",contentClass:"slider-mc",mainClass:"ui-slider-item",prevClass:"prev",nextClass:"next",delay:200,speed:400,hasPage:!0,autoPlay:!0,stayTime:5e3});var b=$(".slider-btn").find(".prev, .next");a.hover(function(){b.css("display","inline-block")},function(){b.css("display","none")})});
+/* product-cleaning/1.0.0 hot-recommend.js Date:2015-10-29 17:08:44 */
+!function(){$(".hot-list-item").hover(function(){$(this).addClass("hover")},function(){$(this).removeClass("hover")}),$(".buy-btn").hover(function(){$(this).addClass("hoverBtn")},function(){$(this).removeClass("hoverBtn")})}();
+/* product-cleaning/1.0.0 brand-recommend.js Date:2015-10-29 17:08:44 */
+!function(){$(".brand-list-item").hover(function(){$(this).addClass("hover")},function(){$(this).removeClass("hover")})}();
+/* product-cleaning/1.0.0 logo-list.js Date:2015-10-29 17:08:44 */
+seajs.use(["jdf/1.0.0/ui/switchable/1.0.0/switchable"],function(){$(".logo-list").switchable({type:"slider",contentClass:"slide-mc",mainClass:"list-item",prevClass:"prev",nextClass:"next",seamlessLoop:!0,delay:200,speed:400,hasPage:!0}),$(".prev").hover(function(){$(this).addClass("prevHover")},function(){$(this).removeClass("prevHover")}),$(".next").hover(function(){$(this).addClass("nextHover")},function(){$(this).removeClass("nextHover")})});
+/* product-cleaning/1.0.0 floor.js Date:2015-10-29 17:08:44 */
+seajs.use(["jdf/1.0.0/ui/switchable/1.0.0/switchable"],function(){$(".floor-slider").switchable({type:"focus",navItem:"floor-slider-trigger-item",navSelectedClass:"selected",contentClass:"floor-list-item",mainClass:"floor-item",delay:200,speed:400,autoPlay:!0,stayTime:5e3})});
+/* product-cleaning/1.0.0 elevator.js Date:2015-10-29 17:08:44 */
+seajs.use(["jdf/1.0.0/ui/fixable/1.0.0/fixable","jdf/1.0.0/ui/elevator/1.0.0/elevator"],function(){$(".ui-elevator").fixable({x:"left",y:"top",xValue:-50,yValue:200,context:$(".floor")}),$("#floorContent").elevator({floorClass:"floor",elevatorClass:"ui-elevator",handlerClass:"ui-elevator-handler",selectClass:"ui-elevator-select"})});

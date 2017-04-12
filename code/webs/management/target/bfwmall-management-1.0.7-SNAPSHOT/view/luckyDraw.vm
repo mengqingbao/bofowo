@@ -1,0 +1,603 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link href="/css/common/hint_windows.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/css/account/login4.css?8"  type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="/js/common/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/js/luckyDraw/Rotate.js"></script>
+<script type="text/javascript" src="/js/com/lyun/core/core.js?1.2"> </script>
+<script type="text/javascript" src="/js/com/lyun/plugin/userInfo.js"> </script>
+<link rel="icon" href="/qwerty.ico"/>
+<title>律云——幸运抽奖</title>
+<script type="text/javascript">
+
+
+function qqLogion(){  
+	
+	 
+	
+	 var location=window.parent.location+"";
+	 location = location.substring(location.indexOf("//")+2,location.length);
+	 location=encodeURIComponent(location);
+	 window.parent.location = "get_qq_authorize_code.htm?redirectLocalion="+location;
+}
+
+function weixinLogion(){
+	 
+	 var location=window.parent.location+"";
+	 location = location.substring(location.indexOf("//")+2,location.length);
+	 location=encodeURIComponent(location);
+	 window.parent.location = "get_weixin_authorize_code.htm?redirectLocalion="+location;
+	 
+}
+
+function weixboLogion(){
+	 
+	 var location=window.parent.location+"";
+	 location = location.substring(location.indexOf("//")+2,location.length);
+	 location=encodeURIComponent(location);
+	 window.parent.location = "get_weibo_authorize_code.htm?redirectLocalion="+location;
+}
+
+
+</script>
+</head>
+
+<style>
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	list-style:none;
+	text-decoration:none;
+	font-family:"Microsoft YaHei";}
+
+img{
+	display:block;
+	border:0;}
+	
+body{
+	background:#ffe341;}
+	
+.top{
+	width:100%;
+	min-width:940px;
+	height:586px;
+	background:url(/img/luckyDraw/top.jpg) top center;}
+
+.reward{
+	width:100%;
+	min-width:940px;
+	height:860px;
+	background:#ed304e;}
+
+.hint{
+	width:910px;
+	margin:0 auto;}
+	
+.hint img{
+	margin:20px 0;}
+	
+.hint_mess{
+	width:870px;
+	padding:12px 18px;
+	border:2px dashed #6a4300;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	-webkit-border-radius:10px;
+	margin-bottom:20px;}
+	
+.hint_mess p{
+	font-size:18px;
+	color:#6a4300;
+	line-height:30px;}
+
+
+.lotteryMain{ width:100%; padding:20px 0; }
+.lotteryBg{ 
+	width:800px; 
+	height:800px; 
+	margin:0 auto; 
+	background:url(img/luckyDraw/bag.png) no-repeat; 
+	position:relative; 
+	overflow:hidden;
+	}
+#run{
+	width:284px; 
+	height:444px; 
+	position:absolute; 
+	left:42%; top:36%;  
+	margin-left:-76px; 
+	margin-top:-107px; 
+	z-index:1; 
+	transform:rotate(0deg); 
+	-ms-transform:rotate(0deg); 
+	}
+#btn_run{ 
+	width:242px; 
+	height:242px; 
+	background:url(img/luckyDraw/start1.png) no-repeat; 
+	border:none; 
+	outline:none; 
+	position:absolute; 
+	left:43%; top:43%; 
+	margin-left:-62px; 
+	margin-top:-62px; 
+	z-index:2;cursor:pointer;
+	}
+
+.hint_window{
+	width:506px;
+	display:none;
+	position:relative;}
+
+.content{
+	width:506px;
+	height:478px;
+	background:url(img/luckyDraw/bg.png) no-repeat;
+	overflow:hidden;}
+	
+.content_lyunMoenyShortFlag{
+    width:506px;
+	height:478px;
+	background:url(img/luckyDraw/shortLyunMoney.png) no-repeat;
+	overflow:hidden;}
+	
+.content_lyunMoenyShortFlag p{
+	width:244px;
+	margin:0 auto;
+	margin-top:170px;
+	font-size:20px;
+	line-height:30px;
+	color:#ac1d00;
+	text-align:center;}
+	
+.content p{
+	width:244px;
+	margin:0 auto;
+	margin-top:170px;
+	font-size:20px;
+	line-height:30px;
+	color:#ac1d00;
+	text-align:center;}
+	
+.btn1{
+	width:414px;
+	height:84px;
+	display:block;
+	background:url(img/luckyDraw/get.png) no-repeat;
+	margin:0 auto;
+	margin-top:28px;}
+	
+	
+	
+.btn2{
+	width:414px;
+	height:84px;
+	display:block;
+	background:url(img/luckyDraw/again.png) no-repeat;
+	margin:0 auto;
+	margin-top:28px;}
+	
+.btn3{
+	width:414px;
+	height:84px;
+	display:block;
+	background:url(img/luckyDraw/again.png) no-repeat;
+	margin:0 auto;
+	margin-top:28px;}
+	
+.btn8{
+	width:414px;
+	height:84px;
+	display:block;
+	background:url(img/luckyDraw/go_toHave.png) no-repeat;
+	margin:0 auto;
+	margin-top:28px;}
+	
+.close_btn{
+	width:48px;
+	height:48px;
+	background:url(img/luckyDraw/close.png) no-repeat;
+	position:absolute;
+	top:20px;
+	right:0px;}
+	
+#btn5_lyunMoenyShortFlag{
+    width:414px;
+	height:84px;
+	display:block;
+	background:url(img/luckyDraw/get.png) no-repeat;
+	margin:0 auto;
+	margin-top:28px;
+
+}
+</style>
+
+<body ondblclick="return false;">
+<div class="top"></div>
+
+<div class="reward">
+	<section class="lotteryMain">
+		<div class="lotteryBg">
+			<img id="run" src="img/luckyDraw/point.png" />
+			<input id="btn_run" type="button" value="" />
+		</div>
+	</section> 
+	
+</div>
+
+<div class="hint">
+  <img src="img/luckyDraw/hint.png" />
+  <div class="hint_mess">
+    <p>1. 同一账号每天登录可参加大转盘抽奖不超过5次，抽奖花费10律金币一次</p>
+    <p>2. 奖品设置：<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;一等奖：IPHONE6<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;二等奖：IPAD<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;三等奖：加湿器<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;四等奖：台式风扇<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;五等奖：凉席套装<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;六等奖：50律金币<br />
+    <p>3. 活动过程中如出现作弊行为（如批量注册、恶意购买、虚假分享、虚假交易等）律云在线有权取消相关抽奖活动，解释权归律云在线所有</p>
+  </div>
+</div>
+
+<div class="hint_window" id="dialog_product">
+  <div class="content">
+    <p id="lotteryResult"></p>
+  </div>
+  <input type="button" class="btn8" id="btn_close" />
+  <input type="button" class="close_btn" id="btn_product" />
+</div>
+
+
+<div class="hint_window" id="dialog_lyunMoney">
+  <div class="content">
+    <p id="lotterylyunMoneyResult"></p>
+  </div>
+  <input type="button" class="btn3" id="btn3" />
+   <input type="button" class="close_btn" id="btn_lyunMoney" />
+</div>
+
+
+<div class="hint_window" id="dialog_lyunMoenyShortFlag">
+  <div class="content_lyunMoenyShortFlag">
+    <p id="lotterylyunMoenyShortFlag" style=" font-size: 18px"></p>
+  </div>
+  <input type="button"  id="btn5_lyunMoenyShortFlag" />  
+   <input type="button" class="close_btn" id="btn_lyunMoenyShort" />
+</div>
+
+<div class="hint_window" id="again">
+  <div class="content">
+    <p>您可以免费再抽一次</p>
+  </div>
+  <input type="button" class="btn2" id="btn2"/>
+   <input type="button" class="close_btn" id="btn_again" />
+</div>
+
+
+<div class="hint_window" id="dialog_lotteryCountShortFlag">
+  <div class="content_lyunMoenyShortFlag">
+    <p id="lotteryCountShortFlag" style=" font-size: 18px"></p>
+  </div>
+  <input type="button"  class="btn1" id="btn5_lotteryCountShortFlag" />  
+  <input type="button" class="close_btn" id="btn_count" />
+  
+</div>
+
+	#parse("common/loginWindow.vm")
+	
+	
+</body>
+<script>
+
+
+
+
+var  clickFlag=true;var againFlag = "false";
+$(function(){ 
+     $("#btn_run").click(function(){
+
+    	 if(!$currentUserUtil.isAuthority()){
+    		 showLoginWindow('dialog');//登录框
+    			return false;
+    		}
+    		lottery();
+    	
+    	 });
+     
+}); 
+
+function lottery(){ 
+	if(!clickFlag){
+		return ;
+	}
+	
+    jQuery.ajax({ 
+        type: 'post', 
+        url: 'begin-lottery.htm?againFlag='+againFlag, 
+        dataType: 'json', 
+        cache: false, 
+        async:false, 
+        error: function(){
+        	lottery();
+        	return false;
+        	}, 
+        success:function(obj){
+        	
+        	if(obj.isHasChance==false&&obj.lotteryCountFlag==true){
+        		$("#lotteryCountShortFlag").html(obj.results);
+        		showWindow8();  //抽奖次数不足的提示
+				return false;
+        	}
+        	if(obj.isHasChance==false&&obj.lyunMoenyShortFlag==true){
+        		$("#lotterylyunMoenyShortFlag").html("对不起！您的账号余额不足<br>您可在<a style='text-decoration :underline;' href='member-personalCenter-load.htm?defaultPage=1'>个人中心</a>查看");
+				showWindow5();  //律金币不足的提示
+				return false;
+        	}
+        	if(obj.againFlag=="true"){
+        		showWindow2();  //再抽一次	  
+        		againFlag = "true";
+				return false;
+        	}
+        	if(obj.againFlag=="false"){
+        		againFlag = "false";
+        	}
+        	clickFlag=false;
+        	var  r=jQuery.fn.rotate;
+        	
+            if(r){
+            	$("#run").rotate({ 
+					duration:3000, //转动时间 
+					angle: 0, //默认角度
+					animateTo:360*12+obj.rotate, //转动角度 
+					easing: jQuery.easing.easeOutSine, 
+					callback: function(){ 
+						clickFlag=true;
+						if(obj.isHasChance==true&&obj.resultType=="1"){
+							$("#lotteryResult").html("恭喜您抽中:"+obj.results);
+							showWindow();  //抽中弹框
+							return false;
+						}else if(obj.isHasChance==true&&obj.resultType=="0"){
+							
+							$("#lotterylyunMoneyResult").html("恭喜您抽中:"+obj.results+"<br>您可在<a style='text-decoration :underline;' href='member-personalCenter-load.htm?defaultPage=1'>个人中心</a>查看");
+							showWindow3();  //抽中律金币弹窗
+							return false;
+						}
+						
+					} 
+            
+				});
+            	
+            }
+            else{
+            	jQuery.getScript("js/luckyDraw/Rotate.js", function(){
+            		$("#run").rotate({ 
+    					duration:3000, //转动时间 
+    					angle: 0, //默认角度
+    					animateTo:360*12+obj.rotate, //转动角度 
+    					easing: jQuery.easing.easeOutSine, 
+    					callback: function(){ 
+    						clickFlag=true;
+    						if(obj.isHasChance==true&&obj.resultType=="1"){
+    							$("#lotteryResult").html("恭喜您抽中:"+obj.results);
+    							showWindow();  //抽中弹框
+    							return false;
+    						}else if(obj.isHasChance==true&&obj.resultType=="0"){
+    							$("#lotterylyunMoneyResult").html("恭喜您抽中:"+obj.results+"<br>您可在<a style='text-decoration :underline;' href='member-personalCenter-load.htm?defaultPage=1'>个人中心</a>查看");
+    							showWindow3();  //抽中律金币弹窗
+    							return false;
+    						}
+    						
+    					} 
+    				});
+            	
+            		
+            	});
+            }
+        	
+        	
+				
+        } 
+    }); 
+};
+
+//抽中实体奖品弹窗
+function showWindow(){ 
+		
+	$("#btn_run").attr('disabled','disabled').css("cursor","default"); 
+	
+	var iWidth =  window.document.documentElement.clientWidth; 
+	var iHeight =  window.document.documentElement.clientHeight; 
+	var bgObj =  document.createElement("div"); 
+	
+	bgObj.style.cssText = "position:fixed;left:0;top:0px;width:" +iWidth+"px;height:"+Math.max(document.body.clientHeight, iHeight)+"px;filter:Alpha(Opacity=60);opacity:0.7;background-color: #000;z-index:999991;";
+	window.document.body.appendChild(bgObj); 
+	
+	var msgObj= document.getElementById("dialog_product");
+	msgObj.style.cssText = "position: fixed;top: 20%;left: 50%;margin-left:-253px; z-index:999992;";
+	msgObj.style.display  = "block";
+	
+	//点击关闭按钮关闭窗口
+	var closeBtn = document.getElementById("btn_close");
+	closeBtn.onclick = function(){ 
+		msgObj.style.display  = "none";
+		$("#btn_run").attr('disabled',false).css("cursor","pointer");
+		document.body.removeChild(bgObj); 
+		window .open("member-personalCenter-load.htm?defaultPage=7");
+		return false;
+		
+	} 	
+	
+	//点击关闭按钮关闭窗口
+	var closeBtn = document.getElementById("btn_product");
+	closeBtn.onclick = function(){ 
+		msgObj.style.display  = "none";
+		$("#btn_run").attr('disabled',false).css("cursor","pointer");
+		document.body.removeChild(bgObj); 
+		return false;
+		
+	} 	
+        
+}	
+
+//再抽一次	  
+function showWindow2(){ 
+        
+	
+	$("#btn_run").attr('disabled','disabled').css("cursor","default"); 
+	
+	var iWidth =  window.document.documentElement.clientWidth; 
+	var iHeight =  window.document.documentElement.clientHeight; 
+	var bgObj =  document.createElement("div"); 
+	
+	bgObj.style.cssText = "position:fixed;left:0;top:0px;width:" +iWidth+"px;height:"+Math.max(document.body.clientHeight, iHeight)+"px;filter:Alpha(Opacity=60);opacity:0.7;background-color: #000;z-index:999991;";
+	window.document.body.appendChild(bgObj); 
+	
+	var msgObj= document.getElementById("again");
+	msgObj.style.cssText = "position: fixed;top: 20%;left: 50%;margin-left:-253px; z-index:999992;";
+	msgObj.style.display  = "block";
+	
+	//点击关闭按钮关闭窗口
+	var closeBtn = document.getElementById("btn2");
+	closeBtn.onclick = function(){ 
+		msgObj.style.display  = "none";
+		$("#btn_run").attr('disabled',false).css("cursor","pointer");
+		document.body.removeChild(bgObj); 
+		return false;
+		
+	} 	
+	
+	//点击关闭按钮关闭窗口
+	var closeBtn = document.getElementById("btn_again");
+	closeBtn.onclick = function(){ 
+		msgObj.style.display  = "none";
+		$("#btn_run").attr('disabled',false).css("cursor","pointer");
+		document.body.removeChild(bgObj); 
+		return false;
+		
+	} 	
+			
+	
+}
+
+//抽中律金币弹窗
+function showWindow3(){
+	
+	   $("#btn_run").attr('disabled','disabled').css("cursor","default"); 
+	
+	    var iWidth =  window.document.documentElement.clientWidth; 
+		var iHeight =  window.document.documentElement.clientHeight; 
+		var bgObj =  document.createElement("div"); 
+		
+		bgObj.style.cssText = "position:fixed;left:0;top:0px;width:" +iWidth+"px;height:"+Math.max(document.body.clientHeight, iHeight)+"px;filter:Alpha(Opacity=60);opacity:0.7;background-color: #000;z-index:999991;";
+		window.document.body.appendChild(bgObj); 
+		
+		var msgObj= document.getElementById("dialog_lyunMoney");
+		msgObj.style.cssText = "position: fixed;top: 20%;left: 50%;margin-left:-253px; z-index:999992;";
+		msgObj.style.display  = "block";
+		
+		//点击关闭按钮关闭窗口
+		var closeBtn = document.getElementById("btn3");
+		closeBtn.onclick = function(){ 
+			msgObj.style.display  = "none";
+			$("#btn_run").attr('disabled',false).css("cursor","pointer");
+			document.body.removeChild(bgObj); 
+			return false;
+			
+		} 	
+		
+		//点击关闭按钮关闭窗口
+		var closeBtn = document.getElementById("btn_lyunMoney");
+		closeBtn.onclick = function(){ 
+			msgObj.style.display  = "none";
+			$("#btn_run").attr('disabled',false).css("cursor","pointer");
+			document.body.removeChild(bgObj); 
+			return false;
+			
+		} 	
+        
+}
+//律金币不足的提示
+function showWindow5(){
+        
+	
+	  $("#btn_run").attr('disabled','disabled').css("cursor","default"); 
+
+		var iWidth =  window.document.documentElement.clientWidth; 
+		var iHeight =  window.document.documentElement.clientHeight; 
+		var bgObj =  document.createElement("div"); 
+		
+		bgObj.style.cssText = "position:fixed;left:0;top:0px;width:" +iWidth+"px;height:"+Math.max(document.body.clientHeight, iHeight)+"px;filter:Alpha(Opacity=60);opacity:0.7;background-color: #000;z-index:999991;";
+		window.document.body.appendChild(bgObj); 
+		
+		var msgObj= document.getElementById("dialog_lyunMoenyShortFlag");
+		msgObj.style.cssText = "position: fixed;top: 20%;left: 50%;margin-left:-253px; z-index:999992;";
+		msgObj.style.display  = "block";
+		
+		//点击关闭按钮关闭窗口
+		var closeBtn = document.getElementById("btn5_lyunMoenyShortFlag");
+		closeBtn.onclick = function(){ 
+			msgObj.style.display  = "none";
+			$("#btn_run").attr('disabled',false).css("cursor","pointer");
+			document.body.removeChild(bgObj); 
+			return false;
+			
+		} 	
+		  
+		//点击关闭按钮关闭窗口
+		var closeBtn = document.getElementById("btn_lyunMoenyShort");
+		closeBtn.onclick = function(){ 
+			msgObj.style.display  = "none";
+			$("#btn_run").attr('disabled',false).css("cursor","pointer");
+			document.body.removeChild(bgObj); 
+			return false;
+			
+		} 	
+		
+}
+
+//抽奖次数不足的提示
+function showWindow8(){
+        
+	
+	  $("#btn_run").attr('disabled','disabled').css("cursor","default"); 
+
+		var iWidth =  window.document.documentElement.clientWidth; 
+		var iHeight =  window.document.documentElement.clientHeight; 
+		var bgObj =  document.createElement("div"); 
+		
+		bgObj.style.cssText = "position:fixed;left:0;top:0px;width:" +iWidth+"px;height:"+Math.max(document.body.clientHeight, iHeight)+"px;filter:Alpha(Opacity=60);opacity:0.7;background-color: #000;z-index:999991;";
+		window.document.body.appendChild(bgObj); 
+		
+		var msgObj= document.getElementById("dialog_lotteryCountShortFlag");
+		msgObj.style.cssText = "position: fixed;top: 20%;left: 50%;margin-left:-253px; z-index:999992;";
+		msgObj.style.display  = "block";
+		
+		//点击关闭按钮关闭窗口
+		var closeBtn = document.getElementById("btn_count");
+		closeBtn.onclick = function(){ 
+			msgObj.style.display  = "none";
+			$("#btn_run").attr('disabled',false).css("cursor","pointer");
+			document.body.removeChild(bgObj); 
+			return false;
+			
+		} 	
+		  
+		//点击关闭按钮关闭窗口
+		var closeBtn = document.getElementById("btn5_lotteryCountShortFlag");
+		closeBtn.onclick = function(){ 
+			msgObj.style.display  = "none";
+			$("#btn_run").attr('disabled',false).css("cursor","pointer");
+			document.body.removeChild(bgObj); 
+			return false;
+			
+		} 	
+		
+}
+</script>  
+
+
+</html>

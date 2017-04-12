@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.ShopCategoryPropMapper">
+	<resultMap type="ShopCategoryPropModel" id="ShopCategoryPropModelMap">
+
+		<id property="id" column="ID" />
+		<result property="categoryId" column="CATEGORY_ID" />
+		<result property="name" column="NAME" />
+		<result property="sellerId" column="SELLER_ID" />
+		<result property="shopId" column="SHOP_ID" />
+		<result property="type" column="TYPE" />
+		<result property="inputType" column="INPUT_TYPE" />
+		<result property="inputOption" column="INPUT_OPTION" />
+		<result property="status" column="STATUS" />
+		
+	</resultMap>
+</mapper> 

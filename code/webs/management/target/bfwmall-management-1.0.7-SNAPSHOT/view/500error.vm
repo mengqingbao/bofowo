@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/common/500error.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/common/jquery-1.8.2.min.js"></script>
+
+<script type="text/javascript">
+
+    function openIndex(){
+    	window.location = 'index.htm';
+    	return false;
+    }
+    
+ 
+
+
+  
+</script>
+
+</head>
+<body>
+
+<div class="fault">
+  <div class="sorry">
+    <img src="../img/common/500error_03.png" />
+  </div>
+  <p>很抱歉，您所访问地页面不存在！</p>
+  <input type="button" value="返回律云首页" class="back_btn" onclick="openIndex()" style="cursor: pointer;"/>
+</div>
+
+<div class="foot"></div>
+</body>
+</html>

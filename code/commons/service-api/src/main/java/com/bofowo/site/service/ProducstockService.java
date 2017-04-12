@@ -13,4 +13,6 @@ public interface ProducstockService{
 	public void del(long id);
 	public long insert(ProducstockModel producstock);
 	public long update(ProducstockModel producstock);
+	public List<ProducstockModel> getListByItemId(Integer itemId);
+	public void delByItemId(int id);
 } 

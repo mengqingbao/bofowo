@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+	<context:annotation-config />
+	<!-- scan location -->
+	<context:component-scan base-package="com.bofowo.site.controller" />
+	<bean id="SpringBeanUtil" class="org.springframe.core.util.SpringBeanUtil"/> 
+	<!-- 全局变量 -->
+	<bean
+		class="org.springframework.beans.factory.config.ext.CspPropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:yunlive.conf.properties</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="settings" class="org.springframework.beans.factory.config.ext.CspPropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath:yunlive.conf.properties</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- one of the properties available; the maximum file size in bytes -->
+		<property name="maxUploadSize" value="100000" />
+	</bean>
+	<bean id="simpleMailSender" class="com.bofowo.site.model.SimpleMailSender">
+		<constructor-arg><value>smtp.exmail.qq.com</value></constructor-arg>
+		<constructor-arg><value>information@lyun.com</value></constructor-arg>
+		<constructor-arg><value>Ly123456!</value></constructor-arg>
+	
+	</bean>
+	
+	
+	<bean id="smsBasicHttpParams" class="org.apache.http.params.BasicHttpParams">
+	</bean>
+	
+	<!-- internationalization -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="content/language" />
+		<property name="useCodeAsDefaultMessage" value="true" />
+	</bean>
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver" />
+	<bean id="exceptionResolver"
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<!-- <property name="defaultErrorView">  
+	      <value>redirect:error.htm</value>  
+	    </property>  -->
+		<property name="exceptionMappings">
+			<props>
+				<!-- <prop key="java.lang.Exception">redirect:error.htm</prop>
+				<prop key="org.springframework.web.multipart.MaxUploadSizeExceededException">redirect:error.htm</prop>
+				<prop key="org.springframework.web.multipart.BindException">redirect:error.htm</prop>
+				<prop key="org.springframework.web.multipart.HttpMessageNotReadableException">redirect:error.htm</prop>
+				<prop key="org.springframework.web.multipart.MethodArgumentNotValidException">redirect:error.htm</prop>
+				<prop key="org.springframework.web.multipart.MissingServletRequestParameterException">redirect:error.htm</prop>
+				<prop key="org.springframework.web.multipart.MissingServletRequestPartException">redirect:error.htm</prop>
+				<prop key="org.springframework.web.multipart.TypeMismatchException">redirect:error.htm</prop>
+				 -->
+			</props>
+		</property>
+	</bean>
+	
+	<!-- EhCache library setup -->
+	<!-- <bean id="ehcache"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"
+		p:config-location="WEB-INF/ehcache.xml" /> -->
+
+	<!-- ehcache -->
+	<!-- <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager"
+		p:cache-manager-ref="ehcache" /> -->
+	<!-- <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"> 
+		<property name="mappings"> <props> <prop key="/upload.htm">fileUploadController</prop> 
+		</props> </property> </bean> <bean id="fileUploadController" class="com.auchan.web.controller.FileUploadController"> 
+		<property name="commandClass" value="com.auchan.web.controller.bean.FileUploadBean" 
+		/> <property name="formView" value="fileuploadform" /> <property name="successView" 
+		value="redirect:/page.htm" /> </bean> -->
+	<import resource="classpath:META-INF/spring/spring-service.xml" />
+	<import resource="classpath:META-INF/spring/spring-mybatis.xml" />
+	<import resource="classpath:META-INF/spring/services.xml" />
+	<import resource="classpath:META-INF/spring/spring-mq.xml" />
+	<!-- import resource="classpath:META-INF/spring/spring-security.xml" /> -->
+</beans>

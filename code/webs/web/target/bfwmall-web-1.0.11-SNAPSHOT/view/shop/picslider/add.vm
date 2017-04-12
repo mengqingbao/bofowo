@@ -1,0 +1,115 @@
+<link src="src/upload_style.css"/>
+<script type="text/javascript" charset="utf-8" src="plugins/ueditor/ueditor.config.js"></script>
+ <script type="text/javascript" charset="utf-8" src="plugins/ueditor/ueditor.all.min.js"> </script>
+ <script type="text/javascript" charset="utf-8" src="plugins/ueditor/lang/zh-cn/zh-cn.js"></script>    
+ <script type="text/javascript" charset="utf-8" src="js/uploadify/ajaxfileupload.js"></script>  
+ <script type="text/javascript" charset="utf-8" src="js/ajaxupload-ly.js?v31"></script> 
+ <script type="text/javascript" charset="utf-8" src="js/base.js?v31"></script> 
+ <script type="text/javascript" charset="utf-8" src="js/jQuery.preview.js?v31"></script>   
+  <div class="am-cf am-padding f1">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">表单</strong> / <small>首页轮播图</small></div>
+  </div>
+
+  <div class="am-g am-margin">
+
+ <form action="provider-picslider-insert.htm" method="post" id="addItemForm" class="am-form am-form-inline" enctype="multipart/form-data">
+ <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
+        <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-center lh30">
+              标题
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
+              <input type="text" class="am-input-sm" name="title">
+            </div>
+             <div class="am-hide-sm-only am-u-md-6 ml-10 lh30">*必填项</div>
+            
+          </div>
+
+        <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-center lh30">
+              选择文件：
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
+             <input type="file" id="photoFile" name="photoFile" style="display:none">
+             <input type="button" id="browseButton" class="btn_enclosure" value="上传附件">
+            </div>
+            
+          </div>
+
+        <div class="am-g am-margin-top" id="imagePreview" style="display:none">
+            <div class="am-u-sm-4 am-u-md-2 am-text-center lh30">
+                &nbsp;
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
+                <div id="previewDiv"><img id="ImgPr" width="420" height="220" /></div>
+            </div>
+            
+          </div>
+
+        <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-center lh30">
+              链接URL
+            </div>
+            <div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
+              <input type="text" class="am-input-sm" name="url">
+            </div>
+             <div class="am-hide-sm-only am-u-md-6 ml-10 lh30">*必填项</div>
+            
+          </div>
+        
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-center lh30">
+              描述
+            </div>
+            <div class="am-u-sm-8 am-u-md-4">
+              <input type="text" class="am-input-sm" name="desc">
+            </div>
+            <div class="am-hide-sm-only am-u-md-6 ml-10 lh30"></div>
+          </div>
+
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-center lh30">
+              状态
+            </div>
+            <div class="am-u-sm-8 am-u-md-4">
+              <input type="radio" class="am-input-sm" name="status" value="1" checked>:显示 &nbsp; &nbsp;
+              <input type="radio" class="am-input-sm" name="status" value="0">:隐藏
+            </div>
+            <div class="am-hide-sm-only am-u-md-6 ml-10 lh30"></div>
+          </div>
+
+  <div class="am-margin center">
+    <input type="button" onclick="sbmit()" class="am-btn am-btn-primary am-btn-xs" value="发 布"/>
+    <a class="am-btn am-btn-primary am-btn-xs" href="provider-item-search-1.htm">取 消</a>
+  </div>
+ </form>
+</div>
+ 
+  <script>
+  $("#browseButton").click(function(){   
+             var ie=navigator.appName=="Microsoft Internet Explorer" ? true : false; 
+             if(ie){ 
+                 document.getElementById("photoFile").click(); 
+             }else{
+                 var a=document.createEvent("MouseEvents");//FF的处理 
+                 a.initEvent("click", true, true);  
+                 document.getElementById("photoFile").dispatchEvent(a); 
+             }
+          }); 
+    $("#photoFile").bind('change',function(){
+        jQuery("#imagePreview").show();
+    });
+ function sbmit(){
+        jQuery("#addItemForm").submit();
+   }
+$("#photoFile").uploadPreview({ Img: "ImgPr", Width: 420, Height:220 });   
+ </script>
+<style>
+#editor {
+    font-size: 12px;
+}
+a.fl {position:relative;overflow:hidden;display:inline-block;color:#005197;text-decoration:underline;vertical-align:bottom;*vertical-align:auto}
+a.fl input {position:absolute;right:0;top:0;height:100px;opacity:0;filter:alpha(opacity=0);cursor:pointer;cursor:hand}
+a.fl:hover {color:#f65100}
+</style>  

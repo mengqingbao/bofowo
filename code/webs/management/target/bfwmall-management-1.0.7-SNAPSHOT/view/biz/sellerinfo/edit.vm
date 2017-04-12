@@ -1,0 +1,80 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>SellerInfo Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<form action="sellerinfo-update.htm" method="post"> 
+	<table class="table table-striped table-bordered responsive">
+															<tr>
+				<td><label for="status">#springMessage("name")</label></td>
+				<td>
+					<input type="text" name="name" id="name" value="$!{sellerinfo.name}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("idCard")</label></td>
+				<td>
+					<input type="text" name="idCard" id="idCard" value="$!{sellerinfo.idCard}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("idCardPic")</label></td>
+				<td>
+					<input type="text" name="idCardPic" id="idCardPic" value="$!{sellerinfo.idCardPic}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("deposit")</label></td>
+				<td>
+					<input type="text" name="deposit" id="deposit" value="$!{sellerinfo.deposit}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("type")</label></td>
+				<td>
+					<input type="text" name="type" id="type" value="$!{sellerinfo.type}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("status")</label></td>
+				<td>
+					<input type="text" name="status" id="status" value="$!{sellerinfo.status}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("createdDate")</label></td>
+				<td>
+					<input type="text" name="createdDate" id="createdDate" value="$!{sellerinfo.createdDate}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("creator")</label></td>
+				<td>
+					<input type="text" name="creator" id="creator" value="$!{sellerinfo.creator}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("userId")</label></td>
+				<td>
+					<input type="text" name="userId" id="userId" value="$!{sellerinfo.userId}"/>
+				</td>
+			</tr>
+						</table>
+	<input type="submit" value="#springMessage("save")"/>
+</form>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

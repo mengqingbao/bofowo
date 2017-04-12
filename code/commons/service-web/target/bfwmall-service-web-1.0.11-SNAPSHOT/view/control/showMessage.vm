@@ -1,0 +1,10 @@
+<span style="display:none" id="_message_hidden_span_">
+#if($message && $message.trim().length() > 0)
+$message
+#elseif($request.getParameter("message") && $request.getParameter("message").trim().length() > 0)
+$request.getParameter("message")
+#end
+</span>
+#if(($message && $message.trim().length() > 0) || ($request.getParameter("message") && $request.getParameter("message").trim().length() > 0))
+<script>$(function(){alert($("#_message_hidden_span_").html())});</script>
+#end

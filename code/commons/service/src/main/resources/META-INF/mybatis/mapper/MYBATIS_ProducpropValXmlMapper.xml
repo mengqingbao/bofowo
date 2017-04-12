@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.ProducpropValMapper">
+	<resultMap type="ProducpropValModel" id="ProducpropValModelMap">
+
+		<id property="id" column="ID" />
+		<result property="productId" column="PRODUCT_ID" />
+		<result property="propName" column="PROP_NAME" />
+		<result property="propVal" column="PROP_VAL" />
+		<result property="propId" column="PROP_ID" />
+		<result property="propKey" column="PROP_KEY" />
+		
+	</resultMap>
+</mapper> 

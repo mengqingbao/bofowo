@@ -1,0 +1,186 @@
+<style>
+.table-main {
+	  border: 1px solid #dddddd;
+}
+</style>
+<div class="main-content">
+    <div class="am-g am-margin-top"  style="min-height:300px;">
+      <div class="am-u-sm-6">
+        <table class="am-table am-table-striped am-table-hover table-main" style="margin-left:10px">
+         	<tbody>
+         	<tr><td colspan="7"> 店铺：<a href="">$shop.name</a></td></tr>
+            			<tr>
+            			  <td></td>
+            			  <td  class="table-title" width="220px"><a href="item-$!{item.itemId}-detail.htm"><image src="item-image-${StringUtil.getImageId($item.images)}.htm" style="width:200px;height:200px"><a/></td>
+            			  <td  class="table-title" width="280px"><a href="item-$!{item.itemId}-detail.htm">$!item.name</a><br/>
+            			     规格：$!{spec}
+            			         <br/>
+                            单价：$!item.shopPrice <br/>
+                            数量：$!quantity
+                            <br/>
+             				总计：$!total
+             				 </td>
+             				 </tr>
+            
+          </tbody>
+        </table>
+        <input type="hidden" name="ids" value="$!{ids}"/>
+      </div>
+      <div class="am-u-sm-6">
+            
+  <form action="member_create_trade_immediately.htm" method="post"> 
+      <div class="am-u-sm-12" style="min-height:40px;margin-top:20px;margin-left:20px">
+       收货地址：
+                    <select name="receiverAddrId" data-am-selected="{btnSize: 'sm'}">
+                        #foreach($addr in $addrs)
+                        <option value="$!{addr.id}">$!{addr.province}$!{addr.city}$!{addr.area}$!{addr.address}  $!{addr.realName}  $!{addr.mobile}</option>
+                        #end
+                    </select>   
+                    
+            <a href="consumer-deliver-address.htm"/>新增</a>
+        </div>
+
+          <div class="am-u-sm-12" style="min-height:40px;;margin-left:20px">
+            支付方式：
+            <div class="am-btn-group" data-am-button="">
+              <label class="am-btn am-btn-default am-btn-xs">
+                <input type="radio" name="payWay" value="alipay"> 支付宝
+              </label>
+              <label class="am-btn am-btn-default am-btn-xs">
+                <input type="radio" name="payWay" value="weixin"> 微信
+              </label>
+              <label class="am-btn am-btn-default am-btn-xs">
+                <input type="radio" name="payWay" value="jd"> 京东金融
+              </label>
+            </div>
+           </div>
+      <div class="am-u-sm-12" style="min-height:40px;;margin-left:20px">
+       
+         总计价金额：<span id="showTotalPrice" style="color:red;font-size:14px;margin-left:20px">$!total</span>
+         
+         
+      </div>
+ 
+      <div class="am-u-sm-12" style="min-height:40px;padding-left: 10px;">
+         <input type="hidden" name="goodsId" id="goodsId" value="$!{goodsId}"/>
+          <input type="hidden" name="quantity" id="quantity" value="$!{quantity}"/>
+           <input type="hidden" name="spec" id="tradeIds" value="$!{spec}"/>
+         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+         <input type="submit" value="提交订单并支付" class="am-btn am-btn-default"/>
+      </div>
+ 
+   </form> 
+            
+      </div>
+    </div>
+    <div class="am-g">
+      <div class="am-u-sm-12">
+		&nbsp;
+      </div>
+    </div>
+ </div>
+    <script type="text/javascript" charset-"utf-8" src="js/jsAddress.js"></script>
+    <script type="text/javascript" charset-"utf-8" src="js/jquery-1.8.2.min.js"></script>
+    <link href='/css/jquery.qtip.min.css' rel='stylesheet'>
+	<link href='/css/jquery.qtip.css' rel='stylesheet'>
+	<script src="/js/jquery.qtip.min.js"></script>    
+    <script>
+    function buyNow(id){ 
+    	console.log(id);
+			//var num=parseInt(jQuery("#quantity").val());
+			//if(num<1){
+			//	alert("数量必须大于1");
+			//}
+			console.log(jQuery("#"+id));
+			jQuery("#"+id).submit()
+		}
+
+      jQuery(".btn-del").each(function(){jQuery(this).qtip({
+		content: {
+			text: "#springMessage("confirm")<br/><br/><input type='button' value='#springMessage("delete")' onclick='del("+jQuery(this).attr('id')+")' class='btn btn-danger'>  <input type='button' value='#springMessage("cancel")' class='btn cancel'>",
+			title: "#springMessage("delete")",
+			button: "#springMessage("cancel")",
+		},
+		
+		position: {
+			my: 'bottom right',
+			at: 'top center'
+		 },
+		style: {
+			classes: 'qtip-shadow qtip-bootstrap'
+		},
+		show: {
+			event: 'click', // Show it on click...
+			solo: true, // ...and hide all other tooltips...
+			modal: true // ...and make it modal
+		  },
+		hide: true,
+		events: {
+            render: function(event, api) {
+                $('.cancel').click(function(e) {
+                    api.hide(e);
+                });
+            },
+          //  hide: function(event, api) { api.destroy(); }
+        }
+
+	});});
+	
+jQuery("#allCheck").click(function(){  
+  var total=0;
+  var code_Values = document.all["payCheck"];  
+  var ids="";
+ 
+  if(this.checked){
+     if (code_Values.length) {  
+       for ( var i = 0; i < code_Values.length; i++) {  
+        code_Values[i].checked = true; 
+        ids+=jQuery(code_Values[i]).attr("itemId")+","
+    	total+=Number(jQuery(code_Values[i]).attr("price"));
+      }  
+     }
+    jQuery("#showTotalPrice").html(total);  
+    jQuery("#submitItemIds").val(ids);
+  
+  }else{
+  	if (code_Values.length) {  
+       for ( var i = 0; i < code_Values.length; i++) {  
+        code_Values[i].checked = false;  
+      }  
+     } else {  
+  	  code_Values.checked = false;  
+     }  
+    jQuery("#showTotalPrice").html("0");  
+    jQuery("#submitItemIds").val("");
+  }
+} );
+  
+   
+  
+jQuery(".payCheckBox").click(function(){  
+  var total=0;
+  var code_Values = document.all["payCheck"];  
+  var ids="";
+  var ifsetAllPayCheck=true;
+  if (code_Values.length) {  
+    for ( var i = 0; i < code_Values.length; i++) {  
+    	if(code_Values[i].checked){
+    		ids+=jQuery(code_Values[i]).attr("itemId")+","
+    		total+=Number(jQuery(code_Values[i]).attr("price"));
+    	}else{
+    		ifsetAllPayCheck=false;
+    	}
+    }
+    jQuery("#showTotalPrice").html(total);  
+    jQuery("#submitItemIds").val(ids);
+    console.log(ifsetAllPayCheck);
+    if(ifsetAllPayCheck){
+    	//jQuery("#allCheck").attr("checked", "checked");
+    	document.getElementById("allCheck").checked=true;
+    }else{
+    	document.getElementById("allCheck").checked=false;
+    }
+  }
+}  
+);
+     </script>

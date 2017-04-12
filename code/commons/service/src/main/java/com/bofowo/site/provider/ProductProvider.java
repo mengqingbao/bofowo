@@ -64,6 +64,9 @@ public class ProductProvider {
 	if(!StringUtil.isEmpty(query.getCurrentUserName())){
 		sql+="and SELLER_ID='"+query.getCurrentUserName()+"' ";
 	}
+	if(!StringUtil.isEmpty(query.getTaglib())){
+		sql+="and TIGLIB='"+query.getTaglib()+"' ";
+	}
 	sql+="order by MODIFIED_TIME desc limit #{startRow},#{endRow}";
 	return sql;
 	}

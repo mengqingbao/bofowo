@@ -1,0 +1,113 @@
+ <div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="">
+                    <h2><i class="glyphicon glyphicon-user"></i>Attending List</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                        <a href="#" class="btn btn-close btn-round btn-default"><i
+                                class="glyphicon glyphicon-remove"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+        
+         
+                <table class="table table-striped table-bordered responsive">
+				<tbody>
+				<tr>
+					<td width="160px">Training description</td>
+					<td colspan="3"></td>
+					
+				</tr>
+         		<tr>
+					<td>Training starting date:</td>
+					<td></td>
+					<td width="160px">Location</td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td width="50px">Training ending date: </td>
+					<td></td>
+					<td>Training duration: </td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td>Session number: </td>
+					<td></td>
+					<td>Today’s date :</td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td>Organization center:</td>
+					<td></td>
+					<td>Participants’ number</td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td>Trainer(s)’ name(s)</td>
+					<td></td>
+					<td>Training Company’s Name</td>
+					<td></td>
+					
+				</tr>
+         		
+         		 
+		         </tbody>
+      </table>
+		<table class="table table-striped table-bordered responsive">
+			<tr><td>No.</td><td>Employees’ ID</td><td>First Name</td><td>Last Name</td><td>Position</td><td>Store</td><td>Division</td><td>Section</td><td>Manager</td><td>Signatures</td><td>Arrival time</td></tr>
+			<tr><td>1</td><td>11</td><td>沈飞</td><td>shenfei</td><td>P1</td><td>nb1</td><td>FP</td><td>sss</td><td>aludo</td><td><a class="btn btn-danger">Signature</a></td><td class="unsign">2014-11-11 09:20:23</td></tr>
+			<tr><td>2</td><td>212</td><td>郭红霞</td><td>guohongxia</td><td>P1</td><td>nb1</td><td>FP</td><td>sss</td><td>aludo</td><td><a class="btn btn-danger">Signature</a></td><td class="unsign">2014-11-11 09:20:23</td></tr>
+			<tr><td>3</td><td>121</td><td>陈瑜</td><td>chenyu</td><td>P1</td><td>nb1</td><td>FP</td><td>sss</td><td>aludo</td><td><a class="btn btn-danger">Signature</a></td><td class="unsign">2014-11-11 09:20:23</td></tr>
+			<tr><td>4</td><td>212</td><td>朱红瑶</td><td>zhuhongyao</td><td>P1</td><td>nb1</td><td>FP</td><td>sss</td><td>aludo</td><td><a class="btn btn-danger">Signature</a></td><td class="unsign">2014-11-11 09:20:23</td></tr>
+			<tr><td>5</td><td>121</td><td>朱莉芳</td><td>zhulifang</td><td>P1</td><td>nb1</td><td>FP</td><td>sss</td><td>aludo</td><td><a class="btn btn-danger">Signature</a></td><td class="unsign">2014-11-11 09:20:23</td></tr>
+			<tr><td>6</td><td>121</td><td>林家辉</td><td>linjiahui</td><td>P1</td><td>nb1</td><td>FP</td><td>sss</td><td>aludo</td><td><a class="btn btn-danger">Signature</a></td><td class="unsign">2014-11-11 09:20:23</td></tr>
+			<tr><td>7</td><td>1212</td><td>林立</td><td>linli</td><td>P1</td><td>nb1</td><td>FP</td><td>sss</td><td>aludo</td><td><a class="btn btn-danger">Signature</a></td><td class="unsign">2014-11-11 09:20:23</td></tr>
+			<tr><td>8</td><td>1212</td><td>王偲偲</td><td>wangsisi</td><td>P1</td><td>nb1</td><td>FP</td><td>sss</td><td>aludo</td><td><a class="btn btn-danger">Signature</a></td><td class="unsign">2014-11-11 09:20:23</td></tr>
+			<tr><td>9</td><td>1212</td><td>杨倩</td><td>yangqian</td><td>P1</td><td>nb1</td><td>FP</td><td>sss</td><td>aludo</td><td><a class="btn btn-danger">Signature</a></td><td class="unsign">2014-11-11 09:20:23</td></tr>
+			<tr><td>10</td><td>1212</td><td>叶周腾</td><td>yezhouteng</td><td>P1</td><td>nb1</td><td>FP</td><td>sss</td><td>aludo</td><td><a class="btn btn-danger">Signature</a></td><td class="unsign">2014-11-11 09:20:23</td></tr>	
+		</table>
+		 <input type="submit" name="submit" id="submit" value="Print"  class="btn btn-success" />
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+
+    </div><!--/row-->
+	
+	<script>
+	jQuery(".btn-danger").click(function(){
+		if(jQuery(this).hasClass("btn-danger")){
+			jQuery(this).removeClass("btn-danger").addClass("btn-success");
+			var content="<a href=\"#\" class=\"label label-success\">"+jQuery(this).parent().next().html()+"</a>";
+			jQuery(this).parent().next().removeClass("unsign");
+			jQuery(this).parent().next().html(content);
+		}else{
+			jQuery(this).removeClass("btn-success").addClass("btn-danger");
+			var content=jQuery(this).parent().next().children("a").html();
+			jQuery(this).parent().next().html(content);
+			jQuery(this).parent().next().addClass("unsign");
+		}
+		
+	});
+
+	var t = null;
+    
+    function time()
+    {
+       //clearTimeout(t);//清除定时器
+       dt = new Date();
+       var h=dt.getHours();
+       var m=dt.getMinutes();
+       var s=dt.getSeconds();
+       jQuery(".unsign").html(dt.getFullYear()+"\\"+(dt.getMonth()+1)+"\\"+dt.getDate()+" "+h+":"+m+":"+s);
+       t = setTimeout(time,1000);              
+    } 
+	time();
+	</script>

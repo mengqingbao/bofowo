@@ -15,7 +15,8 @@ public enum LayoutType {
     SELLER("seller","seller.vm"),
     AMAZEUI("amazeui","amazeui.vm"),
     BUYER("buyer","buyer.vm"),
-    HOME("home","home.vm");
+    HOME("home","home.vm"),
+    PAY("pay","pay.vm");
     
 
 

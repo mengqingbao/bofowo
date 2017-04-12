@@ -14,11 +14,11 @@ import java.util.List;
 
 public interface WebContentMapper{
 																																																																																																																																																																																																				
-	public String columns="ID,TITLE,AUTHOR,FROM_,CREATE_DATE,MODIFY_DATE,CREATOR,MODIFIER,CONTENT_A,CONTENT_B,CONTENT_C,CATEGORY_ID,STATUS,IS_DELETE,DESC_,TAG_LIB_ID,SEO_TITTLE,SEO_KEY,SEO_DESC";
+	public String columns="ID,TITLE,AUTHOR,FROM_,CREATE_DATE,MODIFY_DATE,CREATOR,MODIFIER,CONTENT_A,CONTENT_B,CONTENT_C,CATEGORY_ID,STATUS,IS_DELETE,DESC_,TAG_LIB_ID,SEO_TITTLE,SEO_KEY,SEO_DESC,PIC";
 																																																																																																																																																																																																				
-	public String property="#{id},#{title},#{author},#{from},#{createDate},#{modifyDate},#{creator},#{modifier},#{contentA},#{contentB},#{contentC},#{categoryId},#{status},#{isDelete},#{desc},#{tagLibId},#{seoTittle},#{seoKey},#{seoDesc}";
+	public String property="#{id},#{title},#{author},#{from},#{createDate},#{modifyDate},#{creator},#{modifier},#{contentA},#{contentB},#{contentC},#{categoryId},#{status},#{isDelete},#{desc},#{tagLibId},#{seoTittle},#{seoKey},#{seoDesc},#{pic}";
 																																																																																																																																																																																																												
-	public String update="TITLE=#{title},AUTHOR=#{author},FROM_=#{from},CREATE_DATE=#{createDate},MODIFY_DATE=#{modifyDate},CREATOR=#{creator},MODIFIER=#{modifier},CONTENT_A=#{contentA},CONTENT_B=#{contentB},CONTENT_C=#{contentC},CATEGORY_ID=#{categoryId},STATUS=#{status},IS_DELETE=#{isDelete},DESC_=#{desc},TAG_LIB_ID=#{tagLibId},SEO_TITTLE=#{seoTittle},SEO_KEY=#{seoKey},SEO_DESC=#{seoDesc}";
+	public String update="TITLE=#{title},AUTHOR=#{author},FROM_=#{from},CREATE_DATE=#{createDate},MODIFY_DATE=#{modifyDate},CREATOR=#{creator},MODIFIER=#{modifier},CONTENT_A=#{contentA},CONTENT_B=#{contentB},CONTENT_C=#{contentC},CATEGORY_ID=#{categoryId},STATUS=#{status},IS_DELETE=#{isDelete},DESC_=#{desc},TAG_LIB_ID=#{tagLibId},SEO_TITTLE=#{seoTittle},SEO_KEY=#{seoKey},SEO_DESC=#{seoDesc},PIC=#{pic}";
 	
 	@Select("select "+columns+" FROM T_WEB_CONTENT limit #{startRow},#{endRow}")
 	@ResultMap(value="com.bofowo.site.mapper.WebContentMapper.WebContentModelMap")

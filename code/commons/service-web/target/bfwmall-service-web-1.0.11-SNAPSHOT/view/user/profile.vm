@@ -1,0 +1,55 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>修改密码</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+<div class="row" style="width:800px;margin:0 auto">
+
+<div class="col-md-12 >
+
+<form action="user-update.htm" method="post"> 
+<h1><a href="#">密码修改</a></h1>
+	<table class="table table-striped table-bordered responsive">
+			<tr>
+				<td><label for="status">#springMessage("userName")</label></td>
+				<td>
+					<input type="text" name="userName" id="userName" value="$!{user.userName}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("photo")</label></td>
+				<td>
+					<input type="text" name="photo" id="photo" value="$!{user.photo}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("desc")</label></td>
+				<td>
+					<input type="text" name="desc" id="desc" value="$!{user.desc}"/>
+				</td>
+			</tr>
+			</tr>
+											<tr>
+				<td colspan="2">
+					<a href="" class="btn btn-danger">修改</a></td>
+			</tr>
+			
+						</table>
+						
+	
+</form>
+</div></div>
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

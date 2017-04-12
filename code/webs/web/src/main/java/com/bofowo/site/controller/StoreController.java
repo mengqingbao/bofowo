@@ -18,6 +18,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.bofowo.site.model.PicSliderModel;
 import com.bofowo.site.model.PostemplateModel;
 import com.bofowo.site.model.ProductModel;
 import com.bofowo.site.model.ShopCategoryModel;
@@ -30,6 +31,7 @@ import com.bofowo.site.query.ProductQuery;
 import com.bofowo.site.query.ShopCategoryPropQuery;
 import com.bofowo.site.query.ShopCategoryQuery;
 import com.bofowo.site.query.ShopScrollQuery;
+import com.bofowo.site.service.PicSliderService;
 import com.bofowo.site.service.PostemplateService;
 import com.bofowo.site.service.ProducpropertiesService;
 import com.bofowo.site.service.ProductService;
@@ -75,10 +77,11 @@ public class StoreController extends BaseController {
 	private ShopService shopService;
 	@Resource
 	private ShopScrollService shopScrollService;
-	
+	@Resource
+	private PicSliderService picSliderService;
 
-	@RequestMapping("/shop-detail")
-	public String shopDetail(ModelMap model,boolean error,Integer id,ProductQuery query){
+	@RequestMapping("/shop-detail-{id}")
+	public String shopDetail(ModelMap model,boolean error,@PathVariable Integer id,ProductQuery query){
 		//店铺基础信息
 		ShopModel shop=shopService.getById(id);
 		model.put("shop", shop);
@@ -86,7 +89,7 @@ public class StoreController extends BaseController {
 			return "error";
 		}
 		//店铺分类信息
-		List<ShopCategoryModel> cates=shopCategoryService.getListByShopId(shop.getId());
+		List<ShopCategoryModel> cates=shopCategoryService.getListByShopId(shop.getId(),"pc");
 		model.put("cates", cates);
 		
 		//查询热卖列表
@@ -101,7 +104,7 @@ public class StoreController extends BaseController {
 				List<ProductModel> news=productService.getNewsTop(query);
 				model.put("news",news);
 		//店铺滚动图片
-		List<ShopScrollModel> ssms = shopScrollService.getScrollByshopId(id);
+		List<PicSliderModel> ssms = picSliderService.getByshopId(id);
 		model.put("ssms", ssms);
 		return "shopDetail";
 	}
@@ -116,7 +119,7 @@ public class StoreController extends BaseController {
 		}
 		
 		//店铺分类信息
-		List<ShopCategoryModel> cates=shopCategoryService.getListByShopId(shopId);
+		List<ShopCategoryModel> cates=shopCategoryService.getListByShopId(shopId,"pc");
 		model.put("cates", cates);
 		query.setShopCategoryId(cateId);
 		query.setShopId(shopId);

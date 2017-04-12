@@ -1,0 +1,115 @@
+ <div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="">
+                    <h2><i class="glyphicon glyphicon-user"></i> #springMessage("plan.detail")</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                        <a href="#" class="btn btn-close btn-round btn-default"><i
+                                class="glyphicon glyphicon-remove"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+        
+         
+                <table class="table table-striped table-bordered responsive">
+	  <thead>
+          <tr>
+			<th width="50px" class="header_">Code</th>
+            <th class="header_">Title</th>
+			<th width="60px" class="header_">Trainee</th>	
+			<th width="70px" class="header_">Time</th>	
+			<th width="70px" class="header_">Duration</th>				
+			<th width="70px">Status</th>
+            <th width="200px">Operate</th>
+          </tr>
+        </thead>
+						<tbody><tr #if($!courseId=='99') style="background:red" #end>
+					<td width="50px">EI-006
+</td>
+					<td title="To practice the fire fighting equipment "><a href="plan-detail.htm?id=$!plan.id&courseId=99">Fire fighting Practise</a></td>
+					<td width="60px">All Staff</td>
+					<td width="70px">&lt; 3days</td>
+					<td width="70px">1.0 h</td>
+					<td width="50px"><span class="label-success label label-default">available</span></td>
+					<td width="50px">
+					<a class="btn btn-info" href="/course-edit.htm?id=23">
+                                    <i class="glyphicon glyphicon-edit icon-white"></i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger" href="/delete.htm?id=$!{db.id}">
+                                    <i class="glyphicon glyphicon-trash icon-white"></i>
+                                    Delete
+                        </a>
+					</td>
+				</tr>
+         				<tr #if($!courseId=='78') style="background:red" #end>
+					<td width="50px">CHN0001
+</td>
+					<td title="To know the Auchan history and culture"><a href="plan-detail.htm?id=$!plan.id&courseId=78">Welcome to Auchan</a></td>
+					<td width="60px">All Staff</td>
+					<td width="70px">&lt;1个月</td>
+					<td width="70px">0.75 h</td>
+					<td width="50px"><span class="label-success label label-default">available</span></td>
+					<td width="50px">
+					<a class="btn btn-info" href="/course-edit.htm?id=23">
+                                    <i class="glyphicon glyphicon-edit icon-white"></i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger" href="/delete.htm?id=$!{db.id}">
+                                    <i class="glyphicon glyphicon-trash icon-white"></i>
+                                    Delete
+                        </a>
+					</td>
+				</tr>
+         				<tr #if($!courseId=='5') style="background:red" #end>
+					<td width="50px">CHN0020
+</td>
+					<td title="To know the Auchan rules for staff"><a href="plan-detail.htm?id=$!plan.id&courseId=5">Employee handbook@</a></td>
+					<td width="60px">All Staff</td>
+					<td width="70px">&lt;1个月</td>
+					<td width="70px">1.5 h</td>
+					<td width="50px"><span class="label-success label label-default">available</span></td>
+					<td width="50px">
+					<a class="btn btn-info" href="/course-edit.htm?id=23">
+                                    <i class="glyphicon glyphicon-edit icon-white"></i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger" href="/delete.htm?id=$!{db.id}">
+                                    <i class="glyphicon glyphicon-trash icon-white"></i>
+                                    Delete
+                        </a>
+					</td>
+				</tr>
+         				<tr #if($!courseId=='4') style="background:red" #end>
+					<td width="50px">EI-014
+</td>
+					<td title="To know which kind of welfare and insurance staff will got."><a href="plan-detail.htm?id=$!plan.id&courseId=4">Welfare and iinsurance</a></td>
+					<td width="60px">All Staff</td>
+					<td width="70px">&lt;1个月</td>
+					<td width="70px">1.0 h</td>
+					<td width="50px"><span class="label-success label label-default">available</span></td>
+					<td width="50px">
+					<a class="btn btn-info" href="/course-edit.htm?id=23">
+                                    <i class="glyphicon glyphicon-edit icon-white"></i>
+                                    Edit
+                                </a>
+                                <a class="btn btn-danger" href="/delete.htm?id=$!{db.id}">
+                                    <i class="glyphicon glyphicon-trash icon-white"></i>
+                                    Delete
+                        </a>
+					</td>
+				</tr>
+         		 
+		         </tbody>
+      </table>
+	
+	
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+
+    </div><!--/row-->

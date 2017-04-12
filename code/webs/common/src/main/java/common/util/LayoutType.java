@@ -16,7 +16,8 @@ public enum LayoutType {
     AMAZEUI("amazeui","amazeui.vm"),
     BUYER("buyer","buyer.vm"),
     HOME("home","home.vm"),
-    CAR("car","car.vm");
+    CAR("car","car.vm"),
+    PAY("pay","pay.vm");
 
 
     /** 代码 */

@@ -1,0 +1,50 @@
+<div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">表单</strong> / <small>form</small></div>
+</div>
+
+<div class="am-tabs am-margin" data-am-tabs="">
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <li class=""><a href="#tab1">基本信息</a></li>
+      <li class=""><a href="#tab2">详细描述</a></li>
+      <li class="am-active"><a href="#tab3">SEO 选项</a></li>
+    </ul>
+
+<div class="am-tabs-bd" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      <div class="am-tab-panel am-fade" id="tab1">
+       
+<table class="table table-striped table-bordered responsive">
+ <thead>
+  <tr>
+	<td><label for="status">#springMessage("id")</label></td>
+	<td><label for="status">#springMessage("name")</label></td>
+	<td><label for="status">#springMessage("url")</label></td>
+	<td><label for="status">#springMessage("type")</label></td>
+	<td><label for="status">#springMessage("status")</label></td>
+	<td>Operation</td>
+  </tr>
+ </thead>
+ <tbody>
+#foreach($item in $items)
+  <tr>
+	<td> $!{item.id} </td>
+	<td><a href="/page-detail.htm?id=$!{item.id}"> $!{item.name} </td>
+	<td> $!{item.url} </a></td>
+	<td> $!{item.type} </td>
+	<td> $!{item.status} </td>
+	<td><a href="/page-edit.htm?id=$!{item.id}"  class="btn btn-info">Modify</a><a href="/page-del.htm?id=$!{item.id}"  class="btn btn-danger">Del</a></td>
+  </tr>
+#end
+ </tbody>
+</table>
+<form id="form1" name="form1"></form>
+			#pageNavigation($!pageInfo,'form1')
+      </div>
+
+      <div class="am-tab-panel am-fade" id="tab2">
+       
+      </div>
+
+      <div class="am-tab-panel am-fade am-active am-in" id="tab3">
+        
+      </div>
+  </div>

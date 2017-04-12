@@ -16,7 +16,7 @@
         ===
     -->
     <meta charset="utf-8">
-    <title>Auchan Training</title>
+    <title>会员登陆</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -77,8 +77,8 @@
 		           用户登录
 		        </div>
 		        <form  action="login-action-check" method="post">
-		        	<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-		        	<input type="hidden" name="redirect" value="${redirect}"/>
+		        	<input type="hidden" name="${_csrf.parameterName}" value="$!{_csrf.token}"/>
+		        	<input type="hidden" name="redirect" value="$!{redirect}"/>
 		            <fieldset>
 		                <div class="input-group input-group-lg">
 		                    <span class="input-group-addon">用户名</span>

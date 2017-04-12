@@ -1,0 +1,131 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Comment Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<table class="table table-striped table-bordered responsive">
+	<tr>
+		<td><label for="status">#springMessage("id")</label></td>
+		<td>
+			$!{comment.id}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("buyerId")</label></td>
+		<td>
+			$!{comment.buyerId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("orderId")</label></td>
+		<td>
+			$!{comment.orderId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("serviceRate")</label></td>
+		<td>
+			$!{comment.serviceRate}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("itemRate")</label></td>
+		<td>
+			$!{comment.itemRate}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("postRate")</label></td>
+		<td>
+			$!{comment.postRate}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("comment")</label></td>
+		<td>
+			$!{comment.comment}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("createdTime")</label></td>
+		<td>
+			$!{comment.createdTime}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("tOrderCommentcol")</label></td>
+		<td>
+			$!{comment.tOrderCommentcol}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("modifiedTime")</label></td>
+		<td>
+			$!{comment.modifiedTime}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("status")</label></td>
+		<td>
+			$!{comment.status}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("shopId")</label></td>
+		<td>
+			$!{comment.shopId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("sellerId")</label></td>
+		<td>
+			$!{comment.sellerId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("exComment")</label></td>
+		<td>
+			$!{comment.exComment}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("exServiceRate")</label></td>
+		<td>
+			$!{comment.exServiceRate}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("exItemRate")</label></td>
+		<td>
+			$!{comment.exItemRate}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("exPost")</label></td>
+		<td>
+			$!{comment.exPost}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("tradeId")</label></td>
+		<td>
+			$!{comment.tradeId}
+		</td>
+	</tr>
+</table>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

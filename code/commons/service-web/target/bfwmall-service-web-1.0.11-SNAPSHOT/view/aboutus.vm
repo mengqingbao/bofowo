@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>多才多艺群策网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
+
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="bower_components/jquery/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+     #parse("common/head.vm")
+<div class="ch-container">
+	<div class="row" style="width:1024px;margin:0 auto">
+				
+				<div class="box col-md-12"><!--column start-->
+						<div class="box-content">
+							<div class="page-header">
+								<h3>首页 》条约</h3>
+							</div>
+								<center><p style="color:#E47B09;font-size:20;font-weight: bold;font-weight: bold;">多才多艺众策网条约</p></center>
+								<p>声明</p>
+								<p></p>
+								<p></p>
+								<p>免责声明</p>
+								<p></p>
+								<p>关于分成</p>
+								<p></p>
+								<p>甲方责任与权力</p>
+								<p></p>
+								<p>乙方责任与权力</p>
+								<p></p>
+								<p>资方责任与权力</p>
+								<p></p>
+								<p>关于我们</p>
+								<p></p>
+								<p></p>
+								<p></p>
+								<p></p>
+								<p></p>
+								<p></p>
+					</div>
+				</div><!--column end-->
+		
+	</div>
+    <hr>
+</div>
+#include("common/footer.vm")
+</body>
+</html>

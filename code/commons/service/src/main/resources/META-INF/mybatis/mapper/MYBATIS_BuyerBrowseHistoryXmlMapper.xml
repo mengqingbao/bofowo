@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.BuyerBrowseHistoryMapper">
+	<resultMap type="BuyerBrowseHistoryModel" id="BuyerBrowseHistoryModelMap">
+
+		<id property="pid" column="PID" />
+		<result property="createdDate" column="CREATED_DATE" />
+		<result property="buyerId" column="BUYER_ID" />
+		<result property="times" column="TIMES" />
+		<result property="lastVisitDate" column="LAST_VISIT_DATE" />
+		
+	</resultMap>
+</mapper> 

@@ -1,0 +1,36 @@
+  <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>添加标签</small></div>
+    </div> 
+ 
+ <div class="am-g" style="height:400px">
+      <div class="am-u-sm-12">
+
+
+<form action="taglib-insert.htm" method="post"> 
+	<table class="am-table am-table-striped am-table-hover table-main" style="width:400px">
+
+			<tr>
+				<td><label for="status">标签名称：</label></td>
+				<td>
+					<input type="text" name="name" id="name"/><input type="hidden" name="type" id="type" value="$!{type}"/>
+				</td>
+			</tr>
+			<tr>
+				<td>状态：</td>
+				<td>
+					<input type="radio" name="status" value="1" checked/>:启用 <input type="radio" name="status" value="0"/>:停用
+				</td>
+			</tr>
+			<tr>
+				<td>描述：</td>
+				<td>
+					<input type="text" name="desc" id="desc"/>
+				</td>
+			</tr>
+			</table>
+		<input type="submit" value="提交" class="am-btn am-btn-default am-btn-xs am-text-secondary"/>
+</form>
+
+</div>
+
+</div>

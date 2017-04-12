@@ -1,0 +1,102 @@
+
+    <div class="am-cf am-padding">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / #if($pageInfo.type==3) <small>内容标签管理</small> #else <small>产品标签管理</small> #end</div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-6">
+        <div class="am-btn-toolbar">
+          <div class="am-btn-group am-btn-group-xs">
+            <a href="taglib-add.htm?type=$!{pageInfo.type}" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12">
+        <form class="am-form">
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+               <th>类型编码</th><th class="table-title">类型名称</th><th>状态</th><th width="300px">标签描述</th><th class="table-date am-hide-sm-only">修改日期</th><th class="table-set">操作</th>
+              </tr>
+          </thead>
+          <tbody>
+          #foreach($foo in $list)
+            <tr>
+             
+              <td>$foo.id</td>
+              <td> <a class="am-cf am-collapsed" data-am-collapse="{target: '#category-1'}">$foo.name </td>
+              <td>#if($!foo.status==1) 启用 #else 停用 #end</td>
+               <td>$!foo.desc</td>
+              <td class="am-hide-sm-only">$dateFormat.toSimpleDateString($!foo.modifiedDate)</td>
+              <td>
+                <div class="am-btn-toolbar">
+                  <div class="am-btn-group am-btn-group-xs">
+                    <a class="am-btn am-btn-default am-btn-xs am-text-secondary" href="taglib-edit.htm?id=$!{foo.id}" title="编辑"><span class="am-icon-pencil-square-o"></span></a>
+                    <a class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" title="删除" taglibId="$!foo.id"><span class="am-icon-trash-o"></span></a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            #end
+          </tbody>
+        </table>
+       <div class="am-cf">
+<form id="form1" name="form1"></form>
+  <div class="am-pagination">
+  
+   #pageNavigation($pageInfo,"form1")
+   </div>
+</div>
+          <hr />
+          <p>注：删除父类前请先删除子类</p>
+        </form>
+      </div>
+
+    </div>
+    
+    <link href='resources/css/jquery.qtip.min.css' rel='stylesheet'>
+<link href='resources/css/jquery.qtip.css' rel='stylesheet'>
+<script src="resources/js/jquery.js"></script>
+<script src="resources/js/jquery-migrate.min.js"></script>
+<script src="resources/js/jquery.qtip.min.js"></script>
+
+<script>
+	jQuery(".am-text-danger").each(function(){jQuery(this).qtip({
+		content: {
+			text: "确定删除？<br/><br/><input type='button' value='删除' onclick='del("+jQuery(this).attr('taglibId')+")' class='btn btn-danger'>  <input type='button' value='取消' class='btn cancel'>",
+			title: "确认删除",
+			button: "取消",
+		},
+		
+		position: {
+			my: 'bottom right',
+			at: 'top center'
+		 },
+		style: {
+			classes: 'qtip-shadow qtip-bootstrap'
+		},
+		show: {
+			event: 'click', // Show it on click...
+			solo: true, // ...and hide all other tooltips...
+			modal: true // ...and make it modal
+		  },
+		hide: true,
+		events: {
+            render: function(event, api) {
+                $('.cancel').click(function(e) {
+                    api.hide(e);
+                });
+            },
+          //  hide: function(event, api) { api.destroy(); }
+        }
+
+	});})
+	
+	function del(id){
+		window.location.href='taglib-del.htm?id='+id;
+	}
+</script>

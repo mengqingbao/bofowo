@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>盈艺术</title>
+<link  type="text/css" rel="stylesheet" href="css/normalize.css"/>
+
+<style type="text/css" >
+* {
+	font-family: "微软雅黑";
+	margin: 0px;
+}
+a {
+	cursor: pointer;
+}
+.title {
+	font-size: 24px;
+}
+.top{
+	margin:0 auto;
+	width:1920px;
+	padding-top:5px;
+	padding-bottom:5px;
+	background-color:#eaeaeb;
+	text-align:right;
+	font-size:14px;
+	}
+.top p{
+	margin-right:330px;
+	text-height:30px;
+	color:#F6C;
+	}	
+.search{
+	margin:0 auto;
+	height:114px;
+	width:1920px;
+	background-color:#fff;
+	}	
+.logo{
+	margin-left:330px;
+	margin-top:10px;
+	margin-right:125px;
+	display:block;
+	float:left;
+	}
+.search input[type="text"]{
+	padding-left:10px;
+	width:700px;
+	height:45px;
+	display:block;
+	float:left;
+	margin-top:35px;
+	}	
+.search input[type="button"]{
+	text-align:center;
+	height:49px;
+	width:80px;
+	background-color:#a9cc05;
+	color:#fff;
+	border-left:0px;
+	display:block;
+	float:left;
+	margin-top:35px;
+	}			
+.nav{
+	margin:0 auto;
+	font-size:22px;
+	width:1920px;
+	background-color:#393d4a;
+	height:58px;
+	
+	}
+.nav ul{
+	float: left;
+	list-style: outside none none;
+	margin-left:290px;
+	
+	
+	}	
+.nav ul li{
+	text-align:center;
+	margin-right:148px;
+	float: left;
+	color:#fff;
+	height:58px;
+	width:110px;
+	line-height:58px;
+	}
+.on {
+	background-color: #a9cc05;
+}
+.center {
+	
+	margin-top: 10px;
+}
+.content {
+	width: 1360px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+}
+.box {
+	position: relative;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	float: left;
+}
+.content-img-bottom {
+	width: 320px;
+	margin-bottom: 0px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	color: #fff;
+	background-color: #55666e;
+	opacity: 1;
+	margin-left: auto;
+	margin-right: auto;
+}
+.content-img-l {
+	float: left;
+	margin-left: auto;
+}
+.content-img-r {
+	float: right;
+	margin-left: auto;
+	text-indent: 24px;
+}
+.box img {
+	width: 320px;
+ margin-top: 8`px;
+	max-width: 100%;
+	cursor:pointer;
+}
+.bottom {
+	width: 1920px;
+	margin: 0 auto;
+	font-size: 22px;
+	text-align: center;
+}
+.bottom div {
+	background-color: #aacd06;
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+}
+.bottom img {
+	
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="top">
+  <p>欢迎来到盈科书画院!!!</p>
+</div>
+<div class="search"> 
+ <img  src="img/LOGO.png" class="logo"/> 
+    <input  type="text" placeholder="请输入搜索内容"/>
+    <input  type="button" value="搜&nbsp;索"/>
+
+</div>
+<div class="nav">
+  <ul id="nav">
+    <li  ><a>首页</a></li>
+    <li data-t="canvas"><a>油画作品</a></li>
+    <li data-t="wash"><a>水墨画作品</a></li>
+    <li data-t="device"><a>雕塑装置</a></li>
+    <li data-t="film"><a>影像作品</a></li>
+  </ul>
+</div>
+<div class="center">
+  <div class="content" id="masonry"> 
+  </div>
+</div>
+<div class="bottom"> <img  src="img/LOGO.png" />
+  <div>版权所有：盈科书画院</div>
+</div>
+<script src="js/artists.js"></script> 
+<script type="text/javascript">
+	$(function(){
+		//导航栏设置
+		var t=Request.type;
+		
+		$("#nav li").each(function(){
+			if($(this).data("t")==t){
+				$(this).addClass("on");
+			}
+			
+		});
+		
+		
+	var $container = jQuery('#masonry');
+  	jQuery.container.imagesLoaded( function(){
+        $container.masonry({
+            itemSelector : '.box',
+            gutterWidth : 10,
+            isAnimated: true,
+        });
+    });
+});
+
+$(function(){
+		$(".search :button").click(function(){
+			var value=jQuery.trim($(".search input[type='text']").val());
+		
+			if(value==''){
+				return ;
+				}
+				else{
+					if(value=="油画"){
+						//alert("111");
+						value = "canvas";
+						//return;
+						}
+					if(value=="水墨画"){
+						value = "wash";
+						//return;
+						}
+					if(value=="雕塑"){
+						value = "device";
+						//return;
+						}
+					if(value=="影视"){
+						value = "film";
+						//return;
+						}
+					}
+		    window.location="list.html?searchStr="+value;
+
+			});
+
+		});
+
+
+$(function(){
+$("#nav li").click(function(){
+			
+			var naVal = this.getElementsByTagName("a")[0].innerHTML;   //导航栏a标签的值
+			
+			//alert(naVal);
+			
+			switch ( naVal ){
+				case "首页" :
+				   
+					window.location = "index.html" ;
+					break;
+				case "油画作品" :
+					window.location = "list.html?type=canvas" ;
+					break;
+				case "水墨画作品" :
+					window.location = "list.html?type=wash" ;
+					break;
+				case "雕塑装置" :
+					window.location = "list.html?type=device" ;
+					break;
+				case "影像作品" :
+					window.location = "list.html?type=film" ;
+					break;
+				}
+		});
+});
+</script>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.masonry.min.js"></script>
+</body>
+</html>

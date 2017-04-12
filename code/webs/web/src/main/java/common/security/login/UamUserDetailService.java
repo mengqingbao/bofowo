@@ -37,6 +37,7 @@ public class UamUserDetailService implements UserDetailsService {
 		ShopModel shop=shopService.getByUsername(username);
 		if(shop!=null){
 			shopId=shop.getId();
+			roles.add("ROLE_seller");
 		}
 		
 		//accountService.setNewbieTask(userInfo,member);

@@ -1,14 +1,16 @@
 package com.bofowo.site.serviceimpl;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.bofowo.site.mapper.BuyerCollectionMapper;
 import com.bofowo.site.model.BuyerCollectionModel;
 import com.bofowo.site.query.BuyerCollectionQuery;
 import com.bofowo.site.service.BuyerCollectionService;
-
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 
 @Component("buyerCollectionService")
@@ -34,8 +36,17 @@ public class BuyerCollectionServiceImpl implements BuyerCollectionService{
 	public long update(BuyerCollectionModel buyercollection){
 		return buyercollectionMapper.update(buyercollection);
 	}
-	public BuyerCollectionModel getByProductId(Integer id) {
-		
-		return buyercollectionMapper.getByProductId(id);
+	public BuyerCollectionModel getByProductId(Integer id,String buyerId) {
+		Map condition=new HashMap();
+		condition.put("id", id);
+		condition.put("buyerId", buyerId);
+		return buyercollectionMapper.getByProductId(condition);
+	}
+	@Override
+	public BuyerCollectionModel getByShopId(Integer id,String buyerId) {
+		Map condition=new HashMap();
+		condition.put("id", id);
+		condition.put("buyerId", buyerId);
+		return buyercollectionMapper.getByShopId(condition);
 	}
 } 

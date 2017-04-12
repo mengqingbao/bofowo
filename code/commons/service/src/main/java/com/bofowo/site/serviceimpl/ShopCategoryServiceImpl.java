@@ -1,14 +1,16 @@
 package com.bofowo.site.serviceimpl;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.bofowo.site.mapper.ShopCategoryMapper;
 import com.bofowo.site.model.ShopCategoryModel;
 import com.bofowo.site.query.ShopCategoryQuery;
 import com.bofowo.site.service.ShopCategoryService;
-
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 
 @Component("shopCategoryService")
@@ -35,8 +37,11 @@ public class ShopCategoryServiceImpl implements ShopCategoryService{
 		return shopcategoryMapper.update(shopcategory);
 	}
 	@Override
-	public List<ShopCategoryModel> getListByShopId(int id) {
-		return shopcategoryMapper.getListByShopId(id);
+	public List<ShopCategoryModel> getListByShopId(int id,String type) {
+		Map condition=new HashMap();
+		condition.put("id", id);
+		condition.put("type",type);
+		return shopcategoryMapper.getListByShopId(condition);
 	}
 	@Override
 	public List<ShopCategoryModel> getCatesBySellerId(String sellerId) {

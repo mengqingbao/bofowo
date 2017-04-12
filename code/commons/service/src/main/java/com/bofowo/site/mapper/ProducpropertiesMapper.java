@@ -38,7 +38,7 @@ public interface ProducpropertiesMapper{
 	@Delete("delete from T_PRODUCT_PROPERTIES where ID=#{id}")
 	public void del(long id);
 	
-	@SelectKey(before=true,keyProperty="id",resultType=Integer.class,statementType=StatementType.STATEMENT,statement="select nextval('propertiesVal') as ID")
+	//@SelectKey(before=true,keyProperty="id",resultType=Integer.class,statementType=StatementType.STATEMENT,statement="select nextval('propertiesVal') as ID")
 	@Insert("insert into T_PRODUCT_PROPERTIES ("+columns+") values ("+property+")")
 	public long insert(ProducpropertiesModel producproperties);
 

@@ -1,0 +1,108 @@
+    <div class="am-g am-padding f1">
+      <div class="am-u-sm-9">
+        <strong class="am-text-primary am-text-lg">首页</strong> / <small>滚动图片</small>
+      </div>
+      <div class="am-u-sm-3 ">
+         <a class="am-btn am-btn-default" href="provider-picslider-add.htm"><span class="am-icon-plus"></span> 新增</a>
+      </div> 
+    </div>
+
+
+  <div class="am-g mt-10">
+   #if($!pageInfo.totalItem>0) 
+      <div class="am-u-sm-12">
+          <table class="am-table am-table-striped am-table-hover table-main">
+           <thead>
+  <tr>
+    <td><label for="status">#springMessage("id")</label></td>
+    <td><label for="status">#springMessage("title")</label></td>
+    <td><label for="status">#springMessage("pic")</label></td>
+    <td><label for="status">#springMessage("status")</label></td>
+    <td>Operation</td>
+  </tr>
+ </thead>
+ <tbody>
+#foreach($item in $items)
+  <tr>
+    <td> $!{item.id} </td>
+    <td><a href="/picslider-detail.htm?id=$!{item.id}"> $!{item.title} </a></td>
+    <td> <image src="$!{imageService}/$!{item.pic}" height="100px" width="200px"/></td>
+    <td> <input  type="checkbox"  class="statusCheck"  sliderid="$!{item.id}" #if($item.status==1) checked #end> </td>
+
+    <td><a href="/provider-picslider-del.htm?id=$!{item.id}"  class="am-btn am-btn-default am-btn-xs am-text-danger btn-del">删除</a></td>
+  </tr>
+#end
+ </tbody>
+        </table>        
+
+          <hr />
+          <p>注：最多可以设置15个模板</p>
+
+      </div>
+  #else
+        
+        <center>暂时还没有数据~</center>
+  #end 
+</div>    
+<link href='/css/jquery.qtip.min.css' rel='stylesheet'>
+<link href='/css/jquery.qtip.css' rel='stylesheet'>
+<script src="/js/jquery.qtip.min.js"></script>
+<script>
+    jQuery(".btn-del").each(function(){jQuery(this).qtip({
+        content: {
+            text: "#springMessage("confirm")<br/><br/><input type='button' value='#springMessage("delete")' onclick='del("+jQuery(this).attr('id')+")' class='btn btn-danger'>  <input type='button' value='#springMessage("cancel")' class='btn cancel'>",
+            title: "#springMessage("delete")",
+            button: "#springMessage("cancel")",
+        },
+        
+        position: {
+            my: 'bottom right',
+            at: 'top center'
+         },
+        style: {
+            classes: 'qtip-shadow qtip-bootstrap'
+        },
+        show: {
+            event: 'click', // Show it on click...
+            solo: true, // ...and hide all other tooltips...
+            modal: true // ...and make it modal
+          },
+        hide: true,
+        events: {
+            render: function(event, api) {
+                $('.cancel').click(function(e) {
+                    api.hide(e);
+                });
+            },
+          //  hide: function(event, api) { api.destroy(); }
+        }
+
+    });})
+
+    
+    function filterBtn(){
+        $("#form1").submit();
+    }
+    jQuery(".statusCheck").bind("click",function(){
+        var status='1';
+        if($(this).is(':checked')){
+            status='1';
+        }else{
+            status='0';
+        }
+        setStatus($(this).attr("sliderid"),status);
+    });
+    
+    function setStatus(id,status){
+        jQuery.ajax({
+             type: "GET",
+             url: "cprovider-picslider-setstatu.htm",
+             data: {id:id,status:status},
+             dataType: "json",
+             success: function(data){
+             alert('修改成功');
+              window.location.reload()
+             }
+         });
+    }
+</script>

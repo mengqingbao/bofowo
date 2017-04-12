@@ -1,0 +1,71 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>PicSlider Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<table class="table table-striped table-bordered responsive">
+	<tr>
+		<td><label for="status">#springMessage("id")</label></td>
+		<td>
+			$!{picslider.id}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("title")</label></td>
+		<td>
+			$!{picslider.title}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("pic")</label></td>
+		<td>
+			$!{picslider.pic}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("sellerId")</label></td>
+		<td>
+			$!{picslider.sellerId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("shopId")</label></td>
+		<td>
+			$!{picslider.shopId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("url")</label></td>
+		<td>
+			$!{picslider.url}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("desc")</label></td>
+		<td>
+			$!{picslider.desc}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("status")</label></td>
+		<td>
+			$!{picslider.status}
+		</td>
+	</tr>
+</table>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

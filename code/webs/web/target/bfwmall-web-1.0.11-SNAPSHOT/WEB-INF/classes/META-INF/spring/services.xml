@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://www.chinasoft.pro/schema/dubbo"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.chinasoft.pro/schema/dubbo 
+       http://www.chinasoft.pro/schema/dubbo/dubbo.xsd ">
+       <dubbo:application name="bfwmall-web-public" />
+		<!-- zookeeper 祖册中心-->
+	   <dubbo:registry address="zookeeper://172.16.252.141:2181" timeout="30000"/>
+	   
+	   <dubbo:reference interface="com.bofowo.site.service.AdminService" id="adminService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.ArtForeignService" id="artforeginService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.ArtMaterialService" id="artMaterialService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.ArtSortService" id="artSortService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.ArtThemeService" id="artThemeService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.ArtTypeService" id="artTypeService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.AuctionManageMentService" id="auctionManageMentService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.AuctionMarginService" id="auctionMarginService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.AuctionTypeService" id="auctionTypeService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.BidHistoryService" id="bidHistoryService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.CartDetailsService" id="cartDetailsService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.CommodityAuctionService" id="commodityAuctionService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.CommodityManageMentService" id="commodityManageMentService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.CommodityOrderService" id="commodityOrderService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.CommodityService" id="commodityService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.CartService" id="cartService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.OrderDetailsService" id="orderDetailsService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.PageTypeService" id="pageTypeService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.ReceiptAddressService" id="receiptAddressService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.RecommendService" id="recommendService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.ReservationService" id="reservationService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.SmsService" id="smsService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.SpikeManagementService" id="spikeManagementService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.UserCollectService" id="userCollectService" timeout="3000"/>
+	   <dubbo:reference interface="com.bofowo.site.service.UserService" id="userService" timeout="3000"/>
+	</beans>

@@ -43,5 +43,11 @@ public interface ProducstockMapper{
 	public long insert(ProducstockModel producstock);
 
 	@Update("update T_PRODUCT_STOCK set "+update+" where ID=#{id}")
-	public long update(ProducstockModel producstockModel); 
+	public long update(ProducstockModel producstockModel);
+
+	@Select("select * from T_PRODUCT_STOCK where ITEM_ID=#{itemId}")
+	@ResultMap(value="com.bofowo.site.mapper.ProducstockMapper.ProducstockModelMap")
+	public List<ProducstockModel> getListByItemId(Integer itemId);
+	@Delete("delete from T_PRODUCT_STOCK where ITEM_ID=#{id}")
+	public void delByItemId(int id); 
 }

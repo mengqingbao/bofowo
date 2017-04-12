@@ -1,0 +1,117 @@
+<link href='/css/jquery.qtip.min.css' rel='stylesheet'>
+<link href='/css/jquery.qtip.css' rel='stylesheet'>
+    <script src="/js/jquery.qtip.min.js"></script>
+<script>
+
+	$(document).ready(function() {
+		var currentLangCode = 'en';
+		
+		if("zh_cn"==jQuery.cookie('org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE')){
+			currentLangCode="zh-cn";
+		}else{
+			currentLangCode="en";
+		}
+
+
+
+		function renderCalendar() {
+			$('#calendar').fullCalendar({
+				header: {
+					left: 'prev,next today',
+					center: 'title',
+					right: 'month,agendaWeek,agendaDay'
+				},
+				height: 250,
+				defaultDate: '2014-09-12',
+				lang: currentLangCode,
+				buttonIcons: false, // show the prev/next text
+				weekNumbers: true,
+				editable: true,
+				eventLimit: true, // allow "more" link when too many events
+				events: [
+					
+					{
+						title: '商场中的7保',
+						start: '2014-09-11',
+						end: '2014-09-13',
+						backgroundColor: 'red'
+					},
+					{
+						title: '欧尚集团宗旨',
+						start: '2014-09-12T10:30:00',
+						end: '2014-09-12T12:30:00',
+						backgroundColor: 'red'
+						
+					},
+					{
+						title: 'Auchan vision',
+						start: '2014-09-12T12:00:00',
+						backgroundColor: 'red'
+					},
+					{
+						title: '消防实践',
+						start: '2014-09-12T20:00:00'
+					},
+					{
+						title: '商场中的7保',
+						start: '2014-09-13T07:00:00',
+						eventClick:function(calEvent, jsEvent, view) {alert('');}
+					},
+					{
+						title: '消防实践',
+						start: '2014-09-13T07:00:00',
+						start: '2014-09-28'
+						
+					}
+				],
+				 eventRender: function(event, element) {
+					element.qtip({
+						content: {
+								text: '<table style=\"font-size:10px;line-height:9px;\"><tr><td>Course:</td><td>xxxxx</td></tr>'+
+								'<tr><td>Members</td><td>50</td></tr>'+
+								'<tr><td>Start Date</td><td>2014/09/10 9:00:00</td></tr>'+
+								'<tr><td>End Date</td><td>2014/09/10 11:00:00</td></tr>'+
+								'<tr><td>Address</td><td>No.2066 changyang RD</td></tr>'+
+								'<tr><td>Place</td><td>Training room 101</td></tr>'+
+								'</table>',
+								title: "Session information"
+							},
+							position: {
+								  my: 'bottom right',
+								  at: 'top center'
+								},
+							style: {
+										classes: 'qtip-shadow qtip-bootstrap'
+							}
+					});
+				}
+			});
+		}
+
+		renderCalendar();
+	});
+
+</script>
+
+    <div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="">
+                    <h2><i class="glyphicon glyphicon-calendar"></i> #springMessage("sub-menu-tfunction-calendar")</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-setting btn-round btn-default"><i
+                                class="glyphicon glyphicon-cog"></i></a>
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                        <a href="#" class="btn btn-close btn-round btn-default"><i
+                                class="glyphicon glyphicon-remove"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+					<div id='calendar'></div>
+	                 <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div><!--/row-->

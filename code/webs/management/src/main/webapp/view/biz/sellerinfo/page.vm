@@ -1,0 +1,52 @@
+
+    <div class="am-cf am-padding f1">
+      <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">首页</strong> / <small>店铺管理</small></div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12 am-u-md-3">
+        <div class="am-form-group">
+         
+        </div>
+      </div>
+      <div class="am-u-sm-12 am-u-md-3">
+        <div class="am-input-group am-input-group-sm">
+          <input type="text" class="am-form-field" value＝"店铺名称">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button">搜索</button>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="am-g">
+      <div class="am-u-sm-12" style="min-height:500px;">
+        <form class="am-form">
+          <table class="am-table am-table-striped am-table-hover table-main">
+            <thead>
+              <tr>
+                <th>ID</th><th class="table-title">店铺名称</th><th class="table-type">店铺类别</th><th class="table-date am-hide-sm-only">申请时间</th><th class="table-date am-hide-sm-only">状态</th><th class="table-set">操作</th>
+              </tr>
+          </thead>
+          <tbody>
+           #foreach($item in $items)
+  <tr>
+    <td> $!{item.id} </td>
+    <td><a href="/sellerinfo-detail.htm?id=$!{item.id}"> $!{item.name} </td>
+    <td> $!{item.type} </a></td>
+    <td> $!{item.createdDate} </td>
+    <td> $!{item.status} </td>
+    <td><a class="am-btn am-btn-default am-btn-xs am-text-secondary" href="/sellerinfo-detail.htm?id=$!{item.id}"  class="btn btn-info">审核</a></td>
+  </tr>
+#end
+          </tbody>
+        </table>
+          <div class="am-cf">
+  <form id="form1" name="form1"></form>
+            #pageNavigation($!pageInfo,'form1')
+</div>
+
+      </div>
+
+    </div>
+

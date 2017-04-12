@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>多才多艺群策网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
+
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="bower_components/jquery/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<br/><br/>
+<div class="ch-container">
+
+<div class="row" style="width:1000px;margin:0 auto">
+    <div class="box col-md-12">
+        <div class="box-inner">
+            <div class="box-content">
+            <ul class="breadcrumb">
+			        <h3>会员注册</h3>
+			    </ul>
+              		<form action="regAction.htm" method="post" name="form1">
+	                <div class="input-group col-md-6" style="width:500px;margin:0 auto">
+	                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+	                  	  <span class="input-group-addon">用 &nbsp;户 &nbsp;名</span>
+	                   	  <input type="text" name="username" class="form-control" placeholder="请输入手机号码快速注册">
+	                </div>
+	                
+	                <div class="input-group col-md-6" style="width:500px;margin:0 auto;margin-top:30px;">
+	                  	  <span class="input-group-addon">登陆密码</span>
+	                   	  <input type="password" name="password" class="form-control" placeholder="登录密码">
+	                </div>
+	                
+	                <div class="input-group col-md-6" style="width:500px;margin:0 auto;margin-top:30px;">
+	                  	  <span class="input-group-addon">确认密码</span>
+	                   	  <input type="password" name="repassword" class="form-control" placeholder="确认密码">
+	                </div>
+	                
+	                
+	                <div class="input-group col-md-6" style="width:200px;margin:0 auto;margin-top:20px;">
+	                   	  <input type="checkbox" id="inlineCheckbox3" value="option3">同意遵守BOFOWO条款
+	                </div>
+	                
+	                <div class="input-group col-md-6" style="width:400px;margin:0 auto;margin-top:30px;">
+	                  	  <input type="submit" value="注册"/>      <input type="button" value="取消" onclick="javascript:window.location.href='index.htm'"/>
+	                </div>
+	                
+	                <br/><br/><br/>
+	                </form>
+                
+            </div>
+        </div>
+    </div>
+    <!--/span-->
+
+</div><!--/row-->
+		 				
+    <hr>
+</div>
+
+</body>
+</html>

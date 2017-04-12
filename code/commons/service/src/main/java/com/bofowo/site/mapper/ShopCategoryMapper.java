@@ -1,20 +1,19 @@
 package com.bofowo.site.mapper;
+import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.ResultMap;
-import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectKey;
 import org.apache.ibatis.annotations.SelectProvider;
 import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.mapping.StatementType;
 
 import com.bofowo.site.model.ShopCategoryModel;
 import com.bofowo.site.provider.ShopCategoryProvider;
 import com.bofowo.site.query.ShopCategoryQuery;
-
-import org.apache.ibatis.mapping.StatementType;
-
-import java.util.List;
 
 public interface ShopCategoryMapper{
 																																																																																																																																																												
@@ -45,9 +44,9 @@ public interface ShopCategoryMapper{
 	@Update("update T_SHOP_CATEGORY set "+update+" where ID=#{id}")
 	public long update(ShopCategoryModel shopcategoryModel);
 
-	@Select("select * from T_SHOP_CATEGORY where SHOP_ID=#{id}")
+	@Select("select * from T_SHOP_CATEGORY where SHOP_ID=#{id} and TYPE=#{type}")
 	@ResultMap(value="com.bofowo.site.mapper.ShopCategoryMapper.ShopCategoryModelMap")
-	public List<ShopCategoryModel> getListByShopId(int id);
+	public List<ShopCategoryModel> getListByShopId(Map condition);
 
 	@Select("select * from T_SHOP_CATEGORY where SELLER_ID=#{sellerId}")
 	@ResultMap(value="com.bofowo.site.mapper.ShopCategoryMapper.ShopCategoryModelMap")

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.SellerInfoMapper">
+	<resultMap type="SellerInfoModel" id="SellerInfoModelMap">
+
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="idCard" column="ID_CARD" />
+		<result property="idCardPic" column="ID_CARD_PIC" />
+		<result property="deposit" column="DEPOSIT" />
+		<result property="type" column="TYPE_" />
+		<result property="status" column="STATUS" />
+		<result property="createdDate" column="CREATED_DATE" />
+		<result property="creator" column="CREATOR" />
+		<result property="userId" column="USER_ID" />
+		<result property="shoperName" column="SHOPER_NAME" />
+		<result property="companyCert" column="COMPANY_CERT" />
+		<result property="proxyCert" column="PROXY_CERT" />
+		<result property="fistProxyCert" column="FIST_PROXY_CERT" />
+		
+	</resultMap>
+</mapper> 

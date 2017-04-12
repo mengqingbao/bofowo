@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.ThemeMapper">
+	<resultMap type="ThemeModel" id="ThemeModelMap">
+
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="content" column="CONTENT" />
+		<result property="status" column="STATUS" />
+		<result property="level" column="LEVEL" />
+		<result property="price" column="PRICE" />
+		<result property="sellerId" column="SELLER_ID" />
+		<result property="avatar" column="AVATAR" />
+		<result property="draw" column="DRAW" />
+		<result property="createTime" column="CREATE_TIME" />
+		<result property="modifyTime" column="MODIFY_TIME" />
+		
+	</resultMap>
+</mapper> 

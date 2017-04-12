@@ -26,9 +26,9 @@ import common.util.StringUtil;
 public class WebContentProvider {
 	
 																																																																																																																																																																																																			
-	public String columns="ID,TITLE,AUTHOR,FROM_,CREATE_DATE,MODIFY_DATE,CREATOR,MODIFIER,CONTENT_A,CONTENT_B,CONTENT_C,CATEGORY_ID,STATUS,IS_DELETE,DESC_,TAG_LIB_ID,SEO_TITTLE,SEO_KEY,SEO_DESC";
-																																																																																																																																																																																																				
-	public String property="#{id},#{title},#{author},#{from},#{createDate},#{modifyDate},#{creator},#{modifier},#{contentA},#{contentB},#{contentC},#{categoryId},#{status},#{isDelete},#{desc},#{tagLibId},#{seoTittle},#{seoKey},#{seoDesc}";
+	public String columns="ID,TITLE,AUTHOR,FROM_,CREATE_DATE,MODIFY_DATE,CREATOR,MODIFIER,CONTENT_A,CONTENT_B,CONTENT_C,CATEGORY_ID,STATUS,IS_DELETE,DESC_,TAG_LIB_ID,SEO_TITTLE,SEO_KEY,SEO_DESC,PIC";
+	
+	public String property="#{id},#{title},#{author},#{from},#{createDate},#{modifyDate},#{creator},#{modifier},#{contentA},#{contentB},#{contentC},#{categoryId},#{status},#{isDelete},#{desc},#{tagLibId},#{seoTittle},#{seoKey},#{seoDesc},#{pic}";
 	
 	public String getSearchSql(WebContentQuery query){
 	String sql="select "+columns+" FROM WebContent where 1=1 ";

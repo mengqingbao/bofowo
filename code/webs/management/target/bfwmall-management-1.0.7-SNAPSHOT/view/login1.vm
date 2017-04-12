@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html  >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/css/account/login2.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/common/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/js/com/lyun/core/core.js?1.2"> </script>
+<link rel="icon" href="/qwerty.ico"/>
+</head>
+<script type="text/javascript">  
+if (window != top)
+    top.location.href = location.href;
+function checkName(){
+	 var phoneNo = jQuery("#phoneNo").val();
+	 jQuery("#phoneNo").val(phoneNo);
+	 var patrna=/[\u4E00-\u9FA5]|[\uFE30-\uFFA0]/gi ;       //中文字符
+	 var patrnc= /^1[3|4|5|7|8][0-9]\d{4,8}jQuery/;
+	 var emailreg=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*jQuery/;
+	 
+	 if(emailreg.test(phoneNo)){
+		 jQuery("#nameSpan").hide();
+		 return true;
+	 }else{
+	 if (phoneNo=="" ||  phoneNo.length>11 || phoneNo.length<11|| patrna.exec(phoneNo)|| !patrnc.exec(phoneNo)) {
+		jQuery("#nameSpan").show();
+		jQuery("#nameSpan").html("输入的手机号码或者邮箱不正确");
+		return false; 		
+  	 }else{
+	   jQuery("#nameSpan").hide();
+	   	return true; 
+  	 }
+	 }
+	
+}
+function  checkPwd(){
+   var pwd = jQuery("#pwd").val();
+   var reg= /^[a-zA-Z0-9_]{6,16}jQuery/;
+  //  ||!reg.test(pwd);
+   if(pwd == "" ){
+      jQuery("#pwdSpan").show();
+      //jQuery("#pwdSpan").html("密码必须是6~16个字符,不区分大小写");
+      jQuery("#pwdSpan").html("密码无效");
+      return false; 	
+   }else{
+	   jQuery("#pwdSpan").hide();
+	   return true; 
+   }
+  
+
+}
+function checkLogin(){
+	if(!checkName()||!checkPwd()){
+		jQuery("#nameSpan").show();
+		jQuery("#pwdSpan").show();
+		return false;
+	}
+}
+
+
+	
+    jQuery(function(){
+    	var showPwd = jQuery("#showPwd"), pwd = jQuery("#pwd");  
+    	showPwd.focus(function(){  
+    	   pwd.show().focus();  
+    	   showPwd.hide();  
+    	});  
+    	  
+    	pwd.blur(function(){  
+    	   if(pwd.val()=="") {  
+    	       showPwd.show();  
+    	       pwd.hide();  
+    	    }else{
+    	    	checkPwd();
+    	    }
+    	   
+    	}); 
+    	
+    });
+	
+
+
+</script>
+<body>
+<div class="login">
+  <div class="title">
+    <a>欢迎登录律云在线服务平台</a>
+  </div>
+  <form class="form-horizontal" action="j_spring_security_check" method="post">
+  <input type="hidden" name="redirect" value="jQuery!{redirect}"/>
+  <div class="login_information">
+    <h1>登录  </h1>
+    <ul>
+      <li>
+        <input type="text" id="phoneNo" name="j_username" class="windows" value="15397083718" placeholder="手机号/邮箱" style="color:#bfbfbf">
+        <span id="nameSpan" style="color: red;"></span>
+      </li>
+      <li>
+      	<input id="showPwd" class="windows" type="text" value="密码" value="123456" style="color:#bfbfbf"/>  
+		<input id="pwd" class="windows" name="j_password" type="password" value="123456" style="color:#676767;display: none;" onkeyup="this.value=this.value.replace(/^ +| +jQuery/g,'');this.value=this.value.toLowerCase()"/> 
+      	<span id="pwdSpan" style="color: red;"> #if($error)
+      	用户名与密码不匹配
+      	#end
+      	</span>
+      </li>
+      <li>
+        <input type="submit" value="登录" class="login_button" />
+      </li>
+      <li>
+        <a href="findMyPassWordBtu.htm" style="border-right:1px solid #e5e5e5">忘记密码</a>
+        <a href="account-add.htm">立即注册</a>
+      </li>
+    </ul>
+    
+  </div>
+  </form>
+
+  <p>Shanghai law cloud Technology Co., Ltd. 上海律云科技有限公司版权所有</p>
+</div>
+
+<div class="foot"></div>
+</body>
+</html>

@@ -22,4 +22,6 @@ public interface CarService{
 	 * @since JDK 1.7
 	 */
 	public List<CarModel> getItemsByIds(String ids, String username);
+	public CarModel getByItemId(Integer id, String username);
+	public void deleteByIdAndUsername(Integer valueOf, String username);
 } 

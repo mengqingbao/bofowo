@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.ManageResourceMapper">
+	<resultMap type="ManageResourceModel" id="ManageResourceModelMap">
+
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="content" column="CONTENT" />
+		<result property="type" column="TYPE_" />
+		<result property="status" column="STATUS" />
+		<result property="createDate" column="CREATE_DATE" />
+		<result property="creator" column="CREATOR" />
+		<result property="parentId" column="PARENT_ID" />
+		
+	</resultMap>
+</mapper> 

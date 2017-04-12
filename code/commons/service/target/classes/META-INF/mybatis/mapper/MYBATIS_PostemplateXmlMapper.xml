@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.PostemplateMapper">
+	<resultMap type="PostemplateModel" id="PostemplateModelMap">
+
+		<id property="id" column="ID" />
+		<result property="sellerId" column="SELLER_ID" />
+		<result property="tittle" column="TITTLE" />
+		<result property="fee" column="FEE" />
+		<result property="firstFee" column="FIRST_FEE" />
+		<result property="exWeight" column="EX_WEIGHT" />
+		<result property="exWeightFee" column="EX_WEIGHT_FEE" />
+		<result property="freeArea" column="FREE_AREA" />
+		<result property="status" column="STATUS" />
+		
+	</resultMap>
+</mapper> 

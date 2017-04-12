@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>bofowo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
+
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+     <link rel="stylesheet" href="assets/css/amazeui.css?v5"/>
+  <link rel="stylesheet" href="assets/css/admin.css?v4">
+  <link rel="stylesheet" href="css/turnpic-ie.css?12">
+  <link rel="stylesheet" href="css/footer.css?12">
+  <link rel="stylesheet" href="css/base.css?18">
+    <script src="bower_components/jquery/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background:#fff">
+<style>
+.w120{
+    width: 151px;
+    text-align: right;
+}
+</style>
+
+#parse("common/header.vm")
+
+<br/><br/>
+<div class="ch-container">
+
+<div class="row" style="width:1000px;margin:0 auto">
+    <div class="box col-md-12">
+        <div class="box-inner">
+            <div class="box-content">
+            <ul class="breadcrumb">
+			        <h3>入住申请</h3>
+			    </ul>
+              		<form action="reg_shop_owner_action.htm" method="post" name="form1" enctype="multipart/form-data">
+	                <div class="input-group col-md-6" style="width:500px;margin:0 auto">
+	                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+	                  	  <span class="input-group-addon w120">店铺名称</span>
+	                   	  <input type="text" name="name" class="form-control" placeholder="店铺名称，不能为空">
+	                </div>
+	                
+	                <div class="input-group col-md-6" style="width:500px;margin:0 auto;margin-top:30px;">
+	                  	  <span class="input-group-addon w120">姓名</span>
+	                   	  <input type="text" name="shoperName" class="form-control" placeholder="店主姓名">
+	                </div>
+	                
+	                <div class="input-group col-md-6" style="width:500px;margin:0 auto;margin-top:30px;">
+                          <span class="input-group-addon w120">身份证号</span>
+                          <input type="text" name="idCard" class="form-control" placeholder="身份证号码">
+                    </div>
+                    
+                    <div class="input-group col-md-6" style="width:500px;margin:0 auto;margin-top:30px;">
+                          <span class="input-group-addon w120">身份证上传</span>
+                          <input type="file" name="photoImageFile" class="form-control" placeholder="">
+                    </div>
+                     <div class="input-group col-md-6" style="width:500px;margin:0 auto;margin-top:30px;">
+                          <span class="">上传身份证样例</span><br/>
+                          <image src="images/cardid.png">
+                    </div>
+                    
+                    <div class="input-group col-md-6" style="width:500px;margin:0 auto;margin-top:30px;">
+                          <span class="input-group-addon w120">店铺分类</span>
+                          <select name="type" style="height:40px">
+                            <option>个人店铺</option>
+                            <option>公司综合店铺</option>
+                            <option>公司专营店</option>
+                            <option>公司旗舰店</option>
+                          </select>
+                    </div>
+                    
+                    <div class="input-group col-md-6" style="width:500px;margin:0 auto;margin-top:30px;">
+                          <span class="input-group-addon w120">公司营业执照扫描件</span>
+                          <input type="file" name="companyCertFile" id="photogsyyzz" class="form-control" onchange="previewImage('gsyyzz','photogsyyzz')" placeholder="">
+                    </div>
+                    <div class="input-group col-md-6" style="width:500px;margin:0 auto;">
+                          <img id="gsyyzz" alt="" name="pic"  style="width:300;max-height:150px"/>
+                    </div>
+                    
+                    <div class="input-group col-md-6" style="width:500px;margin:0 auto;margin-top:30px;">
+                          <span class="input-group-addon w120">代理产品公司授权书</span>
+                          <input type="file" name="proxyCertFile" id="photodlcpgssqs" onchange="previewImage('dlcpgssqs','photodlcpgssqs')" class="form-control" placeholder="">
+                    </div>
+                    <div class="input-group col-md-6" style="width:500px;margin:0 auto;">
+                          <img id="dlcpgssqs" alt="" name="pic" style="width:300;max-height:150px"/>
+                    </div>
+                    
+                    <div class="input-group col-md-6" style="width:500px;margin:0 auto;margin-top:30px;">
+                          <span class="input-group-addon w120">一级代理经销许可证</span>
+                          <input type="file" name="fistProxyCertFile" id="photoyjdljxxkz" onchange="previewImage('yjdljxxkz','photoyjdljxxkz')" class="form-control" placeholder="">
+                    </div>
+                    <div class="input-group col-md-6" style="width:500px;margin:0 auto;">
+                         <img id="yjdljxxkz" alt="" name="pic" style="width:300;max-height:150px"/>
+                    </div>
+	                
+	                <div class="input-group col-md-6" style="width:400px;margin:0 auto;margin-top:20px;">
+	                   	  <input type="checkbox" id="inlineCheckbox3" value="option3">同意遵守商城服务条款，和违规处罚条款
+	                </div>
+	                
+	                <div class="input-group col-md-6" style="width:400px;margin:0 auto;margin-top:30px;">
+	                  	  <input type="submit" class="am-btn am-btn-primary am-btn-xs" value="提交"/>  &nbsp; &nbsp;    
+	                  	  <input type="button" class="am-btn am-btn-primary am-btn-xs" value="返回" onclick="javascript:window.location.href='index.htm'"/>
+	                </div>
+	                
+	                <br/><br/><br/>
+	                </form>
+                
+            </div>
+        </div>
+    </div>
+    <!--/span-->
+
+</div><!--/row-->
+		 				
+    <hr>
+</div>
+#parse("common/footer.vm")
+<script>
+
+function previewImage(id,fileId) {
+    var pic = document.getElementById(id),
+        file = document.getElementById(fileId);
+ 
+    var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+ 
+     // gif在IE浏览器暂时无法显示
+     if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
+         alert("图片的格式必须为png或者jpg或者jpeg格式！"); 
+         return;
+     }
+     var isIE = navigator.userAgent.match(/MSIE/)!= null,
+         isIE6 = navigator.userAgent.match(/MSIE 6.0/)!= null;
+ 
+     if(isIE) {
+        file.select();
+        var reallocalpath = document.selection.createRange().text;
+ 
+        // IE6浏览器设置img的src为本地路径可以直接显示图片
+         if (isIE6) {
+            pic.src = reallocalpath;
+         }else {
+            // 非IE6版本的IE由于安全问题直接设置img的src无法显示本地图片，但是可以通过滤镜来实现
+             pic.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='image',src=\"" + reallocalpath + "\")";
+             // 设置img的src为base64编码的透明图片 取消显示浏览器默认图片
+             pic.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+         }
+     }else {
+        html5Reader(file,id);
+     }
+}
+ 
+ function html5Reader(file,id){
+     var file = file.files[0];
+     var reader = new FileReader();
+     reader.readAsDataURL(file);
+     reader.onload = function(e){
+         var pic = document.getElementById(id);
+         pic.src=this.result;
+     }
+ }
+</script>
+</body>
+</html>

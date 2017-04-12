@@ -1,0 +1,349 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>bofowo.cn</title>
+  <meta name="description" content="bofowo.cn bofowo.com">
+  <meta name="keywords" content="index">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+  <link rel="stylesheet" href="assets/css/amazeui.css"/>
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="stylesheet" href="css/turnpic-ie.css?12">
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，lymall 暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+#parse("common/header.vm");
+
+<div class="am-cf admin-main">
+  
+  <!-- content start -->
+  <div class="admin-content">
+
+<div class="am-g">
+<div class="am-cf am-padding">
+	<div class="am-u-md-6">
+			LOGO
+
+       </div>
+   		<div class="am-u-md-6">
+      
+     <form id="form1" action="search.htm" method="get">
+      <div class="am-u-sm-2">
+        <div class="am-form-group">
+          <select name="searchType" id="searchType" style="width:60px;font-size:12px" size="1">
+            <option value="item">宝贝</option>
+            <option value="shop">店铺</option>
+          </select>
+        </div>
+      </div>
+      <div class="am-u-sm-9">
+        <div class="am-input-group am-input-group-sm">
+          <input type="text" class="am-form-field" name="keyword" placeholder="请输入要搜索的关键词">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="button" onclick="search()">搜索</button>
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+    
+    <!--第一行start-->
+<div class="am-g">
+      <div class="am-u-md-3">
+        <div class="am-panel am-panel-default">
+        <table class="am-table admin-content-table am-table-hover">
+          #foreach($cate in $cates)
+          <tr>
+            <td><a href="item-search-list.htm">$!cate.name</a></td>
+          </tr>
+         #end
+          </tbody>
+        </table>
+        </div>
+       </div>
+        <div class="am-u-md-9">
+        	
+   <section id="rt-showcase-surround">
+    <div id="rt-showcase" class="slider-container rt-overlay-dark">
+        <div class="rt-container slider-container">
+            <div class="rt-grid-12 rt-alpha rt-omega">
+                
+                <link rel="stylesheet" href="css/turnpic-style.css">
+                <!--[if IE]><link rel="stylesheet" href="css/turnpic-ie.css"><![endif]-->
+                <!--[if lte IE 9]><script type="text/javascript" src="js/turnpic-ie.js"></script><![endif]-->
+
+                <div class="csslider1 autoplay">
+                    <input name="cs_anchor1" autocomplete="off" id="cs_slide1_0" type="radio" class="cs_anchor slide" >
+                    <input name="cs_anchor1" autocomplete="off" id="cs_slide1_1" type="radio" class="cs_anchor slide" >
+                    <input name="cs_anchor1" autocomplete="off" id="cs_slide1_2" type="radio" class="cs_anchor slide" >
+                    <input name="cs_anchor1" autocomplete="off" id="cs_play1" type="radio" class="cs_anchor" checked>
+                    <input name="cs_anchor1" autocomplete="off" id="cs_pause1" type="radio" class="cs_anchor" >
+                    <ul>
+                        <div style="width: 750px;  visibility: hidden; font-size: 0px; line-height: 0;height:350px;">
+                            <img src="images/1.jpg" style="width: 100%;">
+                        </div>
+                        <li class="num0 img">
+                            <img src="images/1.jpg" alt="Clouds" title="Clouds" />
+                        </li>
+                        <li class="num1 img">
+                            <img src="images/2.jpg" alt="Typewriter" title="Typewriter" />
+                        </li>
+                        <li class="num2 img">
+                            <img src="images/3.jpg" alt="Bicycle" title="Bicycle" />
+                        </li>
+                    
+                    </ul>
+                    <div class="cs_description">
+                        <label class="num0">
+                            <span class="cs_title"><span class="cs_wrapper">复古自行车 2000￥</span></span>
+                            
+                        </label>
+                        <label class="num1">
+                            <span class="cs_title"><span class="cs_wrapper">复古打印机 5000￥</span></span>
+                            
+                        </label>
+                        <label class="num2">
+                            <span class="cs_title"><span class="cs_wrapper">摄影器材 10000￥起</span></span>
+                            
+                        </label>
+                    </div>
+                    
+                    <div class="cs_arrowprev">
+                        <label class="num0" for="cs_slide1_0"></label>
+                        <label class="num1" for="cs_slide1_1"></label>
+                        <label class="num2" for="cs_slide1_2"></label>
+                    </div>
+                    <div class="cs_arrownext">
+                        <label class="num0" for="cs_slide1_0"></label>
+                        <label class="num1" for="cs_slide1_1"></label>
+                        <label class="num2" for="cs_slide1_2"></label>
+                    </div>
+                    
+                    <div class="cs_bullets">
+                        <label class="num0" for="cs_slide1_0">
+                            <span class="cs_point"></span>
+                            <span class="cs_thumb"><img src="images/small/1.jpg" alt="Clouds" title="Clouds" /></span>
+                        </label>
+                        <label class="num1" for="cs_slide1_1">
+                            <span class="cs_point"></span>
+                            <span class="cs_thumb"><img src="images/small/2.jpg" alt="Typewriter" title="Typewriter" /></span>
+                        </label>
+                        <label class="num2" for="cs_slide1_2">
+                            <span class="cs_point"></span>
+                            <span class="cs_thumb"><img src="images/small/3.jpg" alt="Bicycle" title="Bicycle" /></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</section>        <!-- /slider -->
+        	
+  		</div>
+</div>
+    <!--第一行end-->
+
+    <ul class="am-avg-sm-1 am-avg-md-4 am-margin am-padding am-text-center admin-content-list ">
+      <li><a href="#" class="am-text-success"><span class="am-icon-btn am-icon-file-text"></span><br>新增订单<br>2300</a></li>
+      <li><a href="#" class="am-text-warning"><span class="am-icon-btn am-icon-briefcase"></span><br>成交订单<br>308</a></li>
+      <li><a href="#" class="am-text-danger"><span class="am-icon-btn am-icon-recycle"></span><br>昨日访问<br>80082</a></li>
+      <li><a href="#" class="am-text-secondary"><span class="am-icon-btn am-icon-user-md"></span><br>在线用户<br>3000</a></li>
+    </ul>
+
+    <div class="am-g">
+    <div class="am-u-sm-12">
+     <div class="am-panel am-panel-default">
+     <div class="am-panel-hd am-cf">卖家排行<span class="am-icon-th am-fr"></span></div>
+      
+        <table class="am-table am-table-bd am-table-striped admin-content-table">
+          <thead>
+          <tr>
+            <th>ID</th><th>卖家</th><th>最后成交</th><th>最后交易时间</th><th>成交总量</th><th>交易总额</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr><td>1</td><td>John Clark</td><td><a href="#">Business management</a></td> <td>2016-10-12</td> <td><span class="am-badge am-badge-success">+20</span></td>
+            <td>
+              1222
+            </td>
+          </tr>
+          <tr><td>2</td><td>风清扬</td><td><a href="#">公司LOGO设计</a> </td><td>2016-10-12</td><td><span class="am-badge am-badge-danger">+2</span></td>
+            <td>
+             1222
+            </td>
+          </tr>
+          <tr><td>3</td><td>詹姆斯</td><td><a href="#">开发一款业务数据软件</a></td><td>2016-10-12</td><td><span class="am-badge am-badge-warning">+10</span></td>
+            <td>
+             1222
+            </td>
+          </tr>
+          <tr><td>4</td><td>云适配</td><td><a href="#">适配所有网站</a></td><td>2016-10-12</td><td><span class="am-badge am-badge-secondary">+50</span></td>
+            <td>
+              1222
+            </td>
+          </tr>
+
+          <tr>
+            <td>5</td><td>呵呵呵</td>
+            <td><a href="#">基兰会获得BUFF</a></td>
+            <td>2016-10-12</td>
+            <td><span class="am-badge">+22</span></td>
+            <td>
+              
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
+	<!--留言之类的-->
+    
+    <div class="am-g">
+      <div class="am-u-md-6">
+        <div class="am-panel am-panel-default">
+          <div class="am-panel-hd am-cf" data-am-collapse="{target: '#collapse-panel-2'}">赞助商<span class="am-icon-chevron-down am-fr"></span></div>
+          <div id="collapse-panel-2" class="am-in">
+            <table class="am-table am-table-bd am-table-bdrs am-table-striped am-table-hover">
+              <tbody>
+              <tr>
+                <th class="am-text-center"></th>
+                <th>赞助商</th>
+                <th>金额</th>
+              </tr>
+              <tr>
+                <td colspan="3">暂无</td>
+              </tr>
+              <tr>
+                <td colspan="3"><a class="am-btn am-btn-default am-badge-danger">立即赞助</a></td>
+              </tr>
+              <tr>
+                <td colspan="3">
+             <small>note:仅支持支付宝。转账请标明赞助名称</small>
+             </td>
+             </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+         <div class="am-panel am-panel-default">
+          <div class="am-panel-hd am-cf">开发技术文档<span class="am-icon-chevron-down am-fr"></span></div>
+          <div id="collapse-panel-2" class="am-in">
+            <table class="am-table am-table-bd am-table-bdrs am-table-striped am-table-hover">
+              <tbody>
+              <tr>
+                <th>技术名称</th>
+                <th>操作</th>
+              </tr>
+              <tr>
+                <td>开发文档.doc</td>
+                <td>下载</td>
+              </tr>
+              <tr>
+                <td>架构文档.doc</td>
+                <td>下载</td>
+              </tr>
+             
+              <tr>
+                <td>设计文档.doc</td>
+                <td>下载</td>
+              </tr>
+              <tr>
+                <td>spring mvc mybatis radis mysql velocity</td>
+                <td>下载</td>
+              </tr>
+              <tr>
+                <td>spring security 安全框架</td>
+                <td>下载</td>
+              </tr>
+              <tr>
+                <td>dubbo 接口治理框架</td>
+                <td>下载</td>
+              </tr>
+               <tr>
+                <td>基于datasource的数据库分库技术</td>
+                <td>下载</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="am-u-md-6">
+        <div class="am-panel am-panel-default">
+          <div class="am-panel-hd am-cf" data-am-collapse="{target: '#collapse-panel-3'}">开发者<span class="am-icon-chevron-down am-fr"></span></div>
+          <div class="am-panel-bd am-collapse am-in am-cf" id="collapse-panel-3">
+            <ul class="am-comments-list admin-content-comment">
+              <li class="am-comment">
+                <a href="#"><img src="http://s.amazeui.org/media/i/demos/bw-2014-06-19.jpg?imageView/1/w/96/h/96" alt="" class="am-comment-avatar" width="48" height="48"></a>
+                <div class="am-comment-main">
+                  <header class="am-comment-hd">
+                    <div class="am-comment-meta"><a href="#" class="am-comment-author">塔克</a> 加入时间 <time>2016-7-12</time> 角色：架构师/初创人员</div>
+                  </header>
+                  <div class="am-comment-bd"><p>遵循 “协议大于配置”、“渐进增强（Progressive enhancement）”的理念，坚持，坚持，还是坚持，从一而终，不忘初心才有可能做好一个软件。</p>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--留言之类的end-->
+   	#foreach($column in $columns)
+   		$column.content
+   	#end
+	
+  </div>
+  <!-- content end -->
+
+</div>
+
+
+
+<footer>
+  <hr>
+  <p class="am-padding-left">© 2014 404886, Inc.2016 404886公司版权所有.</p>
+</footer>
+<script>
+function search(){
+	var form=jQuery("#form1");
+	if(jQuery("#searchType").val()=="shop"){
+		form.attr("action", "searchShop.htm");
+	}else{
+		form.attr("action", "searchItem.htm");
+	}
+	form.submit();
+}
+
+</script>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

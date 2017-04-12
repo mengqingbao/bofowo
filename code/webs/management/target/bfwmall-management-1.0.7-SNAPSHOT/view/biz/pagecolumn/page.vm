@@ -1,0 +1,36 @@
+<div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">表单</strong> / <small>form</small></div>
+  </div>
+
+  <div class="am-tabs am-margin" data-am-tabs="">
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+     #set($i=1)
+    #foreach($item in $items)
+      <li class="#if($i==1)am-active#end"><a href="#tab$i">首页$i楼</a></li>
+     #set($i=$i+1)
+     #end
+     
+    </ul>
+
+    <div class="am-tabs-bd" style="touch-action: pan-y; -webkit-user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+      
+    #set($i=1)
+    #foreach($item in $items)
+      <div class="am-tab-panel am-fade #if($i==1) am-active am-in #end" id="tab$i">
+      <form action="pagecolumn-update.htm" method="post" name="form1">
+      	<input type="hidden" name="id" value="$item.id">
+      	<input type="hidden" name="pageId" value="$item.pageId">
+		<textarea rows="30" name="content" cols="160">$item.content</textarea>
+		 <div class="am-margin">
+    		状态：<input type="radio" name="status" value="1" #if($item.status==1) checked #end/>有效 &nbsp;&nbsp; <input type="radio" name="status" value="0" #if($item.status==0) checked #end/>失效
+  		</div>
+		 <div class="am-margin">
+    		<button type="submit" class="am-btn am-btn-primary am-btn-xs">提交保存</button>
+  		</div>
+  	   </form>
+      </div>
+      #set($i=$i+1)
+	#end
+    </div>
+  </div>
+

@@ -1,0 +1,98 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Order Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<form action="order-update.htm" method="post"> 
+	<table class="table table-striped table-bordered responsive">
+															<tr>
+				<td><label for="status">#springMessage("itemId")</label></td>
+				<td>
+					<input type="text" name="itemId" id="itemId" value="$!{order.itemId}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("title")</label></td>
+				<td>
+					<input type="text" name="title" id="title" value="$!{order.title}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("pic")</label></td>
+				<td>
+					<input type="text" name="pic" id="pic" value="$!{order.pic}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("num")</label></td>
+				<td>
+					<input type="text" name="num" id="num" value="$!{order.num}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("price")</label></td>
+				<td>
+					<input type="text" name="price" id="price" value="$!{order.price}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("total")</label></td>
+				<td>
+					<input type="text" name="total" id="total" value="$!{order.total}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("status")</label></td>
+				<td>
+					<input type="text" name="status" id="status" value="$!{order.status}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("realPay")</label></td>
+				<td>
+					<input type="text" name="realPay" id="realPay" value="$!{order.realPay}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("properties")</label></td>
+				<td>
+					<input type="text" name="properties" id="properties" value="$!{order.properties}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("spec")</label></td>
+				<td>
+					<input type="text" name="spec" id="spec" value="$!{order.spec}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("tid")</label></td>
+				<td>
+					<input type="text" name="tid" id="tid" value="$!{order.tid}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("note")</label></td>
+				<td>
+					<input type="text" name="note" id="note" value="$!{order.note}"/>
+				</td>
+			</tr>
+						</table>
+	<input type="submit" value="#springMessage("save")"/>
+</form>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

@@ -1,0 +1,104 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Shop Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<form action="shop-update.htm" method="post"> 
+	<table class="table table-striped table-bordered responsive">
+															<tr>
+				<td><label for="status">#springMessage("name")</label></td>
+				<td>
+					<input type="text" name="name" id="name" value="$!{shop.name}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("desc")</label></td>
+				<td>
+					<input type="text" name="desc" id="desc" value="$!{shop.desc}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("logoImg")</label></td>
+				<td>
+					<input type="text" name="logoImg" id="logoImg" value="$!{shop.logoImg}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("creator")</label></td>
+				<td>
+					<input type="text" name="creator" id="creator" value="$!{shop.creator}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("url")</label></td>
+				<td>
+					<input type="text" name="url" id="url" value="$!{shop.url}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("owner")</label></td>
+				<td>
+					<input type="text" name="owner" id="owner" value="$!{shop.owner}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("createdTime")</label></td>
+				<td>
+					<input type="text" name="createdTime" id="createdTime" value="$!{shop.createdTime}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("serviceScoreTotal")</label></td>
+				<td>
+					<input type="text" name="serviceScoreTotal" id="serviceScoreTotal" value="$!{shop.serviceScoreTotal}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("drawScoreTotal")</label></td>
+				<td>
+					<input type="text" name="drawScoreTotal" id="drawScoreTotal" value="$!{shop.drawScoreTotal}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("postScoreTotal")</label></td>
+				<td>
+					<input type="text" name="postScoreTotal" id="postScoreTotal" value="$!{shop.postScoreTotal}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("commentTimes")</label></td>
+				<td>
+					<input type="text" name="commentTimes" id="commentTimes" value="$!{shop.commentTimes}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("level")</label></td>
+				<td>
+					<input type="text" name="level" id="level" value="$!{shop.level}"/>
+				</td>
+			</tr>
+											<tr>
+				<td><label for="status">#springMessage("notice")</label></td>
+				<td>
+					<input type="text" name="notice" id="notice" value="$!{shop.notice}"/>
+				</td>
+			</tr>
+						</table>
+	<input type="submit" value="#springMessage("save")"/>
+</form>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

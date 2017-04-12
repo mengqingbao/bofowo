@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>多才多艺群策网</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+
+    <!-- The styles -->
+    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+
+    <link href="css/charisma-app.css" rel="stylesheet">
+    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
+    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
+    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
+    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
+    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
+    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='css/jquery.noty.css' rel='stylesheet'>
+    <link href='css/noty_theme_default.css' rel='stylesheet'>
+    <link href='css/elfinder.min.css' rel='stylesheet'>
+    <link href='css/elfinder.theme.css' rel='stylesheet'>
+    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='css/uploadify.css' rel='stylesheet'>
+    <link href='css/animate.min.css' rel='stylesheet'>
+
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="bower_components/jquery/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+     #parse("common/head.vm")
+<div class="ch-container">
+
+<div class="row" style="width:1024px;margin:0 auto">
+	<div class="page-header">
+			<h3>首页 》项目</h3>
+		</div>
+		<table class="" style="">
+			<tbody>
+				<tr>
+					<td class="center">行业：</td>
+					<td class="center">工业</td>
+					<td class="center">农业</td>
+					<td class="center">服务业</td>
+					<td class="center">网商</td>
+					<td class="center">金融</td>
+					<td class="center">互联网</td>
+				</tr>
+				<tr>
+					<td class="center">进度：</td>
+					<td class="center">100%</td>
+					<td class="center">>50%</td>
+					<td class="center">1%</td>
+					<td class="center"></td>
+					<td class="center"></td>
+					<td class="center"></td>
+				</tr>			
+			</tbody>
+		</table>
+		
+	</div><!--end row-->
+    
+	<div class="row" style="width:1024px;margin:0 auto">
+			#foreach($item in $items)	
+				<div class="box col-md-4"><!--column start-->
+					<div class="box-inner">
+						<div class="box-content">
+							<p>
+									<a href="#">
+									   <img src="/img/slider/4.jpg"  style="width:100%;height:180px;">
+									   
+									</a>
+									<hr>
+									<a href="#"><h4>$item.title</h4></a>
+									<p>参与人数：<a>50</a>人  完成度:$!{item.status}%</p>
+									<p>发起人: <a href="#">$item.creator</a></p>
+							   </p>
+						</div>
+					</div>
+				</div><!--column end-->
+			#end
+	</div>
+		<div class="row" style="width:1024px;margin:0 auto">
+				 #pageNavigation($!pageInfo,'form1')
+		</div>	
+    <hr>
+</div>
+#include("common/footer.vm")
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.ShopCategoryMapper">
+	<resultMap type="ShopCategoryModel" id="ShopCategoryModelMap">
+
+		<id property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="image" column="IMAGE" />
+		<result property="desc" column="DESC_" />
+		<result property="creator" column="CREATOR" />
+		<result property="createdTime" column="CREATED_TIME" />
+		<result property="checker" column="CHECKER" />
+		<result property="checkedTime" column="CHECKED_TIME" />
+		<result property="modifier" column="MODIFIER" />
+		<result property="modifiedTime" column="MODIFIED_TIME" />
+		<result property="status" column="STATUS" />
+		<result property="type" column="TYPE" />
+		<result property="content" column="CONTENT" />
+		<result property="sellerId" column="SELLER_ID" />
+		<result property="shopId" column="SHOP_ID" />
+		
+	</resultMap>
+</mapper> 

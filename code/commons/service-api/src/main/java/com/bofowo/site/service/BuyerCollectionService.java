@@ -13,5 +13,6 @@ public interface BuyerCollectionService{
 	public void del(long id);
 	public long insert(BuyerCollectionModel buyercollection);
 	public long update(BuyerCollectionModel buyercollection);
-	public BuyerCollectionModel getByProductId(Integer id);
+	public BuyerCollectionModel getByProductId(Integer id,String buyerId);
+	public BuyerCollectionModel getByShopId(Integer id,String buyerId);
 } 

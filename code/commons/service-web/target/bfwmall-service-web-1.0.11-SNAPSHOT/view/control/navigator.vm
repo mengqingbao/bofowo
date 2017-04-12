@@ -1,0 +1,13 @@
+#if($navigator && $navigator.items.size() > 0)
+<div id="navigatorDiv" class="breadcrumb">
+    #foreach($navigatorItem in $navigator.items)
+        #if($navigatorItem.last)
+            <span>$!navigatorItem.name</span>
+        #elseif(!${navigatorItem.hrefUrl} || ${navigatorItem.hrefUrl} == "")
+            <span class="item">$!navigatorItem.name</span>
+        #else
+            <span class="item"><a class="blue_link" href="#springUrl(${navigatorItem.hrefUrl})">$!navigatorItem.name</a></span>
+        #end
+    #end
+</div>
+#end

@@ -43,4 +43,9 @@ public class ProductServiceImpl implements ProductService{
 	public List<ProductModel> getNewsTop(ProductQuery query) {
 		return productMapper.fetchPageList(query);
 	}
+	@Override
+	public List<ProductModel> getBrowsedProductTop5(String currentUserName) {
+		
+		return productMapper.getBrowsedProductTop5(currentUserName);
+	}
 } 

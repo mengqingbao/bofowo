@@ -1,0 +1,89 @@
+<div class="row">
+<div class="box col-md-12">
+	<div class="box-inner">
+		<div class="box-header well" data-original-title="">
+			<h2>Theme Management</h2>
+			<div class="box-icon">
+				<a href="#" class="btn btn-minimize btn-round btn-default"><i
+						class="glyphicon glyphicon-chevron-up"></i></a>
+				<a href="#" class="btn btn-close btn-round btn-default"><i
+						class="glyphicon glyphicon-remove"></i></a>
+			</div>
+		</div>
+		<div class="box-content">
+
+<table class="table table-striped table-bordered responsive">
+	<tr>
+		<td><label for="status">#springMessage("id")</label></td>
+		<td>
+			$!{theme.id}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("name")</label></td>
+		<td>
+			$!{theme.name}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("content")</label></td>
+		<td>
+			$!{theme.content}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("status")</label></td>
+		<td>
+			$!{theme.status}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("level")</label></td>
+		<td>
+			$!{theme.level}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("price")</label></td>
+		<td>
+			$!{theme.price}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("sellerId")</label></td>
+		<td>
+			$!{theme.sellerId}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("avatar")</label></td>
+		<td>
+			$!{theme.avatar}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("draw")</label></td>
+		<td>
+			$!{theme.draw}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("createTime")</label></td>
+		<td>
+			$!{theme.createTime}
+		</td>
+	</tr>
+	<tr>
+		<td><label for="status">#springMessage("modifyTime")</label></td>
+		<td>
+			$!{theme.modifyTime}
+		</td>
+	</tr>
+</table>
+
+</div><!--box-content end-->
+	</div>
+</div>
+<!--/span-->
+
+</div><!--/row-->

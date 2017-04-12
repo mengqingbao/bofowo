@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bofowo.site.mapper.CustomerServiceMapper">
+	<resultMap type="CustomerServiceModel" id="CustomerServiceModelMap">
+
+		<id property="id" column="ID" />
+		<result property="buyerId" column="BUYER_ID" />
+		<result property="sellerId" column="SELLER_ID" />
+		<result property="tradeId" column="TRADE_ID" />
+		<result property="orderId" column="ORDER_ID" />
+		<result property="name" column="NAME" />
+		<result property="pic" column="PIC" />
+		<result property="price" column="PRICE" />
+		<result property="question" column="QUESTION" />
+		<result property="replay" column="REPLAY" />
+		<result property="result" column="RESULT" />
+		<result property="servicer" column="SERVICER" />
+		<result property="type" column="TYPE" />
+		<result property="itemId" column="ITEM_ID" />
+		<result property="createdTime" column="CREATED_TIME" />
+		<result property="replayTime" column="REPLAY_TIME" />
+		<result property="endTime" column="END_TIME" />
+		<result property="shopId" column="SHOP_ID" />
+		<result property="shopName" column="SHOP_NAME" />
+		<result property="repalyRate" column="REPALY_RATE" />
+		<result property="status" column="STATUS" />
+		<result property="expressCode" column="EXPRESS_CODE" />
+		<result property="expressContent" column="EXPRESS_CONTENT" />
+		
+	</resultMap>
+</mapper> 

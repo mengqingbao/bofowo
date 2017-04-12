@@ -44,4 +44,8 @@ public interface ProductMapper{
 	@Update("update T_PRODUCT set "+update+" where ID=#{id}")
 	public long update(ProductModel productModel);
 
+	@Select("select tp.* from T_PRODUCT tp,T_BUYER_BROWSE_HISTORY bbh where tp.ID=bbh.PID and BUYER_ID=#{currentUserName} order by LAST_VISIT_DATE desc limit 0,5")
+	@ResultMap(value="com.bofowo.site.mapper.ProductMapper.ProductModelMap")
+	public List<ProductModel> getBrowsedProductTop5(String currentUserName);
+
 }

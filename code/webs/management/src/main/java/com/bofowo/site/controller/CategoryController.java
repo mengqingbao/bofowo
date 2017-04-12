@@ -18,14 +18,14 @@ public class CategoryController extends BaseController{
 
 	@RequestMapping("/category-add")
 	public String addcategory(ModelMap model){
-		return "category/add";
+		return "biz/category/add";
 	}
 	
 	@RequestMapping("/category-edit")
 	public String editcategory(ModelMap model,long id){
 		CategoryModel category = categoryService.getById(id);
 		model.put("category",category);
-		return "category/edit";
+		return "biz/category/edit";
 	}
 	
 	@RequestMapping("category-insert")
@@ -42,14 +42,14 @@ public class CategoryController extends BaseController{
 		
 		model.put("pageInfo", query);
 		model.put("items",items);
-		return "category/page";
+		return "biz/category/page";
 	}
 	
 	@RequestMapping("/category-detail")
 	public String detail_category(ModelMap model,long id){
 		CategoryModel category = categoryService.getById(id);
 		model.put("category",category);
-		return "category/detail";
+		return "biz/category/detail";
 	}
 	
 	@RequestMapping("category-del")
